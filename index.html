@@ -4,12 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="refresh" content="180">
 <title>纸面持仓观察</title>
 <style>
-:root { color-scheme: light; --bg:#f6f8fb; --panel:#ffffff; --text:#172033; --muted:#667085; --line:#dde3ef; --up:#c2410c; --down:#047857; --blue:#2563eb; }
+:root { color-scheme: light; --bg:#f6f8fb; --panel:#fff; --text:#172033; --muted:#667085; --line:#dde3ef; --up:#c2410c; --down:#047857; }
 * { box-sizing:border-box; }
-body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif; font-variant-numeric:tabular-nums; }
 .wrap { width:min(100%,520px); margin:0 auto; padding:10px; }
 header { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; margin-bottom:8px; }
 h1 { margin:0; font-size:19px; letter-spacing:0; }
@@ -21,7 +20,7 @@ h1 { margin:0; font-size:19px; letter-spacing:0; }
 .card b { display:block; margin-top:3px; font-size:18px; letter-spacing:0; }
 section { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:9px; }
 h2 { margin:0 0 8px; font-size:15px; }
-.position { display:grid; grid-template-columns:minmax(0,1.25fr) .64fr .58fr .76fr .9fr; gap:5px; align-items:center; padding:8px 0; border-top:1px solid #edf1f7; font-size:13px; }
+.position { display:grid; grid-template-columns:minmax(0,1.2fr) .62fr .58fr .76fr .9fr; gap:5px; align-items:center; padding:8px 0; border-top:1px solid #edf1f7; font-size:13px; }
 .position:first-of-type { border-top:0; }
 .position b { display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:13px; }
 .position span { display:block; margin-top:2px; color:var(--muted); font-size:11px; }
@@ -32,7 +31,7 @@ h2 { margin:0 0 8px; font-size:15px; }
 .down { color:var(--down); }
 .empty { margin:0; color:var(--muted); font-size:13px; }
 footer { color:var(--muted); font-size:11px; line-height:1.5; text-align:center; padding:8px 4px 2px; }
-@media (max-width:380px) { .position { grid-template-columns:1.18fr .58fr .5fr .66fr .82fr; font-size:12px; } .card b { font-size:17px; } }
+@media (max-width:380px) { .position { grid-template-columns:1.15fr .58fr .5fr .66fr .82fr; font-size:12px; } .card b { font-size:17px; } }
 </style>
 </head>
 <body>
@@ -40,53 +39,58 @@ footer { color:var(--muted); font-size:11px; line-height:1.5; text-align:center;
   <header>
     <div>
       <h1>纸面持仓观察</h1>
-      <div class="notice">仅纸面观察，不构成交易建议。</div>
+      <div class="notice" id="notice">仅纸面观察，不构成交易建议。</div>
     </div>
-    <div class="meta">已更新<br>2026-05-10 23:22:31</div>
+    <div class="meta" id="meta">加载中<br>--</div>
   </header>
   <div class="cards">
-    <div class="card"><span>组合收益</span><b class="up">1.61%</b></div>
-    <div class="card"><span>总权益</span><b>101.61万</b></div>
-    <div class="card"><span>持仓市值</span><b>63.40万</b></div>
-    <div class="card"><span>浮盈亏</span><b class="up">1.61万</b></div>
+    <div class="card"><span>组合收益</span><b id="ret">--</b></div>
+    <div class="card"><span>总权益</span><b id="equity">--</b></div>
+    <div class="card"><span>持仓市值</span><b id="marketValue">--</b></div>
+    <div class="card"><span>浮盈亏</span><b id="floatingPnl">--</b></div>
   </div>
   <section>
     <h2>当前仓位</h2>
-
-      <article class="position">
-        <div>
-          <b>002181 粤 传 媒</b>
-          <span>纸面锁定</span>
-        </div>
-        <div class="qty"><span>持股</span><strong>6600股</strong></div>
-        <div class="price">18.91</div>
-        <div class="mv">12.48万</div>
-        <div class="up">660.00 / 0.53%</div>
-      </article>
-
-      <article class="position">
-        <div>
-          <b>600396 华电辽能</b>
-          <span>纸面锁定</span>
-        </div>
-        <div class="qty"><span>持股</span><strong>18600股</strong></div>
-        <div class="price">13.68</div>
-        <div class="mv">25.44万</div>
-        <div class="up">4464.00 / 1.79%</div>
-      </article>
-
-      <article class="position">
-        <div>
-          <b>688268 华特气体</b>
-          <span>纸面锁定</span>
-        </div>
-        <div class="qty"><span>持股</span><strong>1400股</strong></div>
-        <div class="price">181.97</div>
-        <div class="mv">25.48万</div>
-        <div class="up">1.09万 / 4.48%</div>
-      </article>
+    <div id="positions"><p class="empty">加载中</p></div>
   </section>
-  <footer>页面自动刷新。数据来自本地纸面账户快照。</footer>
+  <footer>页面每 60 秒自动刷新数据。数据来自本地纸面账户快照。</footer>
 </main>
+<script>
+const $ = (id) => document.getElementById(id);
+const num = (value) => Number(String(value || '0').replace('%','').replace('万','')) || 0;
+const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function tone(value) { return num(value) >= 0 ? 'up' : 'down'; }
+function render(data) {
+  $('notice').textContent = data.notice || '仅纸面观察，不构成交易建议。';
+  $('meta').innerHTML = '已更新<br>' + esc(data.source_generated_at || data.generated_at || '--');
+  $('ret').textContent = data.paper_ret_pct || '--';
+  $('ret').className = tone(data.paper_ret_pct);
+  $('equity').textContent = data.equity || '--';
+  $('marketValue').textContent = data.market_value || '--';
+  $('floatingPnl').textContent = data.floating_pnl || '--';
+  $('floatingPnl').className = tone(data.floating_pnl);
+  const rows = data.positions || [];
+  $('positions').innerHTML = rows.length ? rows.map((p) => {
+    const cls = tone(p.pnl_pct || p.pnl_amount);
+    return `<article class="position">
+      <div><b>${esc(p.code)} ${esc(p.name)}</b><span>${esc(p.state || '纸面观察')}</span></div>
+      <div class="qty"><span>持股</span><strong>${esc(p.qty)}股</strong></div>
+      <div class="price">${esc(p.price)}</div>
+      <div class="mv">${esc(p.market_value)}</div>
+      <div class="${cls}">${esc(p.pnl_amount)} / ${esc(p.pnl_pct)}</div>
+    </article>`;
+  }).join('') : '<p class="empty">暂无纸面持仓</p>';
+}
+async function load() {
+  try {
+    const res = await fetch('status.json?t=' + Date.now(), { cache: 'no-store' });
+    render(await res.json());
+  } catch (err) {
+    $('meta').innerHTML = '更新失败<br>稍后重试';
+  }
+}
+load();
+setInterval(load, 60000);
+</script>
 </body>
 </html>
