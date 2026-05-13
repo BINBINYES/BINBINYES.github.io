@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13 12:26:21",
+  "generated_at": "2026-05-13 12:50:45",
   "feed_version": "V171",
   "title": "同花顺模拟监控",
   "notice": "研究/同花顺模拟账户监控，不是真实下单，不连接真实券商。",
@@ -7,7 +7,7 @@
   "account_source": "THS_SIM_CONFIRMED_ONLY",
   "latest_signal_key": "2026-05-13 10:44:08|SELL|603618|1200|38.76|待对齐",
   "account": {
-    "updated_at": "2026-05-13 12:26:09",
+    "updated_at": "2026-05-13 12:50:26",
     "cash": 200000.0,
     "market_value": 0.0,
     "equity": 200000.0,
@@ -22,7 +22,7 @@
     "source": "同花顺模拟账户确认后同步",
     "state": "待同花顺确认",
     "message": "有模型信号还没有在同花顺模拟账户确认，下单成功前不计入手机端账户。",
-    "updated_at": "2026-05-13 12:26:09",
+    "updated_at": "2026-05-13 12:50:26",
     "screen": "ths_home_or_market",
     "division": "模拟练习区",
     "masked_account": "资金账号：****8562",
@@ -67,58 +67,7 @@
   ],
   "positions": [],
   "orders": [],
-  "equity_curve": [
-    {
-      "time": "2026-05-13 12:19:35",
-      "cash": 200000.0,
-      "market_value": 0.0,
-      "equity": 200000.0,
-      "realized_pnl": 0.0,
-      "total_ret_pct": 0.0,
-      "dd_pct": 0.0,
-      "positions": 0
-    },
-    {
-      "time": "2026-05-13 12:21:16",
-      "cash": 200000.0,
-      "market_value": 0.0,
-      "equity": 200000.0,
-      "realized_pnl": 0.0,
-      "total_ret_pct": 0.0,
-      "dd_pct": 0.0,
-      "positions": 0
-    },
-    {
-      "time": "2026-05-13 12:22:34",
-      "cash": 200000.0,
-      "market_value": 0.0,
-      "equity": 200000.0,
-      "realized_pnl": 0.0,
-      "total_ret_pct": 0.0,
-      "dd_pct": 0.0,
-      "positions": 0
-    },
-    {
-      "time": "2026-05-13 12:25:25",
-      "cash": 200000.0,
-      "market_value": 0.0,
-      "equity": 200000.0,
-      "realized_pnl": 0.0,
-      "total_ret_pct": 0.0,
-      "dd_pct": 0.0,
-      "positions": 0
-    },
-    {
-      "time": "2026-05-13 12:26:09",
-      "cash": 200000.0,
-      "market_value": 0.0,
-      "equity": 200000.0,
-      "realized_pnl": 0.0,
-      "total_ret_pct": 0.0,
-      "dd_pct": 0.0,
-      "positions": 0
-    }
-  ],
+  "equity_curve": [],
   "refresh_hint_seconds": 60,
   "public_safe": true
 }
