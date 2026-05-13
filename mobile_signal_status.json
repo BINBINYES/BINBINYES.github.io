@@ -1,13 +1,12 @@
 {
-  "generated_at": "2026-05-13 11:40:03",
-  "feed_version": "V167",
-  "title": "纸面交易信号监控",
+  "generated_at": "2026-05-13 11:51:41",
+  "feed_version": "V168",
+  "title": "纸面信号观察",
   "notice": "研究/纸面监控，不是真实下单，不连接真实券商。",
   "visibility": "不含模型参数、BS图、内部候选池、admin token 或真实券商信息。",
-  "latest_signal_key": "V163-20260513104408-010|SELL|603618|TODAY_MANUAL_REVIEW",
+  "latest_signal_key": "2026-05-13 10:44:08|SELL|603618|6100|38.76|人工复核",
   "account": {
-    "updated_at": "2026-05-13 11:32:55",
-    "mode": "LOCAL_PAPER_ONLY",
+    "updated_at": "2026-05-13 11:48:42",
     "cash": 920672.0,
     "market_value": 68386.0,
     "equity": 989058.0,
@@ -15,12 +14,11 @@
     "realized_pnl": -13584.0,
     "paper_ret_pct": -1.09,
     "positions_count": 2,
-    "live_ready": false
+    "live_ready": false,
+    "state_label": "纸面观察"
   },
   "signals": [
     {
-      "signal_id": "V163-20260513104408-010",
-      "source_order_id": "PAPER-20260512183012-603618-SELL",
       "created_at": "2026-05-13 10:44:08",
       "side": "SELL",
       "code": "603618",
@@ -28,8 +26,7 @@
       "qty": 6100,
       "price": 38.76,
       "amount": 236436.0,
-      "status": "TODAY_MANUAL_REVIEW",
-      "manual_note": "今日纸面订单，可人工对照模拟账户；脚本不会提交订单。",
+      "status": "人工复核",
       "action": "人工复核"
     }
   ],
@@ -67,7 +64,6 @@
     {
       "order_time": "2026-05-10 20:54:29",
       "trade_date": "2026-05-11",
-      "order_id": "PAPER-20260510205429-002181-BUY",
       "side": "BUY",
       "code": "002181",
       "name": "粤 传 媒",
@@ -75,14 +71,11 @@
       "price": 18.81,
       "amount": 124146.0,
       "realized_pnl": "",
-      "realized_pnl_pct": "",
-      "reason": "PAPER_STRONG_WATCH",
-      "note": "V95 weak consensus after-limit: use reduced weight only after confirmation"
+      "realized_pnl_pct": ""
     },
     {
       "order_time": "2026-05-10 20:54:29",
       "trade_date": "2026-05-11",
-      "order_id": "PAPER-20260510205429-600396-BUY",
       "side": "BUY",
       "code": "600396",
       "name": "华电辽能",
@@ -90,14 +83,11 @@
       "price": 13.44,
       "amount": 249984.0,
       "realized_pnl": "",
-      "realized_pnl_pct": "",
-      "reason": "PAPER_STRONG_WATCH",
-      "note": "no hard veto, still paper monitoring only"
+      "realized_pnl_pct": ""
     },
     {
       "order_time": "2026-05-10 20:54:29",
       "trade_date": "2026-05-11",
-      "order_id": "PAPER-20260510205429-688268-BUY",
       "side": "BUY",
       "code": "688268",
       "name": "华特气体",
@@ -105,14 +95,11 @@
       "price": 174.16,
       "amount": 243824.0,
       "realized_pnl": "",
-      "realized_pnl_pct": "",
-      "reason": "PAPER_STRONG_WATCH",
-      "note": "no hard veto, still paper monitoring only"
+      "realized_pnl_pct": ""
     },
     {
       "order_time": "2026-05-11 18:39:22",
       "trade_date": "2026-05-12",
-      "order_id": "PAPER-20260511183922-002181-SELL",
       "side": "SELL",
       "code": "002181",
       "name": "粤 传 媒",
@@ -120,14 +107,11 @@
       "price": 18.03,
       "amount": 118998.0,
       "realized_pnl": -5148.0,
-      "realized_pnl_pct": -4.15,
-      "reason": "V96_EXIT_OR_NO_TOUCH",
-      "note": "失败/撤退"
+      "realized_pnl_pct": -4.15
     },
     {
       "order_time": "2026-05-11 18:39:22",
       "trade_date": "2026-05-12",
-      "order_id": "PAPER-20260511183922-600396-SELL",
       "side": "SELL",
       "code": "600396",
       "name": "华电辽能",
@@ -135,14 +119,11 @@
       "price": 13.67,
       "amount": 254262.0,
       "realized_pnl": 4278.0,
-      "realized_pnl_pct": 1.71,
-      "reason": "V96_EXIT_OR_NO_TOUCH",
-      "note": "失败/撤退"
+      "realized_pnl_pct": 1.71
     },
     {
       "order_time": "2026-05-11 18:39:22",
       "trade_date": "2026-05-12",
-      "order_id": "PAPER-20260511183922-688268-SELL",
       "side": "SELL",
       "code": "688268",
       "name": "华特气体",
@@ -150,14 +131,11 @@
       "price": 172.66,
       "amount": 241724.0,
       "realized_pnl": -2100.0,
-      "realized_pnl_pct": -0.86,
-      "reason": "V96_EXIT_OR_NO_TOUCH",
-      "note": "失败/撤退"
+      "realized_pnl_pct": -0.86
     },
     {
       "order_time": "2026-05-11 18:39:22",
       "trade_date": "2026-05-12",
-      "order_id": "PAPER-20260511183922-603618-BUY",
       "side": "BUY",
       "code": "603618",
       "name": "杭电股份",
@@ -165,14 +143,11 @@
       "price": 40.5,
       "amount": 247050.0,
       "realized_pnl": "",
-      "realized_pnl_pct": "",
-      "reason": "PAPER_STRONG_WATCH",
-      "note": "no hard veto, still paper monitoring only"
+      "realized_pnl_pct": ""
     },
     {
       "order_time": "2026-05-11 18:39:22",
       "trade_date": "2026-05-12",
-      "order_id": "PAPER-20260511183922-920186-BUY",
       "side": "BUY",
       "code": "920186",
       "name": "中科仪",
@@ -180,14 +155,11 @@
       "price": 107.18,
       "amount": 21436.0,
       "realized_pnl": "",
-      "realized_pnl_pct": "",
-      "reason": "PAPER_BSE_MAINLINE_SHADOW",
-      "note": "V103 BSE mainline scanner: 半导体设备/仪器链强势北交所; strong intraday rise; liquidity usable; main money positive"
+      "realized_pnl_pct": ""
     },
     {
       "order_time": "2026-05-11 18:39:22",
       "trade_date": "2026-05-12",
-      "order_id": "PAPER-20260511183922-920249-BUY",
       "side": "BUY",
       "code": "920249",
       "name": "利尔达",
@@ -195,14 +167,11 @@
       "price": 11.66,
       "amount": 44308.0,
       "realized_pnl": "",
-      "realized_pnl_pct": "",
-      "reason": "PAPER_BSE_MAINLINE_SHADOW",
-      "note": "V103 BSE mainline scanner: 芯片模组/物联网链北交所; strong intraday rise; liquidity usable; main money positive"
+      "realized_pnl_pct": ""
     },
     {
       "order_time": "2026-05-12 18:30:12",
       "trade_date": "2026-05-13",
-      "order_id": "PAPER-20260512183012-603618-SELL",
       "side": "SELL",
       "code": "603618",
       "name": "杭电股份",
@@ -210,39 +179,7 @@
       "price": 38.76,
       "amount": 236436.0,
       "realized_pnl": -10614.0,
-      "realized_pnl_pct": -4.3,
-      "reason": "PAPER_STOP_LOSS",
-      "note": "正常承接，不追高等回踩"
-    }
-  ],
-  "execution_logs": [
-    {
-      "run_at": "2026-05-13 11:20:34",
-      "mode": "auto-execute",
-      "intent_id": "V163-20260513104408-010",
-      "side": "SELL",
-      "code": "603618",
-      "name": "杭电股份",
-      "source_qty": "6100",
-      "scaled_qty": "",
-      "price": "38.760",
-      "amount": "",
-      "result": "BLOCKED",
-      "message": "blocked: config allow_auto_simulated_execute is false"
-    },
-    {
-      "run_at": "2026-05-13 11:20:45",
-      "mode": "manual-confirm",
-      "intent_id": "V163-20260513104408-010",
-      "side": "SELL",
-      "code": "603618",
-      "name": "杭电股份",
-      "source_qty": "6100",
-      "scaled_qty": "",
-      "price": "38.760",
-      "amount": "",
-      "result": "BLOCKED",
-      "message": "THS simulated account shows no position data"
+      "realized_pnl_pct": -4.3
     }
   ],
   "refresh_hint_seconds": 60,
