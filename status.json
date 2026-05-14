@@ -1,7 +1,7 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 16:43:11",
-  "source_generated_at": "2026-05-14 16:43:11",
+  "generated_at": "2026-05-14 16:43:46",
+  "source_generated_at": "2026-05-14 16:43:46",
   "initial_capital": "100.00万",
   "total_pnl": "-2976.00",
   "total_pnl_pct": "-0.30%",
@@ -241,6 +241,20 @@
     "version": "V151.3",
     "regime": "NEUTRAL",
     "budget_multiplier": 1.0,
+    "fear_greed": {
+      "score": 44,
+      "label": "中性",
+      "components": {
+        "breadth": 54,
+        "market_return": 60,
+        "limit_up_down": 70,
+        "candidate_mood": 10,
+        "mainline_heat": 80,
+        "news_sentiment": 50
+      },
+      "stale_penalty": 8,
+      "method": "A-share proxy: breadth, return, limit-up/down, candidate mood, mainline heat, optional news sentiment"
+    },
     "breadth": {
       "available": true,
       "source": "universe_cache",
@@ -251,7 +265,7 @@
       "limit_up_count": 69,
       "limit_down_count": 1,
       "stale": true,
-      "age_hours": 162.37
+      "age_hours": 162.38
     },
     "candidate_mood": {
       "sample_size": 16,
@@ -345,7 +359,7 @@
       "items": [],
       "message": "news_path not set"
     },
-    "summary": "V151.3 market=NEUTRAL, breadth_up=53.87, budget_x=1.0; news=neutral"
+    "summary": "V151.3 market=NEUTRAL, fear_greed=44, breadth_up=53.87, budget_x=1.0; news=neutral"
   },
   "operation_history_2d": [
     {
