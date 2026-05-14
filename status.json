@@ -1,13 +1,13 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-13 22:54:48",
-  "source_generated_at": "2026-05-13 22:54:48",
+  "generated_at": "2026-05-13 23:34:26",
+  "source_generated_at": "2026-05-13 23:34:26",
   "equity": "模拟仓已更新",
   "cash": "含利尔达模拟卖出回笼",
   "market_value": "2.37万",
-  "floating_pnl": "2264.00",
+  "floating_pnl": "2308.00",
   "realized_pnl": "-4142.00",
-  "paper_ret_pct": "已止损",
+  "paper_ret_pct": "模拟仓",
   "positions_count": 2,
   "remote_quote_available": true,
   "remote_status_label": "行情连接可用",
@@ -24,8 +24,8 @@
     "record_policy": "模型自动买卖、T+1阻止、用户授权更改都会写入两天内操作历史；已卖出订单写入盈亏历史。"
   },
   "positions": [
-    {"code": "920186", "name": "中科仪", "qty": "200", "cost": "107.18", "price": "118.50", "market_value": "2.37万", "pnl_amount": "2264.00", "pnl_pct": "10.56%", "state": "ok"},
-    {"code": "603803", "name": "瑞斯康达", "qty": "--", "cost": "17.576", "price": "17.02", "market_value": "--", "pnl_amount": "--", "pnl_pct": "-3.16%", "state": "strict"}
+    {"code": "920186", "name": "中科仪", "qty": "200", "cost": "107.18", "price": "118.72", "market_value": "2.37万", "pnl_amount": "2308.00", "pnl_pct": "10.77%", "state": "ok"},
+    {"code": "603803", "name": "瑞斯康达", "qty": "--", "cost": "17.576", "price": "17.00", "market_value": "--", "pnl_amount": "--", "pnl_pct": "-3.28%", "state": "strict"}
   ],
   "operation_history_2d": [
     {"date": "2026-05-13", "time": "22:49:11", "type": "模型止损卖出模拟仓", "code": "920249", "name": "利尔达", "action": "模型止损卖出模拟仓", "qty": "3800", "price": "10.57", "note": "模型自动止损：低于成本线，浮动=-9.35%"}
