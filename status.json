@@ -10,6 +10,16 @@
   "positions_count": 3,
   "remote_quote_available": true,
   "remote_status_label": "行情连接可用",
+  "paper_trading_rules": {
+    "mode": "真实模拟仓",
+    "auto_buy": true,
+    "auto_sell": true,
+    "broker_connected": false,
+    "t1_rule": "A股T+1：当日买入默认不能当日模拟卖出，除非用户授权 allow_t1_override。",
+    "stop_loss_pct": -8.0,
+    "strict_stop_loss_pct": -10.0,
+    "record_policy": "模型自动买卖、T+1阻止、用户授权更改都会写入两天内操作历史；已卖出订单写入盈亏历史。"
+  },
   "positions": [
     {
       "code": "920186",
@@ -32,7 +42,7 @@
       "pnl_amount": "-3648.00",
       "pnl_pct": "-8.23%",
       "state": "below_cost",
-      "risk_note": "已跌破成本，当前标记为观察风险；若为当日买入，A股T+1不能当日卖出，模型只能提示风险，不能自动成交。"
+      "risk_note": "已触发V151模拟仓止损观察线。若该仓不是T+1锁定，模拟仓应生成 MODEL_AUTO_SELL；若是当日买入，记录 T1_BLOCKED_STOP，除非用户授权 allow_t1_override。"
     },
     {
       "code": "603803",
@@ -50,6 +60,17 @@
     {
       "date": "2026-05-13",
       "time": "21:54:25",
+      "type": "RULE_UPDATE",
+      "code": "--",
+      "name": "V151",
+      "action": "启用真实模拟仓自动买卖规则",
+      "qty": "--",
+      "price": "--",
+      "note": "模拟仓达到模型条件可自动买入/卖出；真实券商账户不连接、不下单；A股T+1默认拦截当日卖出。"
+    },
+    {
+      "date": "2026-05-13",
+      "time": "21:54:25",
       "type": "snapshot_sync",
       "code": "--",
       "name": "V151",
@@ -60,14 +81,14 @@
     }
   ],
   "closed_orders": [],
-  "closed_orders_note": "暂无已卖出历史订单；后续卖出后按日期、时间、代码、名称、数量、买入均价、卖出价、盈亏金额、盈亏比例记录。",
+  "closed_orders_note": "暂无已卖出历史订单；后续模型模拟卖出后按日期、时间、代码、名称、数量、买入均价、卖出价、盈亏金额、盈亏比例记录。",
   "risk_notes": [
     {
       "code": "920249",
       "name": "利尔达",
       "level": "below_cost",
-      "note": "当前浮亏约 -8.23%。未显示为自动止损，是因为V151远端只做监控提醒，不连接券商；且A股当日买入受T+1约束不能当日卖出。"
+      "note": "当前浮亏约 -8.23%，已达到模拟仓默认止损线。新本地引擎会按 MODEL_AUTO_SELL 或 T1_BLOCKED_STOP 记录，而不是只做提醒。"
     }
   ],
-  "notice": "公开完整持仓页：仅纸面/监控观察，不构成交易建议。"
+  "notice": "公开完整持仓页：仅纸面/模拟仓观察，不构成真实交易建议或券商下单。"
 }
