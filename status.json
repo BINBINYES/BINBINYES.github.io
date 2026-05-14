@@ -1,7 +1,7 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 14:56:09",
-  "source_generated_at": "2026-05-14 14:56:09",
+  "generated_at": "2026-05-14 14:56:36",
+  "source_generated_at": "2026-05-14 14:56:36",
   "initial_capital": "100.00万",
   "total_pnl": "-2976.00",
   "total_pnl_pct": "-0.30%",
@@ -49,6 +49,193 @@
       "state": "strict"
     }
   ],
+  "position_scheduler": {
+    "enabled": true,
+    "version": "V151.1",
+    "capital": 1000000.0,
+    "max_single_position_pct": 25.0,
+    "positions": [
+      {
+        "code": "920186",
+        "name": "中科仪",
+        "stage": "震荡观察",
+        "score": 2.0,
+        "current_pct": 2.26,
+        "target_pct": 0,
+        "current_qty": 200,
+        "target_qty": "--",
+        "delta_qty": -200,
+        "action": "模拟清仓/退出",
+        "reason": "主升证据不足，保持观察"
+      },
+      {
+        "code": "603803",
+        "name": "瑞斯康达",
+        "stage": "风险退潮",
+        "score": 0,
+        "current_pct": 0.0,
+        "target_pct": 0,
+        "current_qty": "--",
+        "target_qty": "--",
+        "delta_qty": 0,
+        "action": "等待买点",
+        "reason": "持仓已触发防守/严格风险线"
+      }
+    ],
+    "candidates": [
+      {
+        "code": "300885",
+        "name": "海昌新材",
+        "stage": "震荡观察",
+        "score": 42.1,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "主升证据不足，保持观察"
+      },
+      {
+        "code": "002181",
+        "name": "粤 传 媒",
+        "stage": "震荡观察",
+        "score": 16.5,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "主升证据不足，保持观察"
+      },
+      {
+        "code": "688268",
+        "name": "华特气体",
+        "stage": "震荡观察",
+        "score": 9.2,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "主升证据不足，保持观察"
+      },
+      {
+        "code": "000593",
+        "name": "德龙汇能",
+        "stage": "震荡观察",
+        "score": 8.6,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "主升证据不足，保持观察"
+      },
+      {
+        "code": "300769",
+        "name": "德方纳米",
+        "stage": "退潮/不碰",
+        "score": 6,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "600396",
+        "name": "华电辽能",
+        "stage": "退潮/不碰",
+        "score": 4,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "301217",
+        "name": "铜冠铜箔",
+        "stage": "退潮/不碰",
+        "score": 2,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "002240",
+        "name": "盛新锂能",
+        "stage": "退潮/不碰",
+        "score": 2,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "603618",
+        "name": "杭电股份",
+        "stage": "退潮/不碰",
+        "score": 2,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "688256",
+        "name": "DR寒武纪",
+        "stage": "退潮/不碰",
+        "score": 1,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "688001",
+        "name": "华兴源创",
+        "stage": "震荡观察",
+        "score": 0,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "主升证据不足，保持观察"
+      },
+      {
+        "code": "603308",
+        "name": "应流股份",
+        "stage": "退潮/不碰",
+        "score": 0,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "300819",
+        "name": "聚杰微纤",
+        "stage": "退潮/不碰",
+        "score": 0,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "600726",
+        "name": "华电能源",
+        "stage": "退潮/不碰",
+        "score": 0,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      },
+      {
+        "code": "001400",
+        "name": "江顺科技",
+        "stage": "退潮/不碰",
+        "score": 0,
+        "target_pct": 0,
+        "target_qty": "--",
+        "action": "不纳入仓位",
+        "reason": "候选被 NO_TOUCH 或退出逻辑拦截"
+      }
+    ],
+    "summary": "V151.1 已按主升阶段输出模拟目标仓位；仅用于纸面调仓观察，不连接券商。"
+  },
   "operation_history_2d": [
     {
       "date": "2026-05-13",
