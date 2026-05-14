@@ -16,77 +16,26 @@
     "auto_sell": true,
     "broker_connected": false,
     "responsible_module": "本地 v151_ai_realtime_server.py / simulate_paper_trading",
-    "remote_push_module": "Codex/GitHub Pages 同步任务，目前为手动触发；需要调度器定时推送。",
+    "remote_push_module": "Codex heartbeat automation v151-2，每5分钟同步一次 GitHub Pages status.json。",
     "t1_rule": "A股T+1：当日买入默认不能当日模拟卖出，除非用户授权 allow_t1_override。",
     "stop_loss_pct": -8.0,
     "strict_stop_loss_pct": -10.0,
     "record_policy": "模型自动买卖、T+1阻止、用户授权更改都会写入两天内操作历史；已卖出订单写入盈亏历史。"
   },
   "positions": [
-    {
-      "code": "920186",
-      "name": "中科仪",
-      "qty": "200",
-      "cost": "107.18",
-      "price": "118.50",
-      "market_value": "2.37万",
-      "pnl_amount": "2264.00",
-      "pnl_pct": "10.56%",
-      "state": "ok"
-    },
-    {
-      "code": "603803",
-      "name": "瑞斯康达",
-      "qty": "--",
-      "cost": "17.576",
-      "price": "17.02",
-      "market_value": "--",
-      "pnl_amount": "--",
-      "pnl_pct": "-3.16%",
-      "state": "strict"
-    }
+    {"code": "920186", "name": "中科仪", "qty": "200", "cost": "107.18", "price": "118.50", "market_value": "2.37万", "pnl_amount": "2264.00", "pnl_pct": "10.56%", "state": "ok"},
+    {"code": "603803", "name": "瑞斯康达", "qty": "--", "cost": "17.576", "price": "17.02", "market_value": "--", "pnl_amount": "--", "pnl_pct": "-3.16%", "state": "strict"}
   ],
   "operation_history_2d": [
-    {
-      "date": "2026-05-13",
-      "time": "22:49:11",
-      "type": "MODEL_AUTO_SELL",
-      "code": "920249",
-      "name": "利尔达",
-      "action": "模型止损卖出模拟仓",
-      "qty": "3800",
-      "price": "10.57",
-      "note": "MODEL_AUTO_STOP level=below_cost pnl=-9.35"
-    }
+    {"date": "2026-05-13", "time": "22:49:11", "type": "MODEL_AUTO_SELL", "code": "920249", "name": "利尔达", "action": "模型止损卖出模拟仓", "qty": "3800", "price": "10.57", "note": "MODEL_AUTO_STOP level=below_cost pnl=-9.35"}
   ],
   "closed_orders": [
-    {
-      "date": "2026-05-13",
-      "time": "22:49:11",
-      "code": "920249",
-      "name": "利尔达",
-      "qty": "3800",
-      "buy_price": "11.66",
-      "sell_price": "10.57",
-      "pnl_amount": "-4142.00",
-      "pnl_pct": "-9.35%",
-      "reason": "MODEL_AUTO_STOP level=below_cost pnl=-9.35"
-    }
+    {"date": "2026-05-13", "time": "22:49:11", "code": "920249", "name": "利尔达", "qty": "3800", "buy_price": "11.66", "sell_price": "10.57", "pnl_amount": "-4142.00", "pnl_pct": "-9.35%", "reason": "MODEL_AUTO_STOP level=below_cost pnl=-9.35"}
   ],
   "closed_orders_note": "已卖出历史订单来自本地真实模拟仓引擎，非真实券商成交。",
   "risk_notes": [
-    {
-      "code": "920249",
-      "name": "利尔达",
-      "level": "MODEL_AUTO_SELL",
-      "note": "利尔达已由本地模型在 2026-05-13 22:49:11 触发模拟止损卖出，卖出价 10.57，数量 3800，模拟亏损 -4142.00 / -9.35%。"
-    },
-    {
-      "code": "603803",
-      "name": "瑞斯康达",
-      "level": "strict",
-      "note": "瑞斯康达仍在严格风险档位，因未记录持仓数量，当前只做风险监控，不生成模拟卖出订单。"
-    }
+    {"code": "920249", "name": "利尔达", "level": "MODEL_AUTO_SELL", "note": "利尔达已由本地模型在 2026-05-13 22:49:11 触发模拟止损卖出，卖出价 10.57，数量 3800，模拟亏损 -4142.00 / -9.35%。"},
+    {"code": "603803", "name": "瑞斯康达", "level": "strict", "note": "瑞斯康达仍在严格风险档位，因未记录持仓数量，当前只做风险监控，不生成模拟卖出订单。"}
   ],
   "notice": "公开完整持仓页：仅纸面/模拟仓观察，不构成真实交易建议或券商下单。"
 }
