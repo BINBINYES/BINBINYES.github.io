@@ -5,10 +5,22 @@
     "generated_at",
     "source_generated_at",
     "remote_quote_available",
+    "initial_capital",
+    "total_pnl",
+    "total_pnl_pct",
     "positions",
     "operation_history_2d",
     "closed_orders"
   ],
+  "portfolio_fields": {
+    "initial_capital": "string, default 100.00万",
+    "total_pnl": "string, realized + unrealized",
+    "total_pnl_pct": "string, total_pnl / initial_capital",
+    "equity": "string, initial capital + total_pnl",
+    "market_value": "string",
+    "floating_pnl": "string",
+    "realized_pnl": "string"
+  },
   "positions_item": {
     "code": "string",
     "name": "string",
