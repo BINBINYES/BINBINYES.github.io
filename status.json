@@ -1,7 +1,7 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 16:58:10",
-  "source_generated_at": "2026-05-14 16:58:10",
+  "generated_at": "2026-05-14 16:58:21",
+  "source_generated_at": "2026-05-14 16:58:21",
   "initial_capital": "100.00万",
   "total_pnl": "-2976.00",
   "total_pnl_pct": "-0.30%",
@@ -242,7 +242,7 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 1.0,
     "fear_greed": {
-      "score": 44,
+      "score": 45,
       "label": "中性",
       "components": {
         "breadth": 54,
@@ -250,7 +250,7 @@
         "limit_up_down": 70,
         "candidate_mood": 10,
         "mainline_heat": 80,
-        "news_sentiment": 50
+        "news_sentiment": 70
       },
       "stale_penalty": 8,
       "method": "A-share proxy: breadth, return, limit-up/down, candidate mood, mainline heat, optional news sentiment"
@@ -353,13 +353,77 @@
       ]
     },
     "news": {
-      "available": false,
-      "sentiment": "neutral",
-      "score": 0,
-      "items": [],
-      "message": "news_path not set"
+      "available": true,
+      "sentiment": "positive",
+      "score": 7,
+      "items": [
+        "[sina_7x24_public] 日本央行数据显示，4月份以日元计价的进口价格指数同比涨幅创2022年12月以来最快增速。",
+        "[sina_7x24_public] 此次出售将使Kakao对Dunamu的持股比例降至4.03%。",
+        "[sina_7x24_public] Kakao将以1.003万亿韩元的价格向Hana Financial出售其持有的加密货币交易所运营商Dunamu的6.55%股份。",
+        "[sina_7x24_public] 【苹果 iPhone 17 Pro系列全线下调1000元】苹果手机15日零点突然官宣降价，iPhone 17 Pro系列全线下调1000元。一苹果专卖店工作人员",
+        "[sina_7x24_public] 日本10年期国债期货早盘一度下跌32个基点，至128.37。",
+        "[sina_7x24_public] 【汇丰：澳大利亚房价将走低】汇丰下调了对2026年和2027年澳大利亚房价的预测，将利率上升、税收变化、经济低迷和失业率上升的前景纳入考量。汇丰首席经济学家Pa",
+        "[sina_7x24_public] 【药明康德：拟发行人民币67.8亿元于2027年到期之美元结算零息可转换债券】药明康德公告，公司拟发行人民币67.8亿元于2027年到期之美元结算零息可转换债券",
+        "[sina_7x24_public] 日本4月生产者价格同比增长4.9%; 预估为+3.0%。日本4月生产者价格环比增长2.3%; 预估为+0.8%。",
+        "[sina_7x24_public] 韩国将于6月底发布下半年经济展望及战略报告。",
+        "[sina_7x24_public] 日经225指数期货早盘上涨0.5%。",
+        "[sina_7x24_public] 【豪恩汽电：收到某德系高端豪华汽车品牌产品定点信，预计项目生命周期内总营业额约7.8亿元】豪恩汽电公告，公司近日收到某德系高端豪华汽车品牌的智能驾驶视觉感知（A",
+        "[sina_7x24_public] 美联储理事巴尔：期待沃什上任后能在美联储做出一番成就。"
+      ],
+      "raw_count": 20,
+      "statuses": [
+        {
+          "source": "local_file",
+          "ok": false,
+          "message": "news_path not set"
+        },
+        {
+          "source": "sina_7x24_public",
+          "ok": true,
+          "message": "20 items"
+        }
+      ],
+      "mainline_impacts": [
+        {
+          "mainline": "AI算力半导体",
+          "impact_score": 8,
+          "label": "边际加强",
+          "matched_keywords": [
+            "AI",
+            "半导体"
+          ],
+          "examples": [
+            {
+              "time": "2026-05-15 07:40:14",
+              "title": "【美国法官审议Anthropic公司15亿美元作家诉讼和解协议】当地时间周四，美国一名联邦法官要求律师就人工智能公司Anthropic与指控其滥用其著作来训练A",
+              "source": "sina_7x24_public"
+            },
+            {
+              "time": "2026-05-15 07:37:15",
+              "title": "【华泰证券：韩股中半导体相关企业约占总市值的一半，全球AI叙事的反复可能会加大韩股的波动】华泰证券研报称，2026年韩国经济周期性复苏、上市公司治理改善、以及韩",
+              "source": "sina_7x24_public"
+            }
+          ]
+        },
+        {
+          "mainline": "机器人智能制造",
+          "impact_score": 2,
+          "label": "中性扰动",
+          "matched_keywords": [
+            "机器人"
+          ],
+          "examples": [
+            {
+              "time": "2026-05-15 07:40:14",
+              "title": "【美国法官审议Anthropic公司15亿美元作家诉讼和解协议】当地时间周四，美国一名联邦法官要求律师就人工智能公司Anthropic与指控其滥用其著作来训练A",
+              "source": "sina_7x24_public"
+            }
+          ]
+        }
+      ],
+      "message": "loaded 20 news items"
     },
-    "summary": "V151.3 market=NEUTRAL, fear_greed=44, breadth_up=53.87, budget_x=1.0; news=neutral"
+    "summary": "V151.3 market=NEUTRAL, fear_greed=45, breadth_up=53.87, budget_x=1.0; news=positive"
   },
   "operation_history_2d": [
     {
