@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-05-13 21:54:26",
+  "source_updated_at": "2026-05-13 21:54:25",
+  "status": "running",
+  "page_mode": "redacted_public",
+  "notice": "脱敏公开页：不展示股票代码、名称、价格、数量、成本、市值或盈亏明细。",
+  "positions_count": 3,
+  "quote_source_primary": "tencent",
+  "quote_sources": [
+    {"name": "ths_export", "ok": false, "quotes": 0, "latency_ms": 0, "note": "本机同花顺导出未连接"},
+    {"name": "tencent", "ok": true, "quotes": 18, "latency_ms": 96, "note": "当前主行情源"},
+    {"name": "realtime_cache", "ok": true, "quotes": 18, "latency_ms": 0, "note": "防止回退旧CSV"},
+    {"name": "eastmoney", "ok": false, "quotes": 0, "latency_ms": 1000, "note": "延迟或超时，已降级"},
+    {"name": "sina", "ok": false, "quotes": 0, "latency_ms": 0, "note": "低优先级备用"},
+    {"name": "local_csv", "ok": true, "quotes": 18, "latency_ms": 0, "note": "兜底本地候选"}
+  ],
+  "risk_counts": {
+    "ok": 1,
+    "below_cost": 1,
+    "strict": 1
+  },
+  "position_change_signature": "redacted:v151:3:ok1:below1:strict1:tencent",
+  "alert_policy": "仅当买卖、仓位结构或风险档位发生变化时弹窗/铃声；单纯价格波动不弹。"
+}
