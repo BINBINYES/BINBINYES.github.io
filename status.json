@@ -1,7 +1,7 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 16:38:55",
-  "source_generated_at": "2026-05-14 16:38:55",
+  "generated_at": "2026-05-14 16:39:40",
+  "source_generated_at": "2026-05-14 16:39:40",
   "initial_capital": "100.00万",
   "total_pnl": "-2976.00",
   "total_pnl_pct": "-0.30%",
@@ -235,6 +235,117 @@
       }
     ],
     "summary": "V151.1 已按主升阶段输出模拟目标仓位；仅用于纸面调仓观察，不连接券商。"
+  },
+  "market_environment": {
+    "enabled": true,
+    "version": "V151.3",
+    "regime": "NEUTRAL",
+    "budget_multiplier": 1.0,
+    "breadth": {
+      "available": true,
+      "source": "universe_cache",
+      "sample_size": 1472,
+      "up_stock_pct": 53.87,
+      "down_stock_pct": 45.31,
+      "avg_pct": 0.87,
+      "limit_up_count": 69,
+      "limit_down_count": 1,
+      "stale": true,
+      "age_hours": 162.31
+    },
+    "candidate_mood": {
+      "sample_size": 16,
+      "avg_pct": -3.03,
+      "strong_count": 0,
+      "weak_count": 4
+    },
+    "mainlines": {
+      "available": true,
+      "version": "V151.4",
+      "as_of": "2026-05-13",
+      "rows": [
+        {
+          "mainline": "航空航天军工",
+          "node": "航天卫星",
+          "companies": "48",
+          "core_candidates": "1",
+          "strong_candidates": "4",
+          "avg_score": "32.4",
+          "top_companies": "博云新材；电科蓝天；睿创微纳；有研复材；宏明电子"
+        },
+        {
+          "mainline": "AI算力半导体",
+          "node": "半导体制造",
+          "companies": "134",
+          "core_candidates": "5",
+          "strong_candidates": "17",
+          "avg_score": "32.56",
+          "top_companies": "联讯仪器；大普微-UW；德明利；朗科科技；佰维存储"
+        },
+        {
+          "mainline": "AI算力半导体",
+          "node": "光通信/CPO",
+          "companies": "40",
+          "core_candidates": "4",
+          "strong_candidates": "17",
+          "avg_score": "41.96",
+          "top_companies": "协创数据；仕佳光子；源杰科技；光迅科技；永鼎股份"
+        },
+        {
+          "mainline": "新能源电池",
+          "node": "电池材料",
+          "companies": "120",
+          "core_candidates": "1",
+          "strong_candidates": "15",
+          "avg_score": "31.83",
+          "top_companies": "天华新能；赣锋锂业；天赐材料；融捷股份；圣阳股份"
+        },
+        {
+          "mainline": "新能源电池",
+          "node": "光伏设备",
+          "companies": "36",
+          "core_candidates": "0",
+          "strong_candidates": "3",
+          "avg_score": "27.44",
+          "top_companies": "福达合金；欧莱新材；中利集团；银河电子；永和智控"
+        },
+        {
+          "mainline": "航空航天军工",
+          "node": "低空/无人机",
+          "companies": "15",
+          "core_candidates": "0",
+          "strong_candidates": "2",
+          "avg_score": "35.11",
+          "top_companies": "三瑞智能；爱乐达；商络电子；广联航空；中复神鹰"
+        },
+        {
+          "mainline": "AI算力半导体",
+          "node": "算力基础设施",
+          "companies": "42",
+          "core_candidates": "0",
+          "strong_candidates": "1",
+          "avg_score": "28.59",
+          "top_companies": "利通电子；宏景科技；杰创智能；优刻得-W；南兴股份"
+        },
+        {
+          "mainline": "电力电网设备",
+          "node": "电力运营",
+          "companies": "27",
+          "core_candidates": "0",
+          "strong_candidates": "1",
+          "avg_score": "27.69",
+          "top_companies": "晓程科技；华银电力；美利云；恒大高新；深南电A"
+        }
+      ]
+    },
+    "news": {
+      "available": false,
+      "sentiment": "neutral",
+      "score": 0,
+      "items": [],
+      "message": "news_path not set"
+    },
+    "summary": "V151.3 market=NEUTRAL, breadth_up=53.87, budget_x=1.0; news=neutral"
   },
   "operation_history_2d": [
     {
