@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V151 脱敏监控</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #d9e2ef;
+      --accent: #0f766e;
+      --warn: #c2410c;
+      --bad: #dc2626;
+      --good: #047857;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      width: min(980px, calc(100vw - 28px));
+      margin: 28px auto;
+    }
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    h1 { margin: 0 0 4px; font-size: 24px; line-height: 1.2; }
+    p { margin: 0; color: var(--muted); }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    button, a.button {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    button.primary { background: var(--accent); border-color: var(--accent); color: white; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, .04);
+    }
+    .label { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+    .value { font-size: 26px; font-weight: 800; }
+    .ok { color: var(--good); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+    .wide { grid-column: 1 / -1; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+    th { color: var(--muted); font-weight: 600; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #eef2ff;
+      color: #3730a3;
+    }
+    .pill.ok { background: #dcfce7; color: #166534; }
+    .pill.no { background: #fee2e2; color: #991b1b; }
+    .notice { line-height: 1.65; color: #334155; }
+    @media (max-width: 720px) {
+      main { width: min(100vw - 18px, 980px); margin: 14px auto; }
+      header { display: block; }
+      .actions { justify-content: flex-start; margin-top: 12px; }
+      .grid { grid-template-columns: 1fr; }
+      .value { font-size: 22px; }
+      th:nth-child(4), td:nth-child(4) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>V151 脱敏监控</h1>
+        <p>公网安全版，只显示运行状态、行情源和风险档位。</p>
+      </div>
+      <div class="actions">
+        <button id="alarmBtn" class="primary" type="button">开启铃声提醒</button>
+        <button id="refreshBtn" type="button">立即刷新</button>
+        <a class="button" href="./">完整页</a>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="panel">
+        <div class="label">运行状态</div>
+        <div id="status" class="value">--</div>
+      </article>
+      <article class="panel">
+        <div class="label">持仓数量</div>
+        <div id="positions" class="value">--</div>
+      </article>
+      <article class="panel">
+        <div class="label">主行情源</div>
+        <div id="source" class="value">--</div>
+      </article>
+
+      <article class="panel wide">
+        <div class="label">风险档位</div>
+        <table>
+          <tbody>
+            <tr><td>正常</td><td id="riskOk" class="ok">--</td></tr>
+            <tr><td>低于成本/观察</td><td id="riskBelow" class="warn">--</td></tr>
+            <tr><td>严格风险</td><td id="riskStrict" class="bad">--</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="panel wide">
+        <div class="label">行情源状态</div>
+        <table>
+          <thead><tr><th>源</th><th>状态</th><th>数量</th><th>说明</th></tr></thead>
+          <tbody id="sourcesBody"></tbody>
+        </table>
+      </article>
+
+      <article class="panel wide">
+        <div class="label">提示</div>
+        <div id="notice" class="notice">--</div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    let lastSignature = localStorage.getItem('v151_safe_signature') || '';
+    let alarmEnabled = localStorage.getItem('v151_safe_alarm') === '1';
+    let audioCtx = null;
+
+    function setAlarmButton() {
+      $('alarmBtn').textContent = alarmEnabled ? '铃声提醒已开启' : '开启铃声提醒';
+    }
+
+    function beep() {
+      if (!alarmEnabled) return;
+      audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.18, audioCtx.currentTime + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.45);
+      osc.connect(gain).connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.48);
+    }
+
+    function notify(text) {
+      beep();
+      if (alarmEnabled && 'Notification' in window && Notification.permission === 'granted') {
+        new Notification('V151 脱敏监控', { body: text });
+      } else if (alarmEnabled) {
+        alert(text);
+      }
+    }
+
+    async function load() {
+      const res = await fetch('./safe_status.json?t=' + Date.now(), { cache: 'no-store' });
+      const data = await res.json();
+      $('status').textContent = data.status === 'running' ? '运行中' : data.status || '--';
+      $('positions').textContent = data.positions_count ?? '--';
+      $('source').textContent = data.quote_source_primary || '--';
+      $('riskOk').textContent = data.risk_counts?.ok ?? 0;
+      $('riskBelow').textContent = data.risk_counts?.below_cost ?? 0;
+      $('riskStrict').textContent = data.risk_counts?.strict ?? 0;
+      $('notice').textContent = `${data.notice || ''} 更新时间：${data.generated_at || '--'}。${data.alert_policy || ''}`;
+      $('sourcesBody').innerHTML = (data.quote_sources || []).map(src => `
+        <tr>
+          <td>${src.name}</td>
+          <td><span class="pill ${src.ok ? 'ok' : 'no'}">${src.ok ? '可用' : '降级'}</span></td>
+          <td>${src.quotes ?? 0}</td>
+          <td>${src.note || ''}</td>
+        </tr>
+      `).join('');
+      const signature = data.position_change_signature || JSON.stringify(data.risk_counts || {});
+      if (lastSignature && signature !== lastSignature) {
+        notify('V151 仓位结构或风险档位发生变化，请查看页面。');
+      }
+      lastSignature = signature;
+      localStorage.setItem('v151_safe_signature', signature);
+    }
+
+    $('alarmBtn').addEventListener('click', async () => {
+      alarmEnabled = !alarmEnabled;
+      localStorage.setItem('v151_safe_alarm', alarmEnabled ? '1' : '0');
+      if (alarmEnabled && 'Notification' in window && Notification.permission === 'default') {
+        await Notification.requestPermission();
+      }
+      setAlarmButton();
+      if (alarmEnabled) beep();
+    });
+    $('refreshBtn').addEventListener('click', load);
+    setAlarmButton();
+    load();
+    setInterval(load, 15000);
+  </script>
+</body>
+</html>
