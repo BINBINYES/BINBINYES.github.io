@@ -31,7 +31,8 @@
       "market_value": "4.07万",
       "pnl_amount": "-3648.00",
       "pnl_pct": "-8.23%",
-      "state": "below_cost"
+      "state": "below_cost",
+      "risk_note": "已跌破成本，当前标记为观察风险；若为当日买入，A股T+1不能当日卖出，模型只能提示风险，不能自动成交。"
     },
     {
       "code": "603803",
@@ -43,6 +44,29 @@
       "pnl_amount": "--",
       "pnl_pct": "-3.85%",
       "state": "strict"
+    }
+  ],
+  "operation_history_2d": [
+    {
+      "date": "2026-05-13",
+      "time": "21:54:25",
+      "type": "snapshot_sync",
+      "code": "--",
+      "name": "V151",
+      "action": "同步远端持仓快照",
+      "qty": "--",
+      "price": "--",
+      "note": "外端页面刷新记录；真实买卖记录等待本地交易/手工记录接入。"
+    }
+  ],
+  "closed_orders": [],
+  "closed_orders_note": "暂无已卖出历史订单；后续卖出后按日期、时间、代码、名称、数量、买入均价、卖出价、盈亏金额、盈亏比例记录。",
+  "risk_notes": [
+    {
+      "code": "920249",
+      "name": "利尔达",
+      "level": "below_cost",
+      "note": "当前浮亏约 -8.23%。未显示为自动止损，是因为V151远端只做监控提醒，不连接券商；且A股当日买入受T+1约束不能当日卖出。"
     }
   ],
   "notice": "公开完整持仓页：仅纸面/监控观察，不构成交易建议。"
