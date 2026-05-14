@@ -1,0 +1,52 @@
+{
+  "schema_version": "v151.remote.v1",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "source_generated_at",
+    "remote_quote_available",
+    "positions",
+    "operation_history_2d",
+    "closed_orders"
+  ],
+  "positions_item": {
+    "code": "string",
+    "name": "string",
+    "qty": "string",
+    "cost": "string",
+    "price": "string",
+    "market_value": "string",
+    "pnl_amount": "string",
+    "pnl_pct": "string",
+    "state": "string"
+  },
+  "operation_history_2d_item": {
+    "date": "YYYY-MM-DD",
+    "time": "HH:mm:ss",
+    "type": "Chinese display label",
+    "code": "string",
+    "name": "string",
+    "action": "Chinese display label",
+    "qty": "string",
+    "price": "string",
+    "note": "Chinese display text"
+  },
+  "closed_orders_item": {
+    "date": "YYYY-MM-DD",
+    "time": "HH:mm:ss",
+    "code": "string",
+    "name": "string",
+    "qty": "string",
+    "buy_price": "string",
+    "sell_price": "string",
+    "pnl_amount": "string",
+    "pnl_pct": "string",
+    "reason": "Chinese display text"
+  },
+  "ui_rules": {
+    "hide_internal_sync_errors": true,
+    "hide_quote_source_details": true,
+    "no_raw_internal_enums": true,
+    "closed_orders_are_separate_from_operation_history": true
+  }
+}
