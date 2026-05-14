@@ -1,7 +1,7 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 15:06:25",
-  "source_generated_at": "2026-05-14 15:06:25",
+  "generated_at": "2026-05-14 15:06:41",
+  "source_generated_at": "2026-05-14 15:06:41",
   "initial_capital": "100.00万",
   "total_pnl": "-2976.00",
   "total_pnl_pct": "-0.30%",
@@ -61,12 +61,12 @@
         "stage": "震荡观察",
         "score": 2.0,
         "current_pct": 2.26,
-        "target_pct": 0,
+        "target_pct": 5.0,
         "current_qty": 200,
-        "target_qty": "--",
-        "delta_qty": -200,
-        "action": "模拟清仓/退出",
-        "reason": "主升证据不足，保持观察"
+        "target_qty": 400,
+        "delta_qty": 200,
+        "action": "模拟加仓",
+        "reason": "历史反推显示震荡观察桶仍有较多赢家，已有持仓保留5%观察仓，不作硬清零"
       },
       {
         "code": "603803",
