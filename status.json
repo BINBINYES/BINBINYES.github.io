@@ -1,34 +1,58 @@
 {
-  "generated_at": "2026-05-13 02:06:26",
-  "source_generated_at": "2026-05-13 02:01:21",
-  "equity": "98.91万",
+  "generated_at": "2026-05-13 21:54:26",
+  "source_generated_at": "2026-05-13 21:54:25",
+  "equity": "98.46万",
   "cash": "92.07万",
-  "market_value": "6.84万",
-  "floating_pnl": "2642.00",
+  "market_value": "6.39万",
+  "floating_pnl": "-1884.00",
   "realized_pnl": "-1.36万",
-  "paper_ret_pct": "-1.09%",
-  "positions_count": 2,
+  "paper_ret_pct": "-1.54%",
+  "positions_count": 3,
+  "quote_source": "tencent",
   "positions": [
     {
       "code": "920186",
       "name": "中科仪",
       "qty": "200",
-      "price": "120.39",
-      "market_value": "2.41万",
-      "pnl_amount": "2642.00",
-      "pnl_pct": "12.33%",
-      "state": "纸面观察"
+      "cost": "107.18",
+      "price": "116.00",
+      "market_value": "2.32万",
+      "pnl_amount": "1764.00",
+      "pnl_pct": "8.23%",
+      "quote_source": "tencent",
+      "state": "ok"
     },
     {
       "code": "920249",
       "name": "利尔达",
       "qty": "3800",
-      "price": "11.66",
-      "market_value": "4.43万",
-      "pnl_amount": "0.00",
-      "pnl_pct": "0.00%",
-      "state": "纸面观察"
+      "cost": "11.66",
+      "price": "10.70",
+      "market_value": "4.07万",
+      "pnl_amount": "-3648.00",
+      "pnl_pct": "-8.23%",
+      "quote_source": "tencent",
+      "state": "below_cost"
+    },
+    {
+      "code": "603803",
+      "name": "瑞斯康达",
+      "qty": "--",
+      "cost": "17.576",
+      "price": "16.90",
+      "market_value": "--",
+      "pnl_amount": "--",
+      "pnl_pct": "-3.85%",
+      "quote_source": "tencent",
+      "state": "strict"
     }
   ],
-  "notice": "仅纸面观察，不构成交易建议。"
+  "quote_sources": [
+    {"source": "ths_export", "ok": false, "message": "0 quotes"},
+    {"source": "tencent", "ok": true, "message": "18/18 quotes"},
+    {"source": "realtime_cache", "ok": true, "message": "18 cached quotes"},
+    {"source": "eastmoney", "ok": false, "message": "timeout"},
+    {"source": "local_csv", "ok": true, "message": "18 quotes"}
+  ],
+  "notice": "公开完整持仓页：仅纸面/监控观察，不构成交易建议。行情源：腾讯。"
 }
