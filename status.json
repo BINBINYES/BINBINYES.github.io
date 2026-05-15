@@ -1,15 +1,15 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 18:33:16",
-  "source_generated_at": "2026-05-14 18:33:16",
-  "market_environment_updated_at": "2026-05-14 18:33:16",
+  "generated_at": "2026-05-14 18:33:32",
+  "source_generated_at": "2026-05-14 18:33:32",
+  "market_environment_updated_at": "2026-05-14 18:33:32",
   "initial_capital": "100.00万",
-  "total_pnl": "-2946.00",
-  "total_pnl_pct": "-0.29%",
-  "equity": "99.71万",
+  "total_pnl": "-3002.00",
+  "total_pnl_pct": "-0.30%",
+  "equity": "99.70万",
   "cash": "本地模型负责同步",
   "market_value": "2.32万",
-  "floating_pnl": "1804.00",
+  "floating_pnl": "1748.00",
   "realized_pnl": "-4750.00",
   "paper_ret_pct": "模拟仓",
   "positions_count": 2,
@@ -32,10 +32,10 @@
       "name": "中科仪",
       "qty": "200",
       "cost": "107.180",
-      "price": "116.20",
+      "price": "115.92",
       "market_value": "2.32万",
-      "pnl_amount": "1804.00",
-      "pnl_pct": "8.42%",
+      "pnl_amount": "1748.00",
+      "pnl_pct": "8.15%",
       "state": "ok"
     },
     {
@@ -43,10 +43,10 @@
       "name": "瑞斯康达",
       "qty": "--",
       "cost": "17.576",
-      "price": "17.10",
+      "price": "17.12",
       "market_value": "--",
       "pnl_amount": "--",
-      "pnl_pct": "-2.71%",
+      "pnl_pct": "-2.59%",
       "state": "defense"
     }
   ],
@@ -243,13 +243,13 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 1.0,
     "fear_greed": {
-      "score": 50,
+      "score": 49,
       "label": "中性",
       "components": {
         "breadth": 54,
         "market_return": 60,
         "limit_up_down": 70,
-        "candidate_mood": 32,
+        "candidate_mood": 30,
         "mainline_heat": 80,
         "news_sentiment": 70
       },
@@ -270,9 +270,9 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.21,
+      "avg_pct": -1.05,
       "strong_count": 0,
-      "weak_count": 2
+      "weak_count": 3
     },
     "mainlines": {
       "available": true,
@@ -460,7 +460,7 @@
       ],
       "message": "loaded 20 news items"
     },
-    "summary": "V151.3 market=NEUTRAL, fear_greed=50, breadth_up=53.87, budget_x=1.0; news=positive"
+    "summary": "V151.3 market=NEUTRAL, fear_greed=49, breadth_up=53.87, budget_x=1.0; news=positive"
   },
   "mainline_monitor_pool": [
     {
@@ -481,10 +481,10 @@
       "industry": "航空装备Ⅱ",
       "taxonomy_keyword_hits": "军工;商业航天;无人机;航天;航空;航空装备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 26.99,
-      "rt_pct": 8.35,
+      "rt_price": 26.7,
+      "rt_pct": 7.19,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / 航空航天军工 / 航天卫星"
     },
     {
@@ -505,10 +505,10 @@
       "industry": "通用设备",
       "taxonomy_keyword_hits": "CPO;先进封装;光通信;半导体;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1106.11,
-      "rt_pct": 1.01,
+      "rt_price": 1105.99,
+      "rt_pct": 1.0,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -529,10 +529,10 @@
       "industry": "消费电子",
       "taxonomy_keyword_hits": "AI;CPO;云计算;光通信;存储;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 286.01,
-      "rt_pct": -0.7,
+      "rt_price": 289.32,
+      "rt_pct": 0.45,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -553,10 +553,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;数据中心;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 189.48,
-      "rt_pct": 3.81,
+      "rt_price": 189.92,
+      "rt_pct": 4.05,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -577,10 +577,10 @@
       "industry": "计算机设备",
       "taxonomy_keyword_hits": "半导体;存储;数据中心;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 663.14,
-      "rt_pct": 5.09,
+      "rt_price": 660.6,
+      "rt_pct": 4.69,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -601,10 +601,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 97.61,
-      "rt_pct": 1.13,
+      "rt_price": 98.0,
+      "rt_pct": 1.53,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / 新能源电池 / 电池材料"
     },
     {
@@ -625,10 +625,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;半导体;存储;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 748.9,
-      "rt_pct": 3.78,
+      "rt_price": 748.88,
+      "rt_pct": 3.77,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -649,10 +649,10 @@
       "industry": "计算机设备",
       "taxonomy_keyword_hits": "AI;存储;数据中心;算力;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 67.33,
-      "rt_pct": 0.54,
+      "rt_price": 67.35,
+      "rt_pct": 0.57,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -673,10 +673,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;先进封装;半导体;存储;数据中心;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 326.98,
-      "rt_pct": 1.12,
+      "rt_price": 325.8,
+      "rt_pct": 0.76,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -697,10 +697,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1627.33,
-      "rt_pct": -0.47,
+      "rt_price": 1626.86,
+      "rt_pct": -0.5,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -721,10 +721,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;液冷;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 199.8,
-      "rt_pct": -1.96,
+      "rt_price": 201.56,
+      "rt_pct": -1.1,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -745,10 +745,10 @@
       "industry": "自动化设备",
       "taxonomy_keyword_hits": "AI;半导体;存储;液冷;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 121.28,
-      "rt_pct": 5.92,
+      "rt_price": 121.03,
+      "rt_pct": 5.7,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -769,10 +769,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;数据中心;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 54.25,
-      "rt_pct": 0.48,
+      "rt_price": 54.43,
+      "rt_pct": 0.81,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -796,7 +796,7 @@
       "rt_price": 16.33,
       "rt_pct": 2.06,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -817,10 +817,10 @@
       "industry": "金属新材料",
       "taxonomy_keyword_hits": "TOPCon;光伏;新能源;新能源车;电池",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 69.9,
-      "rt_pct": 0.72,
+      "rt_price": 70.01,
+      "rt_pct": 0.88,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备"
     },
     {
@@ -841,10 +841,10 @@
       "industry": "航空装备Ⅱ",
       "taxonomy_keyword_hits": "eVTOL;无人机;航空;航空装备;飞行汽车",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 116.6,
-      "rt_pct": 0.32,
+      "rt_price": 117.18,
+      "rt_pct": 0.82,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 航空航天军工 / 低空/无人机"
     },
     {
@@ -865,10 +865,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "HJT;光伏;电池",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 54.54,
-      "rt_pct": 0.41,
+      "rt_price": 54.91,
+      "rt_pct": 1.09,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备"
     },
     {
@@ -889,10 +889,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;数据中心;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 454.02,
-      "rt_pct": 1.32,
+      "rt_price": 455.55,
+      "rt_pct": 1.66,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -913,10 +913,10 @@
       "industry": "能源金属",
       "taxonomy_keyword_hits": "储能;动力电池;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 79.27,
-      "rt_pct": -0.89,
+      "rt_price": 79.4,
+      "rt_pct": -0.73,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -937,10 +937,10 @@
       "industry": "光伏设备",
       "taxonomy_keyword_hits": "HJT;TOPCon;储能;光伏;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 4.94,
-      "rt_pct": -4.45,
+      "rt_price": 4.87,
+      "rt_pct": -5.8,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备"
     },
     {
@@ -961,10 +961,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "动力电池;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 58.15,
-      "rt_pct": 4.76,
+      "rt_price": 58.22,
+      "rt_pct": 4.88,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -985,10 +985,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 396.55,
-      "rt_pct": -2.01,
+      "rt_price": 397.58,
+      "rt_pct": -1.76,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -1009,10 +1009,10 @@
       "industry": "能源金属",
       "taxonomy_keyword_hits": "储能;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 93.41,
-      "rt_pct": 0.4,
+      "rt_price": 93.48,
+      "rt_pct": 0.47,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -1033,10 +1033,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;先进封装;半导体;数据中心;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1263.0,
-      "rt_pct": 0.19,
+      "rt_price": 1263.04,
+      "rt_pct": 0.2,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -1057,10 +1057,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 292.08,
-      "rt_pct": 1.9,
+      "rt_price": 290.08,
+      "rt_pct": 1.2,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -1081,10 +1081,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;半导体;数据中心;材料;液冷;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 44.65,
-      "rt_pct": 1.25,
+      "rt_price": 44.51,
+      "rt_pct": 0.93,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -1105,10 +1105,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光通信;算力;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1087.1,
-      "rt_pct": 0.84,
+      "rt_price": 1087.0,
+      "rt_pct": 0.83,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -1129,10 +1129,10 @@
       "industry": "消费电子",
       "taxonomy_keyword_hits": "云计算;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 174.7,
-      "rt_pct": 2.52,
+      "rt_price": 176.5,
+      "rt_pct": 3.58,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 算力基础设施"
     },
     {
@@ -1153,10 +1153,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光通信;算力;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 618.01,
-      "rt_pct": 0.02,
+      "rt_price": 619.0,
+      "rt_pct": 0.18,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -1180,7 +1180,7 @@
       "rt_price": 80.03,
       "rt_pct": -0.4,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星"
     },
     {
@@ -1201,10 +1201,10 @@
       "industry": "贵金属",
       "taxonomy_keyword_hits": "光伏;智能电网;电力;电网;绿色电力",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 51.46,
-      "rt_pct": -2.91,
+      "rt_price": 51.58,
+      "rt_pct": -2.68,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 电力电网设备 / 电力运营"
     },
     {
@@ -1225,10 +1225,10 @@
       "industry": "元件",
       "taxonomy_keyword_hits": "CPO;PCB;元件;光通信;存储;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 86.16,
-      "rt_pct": 0.7,
+      "rt_price": 86.86,
+      "rt_pct": 1.52,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO"
     },
     {
@@ -1249,10 +1249,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;光伏;固态电池;新能源;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 28.9,
-      "rt_pct": -7.73,
+      "rt_price": 29.12,
+      "rt_pct": -7.02,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -1273,10 +1273,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;动力电池;固态电池;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 96.56,
-      "rt_pct": 2.34,
+      "rt_price": 96.89,
+      "rt_pct": 2.69,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -1297,10 +1297,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;电池;铜箔;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 81.95,
-      "rt_pct": -4.58,
+      "rt_price": 81.38,
+      "rt_pct": -5.24,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -1321,10 +1321,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;固态电池;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 149.53,
-      "rt_pct": 1.36,
+      "rt_price": 149.99,
+      "rt_pct": 1.67,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -1345,10 +1345,10 @@
       "industry": "军工电子Ⅱ",
       "taxonomy_keyword_hits": "军工;军工电子;卫星;商业航天;无人机;航天",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 139.52,
-      "rt_pct": -0.34,
+      "rt_price": 139.19,
+      "rt_pct": -0.57,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星"
     },
     {
@@ -1369,10 +1369,10 @@
       "industry": "自动化设备",
       "taxonomy_keyword_hits": "CPO;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 404.0,
-      "rt_pct": 8.02,
+      "rt_price": 408.03,
+      "rt_pct": 9.1,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造"
     },
     {
@@ -1393,10 +1393,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 100.06,
-      "rt_pct": 2.73,
+      "rt_price": 100.51,
+      "rt_pct": 3.19,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料"
     },
     {
@@ -1417,10 +1417,10 @@
       "industry": "电网设备",
       "taxonomy_keyword_hits": "储能;光伏;智能电网;核电;水电;特高压;电网;电网设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 21.99,
-      "rt_pct": 1.66,
+      "rt_price": 21.97,
+      "rt_pct": 1.57,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 18:33:16",
+      "quote_updated_at": "2026-05-14 18:33:31",
       "monitor_reason": "强候选 / 电力电网设备 / 变压器/输变电"
     }
   ],
