@@ -1,7 +1,7 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 17:07:10",
-  "source_generated_at": "2026-05-14 17:07:10",
+  "generated_at": "2026-05-14 17:07:13",
+  "source_generated_at": "2026-05-14 17:07:13",
   "initial_capital": "100.00万",
   "total_pnl": "-2976.00",
   "total_pnl_pct": "-0.30%",
@@ -357,6 +357,8 @@
       "sentiment": "neutral",
       "score": 2,
       "items": [
+        "[sina_7x24_public] 【中金公司：建议重视钠电板块投资机会】中金公司认为钠电2026年正式迈入0—1规模化量产阶段，中长期在能源安全叠加经济性提升的驱动下产业化进程有望加速，建议重视",
+        "[sina_7x24_public] 【印度采取更多措施限制黄金进口】印度进一步收紧黄金进口规定。政府通知称，单笔不超过100公斤的黄金进口需要事先获得政府许可，后续进口只有在完成50%出口后才会获",
         "[sina_7x24_public] 【马修·威尔当选所罗门群岛新总理】所罗门群岛总督大卫·蒂瓦·卡普15日宣布，所罗门群岛议会当天选举马修·威尔为该国新总理。（新华社）",
         "[sina_7x24_public] 美国2年期国债收益率升至4.027%以上，创2025年6月以来新高。",
         "[sina_7x24_public] 【利比亚发生大规模球迷骚乱 总理府遭纵火】据利比亚媒体14日报道，利首都的黎波里附近当晚发生大规模球迷骚乱，利总理府部分建筑遭纵火。稍早时候，的黎波里东南部方向",
@@ -366,9 +368,7 @@
         "[sina_7x24_public] 日经225指数上午开盘报62878.71点，涨幅0.35%。",
         "[sina_7x24_public] 日本央行数据显示，4月份以日元计价的进口价格指数同比涨幅创2022年12月以来最快增速。",
         "[sina_7x24_public] 此次出售将使Kakao对Dunamu的持股比例降至4.03%。",
-        "[sina_7x24_public] Kakao将以1.003万亿韩元的价格向Hana Financial出售其持有的加密货币交易所运营商Dunamu的6.55%股份。",
-        "[sina_7x24_public] 【苹果 iPhone 17 Pro系列全线下调1000元】苹果手机15日零点突然官宣降价，iPhone 17 Pro系列全线下调1000元。一苹果专卖店工作人员",
-        "[sina_7x24_public] 日本10年期国债期货早盘一度下跌32个基点，至128.37。"
+        "[sina_7x24_public] Kakao将以1.003万亿韩元的价格向Hana Financial出售其持有的加密货币交易所运营商Dunamu的6.55%股份。"
       ],
       "raw_count": 20,
       "statuses": [
@@ -383,7 +383,23 @@
           "message": "20 items"
         }
       ],
-      "mainline_impacts": [],
+      "mainline_impacts": [
+        {
+          "mainline": "有色黄金小金属",
+          "impact_score": 2,
+          "label": "中性扰动",
+          "matched_keywords": [
+            "黄金"
+          ],
+          "examples": [
+            {
+              "time": "2026-05-15 08:05:34",
+              "title": "【印度采取更多措施限制黄金进口】印度进一步收紧黄金进口规定。政府通知称，单笔不超过100公斤的黄金进口需要事先获得政府许可，后续进口只有在完成50%出口后才会获",
+              "source": "sina_7x24_public"
+            }
+          ]
+        }
+      ],
       "message": "loaded 20 news items"
     },
     "summary": "V151.3 market=NEUTRAL, fear_greed=44, breadth_up=53.87, budget_x=1.0; news=neutral"
