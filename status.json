@@ -1,15 +1,15 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 23:28:47",
-  "source_generated_at": "2026-05-14 23:28:47",
-  "market_environment_updated_at": "2026-05-14 23:28:47",
+  "generated_at": "2026-05-14 23:29:06",
+  "source_generated_at": "2026-05-14 23:29:06",
+  "market_environment_updated_at": "2026-05-14 23:29:06",
   "initial_capital": "100.00万",
-  "total_pnl": "-3022.00",
+  "total_pnl": "-3008.00",
   "total_pnl_pct": "-0.30%",
   "equity": "99.70万",
   "cash": "本地模型负责同步",
-  "market_value": "4.09万",
-  "floating_pnl": "930.00",
+  "market_value": "4.10万",
+  "floating_pnl": "944.00",
   "realized_pnl": "-3952.00",
   "paper_ret_pct": "模拟仓",
   "positions_count": 2,
@@ -51,10 +51,10 @@
       "name": "中科仪",
       "qty": "200",
       "cost": "107.180",
-      "price": "111.95",
+      "price": "111.90",
       "market_value": "2.24万",
-      "pnl_amount": "954.00",
-      "pnl_pct": "4.45%",
+      "pnl_amount": "944.00",
+      "pnl_pct": "4.40%",
       "state": "ok"
     },
     {
@@ -62,11 +62,11 @@
       "name": "海昌新材",
       "qty": "600",
       "cost": "30.970",
-      "price": "30.93",
+      "price": "30.97",
       "market_value": "1.86万",
-      "pnl_amount": "-24.00",
-      "pnl_pct": "-0.13%",
-      "state": "below_cost"
+      "pnl_amount": "0.00",
+      "pnl_pct": "0.00%",
+      "state": "ok"
     }
   ],
   "position_scheduler": {
@@ -91,15 +91,15 @@
       {
         "code": "300885",
         "name": "海昌新材",
-        "stage": "弱势降仓",
-        "score": 34.1,
+        "stage": "震荡观察",
+        "score": 42.1,
         "current_pct": 1.86,
-        "target_pct": 5.0,
+        "target_pct": 1.86,
         "current_qty": 600,
-        "target_qty": 1600,
-        "delta_qty": 1000,
-        "action": "模拟加仓",
-        "reason": "低于成本且主升确认不足"
+        "target_qty": 600,
+        "delta_qty": 0,
+        "action": "维持观察",
+        "reason": "历史反推显示震荡观察桶仍有较多赢家，已有持仓维持观察仓，不作硬清零"
       }
     ],
     "candidates": [
@@ -291,7 +291,7 @@
         "strong_down=9.38",
         "limit=69.0/1.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-0.77"
+        "candidate_avg=-0.72"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -308,11 +308,11 @@
       "limit_up_count": 69,
       "limit_down_count": 1,
       "stale": true,
-      "age_hours": 169.13
+      "age_hours": 169.14
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -0.77,
+      "avg_pct": -0.72,
       "strong_count": 3,
       "weak_count": 1
     },
@@ -465,7 +465,7 @@
   "hidden_flow_proxy": {
     "enabled": true,
     "version": "V151.9",
-    "generated_at": "2026-05-14 23:28:47",
+    "generated_at": "2026-05-14 23:29:06",
     "diagnostic_only": true,
     "method": "free public money-flow fields plus OHLC/volume absorption proxy; not an execution gate",
     "source_priority": [
@@ -494,7 +494,7 @@
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
-        "pct": 3.86,
+        "pct": 4.0,
         "diagnostic_only": true
       },
       {
@@ -526,7 +526,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.43%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.54%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -536,7 +536,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.43,
+        "pct": -1.54,
         "diagnostic_only": true
       },
       {
@@ -547,7 +547,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.75%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.76%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -557,7 +557,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.75,
+        "pct": -4.76,
         "diagnostic_only": true
       },
       {
@@ -568,7 +568,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -0.94%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -0.98%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -578,7 +578,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.94,
+        "pct": -0.98,
         "diagnostic_only": true
       },
       {
@@ -631,7 +631,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 4.56%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 4.38%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -641,7 +641,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 4.56,
+        "pct": 4.38,
         "diagnostic_only": true
       },
       {
@@ -652,7 +652,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.59%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.60%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -662,7 +662,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.59,
+        "pct": -5.6,
         "diagnostic_only": true
       },
       {
@@ -673,7 +673,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.39%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.34%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -683,7 +683,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.39,
+        "pct": -4.34,
         "diagnostic_only": true
       },
       {
@@ -694,7 +694,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 3.34%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 3.18%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -704,7 +704,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.34,
+        "pct": 3.18,
         "diagnostic_only": true
       },
       {
@@ -715,7 +715,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.65%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.71%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -725,7 +725,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.65,
+        "pct": -2.71,
         "diagnostic_only": true
       },
       {
@@ -757,7 +757,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -3.94%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -3.99%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -767,7 +767,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.94,
+        "pct": -3.99,
         "diagnostic_only": true
       },
       {
@@ -799,7 +799,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.57%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.63%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -809,7 +809,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.57,
+        "pct": -5.63,
         "diagnostic_only": true
       },
       {
@@ -820,7 +820,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.89%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.91%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -830,7 +830,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.89,
+        "pct": -2.91,
         "diagnostic_only": true
       },
       {
@@ -841,7 +841,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.00%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.05%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -851,7 +851,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -1.05,
         "diagnostic_only": true
       },
       {
@@ -862,7 +862,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.17%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.13%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -872,7 +872,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.17,
+        "pct": -5.13,
         "diagnostic_only": true
       },
       {
@@ -883,7 +883,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.00%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.06%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -893,7 +893,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -1.06,
         "diagnostic_only": true
       },
       {
@@ -904,7 +904,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.37%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.45%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -914,7 +914,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.37,
+        "pct": 0.45,
         "diagnostic_only": true
       },
       {
@@ -946,7 +946,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.11%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.07%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -956,7 +956,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.11,
+        "pct": 0.07,
         "diagnostic_only": true
       },
       {
@@ -967,7 +967,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -6.35%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -6.29%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -977,7 +977,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.35,
+        "pct": -6.29,
         "diagnostic_only": true
       },
       {
@@ -988,7 +988,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.44%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.45%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -998,7 +998,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.44,
+        "pct": -2.45,
         "diagnostic_only": true
       },
       {
@@ -1030,7 +1030,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 3.66%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 3.64%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1040,7 +1040,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.66,
+        "pct": 3.64,
         "diagnostic_only": true
       },
       {
@@ -1072,7 +1072,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.50%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.55%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1082,7 +1082,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.5,
+        "pct": -1.55,
         "diagnostic_only": true
       },
       {
@@ -1093,7 +1093,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.77%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.66%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1103,7 +1103,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.77,
+        "pct": -5.66,
         "diagnostic_only": true
       },
       {
@@ -1114,7 +1114,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -7.26%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -7.23%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1124,7 +1124,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -7.26,
+        "pct": -7.23,
         "diagnostic_only": true
       },
       {
@@ -1135,7 +1135,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -3.43%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -3.48%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1145,7 +1145,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.43,
+        "pct": -3.48,
         "diagnostic_only": true
       },
       {
@@ -1177,7 +1177,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.41%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.43%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1187,7 +1187,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.41,
+        "pct": -2.43,
         "diagnostic_only": true
       },
       {
@@ -1198,7 +1198,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.79%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.85%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1208,7 +1208,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.79,
+        "pct": -2.85,
         "diagnostic_only": true
       },
       {
@@ -1219,7 +1219,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.53%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.49%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1229,7 +1229,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.53,
+        "pct": -5.49,
         "diagnostic_only": true
       },
       {
@@ -1261,7 +1261,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -9.96%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -9.99%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1271,7 +1271,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -9.96,
+        "pct": -9.99,
         "diagnostic_only": true
       },
       {
@@ -1282,7 +1282,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.73%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.69%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1292,7 +1292,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.73,
+        "pct": 0.69,
         "diagnostic_only": true
       },
       {
@@ -1303,7 +1303,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.21%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.17%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1313,7 +1313,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.21,
+        "pct": 0.17,
         "diagnostic_only": true
       },
       {
@@ -1324,7 +1324,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.07%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.09%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1334,7 +1334,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.07,
+        "pct": -4.09,
         "diagnostic_only": true
       },
       {
@@ -1345,7 +1345,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 5.82%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 5.61%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1355,7 +1355,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 5.82,
+        "pct": 5.61,
         "diagnostic_only": true
       },
       {
@@ -1366,7 +1366,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 3.03%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 3.05%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1376,7 +1376,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.03,
+        "pct": 3.05,
         "diagnostic_only": true
       },
       {
@@ -1387,7 +1387,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -0.79%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -0.74%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1397,7 +1397,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.79,
+        "pct": -0.74,
         "diagnostic_only": true
       },
       {
@@ -1429,7 +1429,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.40%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.39%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1439,7 +1439,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.4,
+        "pct": -1.39,
         "diagnostic_only": true
       },
       {
@@ -1450,7 +1450,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.86%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.80%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1460,7 +1460,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.86,
+        "pct": -5.8,
         "diagnostic_only": true
       },
       {
@@ -1471,7 +1471,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.17%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.22%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1481,7 +1481,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.17,
+        "pct": -2.22,
         "diagnostic_only": true
       },
       {
@@ -1492,7 +1492,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.71%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.66%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1502,7 +1502,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.71,
+        "pct": -2.66,
         "diagnostic_only": true
       },
       {
@@ -1513,7 +1513,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 4.76%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 4.72%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1523,7 +1523,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 4.76,
+        "pct": 4.72,
         "diagnostic_only": true
       },
       {
@@ -1534,7 +1534,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 1.38%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 1.34%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1544,7 +1544,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.38,
+        "pct": 1.34,
         "diagnostic_only": true
       },
       {
@@ -1576,7 +1576,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -0.54%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -0.61%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1586,7 +1586,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.54,
+        "pct": -0.61,
         "diagnostic_only": true
       },
       {
@@ -1618,7 +1618,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.54%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.51%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1628,7 +1628,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.54,
+        "pct": -2.51,
         "diagnostic_only": true
       },
       {
@@ -1639,7 +1639,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -8.81%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -8.92%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1649,7 +1649,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -8.81,
+        "pct": -8.92,
         "diagnostic_only": true
       },
       {
@@ -1723,7 +1723,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -6.61%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -6.35%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1733,7 +1733,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.61,
+        "pct": -6.35,
         "diagnostic_only": true
       },
       {
@@ -1744,7 +1744,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.29%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.35%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1754,7 +1754,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.29,
+        "pct": -2.35,
         "diagnostic_only": true
       },
       {
@@ -1765,7 +1765,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.55%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.56%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1775,7 +1775,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.55,
+        "pct": -4.56,
         "diagnostic_only": true
       },
       {
@@ -1807,7 +1807,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -3.09%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -3.12%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1817,7 +1817,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.09,
+        "pct": -3.12,
         "diagnostic_only": true
       },
       {
@@ -1828,7 +1828,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.61%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.66%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1838,7 +1838,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.61,
+        "pct": -5.66,
         "diagnostic_only": true
       },
       {
@@ -1849,7 +1849,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 1.87%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 1.89%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -1859,7 +1859,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.87,
+        "pct": 1.89,
         "diagnostic_only": true
       },
       {
@@ -1880,7 +1880,7 @@
         "outer_ratio_pct": 46.46,
         "vwap_gap_pct": -0.05,
         "amount_ratio": null,
-        "pct": -3.19,
+        "pct": -3.23,
         "diagnostic_only": true
       },
       {
@@ -1901,7 +1901,7 @@
         "outer_ratio_pct": 53.54,
         "vwap_gap_pct": 0.14,
         "amount_ratio": null,
-        "pct": 0.43,
+        "pct": 0.47,
         "diagnostic_only": true
       },
       {
@@ -1924,7 +1924,7 @@
         "outer_ratio_pct": 44.65,
         "vwap_gap_pct": -1.89,
         "amount_ratio": null,
-        "pct": 5.04,
+        "pct": 5.44,
         "diagnostic_only": true
       },
       {
@@ -1945,7 +1945,7 @@
         "outer_ratio_pct": 44.66,
         "vwap_gap_pct": -1.48,
         "amount_ratio": null,
-        "pct": -3.56,
+        "pct": -3.62,
         "diagnostic_only": true
       },
       {
@@ -1966,7 +1966,7 @@
         "outer_ratio_pct": 48.11,
         "vwap_gap_pct": -0.95,
         "amount_ratio": null,
-        "pct": -1.6,
+        "pct": -1.63,
         "diagnostic_only": true
       },
       {
@@ -1987,7 +1987,7 @@
         "outer_ratio_pct": 47.19,
         "vwap_gap_pct": -1.36,
         "amount_ratio": null,
-        "pct": -4.9,
+        "pct": -4.98,
         "diagnostic_only": true
       },
       {
@@ -2008,7 +2008,7 @@
         "outer_ratio_pct": 48.27,
         "vwap_gap_pct": -2.5,
         "amount_ratio": null,
-        "pct": -2.98,
+        "pct": -2.92,
         "diagnostic_only": true
       },
       {
@@ -2029,7 +2029,7 @@
         "outer_ratio_pct": 47.22,
         "vwap_gap_pct": -1.12,
         "amount_ratio": null,
-        "pct": -4.26,
+        "pct": -4.21,
         "diagnostic_only": true
       },
       {
@@ -2050,7 +2050,7 @@
         "outer_ratio_pct": 39.52,
         "vwap_gap_pct": -1.29,
         "amount_ratio": null,
-        "pct": -6.12,
+        "pct": -6.23,
         "diagnostic_only": true
       },
       {
@@ -2071,7 +2071,7 @@
         "outer_ratio_pct": 48.51,
         "vwap_gap_pct": -4.07,
         "amount_ratio": null,
-        "pct": -3.12,
+        "pct": -2.75,
         "diagnostic_only": true
       },
       {
@@ -2094,7 +2094,7 @@
         "outer_ratio_pct": 48.43,
         "vwap_gap_pct": -3.56,
         "amount_ratio": null,
-        "pct": 5.65,
+        "pct": 5.71,
         "diagnostic_only": true
       },
       {
@@ -2115,7 +2115,7 @@
         "outer_ratio_pct": 41.19,
         "vwap_gap_pct": -2.11,
         "amount_ratio": null,
-        "pct": -1.34,
+        "pct": -1.21,
         "diagnostic_only": true
       }
     ],
@@ -2138,7 +2138,7 @@
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
-        "pct": 3.86,
+        "pct": 4.0,
         "diagnostic_only": true
       }
     ],
@@ -2161,7 +2161,7 @@
         "outer_ratio_pct": 53.54,
         "vwap_gap_pct": 0.14,
         "amount_ratio": null,
-        "pct": 0.43,
+        "pct": 0.47,
         "diagnostic_only": true
       },
       {
@@ -2184,7 +2184,7 @@
         "outer_ratio_pct": 44.65,
         "vwap_gap_pct": -1.89,
         "amount_ratio": null,
-        "pct": 5.04,
+        "pct": 5.44,
         "diagnostic_only": true
       },
       {
@@ -2205,7 +2205,7 @@
         "outer_ratio_pct": 44.66,
         "vwap_gap_pct": -1.48,
         "amount_ratio": null,
-        "pct": -3.56,
+        "pct": -3.62,
         "diagnostic_only": true
       },
       {
@@ -2226,7 +2226,7 @@
         "outer_ratio_pct": 48.11,
         "vwap_gap_pct": -0.95,
         "amount_ratio": null,
-        "pct": -1.6,
+        "pct": -1.63,
         "diagnostic_only": true
       },
       {
@@ -2247,7 +2247,7 @@
         "outer_ratio_pct": 47.19,
         "vwap_gap_pct": -1.36,
         "amount_ratio": null,
-        "pct": -4.9,
+        "pct": -4.98,
         "diagnostic_only": true
       },
       {
@@ -2268,7 +2268,7 @@
         "outer_ratio_pct": 48.27,
         "vwap_gap_pct": -2.5,
         "amount_ratio": null,
-        "pct": -2.98,
+        "pct": -2.92,
         "diagnostic_only": true
       },
       {
@@ -2289,7 +2289,7 @@
         "outer_ratio_pct": 47.22,
         "vwap_gap_pct": -1.12,
         "amount_ratio": null,
-        "pct": -4.26,
+        "pct": -4.21,
         "diagnostic_only": true
       },
       {
@@ -2310,7 +2310,7 @@
         "outer_ratio_pct": 39.52,
         "vwap_gap_pct": -1.29,
         "amount_ratio": null,
-        "pct": -6.12,
+        "pct": -6.23,
         "diagnostic_only": true
       },
       {
@@ -2331,7 +2331,7 @@
         "outer_ratio_pct": 48.51,
         "vwap_gap_pct": -4.07,
         "amount_ratio": null,
-        "pct": -3.12,
+        "pct": -2.75,
         "diagnostic_only": true
       },
       {
@@ -2354,7 +2354,7 @@
         "outer_ratio_pct": 48.43,
         "vwap_gap_pct": -3.56,
         "amount_ratio": null,
-        "pct": 5.65,
+        "pct": 5.71,
         "diagnostic_only": true
       },
       {
@@ -2375,7 +2375,7 @@
         "outer_ratio_pct": 41.19,
         "vwap_gap_pct": -2.11,
         "amount_ratio": null,
-        "pct": -1.34,
+        "pct": -1.21,
         "diagnostic_only": true
       }
     ],
@@ -2398,7 +2398,7 @@
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
-        "pct": 3.86,
+        "pct": 4.0,
         "diagnostic_only": true
       },
       "002181": {
@@ -2430,7 +2430,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.43%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.54%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2440,7 +2440,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.43,
+        "pct": -1.54,
         "diagnostic_only": true
       },
       "688256": {
@@ -2451,7 +2451,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.75%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.76%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2461,7 +2461,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.75,
+        "pct": -4.76,
         "diagnostic_only": true
       },
       "920186": {
@@ -2472,7 +2472,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -0.94%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -0.98%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2482,7 +2482,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.94,
+        "pct": -0.98,
         "diagnostic_only": true
       },
       "920249": {
@@ -2535,7 +2535,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 4.56%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 4.38%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2545,7 +2545,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 4.56,
+        "pct": 4.38,
         "diagnostic_only": true
       },
       "300857": {
@@ -2556,7 +2556,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.59%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.60%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2566,7 +2566,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.59,
+        "pct": -5.6,
         "diagnostic_only": true
       },
       "688313": {
@@ -2577,7 +2577,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.39%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.34%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2587,7 +2587,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.39,
+        "pct": -4.34,
         "diagnostic_only": true
       },
       "301666": {
@@ -2598,7 +2598,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 3.34%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 3.18%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2608,7 +2608,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.34,
+        "pct": 3.18,
         "diagnostic_only": true
       },
       "300390": {
@@ -2619,7 +2619,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.65%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.71%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2629,7 +2629,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.65,
+        "pct": -2.71,
         "diagnostic_only": true
       },
       "001309": {
@@ -2661,7 +2661,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -3.94%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -3.99%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2671,7 +2671,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.94,
+        "pct": -3.99,
         "diagnostic_only": true
       },
       "688525": {
@@ -2703,7 +2703,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.57%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.63%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2713,7 +2713,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.57,
+        "pct": -5.63,
         "diagnostic_only": true
       },
       "002281": {
@@ -2724,7 +2724,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.89%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.91%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2734,7 +2734,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.89,
+        "pct": -2.91,
         "diagnostic_only": true
       },
       "002975": {
@@ -2745,7 +2745,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.00%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.05%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2755,7 +2755,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -1.05,
         "diagnostic_only": true
       },
       "600105": {
@@ -2766,7 +2766,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.17%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.13%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2776,7 +2776,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.17,
+        "pct": -5.13,
         "diagnostic_only": true
       },
       "300283": {
@@ -2787,7 +2787,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.00%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.06%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2797,7 +2797,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -1.06,
         "diagnostic_only": true
       },
       "603045": {
@@ -2808,7 +2808,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.37%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.45%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2818,7 +2818,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.37,
+        "pct": 0.45,
         "diagnostic_only": true
       },
       "301696": {
@@ -2850,7 +2850,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.11%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.07%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2860,7 +2860,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.11,
+        "pct": 0.07,
         "diagnostic_only": true
       },
       "688048": {
@@ -2871,7 +2871,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -6.35%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -6.29%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2881,7 +2881,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.35,
+        "pct": -6.29,
         "diagnostic_only": true
       },
       "002460": {
@@ -2892,7 +2892,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.44%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.45%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2902,7 +2902,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.44,
+        "pct": -2.45,
         "diagnostic_only": true
       },
       "002309": {
@@ -2934,7 +2934,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 3.66%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 3.64%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2944,7 +2944,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.66,
+        "pct": 3.64,
         "diagnostic_only": true
       },
       "601869": {
@@ -2976,7 +2976,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.50%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.55%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -2986,7 +2986,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.5,
+        "pct": -1.55,
         "diagnostic_only": true
       },
       "300620": {
@@ -2997,7 +2997,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.77%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.66%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3007,7 +3007,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.77,
+        "pct": -5.66,
         "diagnostic_only": true
       },
       "600522": {
@@ -3018,7 +3018,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -7.26%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -7.23%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3028,7 +3028,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -7.26,
+        "pct": -7.23,
         "diagnostic_only": true
       },
       "300308": {
@@ -3039,7 +3039,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -3.43%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -3.48%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3049,7 +3049,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.43,
+        "pct": -3.48,
         "diagnostic_only": true
       },
       "603629": {
@@ -3081,7 +3081,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.41%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.43%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3091,7 +3091,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.41,
+        "pct": -2.43,
         "diagnostic_only": true
       },
       "688818": {
@@ -3102,7 +3102,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.79%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.85%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3112,7 +3112,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.79,
+        "pct": -2.85,
         "diagnostic_only": true
       },
       "300139": {
@@ -3123,7 +3123,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.53%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.49%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3133,7 +3133,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.53,
+        "pct": -5.49,
         "diagnostic_only": true
       },
       "603459": {
@@ -3165,7 +3165,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -9.96%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -9.99%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3175,7 +3175,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -9.96,
+        "pct": -9.99,
         "diagnostic_only": true
       },
       "301358": {
@@ -3186,7 +3186,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.73%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.69%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3196,7 +3196,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.73,
+        "pct": 0.69,
         "diagnostic_only": true
       },
       "688275": {
@@ -3207,7 +3207,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.21%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 0.17%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3217,7 +3217,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.21,
+        "pct": 0.17,
         "diagnostic_only": true
       },
       "688002": {
@@ -3228,7 +3228,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.07%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.09%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3238,7 +3238,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.07,
+        "pct": -4.09,
         "diagnostic_only": true
       },
       "688025": {
@@ -3249,7 +3249,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 5.82%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 5.61%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3259,7 +3259,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 5.82,
+        "pct": 5.61,
         "diagnostic_only": true
       },
       "603026": {
@@ -3270,7 +3270,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 3.03%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 3.05%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3280,7 +3280,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.03,
+        "pct": 3.05,
         "diagnostic_only": true
       },
       "600869": {
@@ -3291,7 +3291,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -0.79%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -0.74%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3301,7 +3301,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.79,
+        "pct": -0.74,
         "diagnostic_only": true
       },
       "300696": {
@@ -3333,7 +3333,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.40%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -1.39%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3343,7 +3343,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.4,
+        "pct": -1.39,
         "diagnostic_only": true
       },
       "002008": {
@@ -3354,7 +3354,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.86%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.80%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3364,7 +3364,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.86,
+        "pct": -5.8,
         "diagnostic_only": true
       },
       "603083": {
@@ -3375,7 +3375,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.17%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.22%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3385,7 +3385,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.17,
+        "pct": -2.22,
         "diagnostic_only": true
       },
       "688416": {
@@ -3396,7 +3396,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.71%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.66%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3406,7 +3406,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.71,
+        "pct": -2.66,
         "diagnostic_only": true
       },
       "603738": {
@@ -3417,7 +3417,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 4.76%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 4.72%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3427,7 +3427,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 4.76,
+        "pct": 4.72,
         "diagnostic_only": true
       },
       "603986": {
@@ -3438,7 +3438,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 1.38%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 1.34%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3448,7 +3448,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.38,
+        "pct": 1.34,
         "diagnostic_only": true
       },
       "002407": {
@@ -3480,7 +3480,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -0.54%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -0.61%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3490,7 +3490,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.54,
+        "pct": -0.61,
         "diagnostic_only": true
       },
       "301680": {
@@ -3522,7 +3522,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.54%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.51%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3532,7 +3532,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.54,
+        "pct": -2.51,
         "diagnostic_only": true
       },
       "600498": {
@@ -3543,7 +3543,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -8.81%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -8.92%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3553,7 +3553,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -8.81,
+        "pct": -8.92,
         "diagnostic_only": true
       },
       "688811": {
@@ -3627,7 +3627,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -6.61%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -6.35%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3637,7 +3637,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.61,
+        "pct": -6.35,
         "diagnostic_only": true
       },
       "002466": {
@@ -3648,7 +3648,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -2.29%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -2.35%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3658,7 +3658,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.29,
+        "pct": -2.35,
         "diagnostic_only": true
       },
       "301338": {
@@ -3669,7 +3669,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -4.55%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -4.56%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3679,7 +3679,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.55,
+        "pct": -4.56,
         "diagnostic_only": true
       },
       "300739": {
@@ -3711,7 +3711,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -3.09%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -3.12%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3721,7 +3721,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.09,
+        "pct": -3.12,
         "diagnostic_only": true
       },
       "300548": {
@@ -3732,7 +3732,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -5.61%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 -5.66%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3742,7 +3742,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.61,
+        "pct": -5.66,
         "diagnostic_only": true
       },
       "002902": {
@@ -3753,7 +3753,7 @@
         "label": "中性观察",
         "confidence": "low",
         "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 1.87%，等待主力/大单字段补齐",
+        "evidence": "实时资金流未覆盖；当前涨幅 1.89%，等待主力/大单字段补齐",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": null,
         "main_net_amount": null,
@@ -3763,7 +3763,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.87,
+        "pct": 1.89,
         "diagnostic_only": true
       },
       "688001": {
@@ -3784,7 +3784,7 @@
         "outer_ratio_pct": 46.46,
         "vwap_gap_pct": -0.05,
         "amount_ratio": null,
-        "pct": -3.19,
+        "pct": -3.23,
         "diagnostic_only": true
       },
       "000593": {
@@ -3805,7 +3805,7 @@
         "outer_ratio_pct": 53.54,
         "vwap_gap_pct": 0.14,
         "amount_ratio": null,
-        "pct": 0.43,
+        "pct": 0.47,
         "diagnostic_only": true
       },
       "688268": {
@@ -3828,7 +3828,7 @@
         "outer_ratio_pct": 44.65,
         "vwap_gap_pct": -1.89,
         "amount_ratio": null,
-        "pct": 5.04,
+        "pct": 5.44,
         "diagnostic_only": true
       },
       "002240": {
@@ -3849,7 +3849,7 @@
         "outer_ratio_pct": 44.66,
         "vwap_gap_pct": -1.48,
         "amount_ratio": null,
-        "pct": -3.56,
+        "pct": -3.62,
         "diagnostic_only": true
       },
       "300769": {
@@ -3870,7 +3870,7 @@
         "outer_ratio_pct": 48.11,
         "vwap_gap_pct": -0.95,
         "amount_ratio": null,
-        "pct": -1.6,
+        "pct": -1.63,
         "diagnostic_only": true
       },
       "300819": {
@@ -3891,7 +3891,7 @@
         "outer_ratio_pct": 47.19,
         "vwap_gap_pct": -1.36,
         "amount_ratio": null,
-        "pct": -4.9,
+        "pct": -4.98,
         "diagnostic_only": true
       },
       "603803": {
@@ -3912,7 +3912,7 @@
         "outer_ratio_pct": 48.27,
         "vwap_gap_pct": -2.5,
         "amount_ratio": null,
-        "pct": -2.98,
+        "pct": -2.92,
         "diagnostic_only": true
       },
       "603618": {
@@ -3933,7 +3933,7 @@
         "outer_ratio_pct": 47.22,
         "vwap_gap_pct": -1.12,
         "amount_ratio": null,
-        "pct": -4.26,
+        "pct": -4.21,
         "diagnostic_only": true
       },
       "001400": {
@@ -3954,7 +3954,7 @@
         "outer_ratio_pct": 39.52,
         "vwap_gap_pct": -1.29,
         "amount_ratio": null,
-        "pct": -6.12,
+        "pct": -6.23,
         "diagnostic_only": true
       },
       "600726": {
@@ -3975,7 +3975,7 @@
         "outer_ratio_pct": 48.51,
         "vwap_gap_pct": -4.07,
         "amount_ratio": null,
-        "pct": -3.12,
+        "pct": -2.75,
         "diagnostic_only": true
       },
       "600396": {
@@ -3998,7 +3998,7 @@
         "outer_ratio_pct": 48.43,
         "vwap_gap_pct": -3.56,
         "amount_ratio": null,
-        "pct": 5.65,
+        "pct": 5.71,
         "diagnostic_only": true
       },
       "603308": {
@@ -4019,7 +4019,7 @@
         "outer_ratio_pct": 41.19,
         "vwap_gap_pct": -2.11,
         "amount_ratio": null,
-        "pct": -1.34,
+        "pct": -1.21,
         "diagnostic_only": true
       }
     },
@@ -4102,15 +4102,15 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 74.34,
-        "rt_price": 1145.01,
-        "rt_pct": 4.56,
+        "rt_price": 1143.0,
+        "rt_pct": 4.38,
         "potential_score": 66.95,
         "market_strength_score": 100.0,
         "news_impact_score": 0,
         "action": "MODEL_TRIAL_BUY_WATCH",
         "label": "可小仓模拟试错",
         "target_pct": 8.0,
-        "reason": "盘中涨幅确认 4.56%；潜力分 67.0；市场强度 100.0",
+        "reason": "盘中涨幅确认 4.38%；潜力分 67.0；市场强度 100.0",
         "blockers": "",
         "quote_source": "tencent"
       },
@@ -4121,15 +4121,15 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 73.65,
-        "rt_price": 652.05,
-        "rt_pct": 3.34,
+        "rt_price": 651.08,
+        "rt_pct": 3.18,
         "potential_score": 66.09,
         "market_strength_score": 100.0,
         "news_impact_score": 0,
         "action": "MODEL_TRIAL_BUY_WATCH",
         "label": "可小仓模拟试错",
         "target_pct": 8.0,
-        "reason": "盘中涨幅确认 3.34%；潜力分 66.1；市场强度 100.0",
+        "reason": "盘中涨幅确认 3.18%；潜力分 66.1；市场强度 100.0",
         "blockers": "",
         "quote_source": "tencent"
       },
@@ -4140,8 +4140,8 @@
         "node": "电池材料",
         "tier": "核心候选",
         "promotion_score": 76.22,
-        "rt_price": 93.96,
-        "rt_pct": -2.65,
+        "rt_price": 93.9,
+        "rt_pct": -2.71,
         "potential_score": 65.21,
         "market_strength_score": 84.85,
         "news_impact_score": 5.0,
@@ -4149,7 +4149,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 65.2；市场强度 84.8；新闻强化 +5",
-        "blockers": "涨幅未确认 -2.65%；盘中转弱 -2.65%",
+        "blockers": "涨幅未确认 -2.71%；盘中转弱 -2.71%",
         "quote_source": "tencent"
       },
       {
@@ -4159,7 +4159,7 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 70.53,
-        "rt_price": 702.96,
+        "rt_price": 702.94,
         "rt_pct": -2.59,
         "potential_score": 65.15,
         "market_strength_score": 91.18,
@@ -4178,8 +4178,8 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 70.17,
-        "rt_price": 64.33,
-        "rt_pct": -3.94,
+        "rt_price": 64.3,
+        "rt_pct": -3.99,
         "potential_score": 64.14,
         "market_strength_score": 83.18,
         "news_impact_score": 0,
@@ -4187,7 +4187,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 64.1；市场强度 83.2",
-        "blockers": "涨幅未确认 -3.94%；盘中转弱 -3.94%",
+        "blockers": "涨幅未确认 -3.99%；盘中转弱 -3.99%",
         "quote_source": "tencent"
       },
       {
@@ -4197,8 +4197,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 70.11,
-        "rt_price": 174.52,
-        "rt_pct": -4.39,
+        "rt_price": 174.6,
+        "rt_pct": -4.34,
         "potential_score": 66.39,
         "market_strength_score": 66.73,
         "news_impact_score": 0,
@@ -4206,7 +4206,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 66.4；市场强度 66.7",
-        "blockers": "涨幅未确认 -4.39%；盘中转弱 -4.39%",
+        "blockers": "涨幅未确认 -4.34%；盘中转弱 -4.34%",
         "quote_source": "tencent"
       },
       {
@@ -4216,8 +4216,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 69.07,
-        "rt_price": 271.94,
-        "rt_pct": -5.59,
+        "rt_price": 271.9,
+        "rt_pct": -5.6,
         "potential_score": 66.53,
         "market_strength_score": 68.31,
         "news_impact_score": 0,
@@ -4225,7 +4225,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 66.5；市场强度 68.3",
-        "blockers": "涨幅未确认 -5.59%；盘中转弱 -5.59%",
+        "blockers": "涨幅未确认 -5.60%；盘中转弱 -5.60%",
         "quote_source": "tencent"
       },
       {
@@ -4235,7 +4235,7 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 67.73,
-        "rt_price": 303.24,
+        "rt_price": 303.23,
         "rt_pct": -6.22,
         "potential_score": 63.4,
         "market_strength_score": 66.16,
@@ -4254,8 +4254,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 65.7,
-        "rt_price": 197.92,
-        "rt_pct": -2.89,
+        "rt_price": 197.87,
+        "rt_pct": -2.91,
         "potential_score": 60.2,
         "market_strength_score": 88.14,
         "news_impact_score": 0,
@@ -4263,7 +4263,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 60.2；市场强度 88.1",
-        "blockers": "涨幅未确认 -2.89%；盘中转弱 -2.89%",
+        "blockers": "涨幅未确认 -2.91%；盘中转弱 -2.91%",
         "quote_source": "tencent"
       },
       {
@@ -4273,8 +4273,8 @@
         "node": "光伏设备",
         "tier": "强候选",
         "promotion_score": 65.28,
-        "rt_price": 54.38,
-        "rt_pct": 0.11,
+        "rt_price": 54.36,
+        "rt_pct": 0.07,
         "potential_score": 56.72,
         "market_strength_score": 100.0,
         "news_impact_score": 5.0,
@@ -4282,7 +4282,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 56.7；市场强度 100.0；新闻强化 +5",
-        "blockers": "涨幅未确认 0.11%",
+        "blockers": "涨幅未确认 0.07%",
         "quote_source": "tencent"
       },
       {
@@ -4292,8 +4292,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 65.16,
-        "rt_price": 1543.9,
-        "rt_pct": -5.57,
+        "rt_price": 1543.01,
+        "rt_pct": -5.63,
         "potential_score": 61.16,
         "market_strength_score": 72.0,
         "news_impact_score": 0,
@@ -4301,7 +4301,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 61.2；市场强度 72.0",
-        "blockers": "涨幅未确认 -5.57%；盘中转弱 -5.57%",
+        "blockers": "涨幅未确认 -5.63%；盘中转弱 -5.63%",
         "quote_source": "tencent"
       },
       {
@@ -4311,8 +4311,8 @@
         "node": "光伏设备",
         "tier": "强候选",
         "promotion_score": 64.01,
-        "rt_price": 69.66,
-        "rt_pct": 0.37,
+        "rt_price": 69.71,
+        "rt_pct": 0.45,
         "potential_score": 57.81,
         "market_strength_score": 81.78,
         "news_impact_score": 5.0,
@@ -4320,7 +4320,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 57.8；市场强度 81.8；新闻强化 +5",
-        "blockers": "涨幅未确认 0.37%",
+        "blockers": "涨幅未确认 0.45%",
         "quote_source": "tencent"
       },
       {
@@ -4349,8 +4349,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 60.17,
-        "rt_price": 91.64,
-        "rt_pct": -1.5,
+        "rt_price": 91.6,
+        "rt_pct": -1.55,
         "potential_score": 53.75,
         "market_strength_score": 75.01,
         "news_impact_score": 5.0,
@@ -4358,7 +4358,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 75.0；新闻强化 +5",
-        "blockers": "涨幅未确认 -1.50%；潜力分不足 53.8",
+        "blockers": "涨幅未确认 -1.55%；盘中转弱 -1.55%；潜力分不足 53.8",
         "quote_source": "tencent"
       },
       {
@@ -4368,8 +4368,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 59.89,
-        "rt_price": 28.2,
-        "rt_pct": -9.96,
+        "rt_price": 28.19,
+        "rt_pct": -9.99,
         "potential_score": 50.33,
         "market_strength_score": 100.0,
         "news_impact_score": 5.0,
@@ -4377,7 +4377,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 100.0；新闻强化 +5",
-        "blockers": "涨幅未确认 -9.96%；盘中转弱 -9.96%；潜力分不足 50.3",
+        "blockers": "涨幅未确认 -9.99%；盘中转弱 -9.99%；潜力分不足 50.3",
         "quote_source": "tencent"
       },
       {
@@ -4387,8 +4387,8 @@
         "node": "半导体制造",
         "tier": "强候选",
         "promotion_score": 59.87,
-        "rt_price": 15.84,
-        "rt_pct": -1.0,
+        "rt_price": 15.83,
+        "rt_pct": -1.06,
         "potential_score": 58.05,
         "market_strength_score": 87.96,
         "news_impact_score": 0,
@@ -4396,7 +4396,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 58.0；市场强度 88.0",
-        "blockers": "涨幅未确认 -1.00%",
+        "blockers": "涨幅未确认 -1.06%",
         "quote_source": "tencent"
       },
       {
@@ -4406,8 +4406,8 @@
         "node": "光通信/CPO",
         "tier": "强候选",
         "promotion_score": 58.57,
-        "rt_price": 51.2,
-        "rt_pct": -5.17,
+        "rt_price": 51.22,
+        "rt_pct": -5.13,
         "potential_score": 58.29,
         "market_strength_score": 75.67,
         "news_impact_score": 0,
@@ -4415,7 +4415,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 58.3；市场强度 75.7",
-        "blockers": "涨幅未确认 -5.17%；盘中转弱 -5.17%",
+        "blockers": "涨幅未确认 -5.13%；盘中转弱 -5.13%",
         "quote_source": "tencent"
       },
       {
@@ -4425,8 +4425,8 @@
         "node": "光通信/CPO",
         "tier": "强候选",
         "promotion_score": 58.4,
-        "rt_price": 419.65,
-        "rt_pct": -6.35,
+        "rt_price": 419.93,
+        "rt_pct": -6.29,
         "potential_score": 55.6,
         "market_strength_score": 92.55,
         "news_impact_score": 0,
@@ -4434,7 +4434,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 55.6；市场强度 92.5",
-        "blockers": "涨幅未确认 -6.35%；盘中转弱 -6.35%",
+        "blockers": "涨幅未确认 -6.29%；盘中转弱 -6.29%",
         "quote_source": "tencent"
       },
       {
@@ -4444,8 +4444,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 58.21,
-        "rt_price": 84.65,
-        "rt_pct": -1.43,
+        "rt_price": 84.56,
+        "rt_pct": -1.54,
         "potential_score": 49.83,
         "market_strength_score": 86.76,
         "news_impact_score": 5.0,
@@ -4453,7 +4453,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 86.8；新闻强化 +5",
-        "blockers": "涨幅未确认 -1.43%；潜力分不足 49.8；旧候选池 NO_TOUCH，仅允许观察",
+        "blockers": "涨幅未确认 -1.54%；盘中转弱 -1.54%；潜力分不足 49.8；旧候选池 NO_TOUCH，仅允许观察",
         "quote_source": "tencent"
       },
       {
@@ -4482,15 +4482,15 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 57.08,
-        "rt_price": 57.54,
-        "rt_pct": 3.66,
+        "rt_price": 57.53,
+        "rt_pct": 3.64,
         "potential_score": 54.45,
         "market_strength_score": 43.74,
         "news_impact_score": 5.0,
         "action": "PROMOTION_WATCH",
         "label": "晋级观察",
         "target_pct": 0,
-        "reason": "盘中涨幅确认 3.66%；新闻强化 +5",
+        "reason": "盘中涨幅确认 3.64%；新闻强化 +5",
         "blockers": "潜力分不足 54.5；强度不足 43.7",
         "quote_source": "tencent"
       },
@@ -4539,8 +4539,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 56.01,
-        "rt_price": 78.03,
-        "rt_pct": -2.44,
+        "rt_price": 78.02,
+        "rt_pct": -2.45,
         "potential_score": 54.71,
         "market_strength_score": 32.73,
         "news_impact_score": 5.0,
@@ -4548,7 +4548,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "新闻强化 +5",
-        "blockers": "涨幅未确认 -2.44%；盘中转弱 -2.44%；潜力分不足 54.7；强度不足 32.7",
+        "blockers": "涨幅未确认 -2.45%；盘中转弱 -2.45%；潜力分不足 54.7；强度不足 32.7",
         "quote_source": "tencent"
       },
       {
@@ -4558,8 +4558,8 @@
         "node": "半导体制造",
         "tier": "强候选",
         "promotion_score": 55.99,
-        "rt_price": 113.36,
-        "rt_pct": -1.0,
+        "rt_price": 113.3,
+        "rt_pct": -1.05,
         "potential_score": 58.34,
         "market_strength_score": 50.85,
         "news_impact_score": 0,
@@ -4567,7 +4567,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 58.3",
-        "blockers": "涨幅未确认 -1.00%；强度不足 50.9",
+        "blockers": "涨幅未确认 -1.05%；强度不足 50.9",
         "quote_source": "tencent"
       },
       {
@@ -4577,8 +4577,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 55.74,
-        "rt_price": 147.84,
-        "rt_pct": 0.21,
+        "rt_price": 147.78,
+        "rt_pct": 0.17,
         "potential_score": 49.48,
         "market_strength_score": 66.6,
         "news_impact_score": 5.0,
@@ -4586,7 +4586,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 66.6；新闻强化 +5",
-        "blockers": "涨幅未确认 0.21%；潜力分不足 49.5",
+        "blockers": "涨幅未确认 0.17%；潜力分不足 49.5",
         "quote_source": "tencent"
       },
       {
@@ -4596,8 +4596,8 @@
         "node": "航天卫星",
         "tier": "强候选",
         "promotion_score": 55.7,
-        "rt_price": 78.11,
-        "rt_pct": -2.79,
+        "rt_price": 78.06,
+        "rt_pct": -2.85,
         "potential_score": 51.43,
         "market_strength_score": 100.0,
         "news_impact_score": 0,
@@ -4605,7 +4605,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 100.0",
-        "blockers": "涨幅未确认 -2.79%；盘中转弱 -2.79%；潜力分不足 51.4",
+        "blockers": "涨幅未确认 -2.85%；盘中转弱 -2.85%；潜力分不足 51.4",
         "quote_source": "tencent"
       },
       {
@@ -4671,7 +4671,7 @@
       "rt_price": 25.7,
       "rt_pct": 3.17,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4698,15 +4698,15 @@
       "industry": "通用设备",
       "taxonomy_keyword_hits": "CPO;先进封装;光通信;半导体;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1145.01,
-      "rt_pct": 4.56,
+      "rt_price": 1143.0,
+      "rt_pct": 4.38,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 4.56%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 4.38%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4728,15 +4728,15 @@
       "industry": "消费电子",
       "taxonomy_keyword_hits": "AI;CPO;云计算;光通信;存储;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 271.94,
-      "rt_pct": -5.59,
+      "rt_price": 271.9,
+      "rt_pct": -5.6,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.59%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.60%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4758,15 +4758,15 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;数据中心;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 174.52,
-      "rt_pct": -4.39,
+      "rt_price": 174.6,
+      "rt_pct": -4.34,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -4.39%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -4.34%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4788,15 +4788,15 @@
       "industry": "计算机设备",
       "taxonomy_keyword_hits": "半导体;存储;数据中心;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 652.05,
-      "rt_pct": 3.34,
+      "rt_price": 651.08,
+      "rt_pct": 3.18,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 3.34%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 3.18%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4818,15 +4818,15 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 93.96,
-      "rt_pct": -2.65,
+      "rt_price": 93.9,
+      "rt_pct": -2.71,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.65%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.71%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4848,10 +4848,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;半导体;存储;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 702.96,
+      "rt_price": 702.94,
       "rt_pct": -2.59,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4878,15 +4878,15 @@
       "industry": "计算机设备",
       "taxonomy_keyword_hits": "AI;存储;数据中心;算力;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 64.33,
-      "rt_pct": -3.94,
+      "rt_price": 64.3,
+      "rt_pct": -3.99,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -3.94%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -3.99%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4908,10 +4908,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;先进封装;半导体;存储;数据中心;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 303.24,
+      "rt_price": 303.23,
       "rt_pct": -6.22,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4938,15 +4938,15 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1543.9,
-      "rt_pct": -5.57,
+      "rt_price": 1543.01,
+      "rt_pct": -5.63,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.57%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.63%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4968,15 +4968,15 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;液冷;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 197.92,
-      "rt_pct": -2.89,
+      "rt_price": 197.87,
+      "rt_pct": -2.91,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.89%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.91%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -4998,15 +4998,15 @@
       "industry": "自动化设备",
       "taxonomy_keyword_hits": "AI;半导体;存储;液冷;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 113.36,
-      "rt_pct": -1.0,
+      "rt_price": 113.3,
+      "rt_pct": -1.05,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.00%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.05%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5028,15 +5028,15 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;数据中心;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 51.2,
-      "rt_pct": -5.17,
+      "rt_price": 51.22,
+      "rt_pct": -5.13,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.17%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.13%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5058,15 +5058,15 @@
       "industry": "电网设备",
       "taxonomy_keyword_hits": "AI;PCB;半导体;材料;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 15.84,
-      "rt_pct": -1.0,
+      "rt_price": 15.83,
+      "rt_pct": -1.06,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.00%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.06%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5088,15 +5088,15 @@
       "industry": "金属新材料",
       "taxonomy_keyword_hits": "TOPCon;光伏;新能源;新能源车;电池",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 69.66,
-      "rt_pct": 0.37,
+      "rt_price": 69.71,
+      "rt_pct": 0.45,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.37%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.45%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5121,7 +5121,7 @@
       "rt_price": 139.48,
       "rt_pct": 20.0,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 航空航天军工 / 低空/无人机",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5148,15 +5148,15 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "HJT;光伏;电池",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 54.38,
-      "rt_pct": 0.11,
+      "rt_price": 54.36,
+      "rt_pct": 0.07,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.11%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.07%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5178,15 +5178,15 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;数据中心;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 419.65,
-      "rt_pct": -6.35,
+      "rt_price": 419.93,
+      "rt_pct": -6.29,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -6.35%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -6.29%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5208,15 +5208,15 @@
       "industry": "能源金属",
       "taxonomy_keyword_hits": "储能;动力电池;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 78.03,
-      "rt_pct": -2.44,
+      "rt_price": 78.02,
+      "rt_pct": -2.45,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.44%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.45%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5241,7 +5241,7 @@
       "rt_price": 4.66,
       "rt_pct": -9.86,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5268,15 +5268,15 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "动力电池;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 57.54,
-      "rt_pct": 3.66,
+      "rt_price": 57.53,
+      "rt_pct": 3.64,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 3.66%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 3.64%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5301,7 +5301,7 @@
       "rt_price": 374.16,
       "rt_pct": -7.55,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5328,15 +5328,15 @@
       "industry": "能源金属",
       "taxonomy_keyword_hits": "储能;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 91.64,
-      "rt_pct": -1.5,
+      "rt_price": 91.6,
+      "rt_pct": -1.55,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.50%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.55%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5358,15 +5358,15 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;先进封装;半导体;数据中心;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1200.68,
-      "rt_pct": -4.75,
+      "rt_price": 1200.55,
+      "rt_pct": -4.76,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -4.75%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -4.76%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5388,15 +5388,15 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 270.1,
-      "rt_pct": -5.77,
+      "rt_price": 270.4,
+      "rt_pct": -5.66,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.77%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.66%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5418,15 +5418,15 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;半导体;数据中心;材料;液冷;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 40.9,
-      "rt_pct": -7.26,
+      "rt_price": 40.91,
+      "rt_pct": -7.23,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -7.26%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -7.23%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5448,15 +5448,15 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光通信;算力;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1041.04,
-      "rt_pct": -3.43,
+      "rt_price": 1040.47,
+      "rt_pct": -3.48,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -3.43%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -3.48%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5481,7 +5481,7 @@
       "rt_price": 167.6,
       "rt_pct": -1.64,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 算力基础设施",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5508,15 +5508,15 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光通信;算力;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 602.99,
-      "rt_pct": -2.41,
+      "rt_price": 602.91,
+      "rt_pct": -2.43,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.41%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.43%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5538,15 +5538,15 @@
       "industry": "航天装备Ⅱ",
       "taxonomy_keyword_hits": "军工;北斗;卫星;商业航天;导航;航天;航空",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 78.11,
-      "rt_pct": -2.79,
+      "rt_price": 78.06,
+      "rt_pct": -2.85,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.79%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -2.85%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5568,15 +5568,15 @@
       "industry": "贵金属",
       "taxonomy_keyword_hits": "光伏;智能电网;电力;电网;绿色电力",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 50.07,
-      "rt_pct": -5.53,
+      "rt_price": 50.09,
+      "rt_pct": -5.49,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 电力电网设备 / 电力运营",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.53%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -5.49%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5601,7 +5601,7 @@
       "rt_price": 83.0,
       "rt_pct": -2.99,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5628,15 +5628,15 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;光伏;固态电池;新能源;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 28.2,
-      "rt_pct": -9.96,
+      "rt_price": 28.19,
+      "rt_pct": -9.99,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -9.96%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -9.99%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5658,15 +5658,15 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;动力电池;固态电池;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 95.04,
-      "rt_pct": 0.73,
+      "rt_price": 95.0,
+      "rt_pct": 0.69,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.73%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.69%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5688,15 +5688,15 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;电池;铜箔;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 84.65,
-      "rt_pct": -1.43,
+      "rt_price": 84.56,
+      "rt_pct": -1.54,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.43%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -1.54%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5718,15 +5718,15 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;固态电池;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 147.84,
-      "rt_pct": 0.21,
+      "rt_price": 147.78,
+      "rt_pct": 0.17,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.21%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 0.17%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5748,15 +5748,15 @@
       "industry": "军工电子Ⅱ",
       "taxonomy_keyword_hits": "军工;军工电子;卫星;商业航天;无人机;航天",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 134.29,
-      "rt_pct": -4.07,
+      "rt_price": 134.26,
+      "rt_pct": -4.09,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -4.07%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -4.09%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5778,15 +5778,15 @@
       "industry": "自动化设备",
       "taxonomy_keyword_hits": "CPO;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 395.77,
-      "rt_pct": 5.82,
+      "rt_price": 395.0,
+      "rt_pct": 5.61,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 5.82%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 5.61%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5808,15 +5808,15 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 100.35,
-      "rt_pct": 3.03,
+      "rt_price": 100.37,
+      "rt_pct": 3.05,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 3.03%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 3.05%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5838,15 +5838,15 @@
       "industry": "电网设备",
       "taxonomy_keyword_hits": "储能;光伏;智能电网;核电;水电;特高压;电网;电网设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 21.46,
-      "rt_pct": -0.79,
+      "rt_price": 21.47,
+      "rt_pct": -0.74,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:28:38",
+      "quote_updated_at": "2026-05-14 23:29:06",
       "monitor_reason": "强候选 / 电力电网设备 / 变压器/输变电",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
       "hiddenflow_confidence": "low",
-      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -0.79%，等待主力/大单字段补齐",
+      "hiddenflow_reason": "实时资金流未覆盖；当前涨幅 -0.74%，等待主力/大单字段补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     }
@@ -5890,13 +5890,6 @@
     }
   ],
   "closed_orders_note": "已卖出历史订单来自桌面 V151 真实模拟仓引擎，非真实券商成交。",
-  "risk_notes": [
-    {
-      "code": "300885",
-      "name": "海昌新材",
-      "level": "below_cost",
-      "note": "300885 海昌新材 低于成本但未破防守"
-    }
-  ],
+  "risk_notes": [],
   "notice": "公开完整持仓页：仅纸面/模拟仓观察，不构成真实交易建议或券商下单。"
 }
