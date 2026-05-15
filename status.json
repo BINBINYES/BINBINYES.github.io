@@ -1,15 +1,15 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 23:06:57",
-  "source_generated_at": "2026-05-14 23:06:57",
-  "market_environment_updated_at": "2026-05-14 23:06:57",
+  "generated_at": "2026-05-14 23:07:16",
+  "source_generated_at": "2026-05-14 23:07:16",
+  "market_environment_updated_at": "2026-05-14 23:07:16",
   "initial_capital": "100.00万",
-  "total_pnl": "-2990.00",
+  "total_pnl": "-2998.00",
   "total_pnl_pct": "-0.30%",
   "equity": "99.70万",
   "cash": "本地模型负责同步",
   "market_value": "2.24万",
-  "floating_pnl": "962.00",
+  "floating_pnl": "954.00",
   "realized_pnl": "-3952.00",
   "paper_ret_pct": "模拟仓",
   "positions_count": 1,
@@ -51,10 +51,10 @@
       "name": "中科仪",
       "qty": "200",
       "cost": "107.180",
-      "price": "111.99",
+      "price": "111.95",
       "market_value": "2.24万",
-      "pnl_amount": "962.00",
-      "pnl_pct": "4.49%",
+      "pnl_amount": "954.00",
+      "pnl_pct": "4.45%",
       "state": "ok"
     }
   ],
@@ -248,15 +248,15 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 1.0,
     "fear_greed": {
-      "score": 52,
+      "score": 53,
       "label": "中性",
       "components": {
         "breadth": 54,
         "market_return": 60,
         "limit_up_down": 70,
-        "candidate_mood": 47,
+        "candidate_mood": 46,
         "mainline_heat": 80,
-        "news_sentiment": 56
+        "news_sentiment": 70
       },
       "stale_penalty": 8,
       "method": "A-share proxy: breadth, return, limit-up/down, candidate mood, mainline heat, optional news sentiment"
@@ -277,7 +277,7 @@
         "strong_down=9.38",
         "limit=69.0/1.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-0.66"
+        "candidate_avg=-0.69"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -298,7 +298,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -0.66,
+      "avg_pct": -0.69,
       "strong_count": 2,
       "weak_count": 1
     },
@@ -383,21 +383,21 @@
     },
     "news": {
       "available": true,
-      "sentiment": "neutral",
-      "score": 2,
+      "sentiment": "positive",
+      "score": 7,
       "items": [
+        "[sina_7x24_public] 【华海清科首台面向大硅片的8腔室12英寸单片清洗机出机】近日，华海清科股份有限公司（简称“华海清科”）首台面向大硅片制造领域的8腔室12英寸单片清洗机正式出机，",
+        "[sina_7x24_public] 日本30年期国债收益率升至4%，创1999年以来新高。",
+        "[sina_7x24_public] 日本银行执行理事：随着日本金融机构加大对外投资基金的投资与放贷，外部冲击有可能迅速传导至国内市场。",
+        "[sina_7x24_public] 【安徽省人工智能产业发展评价跃居全国第五】5月15日，安徽省人民政府新闻办公室举行开局起步“十五五”安徽专场新闻发布会。发布会围绕“锚定‘三地一区’实现新突破和",
+        "[sina_7x24_public] 【江苏中设集团中标宜兴低空经济产业园项目】近日，江苏中设集团建筑设计有限公司中标宜兴低空经济产业园项目。该项目是宜兴市抢抓国家低空经济发展机遇、培育新质生产力的",
+        "[sina_7x24_public] 日本央行执行理事：全球对冲基金资本流动突遭转向，或加剧债券与股票市场的价格波动。",
+        "[sina_7x24_public] 【阳光电源成交额达200亿元，现涨11.43%】5月15日下午，阳光电源成交额达200亿元，现涨11.43%。",
         "[sina_7x24_public] 日本银行执行理事：投资基金通过提供风险资本发挥促进增长的作用，但也可能对整个金融体系构成潜在风险。",
         "[sina_7x24_public] 韩元跌幅扩大至 1%。",
         "[sina_7x24_public] 【中证500股指期货(IC)主力合约日内跌超3%】中证500股指期货(IC)主力合约日内跌超3%，现报8397.2点。",
         "[sina_7x24_public] 【4月深圳新发企业贷款加权平均利率2.65% 同比下降0.22个百分点】财联社记者从深圳人行获悉，一季度，深圳全市社融累计新增2644亿元，同比多增1230亿元",
-        "[sina_7x24_public] 英国天然气公司同意向英国天然气和电力市场监管局（Ofgem）基金支付2000万英镑。",
-        "[sina_7x24_public] 现货黄金日内跌2%，现报4558.39美元/盎司。",
-        "[sina_7x24_public] 【现货黄金失守4560美元/盎司】现货黄金失守4560美元/盎司，日内跌1.99%。",
-        "[sina_7x24_public] 现货黄金失守4560美元/盎司，日内跌2.00%。",
-        "[sina_7x24_public] 恒生指数跌超2%，现报25860.010点；恒生科技指数现跌3.079%。",
-        "[sina_7x24_public] 【东风汽车联合长江产业投资集团等 六方注资超80亿推动神龙公司转型升级】5月15日，东风汽车联合长江产业投资集团有限公司、武汉金融控股（集团）有限公司、武汉经开",
-        "[sina_7x24_public] 【特朗普结束访华 将乘专机离开北京】今日下午，美国总统特朗普结束对中国的国事访问，将乘专机离开北京。（央视新闻）",
-        "[sina_7x24_public] 韩国KOSPI指数持续下跌，跌幅扩大至7%。"
+        "[sina_7x24_public] 英国天然气公司同意向英国天然气和电力市场监管局（Ofgem）基金支付2000万英镑。"
       ],
       "raw_count": 20,
       "statuses": [
@@ -439,6 +439,21 @@
           ]
         },
         {
+          "mainline": "航空航天军工",
+          "impact_score": 5,
+          "label": "边际加强",
+          "matched_keywords": [
+            "低空"
+          ],
+          "examples": [
+            {
+              "time": "2026-05-15 14:05:39",
+              "title": "【江苏中设集团中标宜兴低空经济产业园项目】近日，江苏中设集团建筑设计有限公司中标宜兴低空经济产业园项目。该项目是宜兴市抢抓国家低空经济发展机遇、培育新质生产力的",
+              "source": "sina_7x24_public"
+            }
+          ]
+        },
+        {
           "mainline": "新能源电池",
           "impact_score": 2,
           "label": "中性扰动",
@@ -471,12 +486,12 @@
       ],
       "message": "loaded 20 news items"
     },
-    "summary": "V151.6 market=NEUTRAL, capital=DATA_STALE, attack=False, fear_greed=52, breadth_up=53.87, budget_x=1.0; news=neutral"
+    "summary": "V151.6 market=NEUTRAL, capital=DATA_STALE, attack=False, fear_greed=53, breadth_up=53.87, budget_x=1.0; news=positive"
   },
   "hidden_flow_proxy": {
     "enabled": true,
     "version": "V151.9",
-    "generated_at": "2026-05-14 23:06:57",
+    "generated_at": "2026-05-14 23:07:14",
     "diagnostic_only": true,
     "method": "free public money-flow fields plus OHLC/volume absorption proxy; not an execution gate",
     "source_priority": [
@@ -491,17 +506,17 @@
         "code": "300885",
         "name": "海昌新材",
         "group": "candidate",
-        "score": 86.04,
+        "score": 87.64,
         "label": "承接增强",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 12.39%；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
+        "evidence": "主力净占比 12.39%；主力净额 0.33亿；大单净额 0.30亿；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": 12.39,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": 33216971.0,
+        "large_net_amount": 30388627.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
@@ -509,24 +524,26 @@
         "diagnostic_only": true
       },
       {
-        "code": "688256",
-        "name": "DR寒武纪",
-        "group": "mainline_pool",
-        "score": 60.68,
-        "label": "主力净流确认",
-        "confidence": "medium",
-        "risk_tags": [],
-        "evidence": "主力净额 0.89亿；大单净额 20.40亿",
+        "code": "000593",
+        "name": "德龙汇能",
+        "group": "candidate",
+        "score": 53.58,
+        "label": "中性观察",
+        "confidence": "high",
+        "risk_tags": [
+          "下跌承接"
+        ],
+        "evidence": "主力净占比 -5.63%；主力净额 0.60亿；大单净额 0.35亿；外盘承接 53.54%；VWAP偏离 0.14%；收盘位置 0.59",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": null,
-        "main_net_amount": 89187759.0,
-        "large_net_amount": 2040436231.0,
-        "flow_time": "2026-05-15 14:07",
+        "main_net_pct": -5.63,
+        "main_net_amount": 59798909.0,
+        "large_net_amount": 34935522.0,
+        "flow_time": "2026-05-15 14:08",
         "flow_source": "eastmoney_flow",
-        "outer_ratio_pct": null,
-        "vwap_gap_pct": null,
+        "outer_ratio_pct": 53.54,
+        "vwap_gap_pct": 0.14,
         "amount_ratio": null,
-        "pct": -4.05,
+        "pct": -0.43,
         "diagnostic_only": true
       },
       {
@@ -551,29 +568,6 @@
         "diagnostic_only": true
       },
       {
-        "code": "000593",
-        "name": "德龙汇能",
-        "group": "candidate",
-        "score": 51.09,
-        "label": "中性观察",
-        "confidence": "high",
-        "risk_tags": [
-          "下跌承接"
-        ],
-        "evidence": "主力净占比 -5.63%；外盘承接 53.54%；VWAP偏离 0.14%；收盘位置 0.59",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": -5.63,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": 53.54,
-        "vwap_gap_pct": 0.14,
-        "amount_ratio": null,
-        "pct": -0.43,
-        "diagnostic_only": true
-      },
-      {
         "code": "688268",
         "name": "华特气体",
         "group": "candidate",
@@ -591,7 +585,7 @@
         "outer_ratio_pct": 44.65,
         "vwap_gap_pct": -1.89,
         "amount_ratio": null,
-        "pct": 3.86,
+        "pct": 3.87,
         "diagnostic_only": true
       },
       {
@@ -612,7 +606,28 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.86,
+        "pct": -0.82,
+        "diagnostic_only": true
+      },
+      {
+        "code": "688256",
+        "name": "DR寒武纪",
+        "group": "mainline_pool",
+        "score": 50.0,
+        "label": "中性观察",
+        "confidence": "low",
+        "risk_tags": [],
+        "evidence": "缺少实时资金字段，等待数据源补齐",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": null,
+        "main_net_amount": null,
+        "large_net_amount": null,
+        "flow_time": null,
+        "flow_source": null,
+        "outer_ratio_pct": null,
+        "vwap_gap_pct": null,
+        "amount_ratio": null,
+        "pct": -4.07,
         "diagnostic_only": true
       },
       {
@@ -633,7 +648,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.9,
+        "pct": -0.94,
         "diagnostic_only": true
       },
       {
@@ -675,7 +690,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.73,
+        "pct": 2.77,
         "diagnostic_only": true
       },
       {
@@ -717,7 +732,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.92,
+        "pct": -5.12,
         "diagnostic_only": true
       },
       {
@@ -738,7 +753,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.38,
+        "pct": -4.4,
         "diagnostic_only": true
       },
       {
@@ -759,7 +774,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.06,
+        "pct": 1.75,
         "diagnostic_only": true
       },
       {
@@ -780,7 +795,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.55,
+        "pct": -2.47,
         "diagnostic_only": true
       },
       {
@@ -801,7 +816,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.5,
+        "pct": -2.47,
         "diagnostic_only": true
       },
       {
@@ -822,7 +837,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.6,
+        "pct": -3.7,
         "diagnostic_only": true
       },
       {
@@ -864,7 +879,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.82,
+        "pct": -5.81,
         "diagnostic_only": true
       },
       {
@@ -885,7 +900,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.9,
+        "pct": -2.96,
         "diagnostic_only": true
       },
       {
@@ -906,7 +921,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -1.04,
         "diagnostic_only": true
       },
       {
@@ -927,7 +942,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.08,
+        "pct": -5.22,
         "diagnostic_only": true
       },
       {
@@ -948,7 +963,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -0.88,
         "diagnostic_only": true
       },
       {
@@ -969,7 +984,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.02,
+        "pct": 1.12,
         "diagnostic_only": true
       },
       {
@@ -990,7 +1005,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 20.0,
+        "pct": 19.98,
         "diagnostic_only": true
       },
       {
@@ -1011,7 +1026,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.29,
+        "pct": 0.33,
         "diagnostic_only": true
       },
       {
@@ -1032,7 +1047,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.25,
+        "pct": -6.17,
         "diagnostic_only": true
       },
       {
@@ -1053,7 +1068,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.21,
+        "pct": -2.23,
         "diagnostic_only": true
       },
       {
@@ -1095,7 +1110,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.62,
+        "pct": 3.6,
         "diagnostic_only": true
       },
       {
@@ -1137,7 +1152,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.48,
+        "pct": -1.58,
         "diagnostic_only": true
       },
       {
@@ -1158,7 +1173,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.8,
+        "pct": -5.79,
         "diagnostic_only": true
       },
       {
@@ -1179,7 +1194,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -7.26,
+        "pct": -7.28,
         "diagnostic_only": true
       },
       {
@@ -1200,7 +1215,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.1,
+        "pct": -3.21,
         "diagnostic_only": true
       },
       {
@@ -1221,7 +1236,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.67,
+        "pct": -1.64,
         "diagnostic_only": true
       },
       {
@@ -1242,7 +1257,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.2,
+        "pct": -2.22,
         "diagnostic_only": true
       },
       {
@@ -1263,7 +1278,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.99,
+        "pct": -2.95,
         "diagnostic_only": true
       },
       {
@@ -1284,7 +1299,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.79,
+        "pct": -5.81,
         "diagnostic_only": true
       },
       {
@@ -1305,7 +1320,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.75,
+        "pct": -3.72,
         "diagnostic_only": true
       },
       {
@@ -1326,7 +1341,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -9.1,
+        "pct": -9.16,
         "diagnostic_only": true
       },
       {
@@ -1389,7 +1404,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.77,
+        "pct": -3.84,
         "diagnostic_only": true
       },
       {
@@ -1410,7 +1425,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 5.64,
+        "pct": 5.36,
         "diagnostic_only": true
       },
       {
@@ -1431,7 +1446,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.96,
+        "pct": 2.94,
         "diagnostic_only": true
       },
       {
@@ -1452,7 +1467,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.42,
+        "pct": -0.55,
         "diagnostic_only": true
       },
       {
@@ -1473,7 +1488,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -7.58,
+        "pct": -7.53,
         "diagnostic_only": true
       },
       {
@@ -1494,7 +1509,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.54,
+        "pct": -1.62,
         "diagnostic_only": true
       },
       {
@@ -1515,7 +1530,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.75,
+        "pct": -5.76,
         "diagnostic_only": true
       },
       {
@@ -1536,7 +1551,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.58,
+        "pct": -2.72,
         "diagnostic_only": true
       },
       {
@@ -1578,7 +1593,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 5.02,
+        "pct": 5.15,
         "diagnostic_only": true
       },
       {
@@ -1599,7 +1614,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.23,
+        "pct": 1.29,
         "diagnostic_only": true
       },
       {
@@ -1641,7 +1656,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.54,
+        "pct": -0.65,
         "diagnostic_only": true
       },
       {
@@ -1704,7 +1719,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -8.6,
+        "pct": -8.67,
         "diagnostic_only": true
       },
       {
@@ -1725,7 +1740,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.37,
+        "pct": 0.48,
         "diagnostic_only": true
       },
       {
@@ -1746,7 +1761,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.42,
+        "pct": -6.49,
         "diagnostic_only": true
       },
       {
@@ -1788,7 +1803,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.38,
+        "pct": -6.4,
         "diagnostic_only": true
       },
       {
@@ -1809,7 +1824,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.02,
+        "pct": -2.09,
         "diagnostic_only": true
       },
       {
@@ -1851,7 +1866,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.03,
+        "pct": -4.13,
         "diagnostic_only": true
       },
       {
@@ -1872,7 +1887,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.89,
+        "pct": -2.94,
         "diagnostic_only": true
       },
       {
@@ -1914,7 +1929,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.22,
+        "pct": 2.02,
         "diagnostic_only": true
       },
       {
@@ -1935,28 +1950,7 @@
         "outer_ratio_pct": 46.46,
         "vwap_gap_pct": -0.05,
         "amount_ratio": null,
-        "pct": -3.31,
-        "diagnostic_only": true
-      },
-      {
-        "code": "002240",
-        "name": "盛新锂能",
-        "group": "candidate",
-        "score": 25.96,
-        "label": "拉高出货/假突破风险",
-        "confidence": "high",
-        "risk_tags": [],
-        "evidence": "主力净占比 -8.82%；外盘承接 44.66%；VWAP偏离 -1.48%；收盘位置 1.00",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": -8.82,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": 44.66,
-        "vwap_gap_pct": -1.48,
-        "amount_ratio": null,
-        "pct": -3.47,
+        "pct": -3.39,
         "diagnostic_only": true
       },
       {
@@ -1977,28 +1971,28 @@
         "outer_ratio_pct": 48.11,
         "vwap_gap_pct": -0.95,
         "amount_ratio": null,
-        "pct": -1.36,
+        "pct": -1.48,
         "diagnostic_only": true
       },
       {
         "code": "300819",
         "name": "聚杰微纤",
         "group": "candidate",
-        "score": 23.7,
+        "score": 23.14,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -5.79%；外盘承接 47.19%；VWAP偏离 -1.36%；收盘位置 0.22",
+        "evidence": "主力净占比 -5.79%；主力净额 -0.32亿；大单净额 0.20亿；外盘承接 47.19%；VWAP偏离 -1.36%；收盘位置 0.22",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -5.79,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -32059295.0,
+        "large_net_amount": 19932857.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 47.19,
         "vwap_gap_pct": -1.36,
         "amount_ratio": null,
-        "pct": -4.1,
+        "pct": -3.99,
         "diagnostic_only": true
       },
       {
@@ -2023,45 +2017,66 @@
         "diagnostic_only": true
       },
       {
-        "code": "603618",
-        "name": "杭电股份",
+        "code": "002240",
+        "name": "盛新锂能",
         "group": "candidate",
-        "score": 12.7,
+        "score": 19.04,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -10.17%；外盘承接 47.22%；VWAP偏离 -1.12%；收盘位置 0.16",
+        "evidence": "主力净占比 -8.82%；主力净额 -1.60亿；大单净额 -1.07亿；外盘承接 44.66%；VWAP偏离 -1.48%；收盘位置 1.00",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": -8.82,
+        "main_net_amount": -159574682.0,
+        "large_net_amount": -106659588.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
+        "outer_ratio_pct": 44.66,
+        "vwap_gap_pct": -1.48,
+        "amount_ratio": null,
+        "pct": -3.5,
+        "diagnostic_only": true
+      },
+      {
+        "code": "603618",
+        "name": "杭电股份",
+        "group": "candidate",
+        "score": 9.43,
+        "label": "拉高出货/假突破风险",
+        "confidence": "high",
+        "risk_tags": [],
+        "evidence": "主力净占比 -10.17%；主力净额 -0.69亿；大单净额 -0.60亿；外盘承接 47.22%；VWAP偏离 -1.12%；收盘位置 0.16",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -10.17,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -68981974.0,
+        "large_net_amount": -59937078.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 47.22,
         "vwap_gap_pct": -1.12,
         "amount_ratio": null,
-        "pct": -4.42,
+        "pct": -4.5,
         "diagnostic_only": true
       },
       {
         "code": "001400",
         "name": "江顺科技",
         "group": "candidate",
-        "score": 1.32,
+        "score": 0.19,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -20.12%；外盘承接 39.52%；VWAP偏离 -1.29%；收盘位置 0.08",
+        "evidence": "主力净占比 -20.12%；主力净额 -0.29亿；大单净额 -0.12亿；外盘承接 39.52%；VWAP偏离 -1.29%；收盘位置 0.08",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -20.12,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -29403953.0,
+        "large_net_amount": -12468304.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 39.52,
         "vwap_gap_pct": -1.29,
         "amount_ratio": null,
-        "pct": -5.54,
+        "pct": -5.53,
         "diagnostic_only": true
       },
       {
@@ -2082,7 +2097,7 @@
         "outer_ratio_pct": 48.51,
         "vwap_gap_pct": -4.07,
         "amount_ratio": null,
-        "pct": -1.5,
+        "pct": -1.62,
         "diagnostic_only": true
       },
       {
@@ -2095,17 +2110,17 @@
         "risk_tags": [
           "拉高出货嫌疑"
         ],
-        "evidence": "主力净占比 -15.74%；外盘承接 48.43%；VWAP偏离 -3.56%；收盘位置 0.33",
+        "evidence": "主力净占比 -15.74%；主力净额 -1.56亿；大单净额 -0.60亿；外盘承接 48.43%；VWAP偏离 -3.56%；收盘位置 0.33",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -15.74,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -156488125.0,
+        "large_net_amount": -59782316.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 48.43,
         "vwap_gap_pct": -3.56,
         "amount_ratio": null,
-        "pct": 5.71,
+        "pct": 5.65,
         "diagnostic_only": true
       },
       {
@@ -2126,7 +2141,7 @@
         "outer_ratio_pct": 41.19,
         "vwap_gap_pct": -2.11,
         "amount_ratio": null,
-        "pct": -1.61,
+        "pct": -1.64,
         "diagnostic_only": true
       }
     ],
@@ -2135,42 +2150,21 @@
         "code": "300885",
         "name": "海昌新材",
         "group": "candidate",
-        "score": 86.04,
+        "score": 87.64,
         "label": "承接增强",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 12.39%；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
+        "evidence": "主力净占比 12.39%；主力净额 0.33亿；大单净额 0.30亿；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": 12.39,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": 33216971.0,
+        "large_net_amount": 30388627.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
         "pct": 3.69,
-        "diagnostic_only": true
-      },
-      {
-        "code": "688256",
-        "name": "DR寒武纪",
-        "group": "mainline_pool",
-        "score": 60.68,
-        "label": "主力净流确认",
-        "confidence": "medium",
-        "risk_tags": [],
-        "evidence": "主力净额 0.89亿；大单净额 20.40亿",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": null,
-        "main_net_amount": 89187759.0,
-        "large_net_amount": 2040436231.0,
-        "flow_time": "2026-05-15 14:07",
-        "flow_source": "eastmoney_flow",
-        "outer_ratio_pct": null,
-        "vwap_gap_pct": null,
-        "amount_ratio": null,
-        "pct": -4.05,
         "diagnostic_only": true
       }
     ],
@@ -2179,44 +2173,23 @@
         "code": "000593",
         "name": "德龙汇能",
         "group": "candidate",
-        "score": 51.09,
+        "score": 53.58,
         "label": "中性观察",
         "confidence": "high",
         "risk_tags": [
           "下跌承接"
         ],
-        "evidence": "主力净占比 -5.63%；外盘承接 53.54%；VWAP偏离 0.14%；收盘位置 0.59",
+        "evidence": "主力净占比 -5.63%；主力净额 0.60亿；大单净额 0.35亿；外盘承接 53.54%；VWAP偏离 0.14%；收盘位置 0.59",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -5.63,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": 59798909.0,
+        "large_net_amount": 34935522.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 53.54,
         "vwap_gap_pct": 0.14,
         "amount_ratio": null,
         "pct": -0.43,
-        "diagnostic_only": true
-      },
-      {
-        "code": "002240",
-        "name": "盛新锂能",
-        "group": "candidate",
-        "score": 25.96,
-        "label": "拉高出货/假突破风险",
-        "confidence": "high",
-        "risk_tags": [],
-        "evidence": "主力净占比 -8.82%；外盘承接 44.66%；VWAP偏离 -1.48%；收盘位置 1.00",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": -8.82,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": 44.66,
-        "vwap_gap_pct": -1.48,
-        "amount_ratio": null,
-        "pct": -3.47,
         "diagnostic_only": true
       },
       {
@@ -2237,28 +2210,28 @@
         "outer_ratio_pct": 48.11,
         "vwap_gap_pct": -0.95,
         "amount_ratio": null,
-        "pct": -1.36,
+        "pct": -1.48,
         "diagnostic_only": true
       },
       {
         "code": "300819",
         "name": "聚杰微纤",
         "group": "candidate",
-        "score": 23.7,
+        "score": 23.14,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -5.79%；外盘承接 47.19%；VWAP偏离 -1.36%；收盘位置 0.22",
+        "evidence": "主力净占比 -5.79%；主力净额 -0.32亿；大单净额 0.20亿；外盘承接 47.19%；VWAP偏离 -1.36%；收盘位置 0.22",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -5.79,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -32059295.0,
+        "large_net_amount": 19932857.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 47.19,
         "vwap_gap_pct": -1.36,
         "amount_ratio": null,
-        "pct": -4.1,
+        "pct": -3.99,
         "diagnostic_only": true
       },
       {
@@ -2283,45 +2256,66 @@
         "diagnostic_only": true
       },
       {
-        "code": "603618",
-        "name": "杭电股份",
+        "code": "002240",
+        "name": "盛新锂能",
         "group": "candidate",
-        "score": 12.7,
+        "score": 19.04,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -10.17%；外盘承接 47.22%；VWAP偏离 -1.12%；收盘位置 0.16",
+        "evidence": "主力净占比 -8.82%；主力净额 -1.60亿；大单净额 -1.07亿；外盘承接 44.66%；VWAP偏离 -1.48%；收盘位置 1.00",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": -8.82,
+        "main_net_amount": -159574682.0,
+        "large_net_amount": -106659588.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
+        "outer_ratio_pct": 44.66,
+        "vwap_gap_pct": -1.48,
+        "amount_ratio": null,
+        "pct": -3.5,
+        "diagnostic_only": true
+      },
+      {
+        "code": "603618",
+        "name": "杭电股份",
+        "group": "candidate",
+        "score": 9.43,
+        "label": "拉高出货/假突破风险",
+        "confidence": "high",
+        "risk_tags": [],
+        "evidence": "主力净占比 -10.17%；主力净额 -0.69亿；大单净额 -0.60亿；外盘承接 47.22%；VWAP偏离 -1.12%；收盘位置 0.16",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -10.17,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -68981974.0,
+        "large_net_amount": -59937078.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 47.22,
         "vwap_gap_pct": -1.12,
         "amount_ratio": null,
-        "pct": -4.42,
+        "pct": -4.5,
         "diagnostic_only": true
       },
       {
         "code": "001400",
         "name": "江顺科技",
         "group": "candidate",
-        "score": 1.32,
+        "score": 0.19,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -20.12%；外盘承接 39.52%；VWAP偏离 -1.29%；收盘位置 0.08",
+        "evidence": "主力净占比 -20.12%；主力净额 -0.29亿；大单净额 -0.12亿；外盘承接 39.52%；VWAP偏离 -1.29%；收盘位置 0.08",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -20.12,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -29403953.0,
+        "large_net_amount": -12468304.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 39.52,
         "vwap_gap_pct": -1.29,
         "amount_ratio": null,
-        "pct": -5.54,
+        "pct": -5.53,
         "diagnostic_only": true
       },
       {
@@ -2342,7 +2336,7 @@
         "outer_ratio_pct": 48.51,
         "vwap_gap_pct": -4.07,
         "amount_ratio": null,
-        "pct": -1.5,
+        "pct": -1.62,
         "diagnostic_only": true
       },
       {
@@ -2355,17 +2349,17 @@
         "risk_tags": [
           "拉高出货嫌疑"
         ],
-        "evidence": "主力净占比 -15.74%；外盘承接 48.43%；VWAP偏离 -3.56%；收盘位置 0.33",
+        "evidence": "主力净占比 -15.74%；主力净额 -1.56亿；大单净额 -0.60亿；外盘承接 48.43%；VWAP偏离 -3.56%；收盘位置 0.33",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -15.74,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -156488125.0,
+        "large_net_amount": -59782316.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 48.43,
         "vwap_gap_pct": -3.56,
         "amount_ratio": null,
-        "pct": 5.71,
+        "pct": 5.65,
         "diagnostic_only": true
       },
       {
@@ -2386,7 +2380,7 @@
         "outer_ratio_pct": 41.19,
         "vwap_gap_pct": -2.11,
         "amount_ratio": null,
-        "pct": -1.61,
+        "pct": -1.64,
         "diagnostic_only": true
       }
     ],
@@ -2395,42 +2389,44 @@
         "code": "300885",
         "name": "海昌新材",
         "group": "candidate",
-        "score": 86.04,
+        "score": 87.64,
         "label": "承接增强",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 12.39%；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
+        "evidence": "主力净占比 12.39%；主力净额 0.33亿；大单净额 0.30亿；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": 12.39,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": 33216971.0,
+        "large_net_amount": 30388627.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
         "pct": 3.69,
         "diagnostic_only": true
       },
-      "688256": {
-        "code": "688256",
-        "name": "DR寒武纪",
-        "group": "mainline_pool",
-        "score": 60.68,
-        "label": "主力净流确认",
-        "confidence": "medium",
-        "risk_tags": [],
-        "evidence": "主力净额 0.89亿；大单净额 20.40亿",
+      "000593": {
+        "code": "000593",
+        "name": "德龙汇能",
+        "group": "candidate",
+        "score": 53.58,
+        "label": "中性观察",
+        "confidence": "high",
+        "risk_tags": [
+          "下跌承接"
+        ],
+        "evidence": "主力净占比 -5.63%；主力净额 0.60亿；大单净额 0.35亿；外盘承接 53.54%；VWAP偏离 0.14%；收盘位置 0.59",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": null,
-        "main_net_amount": 89187759.0,
-        "large_net_amount": 2040436231.0,
-        "flow_time": "2026-05-15 14:07",
+        "main_net_pct": -5.63,
+        "main_net_amount": 59798909.0,
+        "large_net_amount": 34935522.0,
+        "flow_time": "2026-05-15 14:08",
         "flow_source": "eastmoney_flow",
-        "outer_ratio_pct": null,
-        "vwap_gap_pct": null,
+        "outer_ratio_pct": 53.54,
+        "vwap_gap_pct": 0.14,
         "amount_ratio": null,
-        "pct": -4.05,
+        "pct": -0.43,
         "diagnostic_only": true
       },
       "002181": {
@@ -2454,29 +2450,6 @@
         "pct": 10.0,
         "diagnostic_only": true
       },
-      "000593": {
-        "code": "000593",
-        "name": "德龙汇能",
-        "group": "candidate",
-        "score": 51.09,
-        "label": "中性观察",
-        "confidence": "high",
-        "risk_tags": [
-          "下跌承接"
-        ],
-        "evidence": "主力净占比 -5.63%；外盘承接 53.54%；VWAP偏离 0.14%；收盘位置 0.59",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": -5.63,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": 53.54,
-        "vwap_gap_pct": 0.14,
-        "amount_ratio": null,
-        "pct": -0.43,
-        "diagnostic_only": true
-      },
       "688268": {
         "code": "688268",
         "name": "华特气体",
@@ -2495,7 +2468,7 @@
         "outer_ratio_pct": 44.65,
         "vwap_gap_pct": -1.89,
         "amount_ratio": null,
-        "pct": 3.86,
+        "pct": 3.87,
         "diagnostic_only": true
       },
       "301217": {
@@ -2516,7 +2489,28 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.86,
+        "pct": -0.82,
+        "diagnostic_only": true
+      },
+      "688256": {
+        "code": "688256",
+        "name": "DR寒武纪",
+        "group": "mainline_pool",
+        "score": 50.0,
+        "label": "中性观察",
+        "confidence": "low",
+        "risk_tags": [],
+        "evidence": "缺少实时资金字段，等待数据源补齐",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": null,
+        "main_net_amount": null,
+        "large_net_amount": null,
+        "flow_time": null,
+        "flow_source": null,
+        "outer_ratio_pct": null,
+        "vwap_gap_pct": null,
+        "amount_ratio": null,
+        "pct": -4.07,
         "diagnostic_only": true
       },
       "920186": {
@@ -2537,7 +2531,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.9,
+        "pct": -0.94,
         "diagnostic_only": true
       },
       "920249": {
@@ -2579,7 +2573,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.73,
+        "pct": 2.77,
         "diagnostic_only": true
       },
       "688808": {
@@ -2621,7 +2615,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.92,
+        "pct": -5.12,
         "diagnostic_only": true
       },
       "688313": {
@@ -2642,7 +2636,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.38,
+        "pct": -4.4,
         "diagnostic_only": true
       },
       "301666": {
@@ -2663,7 +2657,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.06,
+        "pct": 1.75,
         "diagnostic_only": true
       },
       "300390": {
@@ -2684,7 +2678,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.55,
+        "pct": -2.47,
         "diagnostic_only": true
       },
       "001309": {
@@ -2705,7 +2699,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.5,
+        "pct": -2.47,
         "diagnostic_only": true
       },
       "300042": {
@@ -2726,7 +2720,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.6,
+        "pct": -3.7,
         "diagnostic_only": true
       },
       "688525": {
@@ -2768,7 +2762,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.82,
+        "pct": -5.81,
         "diagnostic_only": true
       },
       "002281": {
@@ -2789,7 +2783,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.9,
+        "pct": -2.96,
         "diagnostic_only": true
       },
       "002975": {
@@ -2810,7 +2804,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -1.04,
         "diagnostic_only": true
       },
       "600105": {
@@ -2831,7 +2825,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.08,
+        "pct": -5.22,
         "diagnostic_only": true
       },
       "300283": {
@@ -2852,7 +2846,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.0,
+        "pct": -0.88,
         "diagnostic_only": true
       },
       "603045": {
@@ -2873,7 +2867,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.02,
+        "pct": 1.12,
         "diagnostic_only": true
       },
       "301696": {
@@ -2894,7 +2888,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 20.0,
+        "pct": 19.98,
         "diagnostic_only": true
       },
       "688530": {
@@ -2915,7 +2909,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.29,
+        "pct": 0.33,
         "diagnostic_only": true
       },
       "688048": {
@@ -2936,7 +2930,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.25,
+        "pct": -6.17,
         "diagnostic_only": true
       },
       "002460": {
@@ -2957,7 +2951,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.21,
+        "pct": -2.23,
         "diagnostic_only": true
       },
       "002309": {
@@ -2999,7 +2993,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 3.62,
+        "pct": 3.6,
         "diagnostic_only": true
       },
       "601869": {
@@ -3041,7 +3035,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.48,
+        "pct": -1.58,
         "diagnostic_only": true
       },
       "300620": {
@@ -3062,7 +3056,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.8,
+        "pct": -5.79,
         "diagnostic_only": true
       },
       "600522": {
@@ -3083,7 +3077,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -7.26,
+        "pct": -7.28,
         "diagnostic_only": true
       },
       "300308": {
@@ -3104,7 +3098,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.1,
+        "pct": -3.21,
         "diagnostic_only": true
       },
       "603629": {
@@ -3125,7 +3119,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.67,
+        "pct": -1.64,
         "diagnostic_only": true
       },
       "300502": {
@@ -3146,7 +3140,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.2,
+        "pct": -2.22,
         "diagnostic_only": true
       },
       "688818": {
@@ -3167,7 +3161,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.99,
+        "pct": -2.95,
         "diagnostic_only": true
       },
       "300139": {
@@ -3188,7 +3182,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.79,
+        "pct": -5.81,
         "diagnostic_only": true
       },
       "603459": {
@@ -3209,7 +3203,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.75,
+        "pct": -3.72,
         "diagnostic_only": true
       },
       "002580": {
@@ -3230,7 +3224,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -9.1,
+        "pct": -9.16,
         "diagnostic_only": true
       },
       "301358": {
@@ -3293,7 +3287,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -3.77,
+        "pct": -3.84,
         "diagnostic_only": true
       },
       "688025": {
@@ -3314,7 +3308,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 5.64,
+        "pct": 5.36,
         "diagnostic_only": true
       },
       "603026": {
@@ -3335,7 +3329,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.96,
+        "pct": 2.94,
         "diagnostic_only": true
       },
       "600869": {
@@ -3356,7 +3350,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.42,
+        "pct": -0.55,
         "diagnostic_only": true
       },
       "300696": {
@@ -3377,7 +3371,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -7.58,
+        "pct": -7.53,
         "diagnostic_only": true
       },
       "300438": {
@@ -3398,7 +3392,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -1.54,
+        "pct": -1.62,
         "diagnostic_only": true
       },
       "002008": {
@@ -3419,7 +3413,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -5.75,
+        "pct": -5.76,
         "diagnostic_only": true
       },
       "603083": {
@@ -3440,7 +3434,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.58,
+        "pct": -2.72,
         "diagnostic_only": true
       },
       "688416": {
@@ -3482,7 +3476,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 5.02,
+        "pct": 5.15,
         "diagnostic_only": true
       },
       "603986": {
@@ -3503,7 +3497,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 1.23,
+        "pct": 1.29,
         "diagnostic_only": true
       },
       "002407": {
@@ -3545,7 +3539,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -0.54,
+        "pct": -0.65,
         "diagnostic_only": true
       },
       "301680": {
@@ -3608,7 +3602,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -8.6,
+        "pct": -8.67,
         "diagnostic_only": true
       },
       "688811": {
@@ -3629,7 +3623,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 0.37,
+        "pct": 0.48,
         "diagnostic_only": true
       },
       "600487": {
@@ -3650,7 +3644,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.42,
+        "pct": -6.49,
         "diagnostic_only": true
       },
       "600330": {
@@ -3692,7 +3686,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -6.38,
+        "pct": -6.4,
         "diagnostic_only": true
       },
       "002466": {
@@ -3713,7 +3707,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.02,
+        "pct": -2.09,
         "diagnostic_only": true
       },
       "301338": {
@@ -3755,7 +3749,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -4.03,
+        "pct": -4.13,
         "diagnostic_only": true
       },
       "300398": {
@@ -3776,7 +3770,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": -2.89,
+        "pct": -2.94,
         "diagnostic_only": true
       },
       "300548": {
@@ -3818,7 +3812,7 @@
         "outer_ratio_pct": null,
         "vwap_gap_pct": null,
         "amount_ratio": null,
-        "pct": 2.22,
+        "pct": 2.02,
         "diagnostic_only": true
       },
       "688001": {
@@ -3839,28 +3833,7 @@
         "outer_ratio_pct": 46.46,
         "vwap_gap_pct": -0.05,
         "amount_ratio": null,
-        "pct": -3.31,
-        "diagnostic_only": true
-      },
-      "002240": {
-        "code": "002240",
-        "name": "盛新锂能",
-        "group": "candidate",
-        "score": 25.96,
-        "label": "拉高出货/假突破风险",
-        "confidence": "high",
-        "risk_tags": [],
-        "evidence": "主力净占比 -8.82%；外盘承接 44.66%；VWAP偏离 -1.48%；收盘位置 1.00",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": -8.82,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": 44.66,
-        "vwap_gap_pct": -1.48,
-        "amount_ratio": null,
-        "pct": -3.47,
+        "pct": -3.39,
         "diagnostic_only": true
       },
       "300769": {
@@ -3881,28 +3854,28 @@
         "outer_ratio_pct": 48.11,
         "vwap_gap_pct": -0.95,
         "amount_ratio": null,
-        "pct": -1.36,
+        "pct": -1.48,
         "diagnostic_only": true
       },
       "300819": {
         "code": "300819",
         "name": "聚杰微纤",
         "group": "candidate",
-        "score": 23.7,
+        "score": 23.14,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -5.79%；外盘承接 47.19%；VWAP偏离 -1.36%；收盘位置 0.22",
+        "evidence": "主力净占比 -5.79%；主力净额 -0.32亿；大单净额 0.20亿；外盘承接 47.19%；VWAP偏离 -1.36%；收盘位置 0.22",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -5.79,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -32059295.0,
+        "large_net_amount": 19932857.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 47.19,
         "vwap_gap_pct": -1.36,
         "amount_ratio": null,
-        "pct": -4.1,
+        "pct": -3.99,
         "diagnostic_only": true
       },
       "603803": {
@@ -3926,46 +3899,67 @@
         "pct": -3.22,
         "diagnostic_only": true
       },
+      "002240": {
+        "code": "002240",
+        "name": "盛新锂能",
+        "group": "candidate",
+        "score": 19.04,
+        "label": "拉高出货/假突破风险",
+        "confidence": "high",
+        "risk_tags": [],
+        "evidence": "主力净占比 -8.82%；主力净额 -1.60亿；大单净额 -1.07亿；外盘承接 44.66%；VWAP偏离 -1.48%；收盘位置 1.00",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": -8.82,
+        "main_net_amount": -159574682.0,
+        "large_net_amount": -106659588.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
+        "outer_ratio_pct": 44.66,
+        "vwap_gap_pct": -1.48,
+        "amount_ratio": null,
+        "pct": -3.5,
+        "diagnostic_only": true
+      },
       "603618": {
         "code": "603618",
         "name": "杭电股份",
         "group": "candidate",
-        "score": 12.7,
+        "score": 9.43,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -10.17%；外盘承接 47.22%；VWAP偏离 -1.12%；收盘位置 0.16",
+        "evidence": "主力净占比 -10.17%；主力净额 -0.69亿；大单净额 -0.60亿；外盘承接 47.22%；VWAP偏离 -1.12%；收盘位置 0.16",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -10.17,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -68981974.0,
+        "large_net_amount": -59937078.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 47.22,
         "vwap_gap_pct": -1.12,
         "amount_ratio": null,
-        "pct": -4.42,
+        "pct": -4.5,
         "diagnostic_only": true
       },
       "001400": {
         "code": "001400",
         "name": "江顺科技",
         "group": "candidate",
-        "score": 1.32,
+        "score": 0.19,
         "label": "拉高出货/假突破风险",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -20.12%；外盘承接 39.52%；VWAP偏离 -1.29%；收盘位置 0.08",
+        "evidence": "主力净占比 -20.12%；主力净额 -0.29亿；大单净额 -0.12亿；外盘承接 39.52%；VWAP偏离 -1.29%；收盘位置 0.08",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -20.12,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -29403953.0,
+        "large_net_amount": -12468304.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 39.52,
         "vwap_gap_pct": -1.29,
         "amount_ratio": null,
-        "pct": -5.54,
+        "pct": -5.53,
         "diagnostic_only": true
       },
       "600726": {
@@ -3986,7 +3980,7 @@
         "outer_ratio_pct": 48.51,
         "vwap_gap_pct": -4.07,
         "amount_ratio": null,
-        "pct": -1.5,
+        "pct": -1.62,
         "diagnostic_only": true
       },
       "600396": {
@@ -3999,17 +3993,17 @@
         "risk_tags": [
           "拉高出货嫌疑"
         ],
-        "evidence": "主力净占比 -15.74%；外盘承接 48.43%；VWAP偏离 -3.56%；收盘位置 0.33",
+        "evidence": "主力净占比 -15.74%；主力净额 -1.56亿；大单净额 -0.60亿；外盘承接 48.43%；VWAP偏离 -3.56%；收盘位置 0.33",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -15.74,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -156488125.0,
+        "large_net_amount": -59782316.0,
+        "flow_time": "2026-05-15 14:08",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 48.43,
         "vwap_gap_pct": -3.56,
         "amount_ratio": null,
-        "pct": 5.71,
+        "pct": 5.65,
         "diagnostic_only": true
       },
       "603308": {
@@ -4030,17 +4024,17 @@
         "outer_ratio_pct": 41.19,
         "vwap_gap_pct": -2.11,
         "amount_ratio": null,
-        "pct": -1.61,
+        "pct": -1.64,
         "diagnostic_only": true
       }
     },
-    "summary": "V151.9 暗盘资金代理：2 个承接/净流确认，10 个撤退或假突破风险；仅诊断，不改变买卖。"
+    "summary": "V151.9 暗盘资金代理：1 个承接/净流确认，10 个撤退或假突破风险；仅诊断，不改变买卖。"
   },
   "mainline_promotion": {
     "enabled": true,
     "version": "V151.5",
     "trial_rows": 3,
-    "watch_rows": 23,
+    "watch_rows": 25,
     "rules": {
       "trial_score": 70.0,
       "watch_score": 55.0,
@@ -4057,16 +4051,16 @@
         "mainline": "航空航天军工",
         "node": "航天卫星",
         "tier": "核心候选",
-        "promotion_score": 74.71,
-        "rt_price": 25.59,
-        "rt_pct": 2.73,
+        "promotion_score": 79.71,
+        "rt_price": 25.6,
+        "rt_pct": 2.77,
         "potential_score": 68.69,
         "market_strength_score": 91.19,
-        "news_impact_score": 0,
+        "news_impact_score": 5.0,
         "action": "MODEL_TRIAL_BUY_WATCH",
         "label": "可小仓模拟试错",
         "target_pct": 8.0,
-        "reason": "盘中涨幅确认 2.73%；潜力分 68.7；市场强度 91.2",
+        "reason": "盘中涨幅确认 2.77%；潜力分 68.7；市场强度 91.2；新闻强化 +5",
         "blockers": "",
         "quote_source": "tencent"
       },
@@ -4096,15 +4090,15 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 73.65,
-        "rt_price": 644.0,
-        "rt_pct": 2.06,
+        "rt_price": 642.06,
+        "rt_pct": 1.75,
         "potential_score": 66.09,
         "market_strength_score": 100.0,
         "news_impact_score": 0,
         "action": "MODEL_TRIAL_BUY_WATCH",
         "label": "可小仓模拟试错",
         "target_pct": 8.0,
-        "reason": "盘中涨幅确认 2.06%；潜力分 66.1；市场强度 100.0",
+        "reason": "盘中涨幅确认 1.75%；潜力分 66.1；市场强度 100.0",
         "blockers": "",
         "quote_source": "tencent"
       },
@@ -4115,8 +4109,8 @@
         "node": "电池材料",
         "tier": "核心候选",
         "promotion_score": 73.22,
-        "rt_price": 94.06,
-        "rt_pct": -2.55,
+        "rt_price": 94.14,
+        "rt_pct": -2.47,
         "potential_score": 65.21,
         "market_strength_score": 84.85,
         "news_impact_score": 2.0,
@@ -4124,7 +4118,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 65.2；市场强度 84.8；新闻扰动 +2",
-        "blockers": "涨幅未确认 -2.55%；盘中转弱 -2.55%",
+        "blockers": "涨幅未确认 -2.47%；盘中转弱 -2.47%",
         "quote_source": "tencent"
       },
       {
@@ -4134,8 +4128,8 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 70.53,
-        "rt_price": 703.61,
-        "rt_pct": -2.5,
+        "rt_price": 703.86,
+        "rt_pct": -2.47,
         "potential_score": 65.15,
         "market_strength_score": 91.18,
         "news_impact_score": 0,
@@ -4143,7 +4137,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 65.2；市场强度 91.2",
-        "blockers": "涨幅未确认 -2.50%；盘中转弱 -2.50%",
+        "blockers": "涨幅未确认 -2.47%；盘中转弱 -2.47%",
         "quote_source": "tencent"
       },
       {
@@ -4153,8 +4147,8 @@
         "node": "半导体制造",
         "tier": "核心候选",
         "promotion_score": 70.17,
-        "rt_price": 64.56,
-        "rt_pct": -3.6,
+        "rt_price": 64.49,
+        "rt_pct": -3.7,
         "potential_score": 64.14,
         "market_strength_score": 83.18,
         "news_impact_score": 0,
@@ -4162,7 +4156,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 64.1；市场强度 83.2",
-        "blockers": "涨幅未确认 -3.60%；盘中转弱 -3.60%",
+        "blockers": "涨幅未确认 -3.70%；盘中转弱 -3.70%",
         "quote_source": "tencent"
       },
       {
@@ -4172,8 +4166,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 70.11,
-        "rt_price": 174.53,
-        "rt_pct": -4.38,
+        "rt_price": 174.5,
+        "rt_pct": -4.4,
         "potential_score": 66.39,
         "market_strength_score": 66.73,
         "news_impact_score": 0,
@@ -4181,7 +4175,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 66.4；市场强度 66.7",
-        "blockers": "涨幅未确认 -4.38%；盘中转弱 -4.38%",
+        "blockers": "涨幅未确认 -4.40%；盘中转弱 -4.40%",
         "quote_source": "tencent"
       },
       {
@@ -4191,8 +4185,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 69.07,
-        "rt_price": 273.87,
-        "rt_pct": -4.92,
+        "rt_price": 273.28,
+        "rt_pct": -5.12,
         "potential_score": 66.53,
         "market_strength_score": 68.31,
         "news_impact_score": 0,
@@ -4200,7 +4194,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 66.5；市场强度 68.3",
-        "blockers": "涨幅未确认 -4.92%；盘中转弱 -4.92%",
+        "blockers": "涨幅未确认 -5.12%；盘中转弱 -5.12%",
         "quote_source": "tencent"
       },
       {
@@ -4229,8 +4223,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 65.7,
-        "rt_price": 197.88,
-        "rt_pct": -2.9,
+        "rt_price": 197.76,
+        "rt_pct": -2.96,
         "potential_score": 60.2,
         "market_strength_score": 88.14,
         "news_impact_score": 0,
@@ -4238,7 +4232,26 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 60.2；市场强度 88.1",
-        "blockers": "涨幅未确认 -2.90%；盘中转弱 -2.90%",
+        "blockers": "涨幅未确认 -2.96%；盘中转弱 -2.96%",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "301696",
+        "name": "三瑞智能",
+        "mainline": "航空航天军工",
+        "node": "低空/无人机",
+        "tier": "强候选",
+        "promotion_score": 65.61,
+        "rt_price": 139.45,
+        "rt_pct": 19.98,
+        "potential_score": 57.34,
+        "market_strength_score": 100.0,
+        "news_impact_score": 5.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "盘中涨幅确认 19.98%；潜力分 57.3；市场强度 100.0；新闻强化 +5",
+        "blockers": "涨幅过高 19.98%，不追高",
         "quote_source": "tencent"
       },
       {
@@ -4248,8 +4261,8 @@
         "node": "光通信/CPO",
         "tier": "核心候选",
         "promotion_score": 65.16,
-        "rt_price": 1539.9,
-        "rt_pct": -5.82,
+        "rt_price": 1539.93,
+        "rt_pct": -5.81,
         "potential_score": 61.16,
         "market_strength_score": 72.0,
         "news_impact_score": 0,
@@ -4257,7 +4270,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 61.2；市场强度 72.0",
-        "blockers": "涨幅未确认 -5.82%；盘中转弱 -5.82%",
+        "blockers": "涨幅未确认 -5.81%；盘中转弱 -5.81%",
         "quote_source": "tencent"
       },
       {
@@ -4267,8 +4280,8 @@
         "node": "光伏设备",
         "tier": "强候选",
         "promotion_score": 62.28,
-        "rt_price": 54.48,
-        "rt_pct": 0.29,
+        "rt_price": 54.5,
+        "rt_pct": 0.33,
         "potential_score": 56.72,
         "market_strength_score": 100.0,
         "news_impact_score": 2.0,
@@ -4276,7 +4289,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 56.7；市场强度 100.0；新闻扰动 +2",
-        "blockers": "涨幅未确认 0.29%",
+        "blockers": "涨幅未确认 0.33%",
         "quote_source": "tencent"
       },
       {
@@ -4286,8 +4299,8 @@
         "node": "光伏设备",
         "tier": "强候选",
         "promotion_score": 61.01,
-        "rt_price": 70.11,
-        "rt_pct": 1.02,
+        "rt_price": 70.18,
+        "rt_pct": 1.12,
         "potential_score": 57.81,
         "market_strength_score": 81.78,
         "news_impact_score": 2.0,
@@ -4295,26 +4308,26 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 57.8；市场强度 81.8；新闻扰动 +2",
-        "blockers": "涨幅未确认 1.02%",
+        "blockers": "涨幅未确认 1.12%",
         "quote_source": "tencent"
       },
       {
-        "code": "301696",
-        "name": "三瑞智能",
+        "code": "688818",
+        "name": "电科蓝天",
         "mainline": "航空航天军工",
-        "node": "低空/无人机",
+        "node": "航天卫星",
         "tier": "强候选",
-        "promotion_score": 60.61,
-        "rt_price": 139.48,
-        "rt_pct": 20.0,
-        "potential_score": 57.34,
+        "promotion_score": 60.7,
+        "rt_price": 77.98,
+        "rt_pct": -2.95,
+        "potential_score": 51.43,
         "market_strength_score": 100.0,
-        "news_impact_score": 0,
+        "news_impact_score": 5.0,
         "action": "PROMOTION_WATCH",
         "label": "晋级观察",
         "target_pct": 0,
-        "reason": "盘中涨幅确认 20.00%；潜力分 57.3；市场强度 100.0",
-        "blockers": "涨幅过高 20.00%，不追高",
+        "reason": "市场强度 100.0；新闻强化 +5",
+        "blockers": "涨幅未确认 -2.95%；盘中转弱 -2.95%；潜力分不足 51.4",
         "quote_source": "tencent"
       },
       {
@@ -4324,8 +4337,8 @@
         "node": "半导体制造",
         "tier": "强候选",
         "promotion_score": 59.87,
-        "rt_price": 15.84,
-        "rt_pct": -1.0,
+        "rt_price": 15.86,
+        "rt_pct": -0.88,
         "potential_score": 58.05,
         "market_strength_score": 87.96,
         "news_impact_score": 0,
@@ -4333,7 +4346,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 58.0；市场强度 88.0",
-        "blockers": "涨幅未确认 -1.00%",
+        "blockers": "涨幅未确认 -0.88%",
         "quote_source": "tencent"
       },
       {
@@ -4343,8 +4356,8 @@
         "node": "光通信/CPO",
         "tier": "强候选",
         "promotion_score": 58.57,
-        "rt_price": 51.25,
-        "rt_pct": -5.08,
+        "rt_price": 51.17,
+        "rt_pct": -5.22,
         "potential_score": 58.29,
         "market_strength_score": 75.67,
         "news_impact_score": 0,
@@ -4352,7 +4365,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 58.3；市场强度 75.7",
-        "blockers": "涨幅未确认 -5.08%；盘中转弱 -5.08%",
+        "blockers": "涨幅未确认 -5.22%；盘中转弱 -5.22%",
         "quote_source": "tencent"
       },
       {
@@ -4362,8 +4375,8 @@
         "node": "光通信/CPO",
         "tier": "强候选",
         "promotion_score": 58.4,
-        "rt_price": 420.1,
-        "rt_pct": -6.25,
+        "rt_price": 420.46,
+        "rt_pct": -6.17,
         "potential_score": 55.6,
         "market_strength_score": 92.55,
         "news_impact_score": 0,
@@ -4371,7 +4384,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 55.6；市场强度 92.5",
-        "blockers": "涨幅未确认 -6.25%；盘中转弱 -6.25%",
+        "blockers": "涨幅未确认 -6.17%；盘中转弱 -6.17%",
         "quote_source": "tencent"
       },
       {
@@ -4381,8 +4394,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 57.17,
-        "rt_price": 91.66,
-        "rt_pct": -1.48,
+        "rt_price": 91.57,
+        "rt_pct": -1.58,
         "potential_score": 53.75,
         "market_strength_score": 75.01,
         "news_impact_score": 2.0,
@@ -4390,7 +4403,26 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 75.0；新闻扰动 +2",
-        "blockers": "涨幅未确认 -1.48%；潜力分不足 53.8",
+        "blockers": "涨幅未确认 -1.58%；盘中转弱 -1.58%；潜力分不足 53.8",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "688811",
+        "name": "有研复材",
+        "mainline": "航空航天军工",
+        "node": "航天卫星",
+        "tier": "强候选",
+        "promotion_score": 56.98,
+        "rt_price": 27.04,
+        "rt_pct": 0.48,
+        "potential_score": 46.41,
+        "market_strength_score": 100.0,
+        "news_impact_score": 5.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "市场强度 100.0；新闻强化 +5",
+        "blockers": "涨幅未确认 0.48%；潜力分不足 46.4",
         "quote_source": "tencent"
       },
       {
@@ -4400,8 +4432,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 56.89,
-        "rt_price": 28.47,
-        "rt_pct": -9.1,
+        "rt_price": 28.45,
+        "rt_pct": -9.16,
         "potential_score": 50.33,
         "market_strength_score": 100.0,
         "news_impact_score": 2.0,
@@ -4409,7 +4441,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 100.0；新闻扰动 +2",
-        "blockers": "涨幅未确认 -9.10%；盘中转弱 -9.10%；潜力分不足 50.3",
+        "blockers": "涨幅未确认 -9.16%；盘中转弱 -9.16%；潜力分不足 50.3",
         "quote_source": "tencent"
       },
       {
@@ -4419,7 +4451,7 @@
         "node": "光通信/CPO",
         "tier": "强候选",
         "promotion_score": 56.51,
-        "rt_price": 374.05,
+        "rt_price": 374.06,
         "rt_pct": -7.57,
         "potential_score": 54.11,
         "market_strength_score": 86.17,
@@ -4432,14 +4464,33 @@
         "quote_source": "tencent"
       },
       {
+        "code": "603738",
+        "name": "泰晶科技",
+        "mainline": "航空航天军工",
+        "node": "军工电子",
+        "tier": "强候选",
+        "promotion_score": 56.51,
+        "rt_price": 55.71,
+        "rt_pct": 5.15,
+        "potential_score": 47.48,
+        "market_strength_score": 88.48,
+        "news_impact_score": 5.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "盘中涨幅确认 5.15%；市场强度 88.5；新闻强化 +5",
+        "blockers": "潜力分不足 47.5",
+        "quote_source": "tencent"
+      },
+      {
         "code": "603629",
         "name": "利通电子",
         "mainline": "AI算力半导体",
         "node": "算力基础设施",
         "tier": "强候选",
         "promotion_score": 56.49,
-        "rt_price": 167.55,
-        "rt_pct": -1.67,
+        "rt_price": 167.61,
+        "rt_pct": -1.64,
         "potential_score": 52.01,
         "market_strength_score": 100.0,
         "news_impact_score": 0,
@@ -4447,7 +4498,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 100.0",
-        "blockers": "涨幅未确认 -1.67%；盘中转弱 -1.67%；潜力分不足 52.0",
+        "blockers": "涨幅未确认 -1.64%；盘中转弱 -1.64%；潜力分不足 52.0",
         "quote_source": "tencent"
       },
       {
@@ -4457,8 +4508,8 @@
         "node": "半导体制造",
         "tier": "强候选",
         "promotion_score": 55.99,
-        "rt_price": 113.35,
-        "rt_pct": -1.0,
+        "rt_price": 113.31,
+        "rt_pct": -1.04,
         "potential_score": 58.34,
         "market_strength_score": 50.85,
         "news_impact_score": 0,
@@ -4466,26 +4517,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "潜力分 58.3",
-        "blockers": "涨幅未确认 -1.00%；强度不足 50.9",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "688818",
-        "name": "电科蓝天",
-        "mainline": "航空航天军工",
-        "node": "航天卫星",
-        "tier": "强候选",
-        "promotion_score": 55.7,
-        "rt_price": 77.95,
-        "rt_pct": -2.99,
-        "potential_score": 51.43,
-        "market_strength_score": 100.0,
-        "news_impact_score": 0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "市场强度 100.0",
-        "blockers": "涨幅未确认 -2.99%；盘中转弱 -2.99%；潜力分不足 51.4",
+        "blockers": "涨幅未确认 -1.04%；强度不足 50.9",
         "quote_source": "tencent"
       },
       {
@@ -4495,8 +4527,8 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 55.21,
-        "rt_price": 85.14,
-        "rt_pct": -0.86,
+        "rt_price": 85.18,
+        "rt_pct": -0.82,
         "potential_score": 49.83,
         "market_strength_score": 86.76,
         "news_impact_score": 2.0,
@@ -4504,7 +4536,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 86.8；新闻扰动 +2",
-        "blockers": "涨幅未确认 -0.86%；潜力分不足 49.8；旧候选池 NO_TOUCH，仅允许观察",
+        "blockers": "涨幅未确认 -0.82%；潜力分不足 49.8；旧候选池 NO_TOUCH，仅允许观察",
         "quote_source": "tencent"
       },
       {
@@ -4514,8 +4546,8 @@
         "node": "光通信/CPO",
         "tier": "强候选",
         "promotion_score": 55.14,
-        "rt_price": 82.35,
-        "rt_pct": -3.75,
+        "rt_price": 82.38,
+        "rt_pct": -3.72,
         "potential_score": 50.64,
         "market_strength_score": 100.0,
         "news_impact_score": 0,
@@ -4523,7 +4555,7 @@
         "label": "晋级观察",
         "target_pct": 0,
         "reason": "市场强度 100.0",
-        "blockers": "涨幅未确认 -3.75%；盘中转弱 -3.75%；潜力分不足 50.6",
+        "blockers": "涨幅未确认 -3.72%；盘中转弱 -3.72%；潜力分不足 50.6",
         "quote_source": "tencent"
       },
       {
@@ -4552,15 +4584,15 @@
         "node": "电池材料",
         "tier": "强候选",
         "promotion_score": 54.08,
-        "rt_price": 57.52,
-        "rt_pct": 3.62,
+        "rt_price": 57.51,
+        "rt_pct": 3.6,
         "potential_score": 54.45,
         "market_strength_score": 43.74,
         "news_impact_score": 2.0,
         "action": "NO_PROMOTION",
         "label": "暂不晋级",
         "target_pct": 0,
-        "reason": "盘中涨幅确认 3.62%；新闻扰动 +2",
+        "reason": "盘中涨幅确认 3.60%；新闻扰动 +2",
         "blockers": "潜力分不足 54.5；强度不足 43.7",
         "quote_source": "tencent"
       },
@@ -4571,8 +4603,8 @@
         "node": "光通信/CPO",
         "tier": "强候选",
         "promotion_score": 53.55,
-        "rt_price": 40.9,
-        "rt_pct": -7.26,
+        "rt_price": 40.89,
+        "rt_pct": -7.28,
         "potential_score": 52.5,
         "market_strength_score": 73.29,
         "news_impact_score": 0,
@@ -4580,45 +4612,7 @@
         "label": "暂不晋级",
         "target_pct": 0,
         "reason": "市场强度 73.3",
-        "blockers": "涨幅未确认 -7.26%；盘中转弱 -7.26%；潜力分不足 52.5",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "002460",
-        "name": "赣锋锂业",
-        "mainline": "新能源电池",
-        "node": "电池材料",
-        "tier": "强候选",
-        "promotion_score": 53.01,
-        "rt_price": 78.21,
-        "rt_pct": -2.21,
-        "potential_score": 54.71,
-        "market_strength_score": 32.73,
-        "news_impact_score": 2.0,
-        "action": "NO_PROMOTION",
-        "label": "暂不晋级",
-        "target_pct": 0,
-        "reason": "新闻扰动 +2",
-        "blockers": "涨幅未确认 -2.21%；盘中转弱 -2.21%；潜力分不足 54.7；强度不足 32.7",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "688275",
-        "name": "万润新能",
-        "mainline": "新能源电池",
-        "node": "电池材料",
-        "tier": "强候选",
-        "promotion_score": 52.74,
-        "rt_price": 147.54,
-        "rt_pct": 0.01,
-        "potential_score": 49.48,
-        "market_strength_score": 66.6,
-        "news_impact_score": 2.0,
-        "action": "NO_PROMOTION",
-        "label": "暂不晋级",
-        "target_pct": 0,
-        "reason": "市场强度 66.6；新闻扰动 +2",
-        "blockers": "涨幅未确认 0.01%；潜力分不足 49.5",
+        "blockers": "涨幅未确认 -7.28%；盘中转弱 -7.28%；潜力分不足 52.5",
         "quote_source": "tencent"
       }
     ],
@@ -4643,10 +4637,10 @@
       "industry": "航空装备Ⅱ",
       "taxonomy_keyword_hits": "军工;商业航天;无人机;航天;航空;航空装备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 25.59,
-      "rt_pct": 2.73,
+      "rt_price": 25.6,
+      "rt_pct": 2.77,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4676,7 +4670,7 @@
       "rt_price": 1164.0,
       "rt_pct": 6.29,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4703,10 +4697,10 @@
       "industry": "消费电子",
       "taxonomy_keyword_hits": "AI;CPO;云计算;光通信;存储;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 273.87,
-      "rt_pct": -4.92,
+      "rt_price": 273.28,
+      "rt_pct": -5.12,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4733,10 +4727,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;数据中心;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 174.53,
-      "rt_pct": -4.38,
+      "rt_price": 174.5,
+      "rt_pct": -4.4,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4763,10 +4757,10 @@
       "industry": "计算机设备",
       "taxonomy_keyword_hits": "半导体;存储;数据中心;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 644.0,
-      "rt_pct": 2.06,
+      "rt_price": 642.06,
+      "rt_pct": 1.75,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4793,10 +4787,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 94.06,
-      "rt_pct": -2.55,
+      "rt_price": 94.14,
+      "rt_pct": -2.47,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4823,10 +4817,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;半导体;存储;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 703.61,
-      "rt_pct": -2.5,
+      "rt_price": 703.86,
+      "rt_pct": -2.47,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4853,10 +4847,10 @@
       "industry": "计算机设备",
       "taxonomy_keyword_hits": "AI;存储;数据中心;算力;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 64.56,
-      "rt_pct": -3.6,
+      "rt_price": 64.49,
+      "rt_pct": -3.7,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4886,7 +4880,7 @@
       "rt_price": 302.99,
       "rt_pct": -6.3,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4913,10 +4907,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1539.9,
-      "rt_pct": -5.82,
+      "rt_price": 1539.93,
+      "rt_pct": -5.81,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4943,10 +4937,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;液冷;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 197.88,
-      "rt_pct": -2.9,
+      "rt_price": 197.76,
+      "rt_pct": -2.96,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -4973,10 +4967,10 @@
       "industry": "自动化设备",
       "taxonomy_keyword_hits": "AI;半导体;存储;液冷;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 113.35,
-      "rt_pct": -1.0,
+      "rt_price": 113.31,
+      "rt_pct": -1.04,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5003,10 +4997,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;数据中心;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 51.25,
-      "rt_pct": -5.08,
+      "rt_price": 51.17,
+      "rt_pct": -5.22,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5033,10 +5027,10 @@
       "industry": "电网设备",
       "taxonomy_keyword_hits": "AI;PCB;半导体;材料;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 15.84,
-      "rt_pct": -1.0,
+      "rt_price": 15.86,
+      "rt_pct": -0.88,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5063,10 +5057,10 @@
       "industry": "金属新材料",
       "taxonomy_keyword_hits": "TOPCon;光伏;新能源;新能源车;电池",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 70.11,
-      "rt_pct": 1.02,
+      "rt_price": 70.18,
+      "rt_pct": 1.12,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5093,10 +5087,10 @@
       "industry": "航空装备Ⅱ",
       "taxonomy_keyword_hits": "eVTOL;无人机;航空;航空装备;飞行汽车",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 139.48,
-      "rt_pct": 20.0,
+      "rt_price": 139.45,
+      "rt_pct": 19.98,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 航空航天军工 / 低空/无人机",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5123,10 +5117,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "HJT;光伏;电池",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 54.48,
-      "rt_pct": 0.29,
+      "rt_price": 54.5,
+      "rt_pct": 0.33,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5153,10 +5147,10 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;数据中心;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 420.1,
-      "rt_pct": -6.25,
+      "rt_price": 420.46,
+      "rt_pct": -6.17,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5183,10 +5177,10 @@
       "industry": "能源金属",
       "taxonomy_keyword_hits": "储能;动力电池;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 78.21,
-      "rt_pct": -2.21,
+      "rt_price": 78.2,
+      "rt_pct": -2.23,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5216,7 +5210,7 @@
       "rt_price": 4.67,
       "rt_pct": -9.67,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5243,10 +5237,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "动力电池;固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 57.52,
-      "rt_pct": 3.62,
+      "rt_price": 57.51,
+      "rt_pct": 3.6,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5273,10 +5267,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "光纤;光通信;半导体;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 374.05,
+      "rt_price": 374.06,
       "rt_pct": -7.57,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5303,10 +5297,10 @@
       "industry": "能源金属",
       "taxonomy_keyword_hits": "储能;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 91.66,
-      "rt_pct": -1.48,
+      "rt_price": 91.57,
+      "rt_pct": -1.58,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5333,15 +5327,15 @@
       "industry": "半导体",
       "taxonomy_keyword_hits": "AI;先进封装;半导体;数据中心;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1209.5,
-      "rt_pct": -4.05,
+      "rt_price": 1209.33,
+      "rt_pct": -4.07,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
-      "hiddenflow_score": 60.68,
-      "hiddenflow_label": "主力净流确认",
-      "hiddenflow_confidence": "medium",
-      "hiddenflow_reason": "主力净额 0.89亿；大单净额 20.40亿",
+      "hiddenflow_score": 50.0,
+      "hiddenflow_label": "中性观察",
+      "hiddenflow_confidence": "low",
+      "hiddenflow_reason": "缺少实时资金字段，等待数据源补齐",
       "hiddenflow_risk_tags": "",
       "hiddenflow_source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy"
     },
@@ -5363,10 +5357,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;芯片;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 270.01,
-      "rt_pct": -5.8,
+      "rt_price": 270.04,
+      "rt_pct": -5.79,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5393,10 +5387,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光纤;光通信;半导体;数据中心;材料;液冷;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 40.9,
-      "rt_pct": -7.26,
+      "rt_price": 40.89,
+      "rt_pct": -7.28,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5423,10 +5417,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光通信;算力;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 1044.6,
-      "rt_pct": -3.1,
+      "rt_price": 1043.39,
+      "rt_pct": -3.21,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5453,10 +5447,10 @@
       "industry": "消费电子",
       "taxonomy_keyword_hits": "云计算;算力;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 167.55,
-      "rt_pct": -1.67,
+      "rt_price": 167.61,
+      "rt_pct": -1.64,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 算力基础设施",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5483,10 +5477,10 @@
       "industry": "通信设备",
       "taxonomy_keyword_hits": "CPO;光通信;算力;设备;通信设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 604.31,
-      "rt_pct": -2.2,
+      "rt_price": 604.2,
+      "rt_pct": -2.22,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5513,10 +5507,10 @@
       "industry": "航天装备Ⅱ",
       "taxonomy_keyword_hits": "军工;北斗;卫星;商业航天;导航;航天;航空",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 77.95,
-      "rt_pct": -2.99,
+      "rt_price": 77.98,
+      "rt_pct": -2.95,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5543,10 +5537,10 @@
       "industry": "贵金属",
       "taxonomy_keyword_hits": "光伏;智能电网;电力;电网;绿色电力",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 49.93,
-      "rt_pct": -5.79,
+      "rt_price": 49.92,
+      "rt_pct": -5.81,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 电力电网设备 / 电力运营",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5573,10 +5567,10 @@
       "industry": "元件",
       "taxonomy_keyword_hits": "CPO;PCB;元件;光通信;存储;芯片",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 82.35,
-      "rt_pct": -3.75,
+      "rt_price": 82.38,
+      "rt_pct": -3.72,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5603,10 +5597,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;光伏;固态电池;新能源;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 28.47,
-      "rt_pct": -9.1,
+      "rt_price": 28.45,
+      "rt_pct": -9.16,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5636,7 +5630,7 @@
       "rt_price": 94.71,
       "rt_pct": 0.38,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5663,10 +5657,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;电池;铜箔;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 85.14,
-      "rt_pct": -0.86,
+      "rt_price": 85.18,
+      "rt_pct": -0.82,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5693,10 +5687,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "储能;固态电池;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 147.54,
+      "rt_price": 147.55,
       "rt_pct": 0.01,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5723,10 +5717,10 @@
       "industry": "军工电子Ⅱ",
       "taxonomy_keyword_hits": "军工;军工电子;卫星;商业航天;无人机;航天",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 134.71,
-      "rt_pct": -3.77,
+      "rt_price": 134.61,
+      "rt_pct": -3.84,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5753,10 +5747,10 @@
       "industry": "自动化设备",
       "taxonomy_keyword_hits": "CPO;芯片;设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 395.1,
-      "rt_pct": 5.64,
+      "rt_price": 394.03,
+      "rt_pct": 5.36,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5783,10 +5777,10 @@
       "industry": "电池",
       "taxonomy_keyword_hits": "固态电池;新能源;新能源车;电池;锂电",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 100.28,
-      "rt_pct": 2.96,
+      "rt_price": 100.26,
+      "rt_pct": 2.94,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -5813,10 +5807,10 @@
       "industry": "电网设备",
       "taxonomy_keyword_hits": "储能;光伏;智能电网;核电;水电;特高压;电网;电网设备",
       "source": "V151.4_mainline_monitor_pool",
-      "rt_price": 21.54,
-      "rt_pct": -0.42,
+      "rt_price": 21.51,
+      "rt_pct": -0.55,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-14 23:06:50",
+      "quote_updated_at": "2026-05-14 23:07:06",
       "monitor_reason": "强候选 / 电力电网设备 / 变压器/输变电",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
