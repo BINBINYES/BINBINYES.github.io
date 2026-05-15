@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 23:25:51",
-  "source_generated_at": "2026-05-14 23:25:51",
-  "market_environment_updated_at": "2026-05-14 23:25:51",
+  "generated_at": "2026-05-14 23:26:17",
+  "source_generated_at": "2026-05-14 23:26:17",
+  "market_environment_updated_at": "2026-05-14 23:26:17",
   "initial_capital": "100.00万",
   "total_pnl": "-3150.00",
   "total_pnl_pct": "-0.32%",
@@ -308,7 +308,7 @@
       "limit_up_count": 69,
       "limit_down_count": 1,
       "stale": true,
-      "age_hours": 169.08
+      "age_hours": 169.09
     },
     "candidate_mood": {
       "sample_size": 16,
@@ -450,7 +450,7 @@
   "hidden_flow_proxy": {
     "enabled": true,
     "version": "V151.9",
-    "generated_at": "2026-05-14 23:25:51",
+    "generated_at": "2026-05-14 23:26:17",
     "diagnostic_only": true,
     "method": "free public money-flow fields plus OHLC/volume absorption proxy; not an execution gate",
     "source_priority": [
@@ -465,17 +465,17 @@
         "code": "300885",
         "name": "海昌新材",
         "group": "candidate",
-        "score": 86.04,
+        "score": 90.71,
         "label": "承接增强",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 12.39%；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
+        "evidence": "主力净占比 12.39%；主力净额 1.08亿；大单净额 0.71亿；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": 12.39,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": 108370274.0,
+        "large_net_amount": 70993168.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
@@ -564,48 +564,6 @@
         "vwap_gap_pct": null,
         "amount_ratio": null,
         "pct": -4.57,
-        "diagnostic_only": true
-      },
-      {
-        "code": "920186",
-        "name": "中科仪",
-        "group": "position",
-        "score": 50.0,
-        "label": "中性观察",
-        "confidence": "low",
-        "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.37%，等待主力/大单字段补齐",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": null,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": null,
-        "vwap_gap_pct": null,
-        "amount_ratio": null,
-        "pct": -1.37,
-        "diagnostic_only": true
-      },
-      {
-        "code": "920249",
-        "name": "利尔达",
-        "group": "position",
-        "score": 50.0,
-        "label": "中性观察",
-        "confidence": "low",
-        "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.29%，等待主力/大单字段补齐",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": null,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": null,
-        "vwap_gap_pct": null,
-        "amount_ratio": null,
-        "pct": 0.29,
         "diagnostic_only": true
       },
       {
@@ -1869,20 +1827,62 @@
         "diagnostic_only": true
       },
       {
+        "code": "920249",
+        "name": "利尔达",
+        "group": "position",
+        "score": 49.09,
+        "label": "中性观察",
+        "confidence": "medium",
+        "risk_tags": [],
+        "evidence": "主力净额 -0.20亿；大单净额 -0.16亿",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": null,
+        "main_net_amount": -19667744.0,
+        "large_net_amount": -15985897.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
+        "outer_ratio_pct": null,
+        "vwap_gap_pct": null,
+        "amount_ratio": null,
+        "pct": 0.29,
+        "diagnostic_only": true
+      },
+      {
+        "code": "920186",
+        "name": "中科仪",
+        "group": "position",
+        "score": 46.25,
+        "label": "中性观察",
+        "confidence": "medium",
+        "risk_tags": [],
+        "evidence": "主力净额 -1.03亿；大单净额 -0.33亿",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": null,
+        "main_net_amount": -103430080.0,
+        "large_net_amount": -32522336.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
+        "outer_ratio_pct": null,
+        "vwap_gap_pct": null,
+        "amount_ratio": null,
+        "pct": -1.37,
+        "diagnostic_only": true
+      },
+      {
         "code": "688001",
         "name": "华兴源创",
         "group": "candidate",
-        "score": 44.18,
+        "score": 44.79,
         "label": "中性观察",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -0.69%；外盘承接 46.46%；VWAP偏离 -0.05%；收盘位置 0.45",
+        "evidence": "主力净占比 -0.69%；主力净额 -0.04亿；大单净额 0.36亿；外盘承接 46.46%；VWAP偏离 -0.05%；收盘位置 0.45",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -0.69,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -3602101.0,
+        "large_net_amount": 35798294.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.46,
         "vwap_gap_pct": -0.05,
         "amount_ratio": null,
@@ -2107,17 +2107,17 @@
         "code": "300885",
         "name": "海昌新材",
         "group": "candidate",
-        "score": 86.04,
+        "score": 90.71,
         "label": "承接增强",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 12.39%；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
+        "evidence": "主力净占比 12.39%；主力净额 1.08亿；大单净额 0.71亿；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": 12.39,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": 108370274.0,
+        "large_net_amount": 70993168.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
@@ -2344,17 +2344,17 @@
         "code": "300885",
         "name": "海昌新材",
         "group": "candidate",
-        "score": 86.04,
+        "score": 90.71,
         "label": "承接增强",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 12.39%；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
+        "evidence": "主力净占比 12.39%；主力净额 1.08亿；大单净额 0.71亿；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": 12.39,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": 108370274.0,
+        "large_net_amount": 70993168.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.25,
         "vwap_gap_pct": 2.07,
         "amount_ratio": null,
@@ -2443,48 +2443,6 @@
         "vwap_gap_pct": null,
         "amount_ratio": null,
         "pct": -4.57,
-        "diagnostic_only": true
-      },
-      "920186": {
-        "code": "920186",
-        "name": "中科仪",
-        "group": "position",
-        "score": 50.0,
-        "label": "中性观察",
-        "confidence": "low",
-        "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 -1.37%，等待主力/大单字段补齐",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": null,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": null,
-        "vwap_gap_pct": null,
-        "amount_ratio": null,
-        "pct": -1.37,
-        "diagnostic_only": true
-      },
-      "920249": {
-        "code": "920249",
-        "name": "利尔达",
-        "group": "position",
-        "score": 50.0,
-        "label": "中性观察",
-        "confidence": "low",
-        "risk_tags": [],
-        "evidence": "实时资金流未覆盖；当前涨幅 0.29%，等待主力/大单字段补齐",
-        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
-        "main_net_pct": null,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
-        "outer_ratio_pct": null,
-        "vwap_gap_pct": null,
-        "amount_ratio": null,
-        "pct": 0.29,
         "diagnostic_only": true
       },
       "002297": {
@@ -3747,21 +3705,63 @@
         "pct": 1.84,
         "diagnostic_only": true
       },
+      "920249": {
+        "code": "920249",
+        "name": "利尔达",
+        "group": "position",
+        "score": 49.09,
+        "label": "中性观察",
+        "confidence": "medium",
+        "risk_tags": [],
+        "evidence": "主力净额 -0.20亿；大单净额 -0.16亿",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": null,
+        "main_net_amount": -19667744.0,
+        "large_net_amount": -15985897.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
+        "outer_ratio_pct": null,
+        "vwap_gap_pct": null,
+        "amount_ratio": null,
+        "pct": 0.29,
+        "diagnostic_only": true
+      },
+      "920186": {
+        "code": "920186",
+        "name": "中科仪",
+        "group": "position",
+        "score": 46.25,
+        "label": "中性观察",
+        "confidence": "medium",
+        "risk_tags": [],
+        "evidence": "主力净额 -1.03亿；大单净额 -0.33亿",
+        "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
+        "main_net_pct": null,
+        "main_net_amount": -103430080.0,
+        "large_net_amount": -32522336.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
+        "outer_ratio_pct": null,
+        "vwap_gap_pct": null,
+        "amount_ratio": null,
+        "pct": -1.37,
+        "diagnostic_only": true
+      },
       "688001": {
         "code": "688001",
         "name": "华兴源创",
         "group": "candidate",
-        "score": 44.18,
+        "score": 44.79,
         "label": "中性观察",
         "confidence": "high",
         "risk_tags": [],
-        "evidence": "主力净占比 -0.69%；外盘承接 46.46%；VWAP偏离 -0.05%；收盘位置 0.45",
+        "evidence": "主力净占比 -0.69%；主力净额 -0.04亿；大单净额 0.36亿；外盘承接 46.46%；VWAP偏离 -0.05%；收盘位置 0.45",
         "source": "eastmoney_flow+eastmoney/free_quote+local_csv+ohlc_proxy",
         "main_net_pct": -0.69,
-        "main_net_amount": null,
-        "large_net_amount": null,
-        "flow_time": null,
-        "flow_source": null,
+        "main_net_amount": -3602101.0,
+        "large_net_amount": 35798294.0,
+        "flow_time": "2026-05-14",
+        "flow_source": "eastmoney_flow",
         "outer_ratio_pct": 46.46,
         "vwap_gap_pct": -0.05,
         "amount_ratio": null,
@@ -4003,9 +4003,9 @@
         "name": "海昌新材",
         "label": "V151.9-R误拒绝修正候选",
         "action": "MODEL_TRIAL_BUY_WATCH",
-        "hiddenflow_score": 86.04,
+        "hiddenflow_score": 90.71,
         "hiddenflow_label": "承接增强",
-        "hiddenflow_reason": "主力净占比 12.39%；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
+        "hiddenflow_reason": "主力净占比 12.39%；主力净额 1.08亿；大单净额 0.71亿；外盘承接 46.25%；VWAP偏离 2.07%；收盘位置 0.76",
         "original_signal": "OBSERVE",
         "v96_status": "PAPER_OBSERVE_REJECTED_BY_GATE",
         "v60_status": "REJECT",
@@ -4051,7 +4051,7 @@
         "target_pct": 8.0,
         "reason": "盘中涨幅确认 3.37%；潜力分 68.7；市场强度 91.2",
         "blockers": "",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688808",
@@ -4070,7 +4070,7 @@
         "target_pct": 8.0,
         "reason": "盘中涨幅确认 4.93%；潜力分 67.0；市场强度 100.0",
         "blockers": "",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "301666",
@@ -4089,7 +4089,7 @@
         "target_pct": 8.0,
         "reason": "盘中涨幅确认 3.82%；潜力分 66.1；市场强度 100.0",
         "blockers": "",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "300390",
@@ -4108,7 +4108,7 @@
         "target_pct": 0,
         "reason": "潜力分 65.2；市场强度 84.8",
         "blockers": "涨幅未确认 -2.55%；盘中转弱 -2.55%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "001309",
@@ -4127,7 +4127,7 @@
         "target_pct": 0,
         "reason": "潜力分 65.2；市场强度 91.2",
         "blockers": "涨幅未确认 -2.61%；盘中转弱 -2.61%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "300042",
@@ -4146,7 +4146,7 @@
         "target_pct": 0,
         "reason": "潜力分 64.1；市场强度 83.2",
         "blockers": "涨幅未确认 -3.82%；盘中转弱 -3.82%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688313",
@@ -4165,7 +4165,7 @@
         "target_pct": 0,
         "reason": "潜力分 66.4；市场强度 66.7",
         "blockers": "涨幅未确认 -4.40%；盘中转弱 -4.40%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "300857",
@@ -4184,7 +4184,7 @@
         "target_pct": 0,
         "reason": "潜力分 66.5；市场强度 68.3",
         "blockers": "涨幅未确认 -5.55%；盘中转弱 -5.55%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688525",
@@ -4203,7 +4203,7 @@
         "target_pct": 0,
         "reason": "潜力分 63.4；市场强度 66.2",
         "blockers": "涨幅未确认 -6.45%；盘中转弱 -6.45%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "002281",
@@ -4222,7 +4222,7 @@
         "target_pct": 0,
         "reason": "潜力分 60.2；市场强度 88.1",
         "blockers": "涨幅未确认 -2.85%；盘中转弱 -2.85%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688498",
@@ -4241,7 +4241,7 @@
         "target_pct": 0,
         "reason": "潜力分 61.2；市场强度 72.0",
         "blockers": "涨幅未确认 -5.57%；盘中转弱 -5.57%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "301696",
@@ -4260,7 +4260,7 @@
         "target_pct": 0,
         "reason": "盘中涨幅确认 20.00%；潜力分 57.3；市场强度 100.0",
         "blockers": "涨幅过高 20.00%，不追高",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688530",
@@ -4279,7 +4279,7 @@
         "target_pct": 0,
         "reason": "潜力分 56.7；市场强度 100.0",
         "blockers": "涨幅未确认 0.33%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "300283",
@@ -4298,7 +4298,7 @@
         "target_pct": 0,
         "reason": "潜力分 58.0；市场强度 88.0",
         "blockers": "涨幅未确认 -1.06%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "603045",
@@ -4317,7 +4317,7 @@
         "target_pct": 0,
         "reason": "潜力分 57.8；市场强度 81.8",
         "blockers": "涨幅未确认 0.33%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "600105",
@@ -4336,7 +4336,7 @@
         "target_pct": 0,
         "reason": "潜力分 58.3；市场强度 75.7",
         "blockers": "涨幅未确认 -5.19%；盘中转弱 -5.19%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688048",
@@ -4355,7 +4355,7 @@
         "target_pct": 0,
         "reason": "潜力分 55.6；市场强度 92.5",
         "blockers": "涨幅未确认 -6.57%；盘中转弱 -6.57%",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "601869",
@@ -4374,7 +4374,7 @@
         "target_pct": 0,
         "reason": "市场强度 86.2",
         "blockers": "涨幅未确认 -7.47%；盘中转弱 -7.47%；潜力分不足 54.1",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "603629",
@@ -4393,7 +4393,7 @@
         "target_pct": 0,
         "reason": "市场强度 100.0",
         "blockers": "涨幅未确认 -1.48%；潜力分不足 52.0",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "002975",
@@ -4412,7 +4412,7 @@
         "target_pct": 0,
         "reason": "潜力分 58.3",
         "blockers": "涨幅未确认 -1.04%；强度不足 50.9",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688818",
@@ -4431,7 +4431,7 @@
         "target_pct": 0,
         "reason": "市场强度 100.0",
         "blockers": "涨幅未确认 -2.64%；盘中转弱 -2.64%；潜力分不足 51.4",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "002192",
@@ -4450,7 +4450,7 @@
         "target_pct": 0,
         "reason": "市场强度 75.0",
         "blockers": "涨幅未确认 -1.44%；潜力分不足 53.8",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "603459",
@@ -4469,7 +4469,7 @@
         "target_pct": 0,
         "reason": "市场强度 100.0",
         "blockers": "涨幅未确认 -3.07%；盘中转弱 -3.07%；潜力分不足 50.6",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "002580",
@@ -4488,7 +4488,7 @@
         "target_pct": 0,
         "reason": "市场强度 100.0",
         "blockers": "涨幅未确认 -9.99%；盘中转弱 -9.99%；潜力分不足 50.3",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "600522",
@@ -4507,7 +4507,7 @@
         "target_pct": 0,
         "reason": "市场强度 73.3",
         "blockers": "涨幅未确认 -7.23%；盘中转弱 -7.23%；潜力分不足 52.5",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "301217",
@@ -4526,7 +4526,7 @@
         "target_pct": 0,
         "reason": "市场强度 86.8",
         "blockers": "涨幅未确认 -1.08%；潜力分不足 49.8；旧候选池 NO_TOUCH，仅允许观察",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "002309",
@@ -4545,7 +4545,7 @@
         "target_pct": 0,
         "reason": "主线池基础观察",
         "blockers": "涨幅未确认 -9.86%；盘中转弱 -9.86%；潜力分不足 54.7；强度不足 52.3",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "688025",
@@ -4564,7 +4564,7 @@
         "target_pct": 0,
         "reason": "盘中涨幅确认 5.80%；市场强度 84.7",
         "blockers": "潜力分不足 49.0",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "002709",
@@ -4583,7 +4583,7 @@
         "target_pct": 0,
         "reason": "盘中涨幅确认 3.58%",
         "blockers": "潜力分不足 54.5；强度不足 43.7",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       },
       {
         "code": "002008",
@@ -4602,7 +4602,7 @@
         "target_pct": 0,
         "reason": "市场强度 87.3",
         "blockers": "涨幅未确认 -5.72%；盘中转弱 -5.72%；潜力分不足 48.2",
-        "quote_source": "tencent"
+        "quote_source": "tencent_cached"
       }
     ],
     "summary": "主线核心/强候选按实时涨幅、主线强度、潜力分、新闻强化和旧门控状态进行晋级；仅生成模拟试错观察，不连接券商。"
@@ -4628,7 +4628,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 25.75,
       "rt_pct": 3.37,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
@@ -4658,7 +4658,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 1149.03,
       "rt_pct": 4.93,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -4688,7 +4688,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 272.05,
       "rt_pct": -5.55,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -4718,7 +4718,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 174.5,
       "rt_pct": -4.4,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -4748,7 +4748,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 655.1,
       "rt_pct": 3.82,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -4778,7 +4778,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 94.06,
       "rt_pct": -2.55,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -4808,7 +4808,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 702.84,
       "rt_pct": -2.61,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -4838,7 +4838,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 64.41,
       "rt_pct": -3.82,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -4868,7 +4868,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 302.48,
       "rt_pct": -6.45,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -4898,7 +4898,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 1543.99,
       "rt_pct": -5.57,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -4928,7 +4928,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 198.0,
       "rt_pct": -2.85,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -4958,7 +4958,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 113.31,
       "rt_pct": -1.04,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -4988,7 +4988,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 51.19,
       "rt_pct": -5.19,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5018,7 +5018,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 15.83,
       "rt_pct": -1.06,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -5048,7 +5048,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 69.63,
       "rt_pct": 0.33,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
@@ -5078,7 +5078,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 139.48,
       "rt_pct": 20.0,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 航空航天军工 / 低空/无人机",
       "hiddenflow_score": 50.0,
@@ -5108,7 +5108,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 54.5,
       "rt_pct": 0.33,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
@@ -5138,7 +5138,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 418.66,
       "rt_pct": -6.57,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5168,7 +5168,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 78.18,
       "rt_pct": -2.25,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5198,7 +5198,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 4.66,
       "rt_pct": -9.86,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
@@ -5228,7 +5228,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 57.5,
       "rt_pct": 3.58,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5258,7 +5258,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 374.45,
       "rt_pct": -7.47,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5288,7 +5288,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 91.7,
       "rt_pct": -1.44,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5318,7 +5318,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 1203.0,
       "rt_pct": -4.57,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -5348,7 +5348,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 269.8,
       "rt_pct": -5.87,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5378,7 +5378,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 40.91,
       "rt_pct": -7.23,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5408,7 +5408,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 1040.43,
       "rt_pct": -3.49,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5438,7 +5438,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 167.88,
       "rt_pct": -1.48,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 算力基础设施",
       "hiddenflow_score": 50.0,
@@ -5468,7 +5468,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 602.1,
       "rt_pct": -2.56,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5498,7 +5498,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 78.23,
       "rt_pct": -2.64,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
@@ -5528,7 +5528,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 50.08,
       "rt_pct": -5.51,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 电力电网设备 / 电力运营",
       "hiddenflow_score": 50.0,
@@ -5558,7 +5558,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 82.93,
       "rt_pct": -3.07,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
@@ -5588,7 +5588,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 28.19,
       "rt_pct": -9.99,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5618,7 +5618,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 94.88,
       "rt_pct": 0.56,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5648,7 +5648,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 84.95,
       "rt_pct": -1.08,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5678,7 +5678,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 147.99,
       "rt_pct": 0.31,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5708,7 +5708,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 134.23,
       "rt_pct": -4.11,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
@@ -5738,7 +5738,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 395.7,
       "rt_pct": 5.8,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
@@ -5768,7 +5768,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 100.35,
       "rt_pct": 3.03,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
@@ -5798,7 +5798,7 @@
       "source": "V151.4_mainline_monitor_pool",
       "rt_price": 21.45,
       "rt_pct": -0.83,
-      "quote_source": "tencent",
+      "quote_source": "tencent_cached",
       "quote_updated_at": "2026-05-14 23:25:51",
       "monitor_reason": "强候选 / 电力电网设备 / 变压器/输变电",
       "hiddenflow_score": 50.0,
