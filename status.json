@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-14 18:46:18",
-  "source_generated_at": "2026-05-14 18:46:18",
-  "market_environment_updated_at": "2026-05-14 18:46:18",
+  "generated_at": "2026-05-14 18:46:34",
+  "source_generated_at": "2026-05-14 18:46:34",
+  "market_environment_updated_at": "2026-05-14 18:46:34",
   "initial_capital": "100.00万",
   "total_pnl": "-3906.00",
   "total_pnl_pct": "-0.39%",
@@ -243,7 +243,7 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 1.0,
     "fear_greed": {
-      "score": 50,
+      "score": 49,
       "label": "中性",
       "components": {
         "breadth": 54,
@@ -251,7 +251,7 @@
         "limit_up_down": 70,
         "candidate_mood": 32,
         "mainline_heat": 80,
-        "news_sentiment": 70
+        "news_sentiment": 62
       },
       "stale_penalty": 8,
       "method": "A-share proxy: breadth, return, limit-up/down, candidate mood, mainline heat, optional news sentiment"
@@ -266,7 +266,7 @@
       "limit_up_count": 69,
       "limit_down_count": 1,
       "stale": true,
-      "age_hours": 164.42
+      "age_hours": 164.43
     },
     "candidate_mood": {
       "sample_size": 16,
@@ -356,8 +356,11 @@
     "news": {
       "available": true,
       "sentiment": "positive",
-      "score": 14,
+      "score": 4,
       "items": [
+        "[sina_7x24_public] 特朗普：我与伊朗领导人打过一点交道。",
+        "[sina_7x24_public] 科创50日内跌幅达1.00%，成分股中，晶科能源跌6.38%，阿特斯跌5.22%，大全能源跌4.56%，海光信息跌4.51%。",
+        "[sina_7x24_public] 【华为Mate X7直降1000元】5月15日，据华为终端消息，折叠屏旗舰华为Mate X7开启降价，全系直降1000元，优惠后11999元起，并推出至高12期",
         "[sina_7x24_public] 【中芯国际赵海军：公司高度重视市值管理工作】在今日的一季报业绩说明会上，中芯国际联合CEO赵海军表示，当前全球宏观环境仍面临诸多不确定性，对供应链成本、稳定性、",
         "[sina_7x24_public] 【陪审团裁定：埃克森美孚无需就加拿大油砂和天然气资产向投资者承担责任】得克萨斯州一个陪审团周三裁定，埃克森美孚公司无需就其通过与加拿大油砂及落基山脉天然气业务相",
         "[sina_7x24_public] 【万华化学等在烟台成立新材料科技公司】企查查APP显示，近日，万迪新材料科技（烟台）有限公司成立，经营范围包含：新材料技术推广服务；化工产品销售（不含许可类化工",
@@ -366,10 +369,7 @@
         "[sina_7x24_public] 【短剧游戏盘初拉升，引力传媒涨停】短剧游戏盘初拉升，线上线下盘中创新高，引力传媒涨停，粤传媒、华智数媒、浙文互联、天地在线、易点天下跟涨。",
         "[sina_7x24_public] 体育概念震荡走强，粤传媒冲击涨停，金陵体育、共创草坪、舒华体育、中体产业跟涨。",
         "[sina_7x24_public] 沪深两市成交额超5000亿元，较上日此时缩量1096亿元。",
-        "[sina_7x24_public] 据印度《经济时报》报道，预计将有四家投资者组成财团竞购阿达尼机场项目。",
-        "[sina_7x24_public] 印度各邦零售商将汽油和柴油价格上调3卢比/升。",
-        "[sina_7x24_public] 【磁谷科技等在南京成立离心压缩机公司】企查查APP显示，近日，比泽尔磁谷离心压缩机（南京）有限公司成立，注册资本4000万元，经营范围包含：气体压缩机械制造；气",
-        "[sina_7x24_public] 大盘主力净流出超100亿。"
+        "[sina_7x24_public] 据印度《经济时报》报道，预计将有四家投资者组成财团竞购阿达尼机场项目。"
       ],
       "raw_count": 20,
       "statuses": [
@@ -387,7 +387,7 @@
       "mainline_impacts": [
         {
           "mainline": "消费传媒旅游",
-          "impact_score": 28,
+          "impact_score": 17,
           "label": "明显加强",
           "matched_keywords": [
             "传媒",
@@ -442,26 +442,11 @@
               "source": "sina_7x24_public"
             }
           ]
-        },
-        {
-          "mainline": "电力电网设备",
-          "impact_score": 2,
-          "label": "中性扰动",
-          "matched_keywords": [
-            "电力"
-          ],
-          "examples": [
-            {
-              "time": "2026-05-15 09:34:54",
-              "title": "【电力板块盘初下挫，大连热电跌超7%】电力板块盘初下挫，大连热电跌超7%，豫能控股、华银电力跌超5%，桂冠电力、大唐发电、粤电力A跟跌。",
-              "source": "sina_7x24_public"
-            }
-          ]
         }
       ],
       "message": "loaded 20 news items"
     },
-    "summary": "V151.3 market=NEUTRAL, fear_greed=50, breadth_up=53.87, budget_x=1.0; news=positive"
+    "summary": "V151.3 market=NEUTRAL, fear_greed=49, breadth_up=53.87, budget_x=1.0; news=positive"
   },
   "mainline_monitor_pool": [
     {
