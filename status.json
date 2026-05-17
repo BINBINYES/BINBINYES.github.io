@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-16 17:54:28",
-  "source_generated_at": "2026-05-16 17:54:28",
-  "market_environment_updated_at": "2026-05-16 17:54:28",
+  "generated_at": "2026-05-16 17:55:30",
+  "source_generated_at": "2026-05-16 17:55:30",
+  "market_environment_updated_at": "2026-05-16 17:55:30",
   "initial_capital": "5.00万",
   "total_pnl": "6.00",
   "total_pnl_pct": "0.01%",
@@ -345,11 +345,31 @@
           ]
         },
         {
-          "mainline": "AI算力半导体",
-          "impact_score": 12,
-          "label": "明显加强",
+          "mainline": "新能源电池",
+          "impact_score": 9,
+          "label": "边际加强",
           "matched_keywords": [
-            "AI",
+            "光伏",
+            "风电"
+          ],
+          "examples": [
+            {
+              "time": "2026-05-17 08:40:41",
+              "title": "【“十四五”时期，重庆发电量年均增长7.6%】5月14日，重庆市统计局公布《“十四五”时期重庆市能源发展报告》显示，“十四五”时期，全市发电量年均增长7.6%，",
+              "source": "sina_7x24_public"
+            },
+            {
+              "time": "2026-05-17 08:30:13",
+              "title": "【招商策略：主动补库的领域主要集中在TMT和部分中高端制造业】招商策略发布研报《从财报看行业周期阶段与供需格局变化——A股2025年报及2026年一季报业绩深度",
+              "source": "sina_7x24_public"
+            }
+          ]
+        },
+        {
+          "mainline": "AI算力半导体",
+          "impact_score": 6,
+          "label": "边际加强",
+          "matched_keywords": [
             "半导体",
             "数据中心",
             "算力",
@@ -369,27 +389,6 @@
             {
               "time": "2026-05-17 08:22:52",
               "title": "【印度股市市值蒸发9240亿美元 错失人工智能浪潮】在人工智能贸易重塑全球投资格局的大背景下，印度俨然成为最大输家之一。 造成这一局面的原因，远不止印度股市估值",
-              "source": "sina_7x24_public"
-            }
-          ]
-        },
-        {
-          "mainline": "新能源电池",
-          "impact_score": 9,
-          "label": "边际加强",
-          "matched_keywords": [
-            "光伏",
-            "风电"
-          ],
-          "examples": [
-            {
-              "time": "2026-05-17 08:40:41",
-              "title": "【“十四五”时期，重庆发电量年均增长7.6%】5月14日，重庆市统计局公布《“十四五”时期重庆市能源发展报告》显示，“十四五”时期，全市发电量年均增长7.6%，",
-              "source": "sina_7x24_public"
-            },
-            {
-              "time": "2026-05-17 08:30:13",
-              "title": "【招商策略：主动补库的领域主要集中在TMT和部分中高端制造业】招商策略发布研报《从财报看行业周期阶段与供需格局变化——A股2025年报及2026年一季报业绩深度",
               "source": "sina_7x24_public"
             }
           ]
@@ -426,7 +425,7 @@
       "limit_up_count": 69,
       "limit_down_count": 1,
       "stale": true,
-      "age_hours": 211.56
+      "age_hours": 211.58
     },
     "candidate_mood": {
       "sample_size": 16,
@@ -516,8 +515,10 @@
     "news": {
       "available": true,
       "sentiment": "positive",
-      "score": 22,
+      "score": 20,
       "items": [
+        "[sina_7x24_public] 美国银行已同意支付225万美元，就一起涉及7-11门店自动取款机手续费的集体诉讼达成和解。",
+        "[sina_7x24_public] 中国地震台网正式测定：05月17日08时46分在台湾南投县（北纬24.02度，东经120.96度）发生4.5级地震，震源深度15千米。",
         "[sina_7x24_public] 中国地震台网自动测定：05月17日08时46分在台湾南投县附近（北纬24.01度，东经120.96度）发生4.5级左右地震，最终结果以正式速报为准。",
         "[sina_7x24_public] 【华北等地雨势强劲局地或现大暴雨 北方多地气温将持续偏低】未来三天（5月17日至19日），强降雨带将逐渐向东转移，华北等地可能出现同期少见的强降雨，局地有大暴雨",
         "[sina_7x24_public] 【“十四五”时期，重庆发电量年均增长7.6%】5月14日，重庆市统计局公布《“十四五”时期重庆市能源发展报告》显示，“十四五”时期，全市发电量年均增长7.6%，",
@@ -527,9 +528,7 @@
         "[sina_7x24_public] 【招商策略：主动补库的领域主要集中在TMT和部分中高端制造业】招商策略发布研报《从财报看行业周期阶段与供需格局变化——A股2025年报及2026年一季报业绩深度",
         "[sina_7x24_public] 【河北曹妃甸港区实现40万吨船舶常态化满载靠泊】今天（5月17日）上午，满载约40万吨巴西铁矿石的“远见海”轮安全通过老铁山水道——唐山港曹妃甸港区深水航路（南",
         "[sina_7x24_public] 市场消息： 高通敲定一家大型数据中心大客户。",
-        "[sina_7x24_public] 【世卫组织：非洲埃博拉疫情构成“国际关注的突发公共卫生事件”】世界卫生组织17日宣布，刚果（金）和乌干达出现的埃博拉疫情已构成“国际关注的突发公共卫生事件”。（",
-        "[sina_7x24_public] 【伊朗战争推高油价，加剧美国贫富分化】历史上规模最大的石油供应中断正在加剧美国经济内部的分化。根据对OPIS定价数据及联邦需求数据的分析，与伊朗战争期间，美国人",
-        "[sina_7x24_public] 【印度股市市值蒸发9240亿美元 错失人工智能浪潮】在人工智能贸易重塑全球投资格局的大背景下，印度俨然成为最大输家之一。 造成这一局面的原因，远不止印度股市估值"
+        "[sina_7x24_public] 【世卫组织：非洲埃博拉疫情构成“国际关注的突发公共卫生事件”】世界卫生组织17日宣布，刚果（金）和乌干达出现的埃博拉疫情已构成“国际关注的突发公共卫生事件”。（"
       ],
       "raw_count": 20,
       "statuses": [
@@ -575,11 +574,31 @@
           ]
         },
         {
-          "mainline": "AI算力半导体",
-          "impact_score": 12,
-          "label": "明显加强",
+          "mainline": "新能源电池",
+          "impact_score": 9,
+          "label": "边际加强",
           "matched_keywords": [
-            "AI",
+            "光伏",
+            "风电"
+          ],
+          "examples": [
+            {
+              "time": "2026-05-17 08:40:41",
+              "title": "【“十四五”时期，重庆发电量年均增长7.6%】5月14日，重庆市统计局公布《“十四五”时期重庆市能源发展报告》显示，“十四五”时期，全市发电量年均增长7.6%，",
+              "source": "sina_7x24_public"
+            },
+            {
+              "time": "2026-05-17 08:30:13",
+              "title": "【招商策略：主动补库的领域主要集中在TMT和部分中高端制造业】招商策略发布研报《从财报看行业周期阶段与供需格局变化——A股2025年报及2026年一季报业绩深度",
+              "source": "sina_7x24_public"
+            }
+          ]
+        },
+        {
+          "mainline": "AI算力半导体",
+          "impact_score": 6,
+          "label": "边际加强",
+          "matched_keywords": [
             "半导体",
             "数据中心",
             "算力",
@@ -599,27 +618,6 @@
             {
               "time": "2026-05-17 08:22:52",
               "title": "【印度股市市值蒸发9240亿美元 错失人工智能浪潮】在人工智能贸易重塑全球投资格局的大背景下，印度俨然成为最大输家之一。 造成这一局面的原因，远不止印度股市估值",
-              "source": "sina_7x24_public"
-            }
-          ]
-        },
-        {
-          "mainline": "新能源电池",
-          "impact_score": 9,
-          "label": "边际加强",
-          "matched_keywords": [
-            "光伏",
-            "风电"
-          ],
-          "examples": [
-            {
-              "time": "2026-05-17 08:40:41",
-              "title": "【“十四五”时期，重庆发电量年均增长7.6%】5月14日，重庆市统计局公布《“十四五”时期重庆市能源发展报告》显示，“十四五”时期，全市发电量年均增长7.6%，",
-              "source": "sina_7x24_public"
-            },
-            {
-              "time": "2026-05-17 08:30:13",
-              "title": "【招商策略：主动补库的领域主要集中在TMT和部分中高端制造业】招商策略发布研报《从财报看行业周期阶段与供需格局变化——A股2025年报及2026年一季报业绩深度",
               "source": "sina_7x24_public"
             }
           ]
@@ -732,11 +730,31 @@
         ]
       },
       {
-        "mainline": "AI算力半导体",
-        "impact_score": 12,
-        "label": "明显加强",
+        "mainline": "新能源电池",
+        "impact_score": 9,
+        "label": "边际加强",
         "matched_keywords": [
-          "AI",
+          "光伏",
+          "风电"
+        ],
+        "examples": [
+          {
+            "time": "2026-05-17 08:40:41",
+            "title": "【“十四五”时期，重庆发电量年均增长7.6%】5月14日，重庆市统计局公布《“十四五”时期重庆市能源发展报告》显示，“十四五”时期，全市发电量年均增长7.6%，",
+            "source": "sina_7x24_public"
+          },
+          {
+            "time": "2026-05-17 08:30:13",
+            "title": "【招商策略：主动补库的领域主要集中在TMT和部分中高端制造业】招商策略发布研报《从财报看行业周期阶段与供需格局变化——A股2025年报及2026年一季报业绩深度",
+            "source": "sina_7x24_public"
+          }
+        ]
+      },
+      {
+        "mainline": "AI算力半导体",
+        "impact_score": 6,
+        "label": "边际加强",
+        "matched_keywords": [
           "半导体",
           "数据中心",
           "算力",
@@ -756,27 +774,6 @@
           {
             "time": "2026-05-17 08:22:52",
             "title": "【印度股市市值蒸发9240亿美元 错失人工智能浪潮】在人工智能贸易重塑全球投资格局的大背景下，印度俨然成为最大输家之一。 造成这一局面的原因，远不止印度股市估值",
-            "source": "sina_7x24_public"
-          }
-        ]
-      },
-      {
-        "mainline": "新能源电池",
-        "impact_score": 9,
-        "label": "边际加强",
-        "matched_keywords": [
-          "光伏",
-          "风电"
-        ],
-        "examples": [
-          {
-            "time": "2026-05-17 08:40:41",
-            "title": "【“十四五”时期，重庆发电量年均增长7.6%】5月14日，重庆市统计局公布《“十四五”时期重庆市能源发展报告》显示，“十四五”时期，全市发电量年均增长7.6%，",
-            "source": "sina_7x24_public"
-          },
-          {
-            "time": "2026-05-17 08:30:13",
-            "title": "【招商策略：主动补库的领域主要集中在TMT和部分中高端制造业】招商策略发布研报《从财报看行业周期阶段与供需格局变化——A股2025年报及2026年一季报业绩深度",
             "source": "sina_7x24_public"
           }
         ]
@@ -803,7 +800,7 @@
   "hidden_flow_proxy": {
     "enabled": true,
     "version": "V151.9",
-    "generated_at": "2026-05-16 17:54:28",
+    "generated_at": "2026-05-16 17:55:28",
     "diagnostic_only": true,
     "method": "free public money-flow fields plus OHLC/volume absorption proxy; not an execution gate",
     "source_priority": [
@@ -4385,11 +4382,11 @@
         "turnover": 37.51,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "301696",
         "name": "三瑞智能",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4409,11 +4406,11 @@
         "turnover": 14.31,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002407",
         "name": "多氟多",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4433,11 +4430,11 @@
         "turnover": 8.89,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002181",
         "name": "粤 传 媒",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4457,11 +4454,11 @@
         "turnover": 24.65,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "301666",
         "name": "大普微-UW",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4481,11 +4478,11 @@
         "turnover": 9.35,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603986",
         "name": "兆易创新",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4505,11 +4502,11 @@
         "turnover": 9.29,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688268",
         "name": "华特气体",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4529,11 +4526,11 @@
         "turnover": 17.61,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300885",
         "name": "海昌新材",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4553,11 +4550,11 @@
         "turnover": 23.35,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600396",
         "name": "华电辽能",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4575,11 +4572,11 @@
         "turnover": 20.12,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688808",
         "name": "联讯仪器",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4597,11 +4594,11 @@
         "turnover": 18.73,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603738",
         "name": "泰晶科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4619,11 +4616,11 @@
         "turnover": 8.92,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002709",
         "name": "天赐材料",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4641,11 +4638,11 @@
         "turnover": 7.85,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603026",
         "name": "石大胜华",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4663,11 +4660,11 @@
         "turnover": 16.91,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688811",
         "name": "有研复材",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4685,11 +4682,11 @@
         "turnover": 4.35,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "301358",
         "name": "湖南裕能",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4707,11 +4704,11 @@
         "turnover": 11.94,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603045",
         "name": "福达合金",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4729,11 +4726,11 @@
         "turnover": 15.86,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688530",
         "name": "欧莱新材",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4751,11 +4748,11 @@
         "turnover": 4.59,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688275",
         "name": "万润新能",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4773,11 +4770,11 @@
         "turnover": 7.07,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "920249",
         "name": "利尔达",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4795,11 +4792,11 @@
         "turnover": 13.43,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "301680",
         "name": "固德电材",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4817,11 +4814,11 @@
         "turnover": 9.15,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300438",
         "name": "鹏辉能源",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4839,11 +4836,11 @@
         "turnover": 4.02,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300502",
         "name": "新易盛",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4861,11 +4858,11 @@
         "turnover": 7.04,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688416",
         "name": "恒烁股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4883,11 +4880,11 @@
         "turnover": 26.84,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603459",
         "name": "红板科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4905,11 +4902,11 @@
         "turnover": 16.31,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688818",
         "name": "电科蓝天",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4927,11 +4924,11 @@
         "turnover": 10.26,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "301511",
         "name": "德福科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4949,11 +4946,11 @@
         "turnover": 11.65,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002281",
         "name": "光迅科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4971,11 +4968,11 @@
         "turnover": 5.7,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002008",
         "name": "大族激光",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -4993,11 +4990,11 @@
         "turnover": 6.21,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688766",
         "name": "普冉股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5015,11 +5012,11 @@
         "turnover": 10.83,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600105",
         "name": "永鼎股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5037,11 +5034,11 @@
         "turnover": 5.73,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688498",
         "name": "源杰科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5059,11 +5056,11 @@
         "turnover": 9.86,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300620",
         "name": "光库科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5081,11 +5078,11 @@
         "turnover": 6.48,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600487",
         "name": "亨通光电",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5103,11 +5100,11 @@
         "turnover": 6.05,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600869",
         "name": "远东股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5125,11 +5122,11 @@
         "turnover": 7.88,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "000593",
         "name": "德龙汇能",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5147,11 +5144,11 @@
         "turnover": 2.62,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603308",
         "name": "应流股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5169,11 +5166,11 @@
         "turnover": 12.38,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300769",
         "name": "德方纳米",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5191,11 +5188,11 @@
         "turnover": 3.13,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688001",
         "name": "华兴源创",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5213,11 +5210,11 @@
         "turnover": 4.71,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "301217",
         "name": "铜冠铜箔",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5235,11 +5232,11 @@
         "turnover": 5.17,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600726",
         "name": "华电能源",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5259,11 +5256,11 @@
         "turnover": 6.09,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688025",
         "name": "杰普特",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5283,11 +5280,11 @@
         "turnover": 24.04,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002297",
         "name": "博云新材",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5307,11 +5304,11 @@
         "turnover": 31.19,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002902",
         "name": "铭普光磁",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "WAIT_CONFIRM",
@@ -5331,11 +5328,11 @@
         "turnover": 14.81,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002975",
         "name": "博杰股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5355,11 +5352,11 @@
         "turnover": 15.06,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603629",
         "name": "利通电子",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5379,11 +5376,11 @@
         "turnover": 6.77,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603906",
         "name": "龙蟠科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5403,11 +5400,11 @@
         "turnover": 13.23,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "001309",
         "name": "德明利",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5427,11 +5424,11 @@
         "turnover": 20.88,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300283",
         "name": "温州宏丰",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5451,11 +5448,11 @@
         "turnover": 11.05,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002192",
         "name": "融捷股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5475,11 +5472,11 @@
         "turnover": 10.92,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603083",
         "name": "剑桥科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5499,11 +5496,11 @@
         "turnover": 4.74,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002466",
         "name": "天齐锂业",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5523,11 +5520,11 @@
         "turnover": 4.61,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002460",
         "name": "赣锋锂业",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5547,11 +5544,11 @@
         "turnover": 10.77,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300398",
         "name": "飞凯材料",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5571,11 +5568,11 @@
         "turnover": 2.49,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300308",
         "name": "中际旭创",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5595,11 +5592,11 @@
         "turnover": 10.93,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300390",
         "name": "天华新能",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5619,11 +5616,11 @@
         "turnover": 14.48,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300042",
         "name": "朗科科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5643,11 +5640,11 @@
         "turnover": 5.6,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300739",
         "name": "明阳电路",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5667,11 +5664,11 @@
         "turnover": 7.29,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688313",
         "name": "仕佳光子",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5691,11 +5688,11 @@
         "turnover": 2.4,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688002",
         "name": "睿创微纳",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5715,11 +5712,11 @@
         "turnover": 5.59,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300857",
         "name": "协创数据",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5739,11 +5736,11 @@
         "turnover": 6.68,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "301338",
         "name": "凯格精机",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5763,11 +5760,11 @@
         "turnover": 11.2,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300139",
         "name": "晓程科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5787,11 +5784,11 @@
         "turnover": 9.45,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688525",
         "name": "佰维存储",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5811,11 +5808,11 @@
         "turnover": 7.04,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300548",
         "name": "长芯博创",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5835,11 +5832,11 @@
         "turnover": 6.7,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688048",
         "name": "长光华芯",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5859,11 +5856,11 @@
         "turnover": 4.57,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300696",
         "name": "爱乐达",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5883,11 +5880,11 @@
         "turnover": 10.7,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600522",
         "name": "中天科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5907,11 +5904,11 @@
         "turnover": 3.82,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "601869",
         "name": "长飞光纤",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5931,11 +5928,11 @@
         "turnover": 10.52,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600498",
         "name": "烽火通信",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5955,11 +5952,11 @@
         "turnover": 23.36,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002580",
         "name": "圣阳股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -5979,11 +5976,11 @@
         "turnover": 16.35,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "600330",
         "name": "天通股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -6003,11 +6000,11 @@
         "turnover": 29.46,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002309",
         "name": "中利集团",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -6027,11 +6024,11 @@
         "turnover": 10.26,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603803",
         "name": "瑞斯康达",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -6051,11 +6048,11 @@
         "turnover": 6.17,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "002240",
         "name": "盛新锂能",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -6075,11 +6072,11 @@
         "turnover": 7.31,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "603618",
         "name": "杭电股份",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -6099,11 +6096,11 @@
         "turnover": 2.57,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "688256",
         "name": "DR寒武纪",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -6123,11 +6120,11 @@
         "turnover": 8.52,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "300819",
         "name": "聚杰微纤",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       },
       {
         "state": "INTRADAY_RISK",
@@ -6147,11 +6144,11 @@
         "turnover": 5.65,
         "main_net_amount": null,
         "main_net_pct": null,
-        "elapsed_seconds": 59.2,
+        "elapsed_seconds": 61.9,
         "code": "001400",
         "name": "江顺科技",
         "source": "tencent",
-        "updated_at": "2026-05-16 17:54:04"
+        "updated_at": "2026-05-16 17:55:04"
       }
     ],
     "rows_count": 77,
@@ -6201,16 +6198,16 @@
         "mainline": "AI算力半导体",
         "node": "半导体制造",
         "tier": "核心候选",
-        "promotion_score": 86.34,
+        "promotion_score": 80.34,
         "rt_price": 1170.0,
         "rt_pct": 6.84,
         "potential_score": 66.95,
         "market_strength_score": 100.0,
-        "news_impact_score": 12.0,
+        "news_impact_score": 6.0,
         "action": "MODEL_TRIAL_BUY_WATCH",
         "label": "可小仓模拟试错",
         "target_pct": 8.0,
-        "reason": "盘中涨幅确认 6.84%；潜力分 67.0；市场强度 100.0；新闻强化 +12",
+        "reason": "盘中涨幅确认 6.84%；潜力分 67.0；市场强度 100.0；新闻强化 +6",
         "blockers": "",
         "quote_source": "tencent"
       },
@@ -6220,93 +6217,17 @@
         "mainline": "AI算力半导体",
         "node": "半导体制造",
         "tier": "核心候选",
-        "promotion_score": 85.65,
+        "promotion_score": 79.65,
         "rt_price": 680.0,
         "rt_pct": 7.77,
         "potential_score": 66.09,
         "market_strength_score": 100.0,
-        "news_impact_score": 12.0,
+        "news_impact_score": 6.0,
         "action": "MODEL_TRIAL_BUY_WATCH",
         "label": "可小仓模拟试错",
         "target_pct": 8.0,
-        "reason": "盘中涨幅确认 7.77%；潜力分 66.1；市场强度 100.0；新闻强化 +12",
+        "reason": "盘中涨幅确认 7.77%；潜力分 66.1；市场强度 100.0；新闻强化 +6",
         "blockers": "",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "001309",
-        "name": "德明利",
-        "mainline": "AI算力半导体",
-        "node": "半导体制造",
-        "tier": "核心候选",
-        "promotion_score": 82.53,
-        "rt_price": 712.06,
-        "rt_pct": -1.33,
-        "potential_score": 65.15,
-        "market_strength_score": 91.18,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 65.2；市场强度 91.2；新闻强化 +12",
-        "blockers": "涨幅未确认 -1.33%",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "300042",
-        "name": "朗科科技",
-        "mainline": "AI算力半导体",
-        "node": "半导体制造",
-        "tier": "核心候选",
-        "promotion_score": 82.17,
-        "rt_price": 64.95,
-        "rt_pct": -3.02,
-        "potential_score": 64.14,
-        "market_strength_score": 83.18,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 64.1；市场强度 83.2；新闻强化 +12",
-        "blockers": "涨幅未确认 -3.02%；盘中转弱 -3.02%",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "688313",
-        "name": "仕佳光子",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "核心候选",
-        "promotion_score": 82.11,
-        "rt_price": 175.6,
-        "rt_pct": -3.8,
-        "potential_score": 66.39,
-        "market_strength_score": 66.73,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 66.4；市场强度 66.7；新闻强化 +12",
-        "blockers": "涨幅未确认 -3.80%；盘中转弱 -3.80%",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "300857",
-        "name": "协创数据",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "核心候选",
-        "promotion_score": 81.07,
-        "rt_price": 274.01,
-        "rt_pct": -4.87,
-        "potential_score": 66.53,
-        "market_strength_score": 68.31,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 66.5；市场强度 68.3；新闻强化 +12",
-        "blockers": "涨幅未确认 -4.87%；盘中转弱 -4.87%",
         "quote_source": "tencent"
       },
       {
@@ -6329,60 +6250,98 @@
         "quote_source": "tencent"
       },
       {
+        "code": "001309",
+        "name": "德明利",
+        "mainline": "AI算力半导体",
+        "node": "半导体制造",
+        "tier": "核心候选",
+        "promotion_score": 76.53,
+        "rt_price": 712.06,
+        "rt_pct": -1.33,
+        "potential_score": 65.15,
+        "market_strength_score": 91.18,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "潜力分 65.2；市场强度 91.2；新闻强化 +6",
+        "blockers": "涨幅未确认 -1.33%",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "300042",
+        "name": "朗科科技",
+        "mainline": "AI算力半导体",
+        "node": "半导体制造",
+        "tier": "核心候选",
+        "promotion_score": 76.17,
+        "rt_price": 64.95,
+        "rt_pct": -3.02,
+        "potential_score": 64.14,
+        "market_strength_score": 83.18,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "潜力分 64.1；市场强度 83.2；新闻强化 +6",
+        "blockers": "涨幅未确认 -3.02%；盘中转弱 -3.02%",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "688313",
+        "name": "仕佳光子",
+        "mainline": "AI算力半导体",
+        "node": "光通信/CPO",
+        "tier": "核心候选",
+        "promotion_score": 76.11,
+        "rt_price": 175.6,
+        "rt_pct": -3.8,
+        "potential_score": 66.39,
+        "market_strength_score": 66.73,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "潜力分 66.4；市场强度 66.7；新闻强化 +6",
+        "blockers": "涨幅未确认 -3.80%；盘中转弱 -3.80%",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "300857",
+        "name": "协创数据",
+        "mainline": "AI算力半导体",
+        "node": "光通信/CPO",
+        "tier": "核心候选",
+        "promotion_score": 75.07,
+        "rt_price": 274.01,
+        "rt_pct": -4.87,
+        "potential_score": 66.53,
+        "market_strength_score": 68.31,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "潜力分 66.5；市场强度 68.3；新闻强化 +6",
+        "blockers": "涨幅未确认 -4.87%；盘中转弱 -4.87%",
+        "quote_source": "tencent"
+      },
+      {
         "code": "688525",
         "name": "佰维存储",
         "mainline": "AI算力半导体",
         "node": "半导体制造",
         "tier": "核心候选",
-        "promotion_score": 79.73,
+        "promotion_score": 73.73,
         "rt_price": 306.3,
         "rt_pct": -5.27,
         "potential_score": 63.4,
         "market_strength_score": 66.16,
-        "news_impact_score": 12.0,
+        "news_impact_score": 6.0,
         "action": "PROMOTION_WATCH",
         "label": "晋级观察",
         "target_pct": 0,
-        "reason": "潜力分 63.4；市场强度 66.2；新闻强化 +12",
+        "reason": "潜力分 63.4；市场强度 66.2；新闻强化 +6",
         "blockers": "涨幅未确认 -5.27%；盘中转弱 -5.27%",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "002281",
-        "name": "光迅科技",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "核心候选",
-        "promotion_score": 77.7,
-        "rt_price": 196.49,
-        "rt_pct": -3.59,
-        "potential_score": 60.2,
-        "market_strength_score": 88.14,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 60.2；市场强度 88.1；新闻强化 +12",
-        "blockers": "涨幅未确认 -3.59%；盘中转弱 -3.59%",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "688498",
-        "name": "源杰科技",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "核心候选",
-        "promotion_score": 77.16,
-        "rt_price": 1559.0,
-        "rt_pct": -4.65,
-        "potential_score": 61.16,
-        "market_strength_score": 72.0,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 61.2；市场强度 72.0；新闻强化 +12",
-        "blockers": "涨幅未确认 -4.65%；盘中转弱 -4.65%",
         "quote_source": "tencent"
       },
       {
@@ -6405,60 +6364,41 @@
         "quote_source": "tencent"
       },
       {
-        "code": "300283",
-        "name": "温州宏丰",
+        "code": "002281",
+        "name": "光迅科技",
         "mainline": "AI算力半导体",
-        "node": "半导体制造",
-        "tier": "强候选",
-        "promotion_score": 71.87,
-        "rt_price": 15.77,
-        "rt_pct": -1.44,
-        "potential_score": 58.05,
-        "market_strength_score": 87.96,
-        "news_impact_score": 12.0,
+        "node": "光通信/CPO",
+        "tier": "核心候选",
+        "promotion_score": 71.7,
+        "rt_price": 196.49,
+        "rt_pct": -3.59,
+        "potential_score": 60.2,
+        "market_strength_score": 88.14,
+        "news_impact_score": 6.0,
         "action": "PROMOTION_WATCH",
         "label": "晋级观察",
         "target_pct": 0,
-        "reason": "潜力分 58.0；市场强度 88.0；新闻强化 +12",
-        "blockers": "涨幅未确认 -1.44%",
+        "reason": "潜力分 60.2；市场强度 88.1；新闻强化 +6",
+        "blockers": "涨幅未确认 -3.59%；盘中转弱 -3.59%",
         "quote_source": "tencent"
       },
       {
-        "code": "600105",
-        "name": "永鼎股份",
+        "code": "688498",
+        "name": "源杰科技",
         "mainline": "AI算力半导体",
         "node": "光通信/CPO",
-        "tier": "强候选",
-        "promotion_score": 70.57,
-        "rt_price": 51.5,
-        "rt_pct": -4.61,
-        "potential_score": 58.29,
-        "market_strength_score": 75.67,
-        "news_impact_score": 12.0,
+        "tier": "核心候选",
+        "promotion_score": 71.16,
+        "rt_price": 1559.0,
+        "rt_pct": -4.65,
+        "potential_score": 61.16,
+        "market_strength_score": 72.0,
+        "news_impact_score": 6.0,
         "action": "PROMOTION_WATCH",
         "label": "晋级观察",
         "target_pct": 0,
-        "reason": "潜力分 58.3；市场强度 75.7；新闻强化 +12",
-        "blockers": "涨幅未确认 -4.61%；盘中转弱 -4.61%",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "688048",
-        "name": "长光华芯",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "强候选",
-        "promotion_score": 70.4,
-        "rt_price": 418.31,
-        "rt_pct": -6.65,
-        "potential_score": 55.6,
-        "market_strength_score": 92.55,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 55.6；市场强度 92.5；新闻强化 +12",
-        "blockers": "涨幅未确认 -6.65%；盘中转弱 -6.65%",
+        "reason": "潜力分 61.2；市场强度 72.0；新闻强化 +6",
+        "blockers": "涨幅未确认 -4.65%；盘中转弱 -4.65%",
         "quote_source": "tencent"
       },
       {
@@ -6481,44 +6421,6 @@
         "quote_source": "tencent"
       },
       {
-        "code": "601869",
-        "name": "长飞光纤",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "强候选",
-        "promotion_score": 68.51,
-        "rt_price": 374.45,
-        "rt_pct": -7.47,
-        "potential_score": 54.11,
-        "market_strength_score": 86.17,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "市场强度 86.2；新闻强化 +12",
-        "blockers": "涨幅未确认 -7.47%；盘中转弱 -7.47%；潜力分不足 54.1",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "603629",
-        "name": "利通电子",
-        "mainline": "AI算力半导体",
-        "node": "算力基础设施",
-        "tier": "强候选",
-        "promotion_score": 68.49,
-        "rt_price": 170.0,
-        "rt_pct": -0.23,
-        "potential_score": 52.01,
-        "market_strength_score": 100.0,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "市场强度 100.0；新闻强化 +12",
-        "blockers": "涨幅未确认 -0.23%；潜力分不足 52.0",
-        "quote_source": "tencent"
-      },
-      {
         "code": "603045",
         "name": "福达合金",
         "mainline": "新能源电池",
@@ -6535,25 +6437,6 @@
         "target_pct": 0,
         "reason": "潜力分 57.8；市场强度 81.8；新闻强化 +9",
         "blockers": "涨幅未确认 0.76%",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "002975",
-        "name": "博杰股份",
-        "mainline": "AI算力半导体",
-        "node": "半导体制造",
-        "tier": "强候选",
-        "promotion_score": 67.99,
-        "rt_price": 114.99,
-        "rt_pct": 0.43,
-        "potential_score": 58.34,
-        "market_strength_score": 50.85,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "潜力分 58.3；新闻强化 +12",
-        "blockers": "涨幅未确认 0.43%；强度不足 50.9",
         "quote_source": "tencent"
       },
       {
@@ -6576,60 +6459,60 @@
         "quote_source": "tencent"
       },
       {
-        "code": "603459",
-        "name": "红板科技",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "强候选",
-        "promotion_score": 67.14,
-        "rt_price": 83.8,
-        "rt_pct": -2.06,
-        "potential_score": 50.64,
-        "market_strength_score": 100.0,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "市场强度 100.0；新闻强化 +12",
-        "blockers": "涨幅未确认 -2.06%；盘中转弱 -2.06%；潜力分不足 50.6",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "600522",
-        "name": "中天科技",
-        "mainline": "AI算力半导体",
-        "node": "光通信/CPO",
-        "tier": "强候选",
-        "promotion_score": 65.55,
-        "rt_price": 40.99,
-        "rt_pct": -7.05,
-        "potential_score": 52.5,
-        "market_strength_score": 73.29,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "市场强度 73.3；新闻强化 +12",
-        "blockers": "涨幅未确认 -7.05%；盘中转弱 -7.05%；潜力分不足 52.5",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "688025",
-        "name": "杰普特",
+        "code": "300283",
+        "name": "温州宏丰",
         "mainline": "AI算力半导体",
         "node": "半导体制造",
         "tier": "强候选",
-        "promotion_score": 64.39,
-        "rt_price": 394.8,
-        "rt_pct": 5.56,
-        "potential_score": 48.98,
-        "market_strength_score": 84.72,
-        "news_impact_score": 12.0,
+        "promotion_score": 65.87,
+        "rt_price": 15.77,
+        "rt_pct": -1.44,
+        "potential_score": 58.05,
+        "market_strength_score": 87.96,
+        "news_impact_score": 6.0,
         "action": "PROMOTION_WATCH",
         "label": "晋级观察",
         "target_pct": 0,
-        "reason": "盘中涨幅确认 5.56%；市场强度 84.7；新闻强化 +12",
-        "blockers": "潜力分不足 49.0",
+        "reason": "潜力分 58.0；市场强度 88.0；新闻强化 +6",
+        "blockers": "涨幅未确认 -1.44%",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "600105",
+        "name": "永鼎股份",
+        "mainline": "AI算力半导体",
+        "node": "光通信/CPO",
+        "tier": "强候选",
+        "promotion_score": 64.57,
+        "rt_price": 51.5,
+        "rt_pct": -4.61,
+        "potential_score": 58.29,
+        "market_strength_score": 75.67,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "潜力分 58.3；市场强度 75.7；新闻强化 +6",
+        "blockers": "涨幅未确认 -4.61%；盘中转弱 -4.61%",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "688048",
+        "name": "长光华芯",
+        "mainline": "AI算力半导体",
+        "node": "光通信/CPO",
+        "tier": "强候选",
+        "promotion_score": 64.4,
+        "rt_price": 418.31,
+        "rt_pct": -6.65,
+        "potential_score": 55.6,
+        "market_strength_score": 92.55,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "潜力分 55.6；市场强度 92.5；新闻强化 +6",
+        "blockers": "涨幅未确认 -6.65%；盘中转弱 -6.65%",
         "quote_source": "tencent"
       },
       {
@@ -6649,25 +6532,6 @@
         "target_pct": 0,
         "reason": "市场强度 75.0；新闻强化 +9",
         "blockers": "涨幅未确认 -1.48%；潜力分不足 53.8",
-        "quote_source": "tencent"
-      },
-      {
-        "code": "002008",
-        "name": "大族激光",
-        "mainline": "AI算力半导体",
-        "node": "半导体制造",
-        "tier": "强候选",
-        "promotion_score": 63.99,
-        "rt_price": 143.3,
-        "rt_pct": -3.97,
-        "potential_score": 48.24,
-        "market_strength_score": 87.3,
-        "news_impact_score": 12.0,
-        "action": "PROMOTION_WATCH",
-        "label": "晋级观察",
-        "target_pct": 0,
-        "reason": "市场强度 87.3；新闻强化 +12",
-        "blockers": "涨幅未确认 -3.97%；盘中转弱 -3.97%；潜力分不足 48.2",
         "quote_source": "tencent"
       },
       {
@@ -6728,22 +6592,155 @@
         "quote_source": "tencent"
       },
       {
-        "code": "300620",
-        "name": "光库科技",
+        "code": "601869",
+        "name": "长飞光纤",
         "mainline": "AI算力半导体",
         "node": "光通信/CPO",
         "tier": "强候选",
-        "promotion_score": 63.49,
-        "rt_price": 272.02,
-        "rt_pct": -5.1,
-        "potential_score": 52.57,
-        "market_strength_score": 52.19,
-        "news_impact_score": 12.0,
+        "promotion_score": 62.51,
+        "rt_price": 374.45,
+        "rt_pct": -7.47,
+        "potential_score": 54.11,
+        "market_strength_score": 86.17,
+        "news_impact_score": 6.0,
         "action": "PROMOTION_WATCH",
         "label": "晋级观察",
         "target_pct": 0,
-        "reason": "新闻强化 +12",
-        "blockers": "涨幅未确认 -5.10%；盘中转弱 -5.10%；潜力分不足 52.6；强度不足 52.2",
+        "reason": "市场强度 86.2；新闻强化 +6",
+        "blockers": "涨幅未确认 -7.47%；盘中转弱 -7.47%；潜力分不足 54.1",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "603629",
+        "name": "利通电子",
+        "mainline": "AI算力半导体",
+        "node": "算力基础设施",
+        "tier": "强候选",
+        "promotion_score": 62.49,
+        "rt_price": 170.0,
+        "rt_pct": -0.23,
+        "potential_score": 52.01,
+        "market_strength_score": 100.0,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "市场强度 100.0；新闻强化 +6",
+        "blockers": "涨幅未确认 -0.23%；潜力分不足 52.0",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "301217",
+        "name": "铜冠铜箔",
+        "mainline": "新能源电池",
+        "node": "电池材料",
+        "tier": "强候选",
+        "promotion_score": 62.21,
+        "rt_price": 83.2,
+        "rt_pct": -3.12,
+        "potential_score": 49.83,
+        "market_strength_score": 86.76,
+        "news_impact_score": 9.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "市场强度 86.8；新闻强化 +9",
+        "blockers": "涨幅未确认 -3.12%；盘中转弱 -3.12%；潜力分不足 49.8；旧候选池 NO_TOUCH，仅允许观察",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "002309",
+        "name": "中利集团",
+        "mainline": "新能源电池",
+        "node": "光伏设备",
+        "tier": "强候选",
+        "promotion_score": 62.06,
+        "rt_price": 4.65,
+        "rt_pct": -10.06,
+        "potential_score": 54.7,
+        "market_strength_score": 52.32,
+        "news_impact_score": 9.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "新闻强化 +9",
+        "blockers": "涨幅未确认 -10.06%；盘中转弱 -10.06%；潜力分不足 54.7；强度不足 52.3",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "002975",
+        "name": "博杰股份",
+        "mainline": "AI算力半导体",
+        "node": "半导体制造",
+        "tier": "强候选",
+        "promotion_score": 61.99,
+        "rt_price": 114.99,
+        "rt_pct": 0.43,
+        "potential_score": 58.34,
+        "market_strength_score": 50.85,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "潜力分 58.3；新闻强化 +6",
+        "blockers": "涨幅未确认 0.43%；强度不足 50.9",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "603459",
+        "name": "红板科技",
+        "mainline": "AI算力半导体",
+        "node": "光通信/CPO",
+        "tier": "强候选",
+        "promotion_score": 61.14,
+        "rt_price": 83.8,
+        "rt_pct": -2.06,
+        "potential_score": 50.64,
+        "market_strength_score": 100.0,
+        "news_impact_score": 6.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "市场强度 100.0；新闻强化 +6",
+        "blockers": "涨幅未确认 -2.06%；盘中转弱 -2.06%；潜力分不足 50.6",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "002709",
+        "name": "天赐材料",
+        "mainline": "新能源电池",
+        "node": "电池材料",
+        "tier": "强候选",
+        "promotion_score": 61.08,
+        "rt_price": 57.54,
+        "rt_pct": 3.66,
+        "potential_score": 54.45,
+        "market_strength_score": 43.74,
+        "news_impact_score": 9.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "盘中涨幅确认 3.66%；新闻强化 +9",
+        "blockers": "潜力分不足 54.5；强度不足 43.7",
+        "quote_source": "tencent"
+      },
+      {
+        "code": "002460",
+        "name": "赣锋锂业",
+        "mainline": "新能源电池",
+        "node": "电池材料",
+        "tier": "强候选",
+        "promotion_score": 60.01,
+        "rt_price": 78.06,
+        "rt_pct": -2.4,
+        "potential_score": 54.71,
+        "market_strength_score": 32.73,
+        "news_impact_score": 9.0,
+        "action": "PROMOTION_WATCH",
+        "label": "晋级观察",
+        "target_pct": 0,
+        "reason": "新闻强化 +9",
+        "blockers": "涨幅未确认 -2.40%；盘中转弱 -2.40%；潜力分不足 54.7；强度不足 32.7",
         "quote_source": "tencent"
       }
     ],
@@ -6771,7 +6768,7 @@
       "rt_price": 25.85,
       "rt_pct": 3.77,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -6801,7 +6798,7 @@
       "rt_price": 1170.0,
       "rt_pct": 6.84,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -6831,7 +6828,7 @@
       "rt_price": 274.01,
       "rt_pct": -4.87,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -6861,7 +6858,7 @@
       "rt_price": 175.6,
       "rt_pct": -3.8,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -6891,7 +6888,7 @@
       "rt_price": 680.0,
       "rt_pct": 7.77,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -6921,7 +6918,7 @@
       "rt_price": 93.65,
       "rt_pct": -2.97,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -6951,7 +6948,7 @@
       "rt_price": 712.06,
       "rt_pct": -1.33,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -6981,7 +6978,7 @@
       "rt_price": 64.95,
       "rt_pct": -3.02,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7011,7 +7008,7 @@
       "rt_price": 306.3,
       "rt_pct": -5.27,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7041,7 +7038,7 @@
       "rt_price": 1559.0,
       "rt_pct": -4.65,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7071,7 +7068,7 @@
       "rt_price": 196.49,
       "rt_pct": -3.59,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "核心候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7101,7 +7098,7 @@
       "rt_price": 114.99,
       "rt_pct": 0.43,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7131,7 +7128,7 @@
       "rt_price": 51.5,
       "rt_pct": -4.61,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7161,7 +7158,7 @@
       "rt_price": 15.77,
       "rt_pct": -1.44,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7191,7 +7188,7 @@
       "rt_price": 69.93,
       "rt_pct": 0.76,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7221,7 +7218,7 @@
       "rt_price": 139.48,
       "rt_pct": 20.0,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 航空航天军工 / 低空/无人机",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7251,7 +7248,7 @@
       "rt_price": 54.61,
       "rt_pct": 0.53,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7281,7 +7278,7 @@
       "rt_price": 418.31,
       "rt_pct": -6.65,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7311,7 +7308,7 @@
       "rt_price": 78.06,
       "rt_pct": -2.4,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7341,7 +7338,7 @@
       "rt_price": 4.65,
       "rt_pct": -10.06,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 光伏设备",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7371,7 +7368,7 @@
       "rt_price": 57.54,
       "rt_pct": 3.66,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7401,7 +7398,7 @@
       "rt_price": 374.45,
       "rt_pct": -7.47,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7431,7 +7428,7 @@
       "rt_price": 91.66,
       "rt_pct": -1.48,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7461,7 +7458,7 @@
       "rt_price": 1209.0,
       "rt_pct": -4.09,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7491,7 +7488,7 @@
       "rt_price": 272.02,
       "rt_pct": -5.1,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7521,7 +7518,7 @@
       "rt_price": 40.99,
       "rt_pct": -7.05,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7551,7 +7548,7 @@
       "rt_price": 1049.87,
       "rt_pct": -2.61,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7581,7 +7578,7 @@
       "rt_price": 170.0,
       "rt_pct": -0.23,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 算力基础设施",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7611,7 +7608,7 @@
       "rt_price": 610.05,
       "rt_pct": -1.27,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7641,7 +7638,7 @@
       "rt_price": 78.54,
       "rt_pct": -2.25,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7671,7 +7668,7 @@
       "rt_price": 50.27,
       "rt_pct": -5.15,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 电力电网设备 / 电力运营",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7701,7 +7698,7 @@
       "rt_price": 83.8,
       "rt_pct": -2.06,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 光通信/CPO",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7731,7 +7728,7 @@
       "rt_price": 28.19,
       "rt_pct": -9.99,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7761,7 +7758,7 @@
       "rt_price": 95.48,
       "rt_pct": 1.2,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7791,7 +7788,7 @@
       "rt_price": 83.2,
       "rt_pct": -3.12,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7821,7 +7818,7 @@
       "rt_price": 148.21,
       "rt_pct": 0.46,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7851,7 +7848,7 @@
       "rt_price": 134.66,
       "rt_pct": -3.81,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 航空航天军工 / 航天卫星",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7881,7 +7878,7 @@
       "rt_price": 394.8,
       "rt_pct": 5.56,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / AI算力半导体 / 半导体制造",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7911,7 +7908,7 @@
       "rt_price": 100.65,
       "rt_pct": 3.34,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 新能源电池 / 电池材料",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
@@ -7941,7 +7938,7 @@
       "rt_price": 21.63,
       "rt_pct": 0.0,
       "quote_source": "tencent",
-      "quote_updated_at": "2026-05-16 17:54:04",
+      "quote_updated_at": "2026-05-16 17:55:04",
       "monitor_reason": "强候选 / 电力电网设备 / 变压器/输变电",
       "hiddenflow_score": 50.0,
       "hiddenflow_label": "中性观察",
