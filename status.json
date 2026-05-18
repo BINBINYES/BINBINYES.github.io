@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:21:36",
-  "source_generated_at": "2026-05-17 23:21:36",
-  "market_environment_updated_at": "2026-05-17 23:21:36",
+  "generated_at": "2026-05-17 23:22:18",
+  "source_generated_at": "2026-05-17 23:22:18",
+  "market_environment_updated_at": "2026-05-17 23:22:18",
   "initial_capital": "5.00万",
   "total_pnl": "6.00",
   "total_pnl_pct": "0.01%",
@@ -52,7 +52,7 @@
       "label": "中性",
       "components": {
         "breadth": 52,
-        "market_return": 64,
+        "market_return": 63,
         "limit_up_down": 40,
         "candidate_mood": 23,
         "mainline_heat": 80
@@ -71,12 +71,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=51.95",
-        "avg=1.18",
+        "avg=1.12",
         "strong_up=29.87",
         "strong_down=14.29",
-        "limit=74.0/18.0",
+        "limit=75.0/18.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.74"
+        "candidate_avg=-1.8"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -85,12 +85,12 @@
       "source_label": "实时行情代理广度",
       "sample_size": 77,
       "up_stock_pct": 51.95,
-      "down_stock_pct": 46.75,
-      "flat_stock_pct": 1.3,
+      "down_stock_pct": 48.05,
+      "flat_stock_pct": 0.0,
       "strong_up_pct": 29.87,
       "strong_down_pct": 14.29,
-      "avg_pct": 1.18,
-      "limit_up_count": 74,
+      "avg_pct": 1.12,
+      "limit_up_count": 75,
       "limit_down_count": 18,
       "stale": false,
       "age_hours": 0.0,
@@ -98,7 +98,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.01,
+      "fallback_age_hours": 241.02,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -107,7 +107,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.74,
+      "avg_pct": -1.8,
       "strong_count": 1,
       "weak_count": 4
     },
