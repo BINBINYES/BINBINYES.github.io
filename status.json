@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 22:56:33",
-  "source_generated_at": "2026-05-17 22:56:33",
-  "market_environment_updated_at": "2026-05-17 22:56:33",
+  "generated_at": "2026-05-17 22:57:17",
+  "source_generated_at": "2026-05-17 22:57:17",
+  "market_environment_updated_at": "2026-05-17 22:57:17",
   "initial_capital": "5.00万",
-  "total_pnl": "69.00",
-  "total_pnl_pct": "0.14%",
-  "equity": "5.01万",
+  "total_pnl": "-24.00",
+  "total_pnl_pct": "-0.05%",
+  "equity": "5.00万",
   "cash": "本地模型负责同步",
-  "market_value": "0.94万",
-  "floating_pnl": "69.00",
-  "floating_pnl_pct": "0.74%",
+  "market_value": "0.93万",
+  "floating_pnl": "-24.00",
+  "floating_pnl_pct": "-0.26%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,11 +35,11 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "31.47",
-      "market_value": "0.94万",
-      "pnl_amount": "69.00",
-      "pnl_pct": "0.74%",
-      "state": "ok"
+      "price": "31.16",
+      "market_value": "0.93万",
+      "pnl_amount": "-24.00",
+      "pnl_pct": "-0.26%",
+      "state": "below_cost"
     }
   ],
   "market_environment": {
@@ -48,13 +48,13 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 50,
+      "score": 49,
       "label": "中性",
       "components": {
-        "breadth": 52,
-        "market_return": 62,
+        "breadth": 49,
+        "market_return": 61,
         "limit_up_down": 40,
-        "candidate_mood": 23,
+        "candidate_mood": 22,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -70,13 +70,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=51.95",
-        "avg=0.97",
+        "up=49.35",
+        "avg=0.95",
         "strong_up=27.27",
         "strong_down=14.29",
         "limit=81.0/18.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.78"
+        "candidate_avg=-1.89"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -84,12 +84,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 77,
-      "up_stock_pct": 51.95,
-      "down_stock_pct": 48.05,
-      "flat_stock_pct": 0.0,
+      "up_stock_pct": 49.35,
+      "down_stock_pct": 49.35,
+      "flat_stock_pct": 1.3,
       "strong_up_pct": 27.27,
       "strong_down_pct": 14.29,
-      "avg_pct": 0.97,
+      "avg_pct": 0.95,
       "limit_up_count": 81,
       "limit_down_count": 18,
       "stale": false,
@@ -98,7 +98,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 240.59,
+      "fallback_age_hours": 240.61,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -107,7 +107,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.78,
+      "avg_pct": -1.89,
       "strong_count": 1,
       "weak_count": 4
     },
@@ -190,11 +190,18 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=50, breadth_up=51.95, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=49, breadth_up=49.35, budget_x=0.6"
   },
   "operation_history_2d": [],
   "closed_orders": [],
   "closed_orders_note": "已卖出历史订单来自桌面 V151 真实模拟仓引擎，非真实券商成交。",
-  "risk_notes": [],
+  "risk_notes": [
+    {
+      "code": "300885",
+      "name": "海昌新材",
+      "level": "below_cost",
+      "note": "300885 海昌新材 低于成本但未破防守"
+    }
+  ],
   "notice": "公开完整持仓页：仅纸面/模拟仓观察，不构成真实交易建议或券商下单。"
 }
