@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 22:21:06",
-  "source_generated_at": "2026-05-17 22:21:06",
-  "market_environment_updated_at": "2026-05-17 22:21:06",
+  "generated_at": "2026-05-17 22:22:06",
+  "source_generated_at": "2026-05-17 22:22:06",
+  "market_environment_updated_at": "2026-05-17 22:22:06",
   "initial_capital": "5.00万",
-  "total_pnl": "468.00",
-  "total_pnl_pct": "0.94%",
+  "total_pnl": "489.00",
+  "total_pnl_pct": "0.98%",
   "equity": "5.05万",
   "cash": "本地模型负责同步",
-  "market_value": "0.98万",
-  "floating_pnl": "468.00",
-  "floating_pnl_pct": "4.99%",
+  "market_value": "0.99万",
+  "floating_pnl": "489.00",
+  "floating_pnl_pct": "5.22%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.80",
-      "market_value": "0.98万",
-      "pnl_amount": "468.00",
-      "pnl_pct": "4.99%",
+      "price": "32.87",
+      "market_value": "0.99万",
+      "pnl_amount": "489.00",
+      "pnl_pct": "5.22%",
       "state": "ok"
     }
   ],
@@ -48,13 +48,13 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 50,
+      "score": 51,
       "label": "中性",
       "components": {
         "breadth": 52,
         "market_return": 63,
         "limit_up_down": 40,
-        "candidate_mood": 21,
+        "candidate_mood": 25,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -71,12 +71,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=51.95",
-        "avg=1.06",
-        "strong_up=27.27",
+        "avg=1.12",
+        "strong_up=29.87",
         "strong_down=12.99",
-        "limit=79.0/17.0",
+        "limit=79.0/16.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.6"
+        "candidate_avg=-1.52"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -87,18 +87,18 @@
       "up_stock_pct": 51.95,
       "down_stock_pct": 48.05,
       "flat_stock_pct": 0.0,
-      "strong_up_pct": 27.27,
+      "strong_up_pct": 29.87,
       "strong_down_pct": 12.99,
-      "avg_pct": 1.06,
+      "avg_pct": 1.12,
       "limit_up_count": 79,
-      "limit_down_count": 17,
+      "limit_down_count": 16,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 240.0,
+      "fallback_age_hours": 240.02,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -107,8 +107,8 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.6,
-      "strong_count": 0,
+      "avg_pct": -1.52,
+      "strong_count": 1,
       "weak_count": 4
     },
     "mainlines": {
@@ -190,7 +190,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=50, breadth_up=51.95, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=51.95, budget_x=0.6"
   },
   "operation_history_2d": [],
   "closed_orders": [],
