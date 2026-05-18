@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 22:23:03",
-  "source_generated_at": "2026-05-17 22:23:03",
-  "market_environment_updated_at": "2026-05-17 22:23:03",
+  "generated_at": "2026-05-17 22:23:50",
+  "source_generated_at": "2026-05-17 22:23:50",
+  "market_environment_updated_at": "2026-05-17 22:23:50",
   "initial_capital": "5.00万",
   "total_pnl": "492.00",
   "total_pnl_pct": "0.98%",
@@ -51,7 +51,7 @@
       "score": 51,
       "label": "中性",
       "components": {
-        "breadth": 51,
+        "breadth": 52,
         "market_return": 63,
         "limit_up_down": 40,
         "candidate_mood": 25,
@@ -70,13 +70,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=50.65",
-        "avg=1.07",
+        "up=51.95",
+        "avg=1.09",
         "strong_up=28.57",
-        "strong_down=14.29",
-        "limit=79.0/16.0",
+        "strong_down=12.99",
+        "limit=79.0/15.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.53"
+        "candidate_avg=-1.5"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -84,21 +84,21 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 77,
-      "up_stock_pct": 50.65,
-      "down_stock_pct": 49.35,
+      "up_stock_pct": 51.95,
+      "down_stock_pct": 48.05,
       "flat_stock_pct": 0.0,
       "strong_up_pct": 28.57,
-      "strong_down_pct": 14.29,
-      "avg_pct": 1.07,
+      "strong_down_pct": 12.99,
+      "avg_pct": 1.09,
       "limit_up_count": 79,
-      "limit_down_count": 16,
+      "limit_down_count": 15,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 240.03,
+      "fallback_age_hours": 240.05,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -107,7 +107,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.53,
+      "avg_pct": -1.5,
       "strong_count": 1,
       "weak_count": 4
     },
@@ -190,7 +190,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=50.65, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=51.95, budget_x=0.6"
   },
   "operation_history_2d": [],
   "closed_orders": [],
