@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 22:09:06",
-  "source_generated_at": "2026-05-17 22:09:06",
-  "market_environment_updated_at": "2026-05-17 22:09:06",
+  "generated_at": "2026-05-17 22:10:04",
+  "source_generated_at": "2026-05-17 22:10:04",
+  "market_environment_updated_at": "2026-05-17 22:10:04",
   "initial_capital": "5.00万",
   "total_pnl": "408.00",
   "total_pnl_pct": "0.82%",
@@ -51,10 +51,10 @@
       "score": 55,
       "label": "中性",
       "components": {
-        "breadth": 57,
-        "market_return": 69,
+        "breadth": 55,
+        "market_return": 68,
         "limit_up_down": 52,
-        "candidate_mood": 24,
+        "candidate_mood": 28,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -70,13 +70,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=57.14",
-        "avg=1.62",
-        "strong_up=29.87",
-        "strong_down=10.39",
+        "up=54.55",
+        "avg=1.51",
+        "strong_up=27.27",
+        "strong_down=11.69",
         "limit=5.0/0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.21"
+        "candidate_avg=-1.25"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -84,12 +84,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 77,
-      "up_stock_pct": 57.14,
-      "down_stock_pct": 42.86,
+      "up_stock_pct": 54.55,
+      "down_stock_pct": 45.45,
       "flat_stock_pct": 0.0,
-      "strong_up_pct": 29.87,
-      "strong_down_pct": 10.39,
-      "avg_pct": 1.62,
+      "strong_up_pct": 27.27,
+      "strong_down_pct": 11.69,
+      "avg_pct": 1.51,
       "limit_up_count": 5,
       "limit_down_count": 0,
       "stale": false,
@@ -97,14 +97,14 @@
       "quality": "proxy",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 239.8,
+      "fallback_age_hours": 239.82,
       "universe_cache_stale": true
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.21,
+      "avg_pct": -1.25,
       "strong_count": 0,
-      "weak_count": 4
+      "weak_count": 3
     },
     "mainlines": {
       "available": true,
@@ -185,7 +185,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=55, breadth_up=57.14, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=55, breadth_up=54.55, budget_x=0.6"
   },
   "operation_history_2d": [],
   "closed_orders": [],
