@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 22:57:58",
-  "source_generated_at": "2026-05-17 22:57:58",
-  "market_environment_updated_at": "2026-05-17 22:57:58",
+  "generated_at": "2026-05-17 22:58:36",
+  "source_generated_at": "2026-05-17 22:58:36",
+  "market_environment_updated_at": "2026-05-17 22:58:36",
   "initial_capital": "5.00万",
-  "total_pnl": "-60.00",
-  "total_pnl_pct": "-0.12%",
-  "equity": "4.99万",
+  "total_pnl": "3.00",
+  "total_pnl_pct": "0.01%",
+  "equity": "5.00万",
   "cash": "本地模型负责同步",
-  "market_value": "0.93万",
-  "floating_pnl": "-60.00",
-  "floating_pnl_pct": "-0.64%",
+  "market_value": "0.94万",
+  "floating_pnl": "3.00",
+  "floating_pnl_pct": "0.03%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,26 +35,26 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "31.04",
-      "market_value": "0.93万",
-      "pnl_amount": "-60.00",
-      "pnl_pct": "-0.64%",
-      "state": "below_cost"
+      "price": "31.25",
+      "market_value": "0.94万",
+      "pnl_amount": "3.00",
+      "pnl_pct": "0.03%",
+      "state": "ok"
     }
   ],
   "market_environment": {
     "enabled": true,
     "version": "V151.6",
-    "regime": "NEUTRAL",
+    "regime": "COLD",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 49,
+      "score": 47,
       "label": "中性",
       "components": {
-        "breadth": 49,
-        "market_return": 60,
+        "breadth": 44,
+        "market_return": 59,
         "limit_up_down": 40,
-        "candidate_mood": 21,
+        "candidate_mood": 17,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -70,13 +70,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=49.35",
-        "avg=0.85",
+        "up=44.16",
+        "avg=0.77",
         "strong_up=27.27",
-        "strong_down=14.29",
+        "strong_down=15.58",
         "limit=81.0/18.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.04"
+        "candidate_avg=-2.11"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -84,12 +84,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 77,
-      "up_stock_pct": 49.35,
-      "down_stock_pct": 50.65,
-      "flat_stock_pct": 0.0,
+      "up_stock_pct": 44.16,
+      "down_stock_pct": 53.25,
+      "flat_stock_pct": 2.6,
       "strong_up_pct": 27.27,
-      "strong_down_pct": 14.29,
-      "avg_pct": 0.85,
+      "strong_down_pct": 15.58,
+      "avg_pct": 0.77,
       "limit_up_count": 81,
       "limit_down_count": 18,
       "stale": false,
@@ -98,7 +98,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 240.62,
+      "fallback_age_hours": 240.63,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -107,8 +107,8 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.04,
-      "strong_count": 1,
+      "avg_pct": -2.11,
+      "strong_count": 0,
       "weak_count": 4
     },
     "mainlines": {
@@ -190,18 +190,11 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=49, breadth_up=49.35, budget_x=0.6"
+    "summary": "V151.6 market=COLD, capital=BALANCED, attack=False, fear_greed=47, breadth_up=44.16, budget_x=0.6"
   },
   "operation_history_2d": [],
   "closed_orders": [],
   "closed_orders_note": "已卖出历史订单来自桌面 V151 真实模拟仓引擎，非真实券商成交。",
-  "risk_notes": [
-    {
-      "code": "300885",
-      "name": "海昌新材",
-      "level": "below_cost",
-      "note": "300885 海昌新材 低于成本但未破防守"
-    }
-  ],
+  "risk_notes": [],
   "notice": "公开完整持仓页：仅纸面/模拟仓观察，不构成真实交易建议或券商下单。"
 }
