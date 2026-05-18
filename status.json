@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:35:33",
-  "source_generated_at": "2026-05-17 23:35:33",
-  "market_environment_updated_at": "2026-05-17 23:35:33",
+  "generated_at": "2026-05-17 23:37:13",
+  "source_generated_at": "2026-05-17 23:37:13",
+  "market_environment_updated_at": "2026-05-17 23:37:13",
   "initial_capital": "5.00万",
-  "total_pnl": "-31.00",
-  "total_pnl_pct": "-0.06%",
+  "total_pnl": "-49.00",
+  "total_pnl_pct": "-0.10%",
   "equity": "5.00万",
   "cash": "本地模型负责同步",
   "market_value": "1.88万",
-  "floating_pnl": "-31.00",
-  "floating_pnl_pct": "-0.16%",
+  "floating_pnl": "-49.00",
+  "floating_pnl_pct": "-0.26%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "31.15",
+      "price": "31.09",
       "market_value": "0.93万",
-      "pnl_amount": "-27.00",
-      "pnl_pct": "-0.29%",
+      "pnl_amount": "-45.00",
+      "pnl_pct": "-0.48%",
       "state": "below_cost"
     },
     {
@@ -65,7 +65,7 @@
         "breadth": 46,
         "market_return": 62,
         "limit_up_down": 40,
-        "candidate_mood": 18,
+        "candidate_mood": 17,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -82,12 +82,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=46.05",
-        "avg=0.97",
+        "avg=0.96",
         "strong_up=27.63",
-        "strong_down=14.47",
-        "limit=78.0/17.0",
+        "strong_down=15.79",
+        "limit=76.0/17.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.03"
+        "candidate_avg=-2.08"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -99,9 +99,9 @@
       "down_stock_pct": 53.95,
       "flat_stock_pct": 0.0,
       "strong_up_pct": 27.63,
-      "strong_down_pct": 14.47,
-      "avg_pct": 0.97,
-      "limit_up_count": 78,
+      "strong_down_pct": 15.79,
+      "avg_pct": 0.96,
+      "limit_up_count": 76,
       "limit_down_count": 17,
       "stale": false,
       "age_hours": 0.0,
@@ -109,7 +109,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.24,
+      "fallback_age_hours": 241.27,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -118,7 +118,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.03,
+      "avg_pct": -2.08,
       "strong_count": 0,
       "weak_count": 4
     },
@@ -205,52 +205,44 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "002281",
-      "name": "光迅科技",
-      "v1519_flow": "主力净流确认 58",
-      "rt_pct": "6.29%",
-      "price": "208.85",
-      "pool": "AI算力半导体 / 核心候选"
-    },
-    {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 93",
-      "rt_pct": "4.34%",
-      "price": "37.98",
+      "rt_pct": "4.42%",
+      "price": "38.01",
       "pool": "--"
     },
     {
       "code": "300885",
       "name": "海昌新材",
       "v1519_flow": "承接增强 80",
-      "rt_pct": "-0.48%",
-      "price": "31.15",
+      "rt_pct": "-0.67%",
+      "price": "31.09",
       "pool": "--"
     },
     {
       "code": "301217",
       "name": "铜冠铜箔",
       "v1519_flow": "主力净流确认 62",
-      "rt_pct": "4.93%",
-      "price": "87.30",
+      "rt_pct": "4.75%",
+      "price": "87.15",
       "pool": "新能源电池 / 强候选"
     },
     {
       "code": "000593",
       "name": "德龙汇能",
-      "v1519_flow": "承接增强 78",
+      "v1519_flow": "承接增强 77",
       "rt_pct": "0.81%",
       "price": "23.73",
       "pool": "--"
     },
     {
-      "code": "001309",
-      "name": "德明利",
-      "v1519_flow": "主力净流确认 67",
-      "rt_pct": "2.95%",
-      "price": "733.10",
-      "pool": "AI算力半导体 / 核心候选"
+      "code": "688256",
+      "name": "DR寒武纪",
+      "v1519_flow": "主力净流确认 65",
+      "rt_pct": "-0.01%",
+      "price": "1208.89",
+      "pool": "AI算力半导体 / 强候选"
     }
   ],
   "operation_history_2d": [
