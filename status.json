@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:46:08",
-  "source_generated_at": "2026-05-17 23:46:08",
-  "market_environment_updated_at": "2026-05-17 23:46:08",
+  "generated_at": "2026-05-17 23:47:06",
+  "source_generated_at": "2026-05-17 23:47:06",
+  "market_environment_updated_at": "2026-05-17 23:47:06",
   "initial_capital": "5.00万",
-  "total_pnl": "-83.00",
-  "total_pnl_pct": "-0.17%",
+  "total_pnl": "-97.00",
+  "total_pnl_pct": "-0.19%",
   "equity": "4.99万",
   "cash": "本地模型负责同步",
   "market_value": "1.88万",
-  "floating_pnl": "-83.00",
-  "floating_pnl_pct": "-0.44%",
+  "floating_pnl": "-97.00",
+  "floating_pnl_pct": "-0.51%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "30.99",
+      "price": "30.93",
       "market_value": "0.93万",
-      "pnl_amount": "-75.00",
-      "pnl_pct": "-0.80%",
+      "pnl_amount": "-93.00",
+      "pnl_pct": "-0.99%",
       "state": "below_cost"
     },
     {
@@ -46,10 +46,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.72",
+      "price": "23.73",
       "market_value": "0.95万",
-      "pnl_amount": "-8.00",
-      "pnl_pct": "-0.08%",
+      "pnl_amount": "-4.00",
+      "pnl_pct": "-0.04%",
       "state": "below_cost"
     }
   ],
@@ -82,12 +82,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=48.68",
-        "avg=0.9",
+        "avg=0.95",
         "strong_up=25.0",
-        "strong_down=17.11",
+        "strong_down=15.79",
         "limit=2.0/2.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.14"
+        "candidate_avg=-2.13"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -99,8 +99,8 @@
       "down_stock_pct": 51.32,
       "flat_stock_pct": 0.0,
       "strong_up_pct": 25.0,
-      "strong_down_pct": 17.11,
-      "avg_pct": 0.9,
+      "strong_down_pct": 15.79,
+      "avg_pct": 0.95,
       "limit_up_count": 2,
       "limit_down_count": 2,
       "stale": false,
@@ -109,13 +109,13 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.42,
+      "fallback_age_hours": 241.43,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476"
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.14,
+      "avg_pct": -2.13,
       "strong_count": 0,
       "weak_count": 4
     },
@@ -205,32 +205,32 @@
       "code": "301217",
       "name": "铜冠铜箔",
       "v1519_flow": "主力净流确认 62",
-      "rt_pct": "4.76%",
-      "price": "87.16",
+      "rt_pct": "4.88%",
+      "price": "87.26",
       "pool": "新能源电池 / 强候选"
     },
     {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 93",
-      "rt_pct": "4.40%",
-      "price": "38.00",
+      "rt_pct": "4.48%",
+      "price": "38.03",
       "pool": "--"
     },
     {
       "code": "000593",
       "name": "德龙汇能",
       "v1519_flow": "承接增强 77",
-      "rt_pct": "0.76%",
-      "price": "23.72",
+      "rt_pct": "0.81%",
+      "price": "23.73",
       "pool": "--"
     },
     {
       "code": "300885",
       "name": "海昌新材",
-      "v1519_flow": "承接增强 80",
-      "rt_pct": "-0.99%",
-      "price": "30.99",
+      "v1519_flow": "承接增强 79",
+      "rt_pct": "-1.18%",
+      "price": "30.93",
       "pool": "--"
     }
   ],
