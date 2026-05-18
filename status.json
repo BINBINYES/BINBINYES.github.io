@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:59:15",
-  "source_generated_at": "2026-05-17 23:59:15",
-  "market_environment_updated_at": "2026-05-17 23:59:15",
+  "generated_at": "2026-05-18 00:00:04",
+  "source_generated_at": "2026-05-18 00:00:04",
+  "market_environment_updated_at": "2026-05-18 00:00:04",
   "initial_capital": "5.00万",
   "total_pnl": "-4.00",
   "total_pnl_pct": "-0.01%",
@@ -65,7 +65,7 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 51,
+      "score": 52,
       "label": "中性",
       "components": {
         "breadth": 54,
@@ -91,7 +91,7 @@
         "avg=1.41",
         "strong_up=30.26",
         "strong_down=11.84",
-        "limit=82.0/19.0",
+        "limit=82.0/18.0",
         "top_mainline_share=0.2833",
         "candidate_avg=-1.8"
       ],
@@ -108,14 +108,14 @@
       "strong_down_pct": 11.84,
       "avg_pct": 1.41,
       "limit_up_count": 82,
-      "limit_down_count": 19,
+      "limit_down_count": 18,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.64,
+      "fallback_age_hours": 241.65,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -207,33 +207,9 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=53.95, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=52, breadth_up=53.95, budget_x=0.6"
   },
   "intraday_v1519_green": [
-    {
-      "code": "002281",
-      "name": "光迅科技",
-      "v1519_flow": "主力净流确认 59",
-      "rt_pct": "6.82%",
-      "price": "209.90",
-      "pool": "AI算力半导体 / 核心候选"
-    },
-    {
-      "code": "001309",
-      "name": "德明利",
-      "v1519_flow": "主力净流确认 67",
-      "rt_pct": "3.23%",
-      "price": "735.05",
-      "pool": "AI算力半导体 / 核心候选"
-    },
-    {
-      "code": "300438",
-      "name": "鹏辉能源",
-      "v1519_flow": "主力净流确认 61",
-      "rt_pct": "2.80%",
-      "price": "85.64",
-      "pool": "新能源电池 / 强候选"
-    },
     {
       "code": "603618",
       "name": "杭电股份",
