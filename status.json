@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:18:21",
-  "source_generated_at": "2026-05-17 23:18:21",
-  "market_environment_updated_at": "2026-05-17 23:18:21",
+  "generated_at": "2026-05-17 23:19:04",
+  "source_generated_at": "2026-05-17 23:19:04",
+  "market_environment_updated_at": "2026-05-17 23:19:04",
   "initial_capital": "5.00万",
-  "total_pnl": "123.00",
-  "total_pnl_pct": "0.25%",
+  "total_pnl": "105.00",
+  "total_pnl_pct": "0.21%",
   "equity": "5.01万",
   "cash": "本地模型负责同步",
   "market_value": "0.95万",
-  "floating_pnl": "123.00",
-  "floating_pnl_pct": "1.31%",
+  "floating_pnl": "105.00",
+  "floating_pnl_pct": "1.12%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "31.65",
+      "price": "31.59",
       "market_value": "0.95万",
-      "pnl_amount": "123.00",
-      "pnl_pct": "1.31%",
+      "pnl_amount": "105.00",
+      "pnl_pct": "1.12%",
       "state": "ok"
     }
   ],
@@ -76,7 +76,7 @@
         "strong_down=14.29",
         "limit=75.0/19.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.88"
+        "candidate_avg=-1.85"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -98,7 +98,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 240.96,
+      "fallback_age_hours": 240.97,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -107,7 +107,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.88,
+      "avg_pct": -1.85,
       "strong_count": 0,
       "weak_count": 4
     },
