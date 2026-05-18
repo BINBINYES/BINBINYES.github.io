@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:40:13",
-  "source_generated_at": "2026-05-17 23:40:13",
-  "market_environment_updated_at": "2026-05-17 23:40:13",
+  "generated_at": "2026-05-17 23:41:31",
+  "source_generated_at": "2026-05-17 23:41:31",
+  "market_environment_updated_at": "2026-05-17 23:41:31",
   "initial_capital": "5.00万",
   "total_pnl": "-31.00",
   "total_pnl_pct": "-0.06%",
@@ -62,9 +62,9 @@
       "score": 47,
       "label": "中性",
       "components": {
-        "breadth": 49,
-        "market_return": 62,
-        "limit_up_down": 40,
+        "breadth": 47,
+        "market_return": 61,
+        "limit_up_down": 43,
         "candidate_mood": 17,
         "mainline_heat": 80
       },
@@ -81,13 +81,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=48.68",
-        "avg=1.0",
-        "strong_up=27.63",
-        "strong_down=14.47",
-        "limit=77.0/18.0",
+        "up=47.37",
+        "avg=0.92",
+        "strong_up=25.0",
+        "strong_down=15.79",
+        "limit=2.0/2.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.13"
+        "candidate_avg=-2.16"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -95,30 +95,27 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 48.68,
+      "up_stock_pct": 47.37,
       "down_stock_pct": 51.32,
-      "flat_stock_pct": 0.0,
-      "strong_up_pct": 27.63,
-      "strong_down_pct": 14.47,
-      "avg_pct": 1.0,
-      "limit_up_count": 77,
-      "limit_down_count": 18,
+      "flat_stock_pct": 1.32,
+      "strong_up_pct": 25.0,
+      "strong_down_pct": 15.79,
+      "avg_pct": 0.92,
+      "limit_up_count": 2,
+      "limit_down_count": 2,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.32,
+      "fallback_age_hours": 241.34,
       "universe_cache_stale": true,
-      "full_market_live_message": "universe seed too small: 1476",
-      "limit_count_source": "eastmoney_limit_pool",
-      "limit_count_qdate": "20260518",
-      "limit_count_message": "eastmoney limit pools"
+      "full_market_live_message": "universe seed too small: 1476"
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.13,
+      "avg_pct": -2.16,
       "strong_count": 0,
       "weak_count": 4
     },
@@ -201,31 +198,31 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=47, breadth_up=48.68, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=47, breadth_up=47.37, budget_x=0.6"
   },
   "intraday_v1519_green": [
     {
-      "code": "300885",
-      "name": "海昌新材",
-      "v1519_flow": "承接增强 79",
-      "rt_pct": "-0.48%",
-      "price": "31.15",
-      "pool": "--"
-    },
-    {
-      "code": "601869",
-      "name": "长飞光纤",
-      "v1519_flow": "主力净流确认 63",
-      "rt_pct": "6.29%",
-      "price": "397.99",
-      "pool": "AI算力半导体 / 强候选"
+      "code": "301217",
+      "name": "铜冠铜箔",
+      "v1519_flow": "主力净流确认 62",
+      "rt_pct": "4.80%",
+      "price": "87.19",
+      "pool": "新能源电池 / 强候选"
     },
     {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 93",
-      "rt_pct": "4.48%",
-      "price": "38.03",
+      "rt_pct": "4.37%",
+      "price": "37.99",
+      "pool": "--"
+    },
+    {
+      "code": "300885",
+      "name": "海昌新材",
+      "v1519_flow": "承接增强 80",
+      "rt_pct": "-0.48%",
+      "price": "31.15",
       "pool": "--"
     },
     {
@@ -235,22 +232,6 @@
       "rt_pct": "0.81%",
       "price": "23.73",
       "pool": "--"
-    },
-    {
-      "code": "301217",
-      "name": "铜冠铜箔",
-      "v1519_flow": "主力净流确认 58",
-      "rt_pct": "4.93%",
-      "price": "87.30",
-      "pool": "新能源电池 / 强候选"
-    },
-    {
-      "code": "600522",
-      "name": "中天科技",
-      "v1519_flow": "主力净流确认 59",
-      "rt_pct": "6.61%",
-      "price": "43.70",
-      "pool": "AI算力半导体 / 强候选"
     }
   ],
   "operation_history_2d": [
