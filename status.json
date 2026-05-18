@@ -1,20 +1,20 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 00:08:35",
-  "source_generated_at": "2026-05-18 00:08:35",
-  "market_environment_updated_at": "2026-05-18 00:08:35",
+  "generated_at": "2026-05-18 00:10:01",
+  "source_generated_at": "2026-05-18 00:10:01",
+  "market_environment_updated_at": "2026-05-18 00:10:01",
   "initial_capital": "5.00万",
-  "total_pnl": "-2142.00",
-  "total_pnl_pct": "-4.28%",
-  "equity": "4.79万",
+  "total_pnl": "-54.00",
+  "total_pnl_pct": "-0.11%",
+  "equity": "4.99万",
   "cash": "本地模型负责同步",
-  "market_value": "4.40万",
-  "floating_pnl": "3710.00",
-  "floating_pnl_pct": "9.21%",
-  "realized_pnl": "-5852.00",
+  "market_value": "1.88万",
+  "floating_pnl": "-54.00",
+  "floating_pnl_pct": "-0.29%",
+  "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
-  "positions_count": 3,
+  "positions_count": 2,
   "remote_quote_available": true,
   "remote_status_label": "行情连接可用",
   "paper_trading_rules": {
@@ -30,20 +30,6 @@
     "strict_stop_loss_pct": -10.0
   },
   "positions": [
-    {
-      "code": "920186",
-      "name": "中科仪",
-      "qty": "200",
-      "cost": "107.180",
-      "price": "126.00",
-      "market_value": "2.52万",
-      "pnl_amount": "3764.00",
-      "pnl_pct": "17.56%",
-      "defense_price": "99.68",
-      "strict_price": "96.46",
-      "state": "ok",
-      "source": "v98_local_paper_positions.csv"
-    },
     {
       "code": "300885",
       "name": "海昌新材",
@@ -79,11 +65,11 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 50,
+      "score": 51,
       "label": "中性",
       "components": {
         "breadth": 54,
-        "market_return": 68,
+        "market_return": 67,
         "limit_up_down": 40,
         "candidate_mood": 23,
         "mainline_heat": 80
@@ -101,10 +87,10 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=53.85",
-        "avg=1.5",
-        "strong_up=30.77",
-        "strong_down=12.82",
+        "up=53.95",
+        "avg=1.4",
+        "strong_up=30.26",
+        "strong_down=11.84",
         "limit=82.0/18.0",
         "top_mainline_share=0.2833",
         "candidate_avg=-1.77"
@@ -114,13 +100,13 @@
     "breadth": {
       "available": true,
       "source_label": "实时行情代理广度",
-      "sample_size": 78,
-      "up_stock_pct": 53.85,
-      "down_stock_pct": 46.15,
+      "sample_size": 76,
+      "up_stock_pct": 53.95,
+      "down_stock_pct": 46.05,
       "flat_stock_pct": 0.0,
-      "strong_up_pct": 30.77,
-      "strong_down_pct": 12.82,
-      "avg_pct": 1.5,
+      "strong_up_pct": 30.26,
+      "strong_down_pct": 11.84,
+      "avg_pct": 1.4,
       "limit_up_count": 82,
       "limit_down_count": 18,
       "stale": false,
@@ -129,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.79,
+      "fallback_age_hours": 241.82,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -221,7 +207,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=50, breadth_up=53.85, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=53.95, budget_x=0.6"
   },
   "intraday_v1519_green": [
     {
@@ -239,6 +225,14 @@
       "rt_pct": "-0.89%",
       "price": "31.02",
       "pool": "--"
+    },
+    {
+      "code": "301217",
+      "name": "铜冠铜箔",
+      "v1519_flow": "主力净流确认 62",
+      "rt_pct": "4.70%",
+      "price": "87.11",
+      "pool": "新能源电池 / 强候选"
     },
     {
       "code": "000593",
@@ -260,33 +254,9 @@
       "qty": "400",
       "price": "23.74",
       "note": "14:30半小时门控通过 / hiddenflow=76.94 / 承接增强 / 历史去重验证：4/4胜、均值29.43%，样本小；14:30-15:00 半小时门控内才允许纸面试买，不连接券商。"
-    },
-    {
-      "date": "2026-05-18",
-      "time": "00:06:03",
-      "type": "MODEL_AUTO_SELL",
-      "code": "920249",
-      "name": "利尔达",
-      "action": "模型止损卖出模拟仓",
-      "qty": "3800",
-      "price": "10.12",
-      "note": "MODEL_AUTO_STOP level=strict pnl=-13.21"
     }
   ],
-  "closed_orders": [
-    {
-      "date": "2026-05-18",
-      "time": "00:06:03",
-      "code": "920249",
-      "name": "利尔达",
-      "qty": "3800",
-      "buy_price": "11.66",
-      "sell_price": "10.12",
-      "pnl_amount": "-5852.00",
-      "pnl_pct": "-13.21%",
-      "reason": "MODEL_AUTO_STOP level=strict pnl=-13.21"
-    }
-  ],
+  "closed_orders": [],
   "closed_orders_note": "已卖出历史订单来自桌面 V151 真实模拟仓引擎，非真实券商成交。",
   "risk_notes": [
     {
