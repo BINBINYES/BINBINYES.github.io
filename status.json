@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 13:24:04",
-  "source_generated_at": "2026-05-18 13:24:04",
-  "market_environment_updated_at": "2026-05-18 13:24:04",
+  "generated_at": "2026-05-18 13:25:00",
+  "source_generated_at": "2026-05-18 13:25:00",
+  "market_environment_updated_at": "2026-05-18 13:25:00",
   "initial_capital": "5.00万",
   "total_pnl": "-54.00",
   "total_pnl_pct": "-0.11%",
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 255.05,
+      "fallback_age_hours": 255.07,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -211,22 +211,6 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "002281",
-      "name": "光迅科技",
-      "v1519_flow": "主力净流确认 59",
-      "rt_pct": "6.82%",
-      "price": "209.90",
-      "pool": "AI算力半导体-光通信/CPO / 核心候选"
-    },
-    {
-      "code": "001309",
-      "name": "德明利",
-      "v1519_flow": "主力净流确认 67",
-      "rt_pct": "3.23%",
-      "price": "735.04",
-      "pool": "AI算力半导体-半导体制造 / 核心候选"
-    },
-    {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 93",
@@ -253,7 +237,7 @@
     {
       "code": "000593",
       "name": "德龙汇能",
-      "v1519_flow": "承接增强 78",
+      "v1519_flow": "承接增强 77",
       "rt_pct": "0.98%",
       "price": "23.77",
       "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
