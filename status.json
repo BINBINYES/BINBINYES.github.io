@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:42:48",
-  "source_generated_at": "2026-05-17 23:42:48",
-  "market_environment_updated_at": "2026-05-17 23:42:48",
+  "generated_at": "2026-05-17 23:44:29",
+  "source_generated_at": "2026-05-17 23:44:29",
+  "market_environment_updated_at": "2026-05-17 23:44:29",
   "initial_capital": "5.00万",
-  "total_pnl": "-65.00",
-  "total_pnl_pct": "-0.13%",
+  "total_pnl": "-60.00",
+  "total_pnl_pct": "-0.12%",
   "equity": "4.99万",
   "cash": "本地模型负责同步",
   "market_value": "1.88万",
-  "floating_pnl": "-65.00",
-  "floating_pnl_pct": "-0.34%",
+  "floating_pnl": "-60.00",
+  "floating_pnl_pct": "-0.32%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "31.13",
+      "price": "31.08",
       "market_value": "0.93万",
-      "pnl_amount": "-33.00",
-      "pnl_pct": "-0.35%",
+      "pnl_amount": "-48.00",
+      "pnl_pct": "-0.51%",
       "state": "below_cost"
     },
     {
@@ -46,10 +46,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.66",
+      "price": "23.71",
       "market_value": "0.95万",
-      "pnl_amount": "-32.00",
-      "pnl_pct": "-0.34%",
+      "pnl_amount": "-12.00",
+      "pnl_pct": "-0.13%",
       "state": "below_cost"
     }
   ],
@@ -63,9 +63,9 @@
       "label": "中性",
       "components": {
         "breadth": 47,
-        "market_return": 59,
+        "market_return": 60,
         "limit_up_down": 43,
-        "candidate_mood": 16,
+        "candidate_mood": 17,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -82,12 +82,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=47.37",
-        "avg=0.78",
+        "avg=0.82",
         "strong_up=23.68",
         "strong_down=17.11",
         "limit=2.0/2.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.26"
+        "candidate_avg=-2.15"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -100,7 +100,7 @@
       "flat_stock_pct": 0.0,
       "strong_up_pct": 23.68,
       "strong_down_pct": 17.11,
-      "avg_pct": 0.78,
+      "avg_pct": 0.82,
       "limit_up_count": 2,
       "limit_down_count": 2,
       "stale": false,
@@ -109,13 +109,13 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.36,
+      "fallback_age_hours": 241.39,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476"
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.26,
+      "avg_pct": -2.15,
       "strong_count": 0,
       "weak_count": 4
     },
@@ -205,33 +205,41 @@
       "code": "301217",
       "name": "铜冠铜箔",
       "v1519_flow": "主力净流确认 62",
-      "rt_pct": "4.65%",
-      "price": "87.07",
+      "rt_pct": "4.66%",
+      "price": "87.08",
       "pool": "新能源电池 / 强候选"
     },
     {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 93",
-      "rt_pct": "4.26%",
-      "price": "37.95",
+      "rt_pct": "4.48%",
+      "price": "38.03",
       "pool": "--"
     },
     {
       "code": "300885",
       "name": "海昌新材",
       "v1519_flow": "承接增强 80",
-      "rt_pct": "-0.54%",
-      "price": "31.13",
+      "rt_pct": "-0.70%",
+      "price": "31.08",
       "pool": "--"
     },
     {
       "code": "000593",
       "name": "德龙汇能",
       "v1519_flow": "承接增强 77",
-      "rt_pct": "0.51%",
-      "price": "23.66",
+      "rt_pct": "0.72%",
+      "price": "23.71",
       "pool": "--"
+    },
+    {
+      "code": "002281",
+      "name": "光迅科技",
+      "v1519_flow": "主力净流确认 59",
+      "rt_pct": "6.07%",
+      "price": "208.42",
+      "pool": "AI算力半导体 / 核心候选"
     }
   ],
   "operation_history_2d": [
