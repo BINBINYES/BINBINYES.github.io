@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-17 23:47:06",
-  "source_generated_at": "2026-05-17 23:47:06",
-  "market_environment_updated_at": "2026-05-17 23:47:06",
+  "generated_at": "2026-05-17 23:47:55",
+  "source_generated_at": "2026-05-17 23:47:55",
+  "market_environment_updated_at": "2026-05-17 23:47:55",
   "initial_capital": "5.00万",
-  "total_pnl": "-97.00",
-  "total_pnl_pct": "-0.19%",
+  "total_pnl": "-134.00",
+  "total_pnl_pct": "-0.27%",
   "equity": "4.99万",
   "cash": "本地模型负责同步",
-  "market_value": "1.88万",
-  "floating_pnl": "-97.00",
-  "floating_pnl_pct": "-0.51%",
+  "market_value": "1.87万",
+  "floating_pnl": "-134.00",
+  "floating_pnl_pct": "-0.71%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "30.93",
-      "market_value": "0.93万",
-      "pnl_amount": "-93.00",
-      "pnl_pct": "-0.99%",
+      "price": "30.78",
+      "market_value": "0.92万",
+      "pnl_amount": "-138.00",
+      "pnl_pct": "-1.47%",
       "state": "below_cost"
     },
     {
@@ -46,11 +46,11 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.73",
+      "price": "23.75",
       "market_value": "0.95万",
-      "pnl_amount": "-4.00",
-      "pnl_pct": "-0.04%",
-      "state": "below_cost"
+      "pnl_amount": "4.00",
+      "pnl_pct": "0.04%",
+      "state": "ok"
     }
   ],
   "market_environment": {
@@ -82,12 +82,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=48.68",
-        "avg=0.95",
+        "avg=0.92",
         "strong_up=25.0",
-        "strong_down=15.79",
+        "strong_down=17.11",
         "limit=2.0/2.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.13"
+        "candidate_avg=-2.18"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -99,8 +99,8 @@
       "down_stock_pct": 51.32,
       "flat_stock_pct": 0.0,
       "strong_up_pct": 25.0,
-      "strong_down_pct": 15.79,
-      "avg_pct": 0.95,
+      "strong_down_pct": 17.11,
+      "avg_pct": 0.92,
       "limit_up_count": 2,
       "limit_down_count": 2,
       "stale": false,
@@ -109,13 +109,13 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.43,
+      "fallback_age_hours": 241.45,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476"
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.13,
+      "avg_pct": -2.18,
       "strong_count": 0,
       "weak_count": 4
     },
@@ -205,32 +205,32 @@
       "code": "301217",
       "name": "铜冠铜箔",
       "v1519_flow": "主力净流确认 62",
-      "rt_pct": "4.88%",
-      "price": "87.26",
+      "rt_pct": "4.95%",
+      "price": "87.32",
       "pool": "新能源电池 / 强候选"
     },
     {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 93",
-      "rt_pct": "4.48%",
-      "price": "38.03",
+      "rt_pct": "4.62%",
+      "price": "38.08",
       "pool": "--"
     },
     {
       "code": "000593",
       "name": "德龙汇能",
       "v1519_flow": "承接增强 77",
-      "rt_pct": "0.81%",
-      "price": "23.73",
+      "rt_pct": "0.89%",
+      "price": "23.75",
       "pool": "--"
     },
     {
       "code": "300885",
       "name": "海昌新材",
-      "v1519_flow": "承接增强 79",
-      "rt_pct": "-1.18%",
-      "price": "30.93",
+      "v1519_flow": "承接增强 80",
+      "rt_pct": "-1.66%",
+      "price": "30.78",
       "pool": "--"
     }
   ],
@@ -255,12 +255,6 @@
       "name": "海昌新材",
       "level": "below_cost",
       "note": "300885 海昌新材 低于成本但未破防守"
-    },
-    {
-      "code": "000593",
-      "name": "德龙汇能",
-      "level": "below_cost",
-      "note": "000593 德龙汇能 低于成本但未破防守"
     }
   ],
   "notice": "公开完整持仓页：仅纸面/模拟仓观察，不构成真实交易建议或券商下单。"
