@@ -1,20 +1,20 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 00:06:52",
-  "source_generated_at": "2026-05-18 00:06:52",
-  "market_environment_updated_at": "2026-05-18 00:06:52",
+  "generated_at": "2026-05-18 00:07:43",
+  "source_generated_at": "2026-05-18 00:07:43",
+  "market_environment_updated_at": "2026-05-18 00:07:43",
   "initial_capital": "5.00万",
-  "total_pnl": "-7994.00",
-  "total_pnl_pct": "-15.99%",
-  "equity": "4.20万",
+  "total_pnl": "-2142.00",
+  "total_pnl_pct": "-4.28%",
+  "equity": "4.79万",
   "cash": "本地模型负责同步",
-  "market_value": "8.25万",
-  "floating_pnl": "-2142.00",
-  "floating_pnl_pct": "-2.53%",
+  "market_value": "4.40万",
+  "floating_pnl": "3710.00",
+  "floating_pnl_pct": "9.21%",
   "realized_pnl": "-5852.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
-  "positions_count": 4,
+  "positions_count": 3,
   "remote_quote_available": true,
   "remote_status_label": "行情连接可用",
   "paper_trading_rules": {
@@ -42,20 +42,6 @@
       "defense_price": "99.68",
       "strict_price": "96.46",
       "state": "ok",
-      "source": "v98_local_paper_positions.csv"
-    },
-    {
-      "code": "920249",
-      "name": "利尔达",
-      "qty": "3800",
-      "cost": "11.660",
-      "price": "10.12",
-      "market_value": "3.85万",
-      "pnl_amount": "-5852.00",
-      "pnl_pct": "-13.21%",
-      "defense_price": "10.84",
-      "strict_price": "10.49",
-      "state": "strict",
       "source": "v98_local_paper_positions.csv"
     },
     {
@@ -93,12 +79,12 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 51,
+      "score": 50,
       "label": "中性",
       "components": {
         "breadth": 54,
         "market_return": 68,
-        "limit_up_down": 43,
+        "limit_up_down": 40,
         "candidate_mood": 23,
         "mainline_heat": 80
       },
@@ -119,7 +105,7 @@
         "avg=1.5",
         "strong_up=30.77",
         "strong_down=12.82",
-        "limit=2.0/2.0",
+        "limit=82.0/18.0",
         "top_mainline_share=0.2833",
         "candidate_avg=-1.77"
       ],
@@ -135,17 +121,20 @@
       "strong_up_pct": 30.77,
       "strong_down_pct": 12.82,
       "avg_pct": 1.5,
-      "limit_up_count": 2,
-      "limit_down_count": 2,
+      "limit_up_count": 82,
+      "limit_down_count": 18,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 241.75,
+      "fallback_age_hours": 241.78,
       "universe_cache_stale": true,
-      "full_market_live_message": "universe seed too small: 1476"
+      "full_market_live_message": "universe seed too small: 1476",
+      "limit_count_source": "eastmoney_limit_pool",
+      "limit_count_qdate": "20260518",
+      "limit_count_message": "eastmoney limit pools"
     },
     "candidate_mood": {
       "sample_size": 16,
@@ -232,7 +221,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=53.85, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=50, breadth_up=53.85, budget_x=0.6"
   },
   "intraday_v1519_green": [
     {
@@ -308,12 +297,6 @@
   ],
   "closed_orders_note": "已卖出历史订单来自桌面 V151 真实模拟仓引擎，非真实券商成交。",
   "risk_notes": [
-    {
-      "code": "920249",
-      "name": "利尔达",
-      "level": "strict",
-      "note": "920249 利尔达 跌破严格风险线 10.49"
-    },
     {
       "code": "300885",
       "name": "海昌新材",
