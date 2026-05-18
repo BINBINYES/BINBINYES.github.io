@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 12:12:00",
-  "source_generated_at": "2026-05-18 12:12:00",
-  "market_environment_updated_at": "2026-05-18 12:12:00",
+  "generated_at": "2026-05-18 12:13:05",
+  "source_generated_at": "2026-05-18 12:13:05",
+  "market_environment_updated_at": "2026-05-18 12:13:05",
   "initial_capital": "5.00万",
   "total_pnl": "-54.00",
   "total_pnl_pct": "-0.11%",
@@ -65,7 +65,7 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 50,
+      "score": 51,
       "label": "中性",
       "components": {
         "breadth": 54,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 253.85,
+      "fallback_age_hours": 253.87,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -207,7 +207,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=50, breadth_up=53.95, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=53.95, budget_x=0.6"
   },
   "intraday_v1519_green": [
     {
