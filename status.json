@@ -1,18 +1,18 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 13:12:45",
-  "source_generated_at": "2026-05-19 13:12:45",
-  "market_environment_updated_at": "2026-05-19 13:12:45",
+  "generated_at": "2026-05-19 13:13:34",
+  "source_generated_at": "2026-05-19 13:13:34",
+  "market_environment_updated_at": "2026-05-19 13:13:34",
   "initial_capital": "5.00万",
-  "total_pnl": "768.00",
-  "total_pnl_pct": "1.54%",
-  "equity_pnl_pct": "1.54%",
+  "total_pnl": "756.00",
+  "total_pnl_pct": "1.51%",
+  "equity_pnl_pct": "1.51%",
   "equity": "5.08万",
-  "equity_detail": "累计盈亏 768.00 / 1.54%",
+  "equity_detail": "累计盈亏 756.00 / 1.51%",
   "cash": "本地模型负责同步",
   "market_value": "1.96万",
-  "floating_pnl": "768.00",
-  "floating_pnl_pct": "4.07%",
+  "floating_pnl": "756.00",
+  "floating_pnl_pct": "4.01%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -51,10 +51,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "24.79",
+      "price": "24.76",
       "market_value": "0.99万",
-      "pnl_amount": "420.00",
-      "pnl_pct": "4.42%",
+      "pnl_amount": "408.00",
+      "pnl_pct": "4.30%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -67,13 +67,13 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 35,
+      "score": 37,
       "label": "恐惧",
       "components": {
-        "breadth": 16,
-        "market_return": 22,
+        "breadth": 17,
+        "market_return": 24,
         "limit_up_down": 44,
-        "candidate_mood": 25,
+        "candidate_mood": 29,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -89,13 +89,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=15.79",
-        "avg=-2.37",
+        "up=17.11",
+        "avg=-2.16",
         "strong_up=7.89",
-        "strong_down=44.74",
+        "strong_down=38.16",
         "limit=63.0/7.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.66"
+        "candidate_avg=-1.46"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -103,12 +103,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 15.79,
-      "down_stock_pct": 82.89,
-      "flat_stock_pct": 1.32,
+      "up_stock_pct": 17.11,
+      "down_stock_pct": 80.26,
+      "flat_stock_pct": 2.63,
       "strong_up_pct": 7.89,
-      "strong_down_pct": 44.74,
-      "avg_pct": -2.37,
+      "strong_down_pct": 38.16,
+      "avg_pct": -2.16,
       "limit_up_count": 63,
       "limit_down_count": 7,
       "stale": false,
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 263.86,
+      "fallback_age_hours": 263.88,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -126,8 +126,8 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.66,
-      "strong_count": 0,
+      "avg_pct": -1.46,
+      "strong_count": 1,
       "weak_count": 3
     },
     "mainlines": {
@@ -209,9 +209,18 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=35, breadth_up=15.79, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=37, breadth_up=17.11, budget_x=0.35"
   },
-  "intraday_v1519_green": [],
+  "intraday_v1519_green": [
+    {
+      "code": "600396",
+      "name": "华电辽能",
+      "v1519_flow": "承接增强 94",
+      "rt_pct": "5.16%",
+      "price": "16.50",
+      "pool": "电力电网设备-电力运营 / 候选"
+    }
+  ],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
