@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 11:44:05",
-  "source_generated_at": "2026-05-19 11:44:05",
-  "market_environment_updated_at": "2026-05-19 11:44:05",
+  "generated_at": "2026-05-19 11:45:01",
+  "source_generated_at": "2026-05-19 11:45:01",
+  "market_environment_updated_at": "2026-05-19 11:45:01",
   "initial_capital": "5.00万",
   "total_pnl": "680.00",
   "total_pnl_pct": "1.36%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 262.39,
+      "fallback_age_hours": 262.4,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -213,28 +213,12 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "600396",
-      "name": "华电辽能",
-      "v1519_flow": "承接增强 94",
-      "rt_pct": "4.14%",
-      "price": "16.34",
-      "pool": "电力电网设备-电力运营 / 候选"
-    },
-    {
       "code": "301511",
       "name": "德福科技",
       "v1519_flow": "主力净流确认 60",
       "rt_pct": "4.84%",
       "price": "101.50",
       "pool": "新能源电池-电池材料 / 强候选"
-    },
-    {
-      "code": "000593",
-      "name": "德龙汇能",
-      "v1519_flow": "承接增强 81",
-      "rt_pct": "2.48%",
-      "price": "24.36",
-      "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
     }
   ],
   "operation_history_2d": [
