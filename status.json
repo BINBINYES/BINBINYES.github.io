@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 18:51:20",
-  "source_generated_at": "2026-05-19 18:51:20",
-  "market_environment_updated_at": "2026-05-19 18:51:20",
+  "generated_at": "2026-05-19 18:52:14",
+  "source_generated_at": "2026-05-19 18:52:14",
+  "market_environment_updated_at": "2026-05-19 18:52:14",
   "initial_capital": "5.00万",
   "total_pnl": "535.00",
   "total_pnl_pct": "1.07%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 269.5,
+      "fallback_age_hours": 269.52,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476"
     },
@@ -299,22 +299,6 @@
       "pool": "新能源电池-电池材料 / 强候选"
     },
     {
-      "code": "300885",
-      "name": "海昌新材",
-      "v1519_flow": "承接增强 75",
-      "rt_pct": "3.84%",
-      "price": "32.21",
-      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
-    },
-    {
-      "code": "002281",
-      "name": "光迅科技",
-      "v1519_flow": "主力净流确认 64",
-      "rt_pct": "10.00%",
-      "price": "230.89",
-      "pool": "AI算力半导体-光通信/CPO / 核心候选"
-    },
-    {
       "code": "688416",
       "name": "恒烁股份",
       "v1519_flow": "承接增强 78",
@@ -323,28 +307,20 @@
       "pool": "AI算力半导体-半导体制造 / 强候选"
     },
     {
-      "code": "300438",
-      "name": "鹏辉能源",
-      "v1519_flow": "主力净流确认 60",
-      "rt_pct": "1.27%",
-      "price": "86.69",
-      "pool": "新能源电池-电池材料 / 强候选"
-    },
-    {
-      "code": "600869",
-      "name": "远东股份",
-      "v1519_flow": "主力净流确认 63",
-      "rt_pct": "1.03%",
-      "price": "21.50",
-      "pool": "电力电网设备-变压器/输变电 / 强候选"
-    },
-    {
       "code": "000593",
       "name": "德龙汇能",
       "v1519_flow": "承接增强 86",
       "rt_pct": "2.44%",
       "price": "24.35",
       "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
+    },
+    {
+      "code": "002281",
+      "name": "光迅科技",
+      "v1519_flow": "主力净流确认 64",
+      "rt_pct": "10.00%",
+      "price": "230.89",
+      "pool": "AI算力半导体-光通信/CPO / 核心候选"
     },
     {
       "code": "603083",
@@ -371,12 +347,44 @@
       "pool": "AI算力半导体-半导体制造 / 强候选"
     },
     {
+      "code": "300885",
+      "name": "海昌新材",
+      "v1519_flow": "承接增强 75",
+      "rt_pct": "3.84%",
+      "price": "32.21",
+      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
+    },
+    {
       "code": "600396",
       "name": "华电辽能",
       "v1519_flow": "承接增强 79",
       "rt_pct": "2.93%",
       "price": "16.15",
       "pool": "电力电网设备-电力运营 / 候选"
+    },
+    {
+      "code": "688025",
+      "name": "杰普特",
+      "v1519_flow": "主力净流确认 63",
+      "rt_pct": "1.73%",
+      "price": "405.90",
+      "pool": "AI算力半导体-半导体制造 / 强候选"
+    },
+    {
+      "code": "300438",
+      "name": "鹏辉能源",
+      "v1519_flow": "主力净流确认 60",
+      "rt_pct": "1.27%",
+      "price": "86.69",
+      "pool": "新能源电池-电池材料 / 强候选"
+    },
+    {
+      "code": "600869",
+      "name": "远东股份",
+      "v1519_flow": "主力净流确认 63",
+      "rt_pct": "1.03%",
+      "price": "21.50",
+      "pool": "电力电网设备-变压器/输变电 / 强候选"
     },
     {
       "code": "603618",
@@ -395,14 +403,6 @@
       "pool": "AI算力半导体-半导体制造 / 核心候选"
     },
     {
-      "code": "688025",
-      "name": "杰普特",
-      "v1519_flow": "主力净流确认 63",
-      "rt_pct": "1.73%",
-      "price": "405.90",
-      "pool": "AI算力半导体-半导体制造 / 强候选"
-    },
-    {
       "code": "688818",
       "name": "电科蓝天",
       "v1519_flow": "主力净流确认 63",
@@ -416,7 +416,7 @@
     "version": "V151.5",
     "rows_count": 30,
     "trial_rows": 0,
-    "watch_rows": 24,
+    "watch_rows": 22,
     "rows": [
       {
         "code": "688808",
@@ -445,14 +445,14 @@
         "level": "核心候选-主线晋级",
         "action": "PROMOTION_WATCH",
         "action_zh": "晋级观察",
-        "promotion_score": 78.71,
+        "promotion_score": 76.71,
         "v1519_flow": "拉高出货/假突破风险 16",
         "hiddenflow_score": 16.36,
         "hiddenflow_label": "拉高出货/假突破风险",
         "rt_pct": "-5.44%",
         "price": "24.00",
         "blockers": "涨幅未确认 -5.44%；盘中转弱 -5.44%",
-        "reason": "潜力分 68.7；市场强度 91.2；新闻扰动 +4"
+        "reason": "潜力分 68.7；市场强度 91.2；新闻扰动 +2"
       },
       {
         "code": "301666",
@@ -625,14 +625,14 @@
         "level": "强候选-主线晋级",
         "action": "PROMOTION_WATCH",
         "action_zh": "晋级观察",
-        "promotion_score": 64.61,
+        "promotion_score": 62.61,
         "v1519_flow": "中性观察 45",
         "hiddenflow_score": 44.97,
         "hiddenflow_label": "中性观察",
         "rt_pct": "2.21%",
         "price": "160.55",
         "blockers": "无",
-        "reason": "盘中涨幅确认 2.21%；潜力分 57.3；市场强度 100.0；新闻扰动 +4"
+        "reason": "盘中涨幅确认 2.21%；潜力分 57.3；市场强度 100.0；新闻扰动 +2"
       },
       {
         "code": "688530",
@@ -669,24 +669,6 @@
         "price": "19.35",
         "blockers": "涨幅过高 12.11%，不追高",
         "reason": "盘中涨幅确认 12.11%；潜力分 58.0；市场强度 88.0"
-      },
-      {
-        "code": "688818",
-        "name": "电科蓝天",
-        "mainline": "航空航天军工",
-        "node": "航天卫星",
-        "theme": "航空航天军工 / 航天卫星",
-        "level": "强候选-主线晋级",
-        "action": "PROMOTION_WATCH",
-        "action_zh": "晋级观察",
-        "promotion_score": 59.7,
-        "v1519_flow": "主力净流确认 63",
-        "hiddenflow_score": 62.84,
-        "hiddenflow_label": "主力净流确认",
-        "rt_pct": "-0.70%",
-        "price": "80.91",
-        "blockers": "涨幅未确认 -0.70%；潜力分不足 51.4",
-        "reason": "市场强度 100.0；新闻扰动 +4"
       },
       {
         "code": "603045",
@@ -743,6 +725,24 @@
         "reason": "潜力分 55.6；市场强度 92.5"
       },
       {
+        "code": "688818",
+        "name": "电科蓝天",
+        "mainline": "航空航天军工",
+        "node": "航天卫星",
+        "theme": "航空航天军工 / 航天卫星",
+        "level": "强候选-主线晋级",
+        "action": "PROMOTION_WATCH",
+        "action_zh": "晋级观察",
+        "promotion_score": 57.7,
+        "v1519_flow": "主力净流确认 63",
+        "hiddenflow_score": 62.84,
+        "hiddenflow_label": "主力净流确认",
+        "rt_pct": "-0.70%",
+        "price": "80.91",
+        "blockers": "涨幅未确认 -0.70%；潜力分不足 51.4",
+        "reason": "市场强度 100.0；新闻扰动 +2"
+      },
+      {
         "code": "601869",
         "name": "长飞光纤",
         "mainline": "AI算力半导体",
@@ -795,42 +795,6 @@
         "price": "119.10",
         "blockers": "涨幅未确认 -0.75%；强度不足 50.9",
         "reason": "潜力分 58.3"
-      },
-      {
-        "code": "688811",
-        "name": "有研复材",
-        "mainline": "航空航天军工",
-        "node": "航天卫星",
-        "theme": "航空航天军工 / 航天卫星",
-        "level": "强候选-主线晋级",
-        "action": "PROMOTION_WATCH",
-        "action_zh": "晋级观察",
-        "promotion_score": 55.98,
-        "v1519_flow": "拉高出货/假突破风险 19",
-        "hiddenflow_score": 19.41,
-        "hiddenflow_label": "拉高出货/假突破风险",
-        "rt_pct": "-2.83%",
-        "price": "31.93",
-        "blockers": "涨幅未确认 -2.83%；盘中转弱 -2.83%；潜力分不足 46.4",
-        "reason": "市场强度 100.0；新闻扰动 +4"
-      },
-      {
-        "code": "603738",
-        "name": "泰晶科技",
-        "mainline": "航空航天军工",
-        "node": "军工电子",
-        "theme": "航空航天军工 / 军工电子",
-        "level": "强候选-主线晋级",
-        "action": "PROMOTION_WATCH",
-        "action_zh": "晋级观察",
-        "promotion_score": 55.51,
-        "v1519_flow": "拉高出货/假突破风险 15",
-        "hiddenflow_score": 15.11,
-        "hiddenflow_label": "拉高出货/假突破风险",
-        "rt_pct": "-2.78%",
-        "price": "52.50",
-        "blockers": "涨幅未确认 -2.78%；盘中转弱 -2.78%；潜力分不足 47.5",
-        "reason": "市场强度 88.5；新闻扰动 +4"
       },
       {
         "code": "002192",
@@ -887,6 +851,24 @@
         "reason": "盘中涨幅确认 3.97%；市场强度 100.0"
       },
       {
+        "code": "688811",
+        "name": "有研复材",
+        "mainline": "航空航天军工",
+        "node": "航天卫星",
+        "theme": "航空航天军工 / 航天卫星",
+        "level": "强候选-主线晋级",
+        "action": "NO_PROMOTION",
+        "action_zh": "暂不晋级",
+        "promotion_score": 53.98,
+        "v1519_flow": "拉高出货/假突破风险 19",
+        "hiddenflow_score": 19.41,
+        "hiddenflow_label": "拉高出货/假突破风险",
+        "rt_pct": "-2.83%",
+        "price": "31.93",
+        "blockers": "涨幅未确认 -2.83%；盘中转弱 -2.83%；潜力分不足 46.4",
+        "reason": "市场强度 100.0；新闻扰动 +2"
+      },
+      {
         "code": "600522",
         "name": "中天科技",
         "mainline": "AI算力半导体",
@@ -903,6 +885,24 @@
         "price": "44.55",
         "blockers": "潜力分不足 52.5",
         "reason": "盘中涨幅确认 1.37%；市场强度 73.3"
+      },
+      {
+        "code": "603738",
+        "name": "泰晶科技",
+        "mainline": "航空航天军工",
+        "node": "军工电子",
+        "theme": "航空航天军工 / 军工电子",
+        "level": "强候选-主线晋级",
+        "action": "NO_PROMOTION",
+        "action_zh": "暂不晋级",
+        "promotion_score": 53.51,
+        "v1519_flow": "拉高出货/假突破风险 15",
+        "hiddenflow_score": 15.11,
+        "hiddenflow_label": "拉高出货/假突破风险",
+        "rt_pct": "-2.78%",
+        "price": "52.50",
+        "blockers": "涨幅未确认 -2.78%；盘中转弱 -2.78%；潜力分不足 47.5",
+        "reason": "市场强度 88.5；新闻扰动 +2"
       },
       {
         "code": "301217",
@@ -966,7 +966,7 @@
     "version": "V151.5",
     "rows_count": 30,
     "trial_rows": 0,
-    "watch_rows": 24,
+    "watch_rows": 22,
     "rows": [
       {
         "code": "688808",
@@ -995,14 +995,14 @@
         "level": "核心候选-主线晋级",
         "action": "PROMOTION_WATCH",
         "action_zh": "晋级观察",
-        "promotion_score": 78.71,
+        "promotion_score": 76.71,
         "v1519_flow": "拉高出货/假突破风险 16",
         "hiddenflow_score": 16.36,
         "hiddenflow_label": "拉高出货/假突破风险",
         "rt_pct": "-5.44%",
         "price": "24.00",
         "blockers": "涨幅未确认 -5.44%；盘中转弱 -5.44%",
-        "reason": "潜力分 68.7；市场强度 91.2；新闻扰动 +4"
+        "reason": "潜力分 68.7；市场强度 91.2；新闻扰动 +2"
       },
       {
         "code": "301666",
@@ -1175,14 +1175,14 @@
         "level": "强候选-主线晋级",
         "action": "PROMOTION_WATCH",
         "action_zh": "晋级观察",
-        "promotion_score": 64.61,
+        "promotion_score": 62.61,
         "v1519_flow": "中性观察 45",
         "hiddenflow_score": 44.97,
         "hiddenflow_label": "中性观察",
         "rt_pct": "2.21%",
         "price": "160.55",
         "blockers": "无",
-        "reason": "盘中涨幅确认 2.21%；潜力分 57.3；市场强度 100.0；新闻扰动 +4"
+        "reason": "盘中涨幅确认 2.21%；潜力分 57.3；市场强度 100.0；新闻扰动 +2"
       },
       {
         "code": "688530",
@@ -1219,24 +1219,6 @@
         "price": "19.35",
         "blockers": "涨幅过高 12.11%，不追高",
         "reason": "盘中涨幅确认 12.11%；潜力分 58.0；市场强度 88.0"
-      },
-      {
-        "code": "688818",
-        "name": "电科蓝天",
-        "mainline": "航空航天军工",
-        "node": "航天卫星",
-        "theme": "航空航天军工 / 航天卫星",
-        "level": "强候选-主线晋级",
-        "action": "PROMOTION_WATCH",
-        "action_zh": "晋级观察",
-        "promotion_score": 59.7,
-        "v1519_flow": "主力净流确认 63",
-        "hiddenflow_score": 62.84,
-        "hiddenflow_label": "主力净流确认",
-        "rt_pct": "-0.70%",
-        "price": "80.91",
-        "blockers": "涨幅未确认 -0.70%；潜力分不足 51.4",
-        "reason": "市场强度 100.0；新闻扰动 +4"
       },
       {
         "code": "603045",
@@ -1293,6 +1275,24 @@
         "reason": "潜力分 55.6；市场强度 92.5"
       },
       {
+        "code": "688818",
+        "name": "电科蓝天",
+        "mainline": "航空航天军工",
+        "node": "航天卫星",
+        "theme": "航空航天军工 / 航天卫星",
+        "level": "强候选-主线晋级",
+        "action": "PROMOTION_WATCH",
+        "action_zh": "晋级观察",
+        "promotion_score": 57.7,
+        "v1519_flow": "主力净流确认 63",
+        "hiddenflow_score": 62.84,
+        "hiddenflow_label": "主力净流确认",
+        "rt_pct": "-0.70%",
+        "price": "80.91",
+        "blockers": "涨幅未确认 -0.70%；潜力分不足 51.4",
+        "reason": "市场强度 100.0；新闻扰动 +2"
+      },
+      {
         "code": "601869",
         "name": "长飞光纤",
         "mainline": "AI算力半导体",
@@ -1345,42 +1345,6 @@
         "price": "119.10",
         "blockers": "涨幅未确认 -0.75%；强度不足 50.9",
         "reason": "潜力分 58.3"
-      },
-      {
-        "code": "688811",
-        "name": "有研复材",
-        "mainline": "航空航天军工",
-        "node": "航天卫星",
-        "theme": "航空航天军工 / 航天卫星",
-        "level": "强候选-主线晋级",
-        "action": "PROMOTION_WATCH",
-        "action_zh": "晋级观察",
-        "promotion_score": 55.98,
-        "v1519_flow": "拉高出货/假突破风险 19",
-        "hiddenflow_score": 19.41,
-        "hiddenflow_label": "拉高出货/假突破风险",
-        "rt_pct": "-2.83%",
-        "price": "31.93",
-        "blockers": "涨幅未确认 -2.83%；盘中转弱 -2.83%；潜力分不足 46.4",
-        "reason": "市场强度 100.0；新闻扰动 +4"
-      },
-      {
-        "code": "603738",
-        "name": "泰晶科技",
-        "mainline": "航空航天军工",
-        "node": "军工电子",
-        "theme": "航空航天军工 / 军工电子",
-        "level": "强候选-主线晋级",
-        "action": "PROMOTION_WATCH",
-        "action_zh": "晋级观察",
-        "promotion_score": 55.51,
-        "v1519_flow": "拉高出货/假突破风险 15",
-        "hiddenflow_score": 15.11,
-        "hiddenflow_label": "拉高出货/假突破风险",
-        "rt_pct": "-2.78%",
-        "price": "52.50",
-        "blockers": "涨幅未确认 -2.78%；盘中转弱 -2.78%；潜力分不足 47.5",
-        "reason": "市场强度 88.5；新闻扰动 +4"
       },
       {
         "code": "002192",
@@ -1437,6 +1401,24 @@
         "reason": "盘中涨幅确认 3.97%；市场强度 100.0"
       },
       {
+        "code": "688811",
+        "name": "有研复材",
+        "mainline": "航空航天军工",
+        "node": "航天卫星",
+        "theme": "航空航天军工 / 航天卫星",
+        "level": "强候选-主线晋级",
+        "action": "NO_PROMOTION",
+        "action_zh": "暂不晋级",
+        "promotion_score": 53.98,
+        "v1519_flow": "拉高出货/假突破风险 19",
+        "hiddenflow_score": 19.41,
+        "hiddenflow_label": "拉高出货/假突破风险",
+        "rt_pct": "-2.83%",
+        "price": "31.93",
+        "blockers": "涨幅未确认 -2.83%；盘中转弱 -2.83%；潜力分不足 46.4",
+        "reason": "市场强度 100.0；新闻扰动 +2"
+      },
+      {
         "code": "600522",
         "name": "中天科技",
         "mainline": "AI算力半导体",
@@ -1453,6 +1435,24 @@
         "price": "44.55",
         "blockers": "潜力分不足 52.5",
         "reason": "盘中涨幅确认 1.37%；市场强度 73.3"
+      },
+      {
+        "code": "603738",
+        "name": "泰晶科技",
+        "mainline": "航空航天军工",
+        "node": "军工电子",
+        "theme": "航空航天军工 / 军工电子",
+        "level": "强候选-主线晋级",
+        "action": "NO_PROMOTION",
+        "action_zh": "暂不晋级",
+        "promotion_score": 53.51,
+        "v1519_flow": "拉高出货/假突破风险 15",
+        "hiddenflow_score": 15.11,
+        "hiddenflow_label": "拉高出货/假突破风险",
+        "rt_pct": "-2.78%",
+        "price": "52.50",
+        "blockers": "涨幅未确认 -2.78%；盘中转弱 -2.78%；潜力分不足 47.5",
+        "reason": "市场强度 88.5；新闻扰动 +2"
       },
       {
         "code": "301217",
