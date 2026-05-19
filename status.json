@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 14:58:02",
-  "source_generated_at": "2026-05-19 14:58:02",
-  "market_environment_updated_at": "2026-05-19 14:58:02",
+  "generated_at": "2026-05-19 14:58:57",
+  "source_generated_at": "2026-05-19 14:58:57",
+  "market_environment_updated_at": "2026-05-19 14:58:57",
   "initial_capital": "5.00万",
   "total_pnl": "480.00",
   "total_pnl_pct": "0.96%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 265.62,
+      "fallback_age_hours": 265.63,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -269,6 +269,14 @@
       "pool": "AI算力半导体-光通信/CPO / 强候选"
     },
     {
+      "code": "688766",
+      "name": "普冉股份",
+      "v1519_flow": "主力净流确认 59",
+      "rt_pct": "2.61%",
+      "price": "423.79",
+      "pool": "AI算力半导体-半导体制造 / 强候选"
+    },
+    {
       "code": "300885",
       "name": "海昌新材",
       "v1519_flow": "承接增强 75",
@@ -323,14 +331,6 @@
       "rt_pct": "-0.83%",
       "price": "72.10",
       "pool": "AI算力半导体-半导体制造 / 核心候选"
-    },
-    {
-      "code": "688766",
-      "name": "普冉股份",
-      "v1519_flow": "主力净流确认 59",
-      "rt_pct": "2.61%",
-      "price": "423.79",
-      "pool": "AI算力半导体-半导体制造 / 强候选"
     },
     {
       "code": "688818",
