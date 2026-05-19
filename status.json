@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 22:03:25",
-  "source_generated_at": "2026-05-19 22:03:25",
-  "market_environment_updated_at": "2026-05-19 22:03:25",
+  "generated_at": "2026-05-19 22:05:17",
+  "source_generated_at": "2026-05-19 22:05:17",
+  "market_environment_updated_at": "2026-05-19 22:05:17",
   "initial_capital": "5.00万",
   "total_pnl": "535.00",
   "total_pnl_pct": "1.07%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 272.71,
+      "fallback_age_hours": 272.74,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -286,14 +286,6 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "688416",
-      "name": "恒烁股份",
-      "v1519_flow": "承接增强 77",
-      "rt_pct": "-1.51%",
-      "price": "125.00",
-      "pool": "AI算力半导体-半导体制造 / 强候选"
-    },
-    {
       "code": "688256",
       "name": "DR寒武纪",
       "v1519_flow": "承接增强 80",
@@ -350,6 +342,14 @@
       "pool": "AI算力半导体-半导体制造 / 强候选"
     },
     {
+      "code": "688416",
+      "name": "恒烁股份",
+      "v1519_flow": "承接增强 78",
+      "rt_pct": "-1.51%",
+      "price": "125.00",
+      "pool": "AI算力半导体-半导体制造 / 强候选"
+    },
+    {
       "code": "300885",
       "name": "海昌新材",
       "v1519_flow": "承接增强 75",
@@ -364,6 +364,14 @@
       "rt_pct": "2.93%",
       "price": "16.15",
       "pool": "电力电网设备-电力运营 / 候选"
+    },
+    {
+      "code": "603618",
+      "name": "杭电股份",
+      "v1519_flow": "主力净流确认 70",
+      "rt_pct": "0.28%",
+      "price": "38.71",
+      "pool": "AI算力半导体-光通信/CPO / 候选"
     },
     {
       "code": "688025",
@@ -396,14 +404,6 @@
       "rt_pct": "-0.66%",
       "price": "72.22",
       "pool": "AI算力半导体-半导体制造 / 核心候选"
-    },
-    {
-      "code": "603618",
-      "name": "杭电股份",
-      "v1519_flow": "主力净流确认 70",
-      "rt_pct": "0.28%",
-      "price": "38.71",
-      "pool": "AI算力半导体-光通信/CPO / 候选"
     },
     {
       "code": "688818",
