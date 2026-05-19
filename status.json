@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 17:46:02",
-  "source_generated_at": "2026-05-18 17:46:02",
-  "market_environment_updated_at": "2026-05-18 17:46:02",
+  "generated_at": "2026-05-18 17:48:04",
+  "source_generated_at": "2026-05-18 17:48:04",
+  "market_environment_updated_at": "2026-05-18 17:48:04",
   "initial_capital": "5.00万",
   "total_pnl": "-54.00",
   "total_pnl_pct": "-0.11%",
@@ -65,12 +65,12 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 50,
+      "score": 54,
       "label": "中性",
       "components": {
         "breadth": 54,
         "market_return": 67,
-        "limit_up_down": 40,
+        "limit_up_down": 50,
         "candidate_mood": 23,
         "mainline_heat": 80
       },
@@ -91,7 +91,7 @@
         "avg=1.4",
         "strong_up=30.26",
         "strong_down=11.84",
-        "limit=82.0/18.0",
+        "limit=0/0",
         "top_mainline_share=0.2833",
         "candidate_avg=-1.77"
       ],
@@ -107,19 +107,19 @@
       "strong_up_pct": 30.26,
       "strong_down_pct": 11.84,
       "avg_pct": 1.4,
-      "limit_up_count": 82,
-      "limit_down_count": 18,
+      "limit_up_count": 0,
+      "limit_down_count": 0,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 259.42,
+      "fallback_age_hours": 259.45,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
-      "limit_count_qdate": "20260518",
+      "limit_count_qdate": "20260519",
       "limit_count_message": "eastmoney limit pools"
     },
     "candidate_mood": {
@@ -207,7 +207,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=50, breadth_up=53.95, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=54, breadth_up=53.95, budget_x=0.6"
   },
   "intraday_v1519_green": [
     {
