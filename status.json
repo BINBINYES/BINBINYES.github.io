@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 10:16:10",
-  "source_generated_at": "2026-05-19 10:16:10",
-  "market_environment_updated_at": "2026-05-19 10:16:10",
+  "generated_at": "2026-05-19 10:17:07",
+  "source_generated_at": "2026-05-19 10:17:07",
+  "market_environment_updated_at": "2026-05-19 10:17:07",
   "initial_capital": "5.00万",
-  "total_pnl": "345.00",
-  "total_pnl_pct": "0.69%",
+  "total_pnl": "331.00",
+  "total_pnl_pct": "0.66%",
   "equity": "5.03万",
   "cash": "本地模型负责同步",
   "market_value": "1.92万",
-  "floating_pnl": "345.00",
-  "floating_pnl_pct": "1.83%",
+  "floating_pnl": "331.00",
+  "floating_pnl_pct": "1.75%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.23",
+      "price": "32.21",
       "market_value": "0.97万",
-      "pnl_amount": "297.00",
-      "pnl_pct": "3.17%",
+      "pnl_amount": "291.00",
+      "pnl_pct": "3.10%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -49,10 +49,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.86",
+      "price": "23.84",
       "market_value": "0.95万",
-      "pnl_amount": "48.00",
-      "pnl_pct": "0.51%",
+      "pnl_amount": "40.00",
+      "pnl_pct": "0.42%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -69,9 +69,9 @@
       "label": "恐惧",
       "components": {
         "breadth": 12,
-        "market_return": 3,
+        "market_return": 5,
         "limit_up_down": 45,
-        "candidate_mood": 6,
+        "candidate_mood": 3,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -88,12 +88,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=11.84",
-        "avg=-3.91",
+        "avg=-3.73",
         "strong_up=3.95",
-        "strong_down=72.37",
+        "strong_down=67.11",
         "limit=42.0/5.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.91"
+        "candidate_avg=-2.84"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -105,8 +105,8 @@
       "down_stock_pct": 86.84,
       "flat_stock_pct": 1.32,
       "strong_up_pct": 3.95,
-      "strong_down_pct": 72.37,
-      "avg_pct": -3.91,
+      "strong_down_pct": 67.11,
+      "avg_pct": -3.73,
       "limit_up_count": 42,
       "limit_down_count": 5,
       "stale": false,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 260.92,
+      "fallback_age_hours": 260.94,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,8 +124,8 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.91,
-      "strong_count": 1,
+      "avg_pct": -2.84,
+      "strong_count": 0,
       "weak_count": 6
     },
     "mainlines": {
@@ -209,32 +209,7 @@
     },
     "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=27, breadth_up=11.84, budget_x=0.35"
   },
-  "intraday_v1519_green": [
-    {
-      "code": "688256",
-      "name": "DR寒武纪",
-      "v1519_flow": "承接增强 74",
-      "rt_pct": "-2.96%",
-      "price": "1180.96",
-      "pool": "AI算力半导体-半导体制造 / 强候选"
-    },
-    {
-      "code": "603618",
-      "name": "杭电股份",
-      "v1519_flow": "承接增强 100",
-      "rt_pct": "-6.68%",
-      "price": "36.02",
-      "pool": "AI算力半导体-光通信/CPO / 候选"
-    },
-    {
-      "code": "301217",
-      "name": "铜冠铜箔",
-      "v1519_flow": "承接增强 73",
-      "rt_pct": "-0.70%",
-      "price": "86.50",
-      "pool": "新能源电池-电池材料 / 强候选"
-    }
-  ],
+  "intraday_v1519_green": [],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
