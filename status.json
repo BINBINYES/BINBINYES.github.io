@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 18:45:06",
-  "source_generated_at": "2026-05-18 18:45:06",
-  "market_environment_updated_at": "2026-05-18 18:45:06",
+  "generated_at": "2026-05-18 18:45:50",
+  "source_generated_at": "2026-05-18 18:45:50",
+  "market_environment_updated_at": "2026-05-18 18:45:50",
   "initial_capital": "5.00万",
-  "total_pnl": "55.00",
-  "total_pnl_pct": "0.11%",
-  "equity": "5.01万",
+  "total_pnl": "9.00",
+  "total_pnl_pct": "0.02%",
+  "equity": "5.00万",
   "cash": "本地模型负责同步",
   "market_value": "1.89万",
-  "floating_pnl": "55.00",
-  "floating_pnl_pct": "0.29%",
+  "floating_pnl": "9.00",
+  "floating_pnl_pct": "0.05%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,13 +35,13 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "31.29",
+      "price": "31.19",
       "market_value": "0.94万",
-      "pnl_amount": "15.00",
-      "pnl_pct": "0.16%",
+      "pnl_amount": "-15.00",
+      "pnl_pct": "-0.16%",
       "defense_price": "29.05",
       "strict_price": "28.12",
-      "state": "ok",
+      "state": "below_cost",
       "source": "V151.9R_REJECT_RECOVERY_TRIAL"
     },
     {
@@ -49,10 +49,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.84",
+      "price": "23.80",
       "market_value": "0.95万",
-      "pnl_amount": "40.00",
-      "pnl_pct": "0.42%",
+      "pnl_amount": "24.00",
+      "pnl_pct": "0.25%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -65,13 +65,13 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 40,
-      "label": "中性",
+      "score": 38,
+      "label": "恐惧",
       "components": {
-        "breadth": 22,
-        "market_return": 32,
+        "breadth": 20,
+        "market_return": 30,
         "limit_up_down": 44,
-        "candidate_mood": 32,
+        "candidate_mood": 26,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -87,13 +87,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=22.37",
-        "avg=-1.48",
-        "strong_up=2.63",
-        "strong_down=27.63",
+        "up=19.74",
+        "avg=-1.7",
+        "strong_up=3.95",
+        "strong_down=30.26",
         "limit=30.0/4.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.76"
+        "candidate_avg=-1.95"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -101,12 +101,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 22.37,
-      "down_stock_pct": 76.32,
+      "up_stock_pct": 19.74,
+      "down_stock_pct": 78.95,
       "flat_stock_pct": 1.32,
-      "strong_up_pct": 2.63,
-      "strong_down_pct": 27.63,
-      "avg_pct": -1.48,
+      "strong_up_pct": 3.95,
+      "strong_down_pct": 30.26,
+      "avg_pct": -1.7,
       "limit_up_count": 30,
       "limit_down_count": 4,
       "stale": false,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 260.4,
+      "fallback_age_hours": 260.41,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,9 +124,9 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.76,
+      "avg_pct": -1.95,
       "strong_count": 0,
-      "weak_count": 1
+      "weak_count": 2
     },
     "mainlines": {
       "available": true,
@@ -207,55 +207,55 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=40, breadth_up=22.37, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=38, breadth_up=19.74, budget_x=0.35"
   },
   "intraday_v1519_green": [
     {
       "code": "300885",
       "name": "海昌新材",
       "v1519_flow": "主力净流确认 70",
-      "rt_pct": "0.87%",
-      "price": "31.29",
+      "rt_pct": "0.55%",
+      "price": "31.19",
       "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
     },
     {
       "code": "688256",
       "name": "DR寒武纪",
-      "v1519_flow": "主力净流确认 67",
-      "rt_pct": "-0.90%",
-      "price": "1206.00",
+      "v1519_flow": "主力净流确认 65",
+      "rt_pct": "-1.14%",
+      "price": "1203.07",
       "pool": "AI算力半导体-半导体制造 / 强候选"
     },
     {
       "code": "301217",
       "name": "铜冠铜箔",
-      "v1519_flow": "主力净流确认 63",
-      "rt_pct": "2.48%",
-      "price": "89.27",
+      "v1519_flow": "主力净流确认 62",
+      "rt_pct": "2.40%",
+      "price": "89.20",
       "pool": "新能源电池-电池材料 / 强候选"
     },
     {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 100",
-      "rt_pct": "-4.79%",
-      "price": "36.75",
+      "rt_pct": "-5.18%",
+      "price": "36.60",
       "pool": "AI算力半导体-光通信/CPO / 候选"
     },
     {
       "code": "000593",
       "name": "德龙汇能",
       "v1519_flow": "承接增强 77",
-      "rt_pct": "0.29%",
-      "price": "23.84",
+      "rt_pct": "0.13%",
+      "price": "23.80",
       "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
     },
     {
       "code": "001400",
       "name": "江顺科技",
       "v1519_flow": "主力净流确认 61",
-      "rt_pct": "-3.52%",
-      "price": "171.80",
+      "rt_pct": "-4.32%",
+      "price": "170.38",
       "pool": "新能源电池-新能源车零部件 / 候选"
     }
   ],
@@ -296,6 +296,13 @@
   ],
   "closed_orders": [],
   "closed_orders_note": "已卖出历史订单来自桌面 V151 真实模拟仓引擎，非真实券商成交。",
-  "risk_notes": [],
+  "risk_notes": [
+    {
+      "code": "300885",
+      "name": "海昌新材",
+      "level": "below_cost",
+      "note": "300885 海昌新材 低于成本但未破防守 29.05"
+    }
+  ],
   "notice": "公开完整持仓页：仅纸面/模拟仓观察，不构成真实交易建议或券商下单。"
 }
