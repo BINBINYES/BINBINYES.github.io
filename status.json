@@ -1,18 +1,18 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 13:06:11",
-  "source_generated_at": "2026-05-19 13:06:11",
-  "market_environment_updated_at": "2026-05-19 13:06:11",
+  "generated_at": "2026-05-19 13:07:05",
+  "source_generated_at": "2026-05-19 13:07:05",
+  "market_environment_updated_at": "2026-05-19 13:07:05",
   "initial_capital": "5.00万",
-  "total_pnl": "712.00",
-  "total_pnl_pct": "1.42%",
-  "equity_pnl_pct": "1.42%",
+  "total_pnl": "716.00",
+  "total_pnl_pct": "1.43%",
+  "equity_pnl_pct": "1.43%",
   "equity": "5.07万",
-  "equity_detail": "累计盈亏 712.00 / 1.42%",
+  "equity_detail": "累计盈亏 716.00 / 1.43%",
   "cash": "本地模型负责同步",
   "market_value": "1.96万",
-  "floating_pnl": "712.00",
-  "floating_pnl_pct": "3.77%",
+  "floating_pnl": "716.00",
+  "floating_pnl_pct": "3.79%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -51,10 +51,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "24.62",
-      "market_value": "0.98万",
-      "pnl_amount": "352.00",
-      "pnl_pct": "3.71%",
+      "price": "24.63",
+      "market_value": "0.99万",
+      "pnl_amount": "356.00",
+      "pnl_pct": "3.75%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -70,8 +70,8 @@
       "score": 33,
       "label": "恐惧",
       "components": {
-        "breadth": 14,
-        "market_return": 19,
+        "breadth": 13,
+        "market_return": 18,
         "limit_up_down": 40,
         "candidate_mood": 23,
         "mainline_heat": 80
@@ -89,13 +89,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=14.47",
-        "avg=-2.57",
+        "up=13.16",
+        "avg=-2.64",
         "strong_up=7.89",
         "strong_down=48.68",
         "limit=62.0/8.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.84"
+        "candidate_avg=-1.91"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -103,12 +103,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 14.47,
-      "down_stock_pct": 84.21,
+      "up_stock_pct": 13.16,
+      "down_stock_pct": 85.53,
       "flat_stock_pct": 1.32,
       "strong_up_pct": 7.89,
       "strong_down_pct": 48.68,
-      "avg_pct": -2.57,
+      "avg_pct": -2.64,
       "limit_up_count": 62,
       "limit_down_count": 8,
       "stale": false,
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 263.75,
+      "fallback_age_hours": 263.77,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -126,7 +126,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.84,
+      "avg_pct": -1.91,
       "strong_count": 0,
       "weak_count": 3
     },
@@ -209,7 +209,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=33, breadth_up=14.47, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=33, breadth_up=13.16, budget_x=0.35"
   },
   "intraday_v1519_green": [],
   "operation_history_2d": [
