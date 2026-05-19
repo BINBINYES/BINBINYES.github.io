@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 20:48:15",
-  "source_generated_at": "2026-05-19 20:48:15",
-  "market_environment_updated_at": "2026-05-19 20:48:15",
+  "generated_at": "2026-05-19 20:49:21",
+  "source_generated_at": "2026-05-19 20:49:21",
+  "market_environment_updated_at": "2026-05-19 20:49:21",
   "initial_capital": "5.00万",
   "total_pnl": "535.00",
   "total_pnl_pct": "1.07%",
@@ -67,7 +67,7 @@
     "regime": "COLD",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 47,
+      "score": 45,
       "label": "中性",
       "components": {
         "breadth": 36,
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 271.45,
+      "fallback_age_hours": 271.47,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -282,7 +282,7 @@
       ],
       "message": "局部结构热度来自当前监控池实时报价，仅用于诊断全市场代理是否掩盖板块强弱。"
     },
-    "summary": "V151.6 market=COLD, capital=OUTFLOW, attack=False, fear_greed=47, breadth_up=35.53, budget_x=0.35"
+    "summary": "V151.6 market=COLD, capital=OUTFLOW, attack=False, fear_greed=45, breadth_up=35.53, budget_x=0.35"
   },
   "intraday_v1519_green": [
     {
