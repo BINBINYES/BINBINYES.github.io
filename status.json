@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 10:18:07",
-  "source_generated_at": "2026-05-19 10:18:07",
-  "market_environment_updated_at": "2026-05-19 10:18:07",
+  "generated_at": "2026-05-19 10:19:09",
+  "source_generated_at": "2026-05-19 10:19:09",
+  "market_environment_updated_at": "2026-05-19 10:19:09",
   "initial_capital": "5.00万",
-  "total_pnl": "441.00",
-  "total_pnl_pct": "0.88%",
+  "total_pnl": "406.00",
+  "total_pnl_pct": "0.81%",
   "equity": "5.04万",
   "cash": "本地模型负责同步",
   "market_value": "1.93万",
-  "floating_pnl": "441.00",
-  "floating_pnl_pct": "2.34%",
+  "floating_pnl": "406.00",
+  "floating_pnl_pct": "2.15%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.55",
-      "market_value": "0.98万",
-      "pnl_amount": "393.00",
-      "pnl_pct": "4.19%",
+      "price": "32.38",
+      "market_value": "0.97万",
+      "pnl_amount": "342.00",
+      "pnl_pct": "3.65%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -49,10 +49,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.86",
-      "market_value": "0.95万",
-      "pnl_amount": "48.00",
-      "pnl_pct": "0.51%",
+      "price": "23.90",
+      "market_value": "0.96万",
+      "pnl_amount": "64.00",
+      "pnl_pct": "0.67%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -65,13 +65,13 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 27,
+      "score": 28,
       "label": "恐惧",
       "components": {
         "breadth": 11,
         "market_return": 6,
         "limit_up_down": 44,
-        "candidate_mood": 4,
+        "candidate_mood": 7,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -90,10 +90,10 @@
         "up=10.53",
         "avg=-3.64",
         "strong_up=3.95",
-        "strong_down=65.79",
+        "strong_down=64.47",
         "limit=40.0/5.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.81"
+        "candidate_avg=-2.86"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -105,7 +105,7 @@
       "down_stock_pct": 88.16,
       "flat_stock_pct": 1.32,
       "strong_up_pct": 3.95,
-      "strong_down_pct": 65.79,
+      "strong_down_pct": 64.47,
       "avg_pct": -3.64,
       "limit_up_count": 40,
       "limit_down_count": 5,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 260.95,
+      "fallback_age_hours": 260.97,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,9 +124,9 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.81,
+      "avg_pct": -2.86,
       "strong_count": 0,
-      "weak_count": 6
+      "weak_count": 5
     },
     "mainlines": {
       "available": true,
@@ -207,42 +207,9 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=27, breadth_up=10.53, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=28, breadth_up=10.53, budget_x=0.35"
   },
-  "intraday_v1519_green": [
-    {
-      "code": "300885",
-      "name": "海昌新材",
-      "v1519_flow": "主力净流确认 71",
-      "rt_pct": "4.93%",
-      "price": "32.55",
-      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
-    },
-    {
-      "code": "000593",
-      "name": "德龙汇能",
-      "v1519_flow": "承接增强 78",
-      "rt_pct": "0.38%",
-      "price": "23.86",
-      "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
-    },
-    {
-      "code": "301217",
-      "name": "铜冠铜箔",
-      "v1519_flow": "承接增强 73",
-      "rt_pct": "-1.24%",
-      "price": "86.03",
-      "pool": "新能源电池-电池材料 / 强候选"
-    },
-    {
-      "code": "001400",
-      "name": "江顺科技",
-      "v1519_flow": "主力净流确认 61",
-      "rt_pct": "-7.06%",
-      "price": "165.50",
-      "pool": "新能源电池-新能源车零部件 / 候选"
-    }
-  ],
+  "intraday_v1519_green": [],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
