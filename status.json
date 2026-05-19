@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 18:11:05",
-  "source_generated_at": "2026-05-18 18:11:05",
-  "market_environment_updated_at": "2026-05-18 18:11:05",
+  "generated_at": "2026-05-18 18:12:01",
+  "source_generated_at": "2026-05-18 18:12:01",
+  "market_environment_updated_at": "2026-05-18 18:12:01",
   "initial_capital": "5.00万",
   "total_pnl": "-54.00",
   "total_pnl_pct": "-0.11%",
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 259.83,
+      "fallback_age_hours": 259.85,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -211,14 +211,6 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "300885",
-      "name": "海昌新材",
-      "v1519_flow": "主力净流确认 70",
-      "rt_pct": "0.00%",
-      "price": "31.02",
-      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
-    },
-    {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "承接增强 93",
@@ -233,6 +225,14 @@
       "rt_pct": "0.00%",
       "price": "23.77",
       "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
+    },
+    {
+      "code": "300885",
+      "name": "海昌新材",
+      "v1519_flow": "主力净流确认 70",
+      "rt_pct": "0.00%",
+      "price": "31.02",
+      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
     },
     {
       "code": "301217",
