@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 18:20:01",
-  "source_generated_at": "2026-05-18 18:20:01",
-  "market_environment_updated_at": "2026-05-18 18:20:01",
+  "generated_at": "2026-05-18 18:21:05",
+  "source_generated_at": "2026-05-18 18:21:05",
+  "market_environment_updated_at": "2026-05-18 18:21:05",
   "initial_capital": "5.00万",
   "total_pnl": "-55.00",
   "total_pnl_pct": "-0.11%",
@@ -68,10 +68,10 @@
       "score": 41,
       "label": "中性",
       "components": {
-        "breadth": 18,
-        "market_return": 38,
+        "breadth": 20,
+        "market_return": 37,
         "limit_up_down": 50,
-        "candidate_mood": 30,
+        "candidate_mood": 28,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -87,13 +87,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=18.42",
-        "avg=-1.0",
+        "up=19.74",
+        "avg=-1.12",
         "strong_up=1.32",
-        "strong_down=9.21",
+        "strong_down=11.84",
         "limit=0/0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.54"
+        "candidate_avg=-1.71"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -101,12 +101,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 18.42,
-      "down_stock_pct": 61.84,
-      "flat_stock_pct": 19.74,
+      "up_stock_pct": 19.74,
+      "down_stock_pct": 68.42,
+      "flat_stock_pct": 11.84,
       "strong_up_pct": 1.32,
-      "strong_down_pct": 9.21,
-      "avg_pct": -1.0,
+      "strong_down_pct": 11.84,
+      "avg_pct": -1.12,
       "limit_up_count": 0,
       "limit_down_count": 0,
       "stale": false,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 259.98,
+      "fallback_age_hours": 260.0,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,7 +124,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.54,
+      "avg_pct": -1.71,
       "strong_count": 0,
       "weak_count": 2
     },
@@ -207,7 +207,7 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=41, breadth_up=18.42, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=41, breadth_up=19.74, budget_x=0.35"
   },
   "intraday_v1519_green": [
     {
@@ -238,8 +238,8 @@
       "code": "301217",
       "name": "铜冠铜箔",
       "v1519_flow": "主力净流确认 72",
-      "rt_pct": "-0.93%",
-      "price": "86.30",
+      "rt_pct": "-0.94%",
+      "price": "86.29",
       "pool": "新能源电池-电池材料 / 强候选"
     }
   ],
