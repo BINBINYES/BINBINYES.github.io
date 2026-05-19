@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-18 18:10:01",
-  "source_generated_at": "2026-05-18 18:10:01",
-  "market_environment_updated_at": "2026-05-18 18:10:01",
+  "generated_at": "2026-05-18 18:11:05",
+  "source_generated_at": "2026-05-18 18:11:05",
+  "market_environment_updated_at": "2026-05-18 18:11:05",
   "initial_capital": "5.00万",
   "total_pnl": "-54.00",
   "total_pnl_pct": "-0.11%",
@@ -62,16 +62,16 @@
   "market_environment": {
     "enabled": true,
     "version": "V151.6",
-    "regime": "NEUTRAL",
-    "budget_multiplier": 0.6,
+    "regime": "RISK_OFF",
+    "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 54,
+      "score": 42,
       "label": "中性",
       "components": {
-        "breadth": 54,
-        "market_return": 67,
+        "breadth": 0,
+        "market_return": 50,
         "limit_up_down": 50,
-        "candidate_mood": 23,
+        "candidate_mood": 50,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -79,21 +79,21 @@
     },
     "capital_structure": {
       "version": "V151.6",
-      "state": "BALANCED",
-      "label": "资金均衡观望",
+      "state": "OUTFLOW",
+      "label": "资金退潮",
       "attack_allowed": false,
-      "budget_multiplier": 0.6,
+      "budget_multiplier": 0.35,
       "top_mainline_share": 0.2833,
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=53.95",
-        "avg=1.4",
-        "strong_up=30.26",
-        "strong_down=11.84",
+        "up=0.0",
+        "avg=0.0",
+        "strong_up=0",
+        "strong_down=0",
         "limit=0/0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.77"
+        "candidate_avg=0"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -101,12 +101,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 53.95,
-      "down_stock_pct": 46.05,
-      "flat_stock_pct": 0.0,
-      "strong_up_pct": 30.26,
-      "strong_down_pct": 11.84,
-      "avg_pct": 1.4,
+      "up_stock_pct": 0.0,
+      "down_stock_pct": 0.0,
+      "flat_stock_pct": 100.0,
+      "strong_up_pct": 0.0,
+      "strong_down_pct": 0.0,
+      "avg_pct": 0.0,
       "limit_up_count": 0,
       "limit_down_count": 0,
       "stale": false,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 259.82,
+      "fallback_age_hours": 259.83,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,9 +124,9 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.77,
-      "strong_count": 1,
-      "weak_count": 4
+      "avg_pct": 0.0,
+      "strong_count": 0,
+      "weak_count": 0
     },
     "mainlines": {
       "available": true,
@@ -207,40 +207,40 @@
         }
       ]
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=54, breadth_up=53.95, budget_x=0.6"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=42, breadth_up=0.0, budget_x=0.35"
   },
   "intraday_v1519_green": [
     {
-      "code": "603618",
-      "name": "杭电股份",
-      "v1519_flow": "承接增强 93",
-      "rt_pct": "6.04%",
-      "price": "38.60",
-      "pool": "AI算力半导体-光通信/CPO / 候选"
-    },
-    {
       "code": "300885",
       "name": "海昌新材",
-      "v1519_flow": "承接增强 80",
-      "rt_pct": "-0.89%",
+      "v1519_flow": "主力净流确认 70",
+      "rt_pct": "0.00%",
       "price": "31.02",
       "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
     },
     {
-      "code": "301217",
-      "name": "铜冠铜箔",
-      "v1519_flow": "主力净流确认 62",
-      "rt_pct": "4.70%",
-      "price": "87.11",
-      "pool": "新能源电池-电池材料 / 强候选"
+      "code": "603618",
+      "name": "杭电股份",
+      "v1519_flow": "承接增强 93",
+      "rt_pct": "0.00%",
+      "price": "38.60",
+      "pool": "AI算力半导体-光通信/CPO / 候选"
     },
     {
       "code": "000593",
       "name": "德龙汇能",
       "v1519_flow": "承接增强 77",
-      "rt_pct": "0.98%",
+      "rt_pct": "0.00%",
       "price": "23.77",
       "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
+    },
+    {
+      "code": "301217",
+      "name": "铜冠铜箔",
+      "v1519_flow": "主力净流确认 62",
+      "rt_pct": "0.00%",
+      "price": "87.11",
+      "pool": "新能源电池-电池材料 / 强候选"
     }
   ],
   "operation_history_2d": [
