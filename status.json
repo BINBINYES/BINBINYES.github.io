@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 14:25:56",
-  "source_generated_at": "2026-05-19 14:25:56",
-  "market_environment_updated_at": "2026-05-19 14:25:56",
+  "generated_at": "2026-05-19 14:26:37",
+  "source_generated_at": "2026-05-19 14:26:37",
+  "market_environment_updated_at": "2026-05-19 14:26:37",
   "initial_capital": "5.00万",
   "total_pnl": "620.00",
   "total_pnl_pct": "1.24%",
@@ -90,12 +90,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=31.58",
-        "avg=-0.81",
+        "avg=-0.82",
         "strong_up=11.84",
-        "strong_down=18.42",
+        "strong_down=21.05",
         "limit=82.0/7.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-0.71"
+        "candidate_avg=-0.7"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -107,8 +107,8 @@
       "down_stock_pct": 67.11,
       "flat_stock_pct": 1.32,
       "strong_up_pct": 11.84,
-      "strong_down_pct": 18.42,
-      "avg_pct": -0.81,
+      "strong_down_pct": 21.05,
+      "avg_pct": -0.82,
       "limit_up_count": 82,
       "limit_down_count": 7,
       "stale": false,
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 265.08,
+      "fallback_age_hours": 265.09,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -126,7 +126,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -0.71,
+      "avg_pct": -0.7,
       "strong_count": 1,
       "weak_count": 2
     },
@@ -213,12 +213,12 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "000593",
-      "name": "德龙汇能",
-      "v1519_flow": "承接增强 85",
-      "rt_pct": "2.36%",
-      "price": "24.33",
-      "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
+      "code": "300885",
+      "name": "海昌新材",
+      "v1519_flow": "承接增强 82",
+      "rt_pct": "4.84%",
+      "price": "32.52",
+      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
     }
   ],
   "operation_history_2d": [
