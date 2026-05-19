@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 15:30:42",
-  "source_generated_at": "2026-05-19 15:30:42",
-  "market_environment_updated_at": "2026-05-19 15:30:42",
+  "generated_at": "2026-05-19 15:32:20",
+  "source_generated_at": "2026-05-19 15:32:20",
+  "market_environment_updated_at": "2026-05-19 15:32:20",
   "initial_capital": "5.00万",
   "total_pnl": "535.00",
   "total_pnl_pct": "1.07%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 266.16,
+      "fallback_age_hours": 266.19,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -309,14 +309,6 @@
       "pool": "新能源电池-电池材料 / 强候选"
     },
     {
-      "code": "600869",
-      "name": "远东股份",
-      "v1519_flow": "主力净流确认 63",
-      "rt_pct": "1.03%",
-      "price": "21.50",
-      "pool": "电力电网设备-变压器/输变电 / 强候选"
-    },
-    {
       "code": "603618",
       "name": "杭电股份",
       "v1519_flow": "主力净流确认 70",
@@ -333,9 +325,17 @@
       "pool": "AI算力半导体-半导体制造 / 核心候选"
     },
     {
+      "code": "600869",
+      "name": "远东股份",
+      "v1519_flow": "主力净流确认 62",
+      "rt_pct": "1.03%",
+      "price": "21.50",
+      "pool": "电力电网设备-变压器/输变电 / 强候选"
+    },
+    {
       "code": "688818",
       "name": "电科蓝天",
-      "v1519_flow": "主力净流确认 62",
+      "v1519_flow": "主力净流确认 63",
       "rt_pct": "-0.70%",
       "price": "80.91",
       "pool": "航空航天军工-航天卫星 / 强候选"
@@ -718,8 +718,8 @@
         "action": "PROMOTION_WATCH",
         "action_zh": "晋级观察",
         "promotion_score": 66.7,
-        "v1519_flow": "主力净流确认 62",
-        "hiddenflow_score": 62.28,
+        "v1519_flow": "主力净流确认 63",
+        "hiddenflow_score": 62.84,
         "hiddenflow_label": "主力净流确认",
         "rt_pct": "-0.70%",
         "price": "80.91",
@@ -1268,8 +1268,8 @@
         "action": "PROMOTION_WATCH",
         "action_zh": "晋级观察",
         "promotion_score": 66.7,
-        "v1519_flow": "主力净流确认 62",
-        "hiddenflow_score": 62.28,
+        "v1519_flow": "主力净流确认 63",
+        "hiddenflow_score": 62.84,
         "hiddenflow_label": "主力净流确认",
         "rt_pct": "-0.70%",
         "price": "80.91",
