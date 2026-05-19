@@ -1,18 +1,18 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 13:28:41",
-  "source_generated_at": "2026-05-19 13:28:41",
-  "market_environment_updated_at": "2026-05-19 13:28:41",
+  "generated_at": "2026-05-19 13:29:47",
+  "source_generated_at": "2026-05-19 13:29:47",
+  "market_environment_updated_at": "2026-05-19 13:29:47",
   "initial_capital": "5.00万",
-  "total_pnl": "727.00",
-  "total_pnl_pct": "1.45%",
-  "equity_pnl_pct": "1.45%",
+  "total_pnl": "730.00",
+  "total_pnl_pct": "1.46%",
+  "equity_pnl_pct": "1.46%",
   "equity": "5.07万",
-  "equity_detail": "累计盈亏 727.00 / 1.45%",
+  "equity_detail": "累计盈亏 730.00 / 1.46%",
   "cash": "本地模型负责同步",
   "market_value": "1.96万",
-  "floating_pnl": "727.00",
-  "floating_pnl_pct": "3.85%",
+  "floating_pnl": "730.00",
+  "floating_pnl_pct": "3.87%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -37,10 +37,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.57",
+      "price": "32.58",
       "market_value": "0.98万",
-      "pnl_amount": "399.00",
-      "pnl_pct": "4.26%",
+      "pnl_amount": "402.00",
+      "pnl_pct": "4.29%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -70,10 +70,10 @@
       "score": 42,
       "label": "中性",
       "components": {
-        "breadth": 24,
-        "market_return": 35,
-        "limit_up_down": 46,
-        "candidate_mood": 36,
+        "breadth": 25,
+        "market_return": 36,
+        "limit_up_down": 42,
+        "candidate_mood": 39,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -89,13 +89,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=23.68",
-        "avg=-1.28",
-        "strong_up=7.89",
+        "up=25.0",
+        "avg=-1.16",
+        "strong_up=9.21",
         "strong_down=25.0",
-        "limit=69.0/7.0",
+        "limit=70.0/8.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.15"
+        "candidate_avg=-1.13"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -103,21 +103,21 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 23.68,
-      "down_stock_pct": 75.0,
+      "up_stock_pct": 25.0,
+      "down_stock_pct": 73.68,
       "flat_stock_pct": 1.32,
-      "strong_up_pct": 7.89,
+      "strong_up_pct": 9.21,
       "strong_down_pct": 25.0,
-      "avg_pct": -1.28,
-      "limit_up_count": 69,
-      "limit_down_count": 7,
+      "avg_pct": -1.16,
+      "limit_up_count": 70,
+      "limit_down_count": 8,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 264.13,
+      "fallback_age_hours": 264.15,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -126,8 +126,8 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.15,
-      "strong_count": 1,
+      "avg_pct": -1.13,
+      "strong_count": 2,
       "weak_count": 2
     },
     "mainlines": {
@@ -209,26 +209,9 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=42, breadth_up=23.68, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=42, breadth_up=25.0, budget_x=0.35"
   },
-  "intraday_v1519_green": [
-    {
-      "code": "600396",
-      "name": "华电辽能",
-      "v1519_flow": "承接增强 93",
-      "rt_pct": "4.97%",
-      "price": "16.47",
-      "pool": "电力电网设备-电力运营 / 候选"
-    },
-    {
-      "code": "301511",
-      "name": "德福科技",
-      "v1519_flow": "主力净流确认 60",
-      "rt_pct": "4.07%",
-      "price": "100.75",
-      "pool": "新能源电池-电池材料 / 强候选"
-    }
-  ],
+  "intraday_v1519_green": [],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
