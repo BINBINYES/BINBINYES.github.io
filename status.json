@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 20:10:17",
-  "source_generated_at": "2026-05-19 20:10:17",
-  "market_environment_updated_at": "2026-05-19 20:10:17",
+  "generated_at": "2026-05-19 20:11:19",
+  "source_generated_at": "2026-05-19 20:11:19",
+  "market_environment_updated_at": "2026-05-19 20:11:19",
   "initial_capital": "5.00万",
   "total_pnl": "535.00",
   "total_pnl_pct": "1.07%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 270.82,
+      "fallback_age_hours": 270.84,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -286,14 +286,6 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "603083",
-      "name": "剑桥科技",
-      "v1519_flow": "承接增强 76",
-      "rt_pct": "10.00%",
-      "price": "202.42",
-      "pool": "AI算力半导体-光通信/CPO / 强候选"
-    },
-    {
       "code": "688256",
       "name": "DR寒武纪",
       "v1519_flow": "承接增强 80",
@@ -364,6 +356,14 @@
       "rt_pct": "2.93%",
       "price": "16.15",
       "pool": "电力电网设备-电力运营 / 候选"
+    },
+    {
+      "code": "603083",
+      "name": "剑桥科技",
+      "v1519_flow": "主力净流确认 70",
+      "rt_pct": "10.00%",
+      "price": "202.42",
+      "pool": "AI算力半导体-光通信/CPO / 强候选"
     },
     {
       "code": "688025",
