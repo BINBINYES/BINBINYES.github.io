@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 10:29:01",
-  "source_generated_at": "2026-05-19 10:29:01",
-  "market_environment_updated_at": "2026-05-19 10:29:01",
+  "generated_at": "2026-05-19 10:30:02",
+  "source_generated_at": "2026-05-19 10:30:02",
+  "market_environment_updated_at": "2026-05-19 10:30:02",
   "initial_capital": "5.00万",
-  "total_pnl": "476.00",
-  "total_pnl_pct": "0.95%",
-  "equity": "5.05万",
+  "total_pnl": "406.00",
+  "total_pnl_pct": "0.81%",
+  "equity": "5.04万",
   "cash": "本地模型负责同步",
   "market_value": "1.93万",
-  "floating_pnl": "476.00",
-  "floating_pnl_pct": "2.52%",
+  "floating_pnl": "406.00",
+  "floating_pnl_pct": "2.15%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.64",
-      "market_value": "0.98万",
-      "pnl_amount": "420.00",
-      "pnl_pct": "4.48%",
+      "price": "32.50",
+      "market_value": "0.97万",
+      "pnl_amount": "378.00",
+      "pnl_pct": "4.03%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -49,10 +49,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.88",
-      "market_value": "0.96万",
-      "pnl_amount": "56.00",
-      "pnl_pct": "0.59%",
+      "price": "23.81",
+      "market_value": "0.95万",
+      "pnl_amount": "28.00",
+      "pnl_pct": "0.29%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -65,13 +65,13 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 30,
+      "score": 29,
       "label": "恐惧",
       "components": {
         "breadth": 12,
-        "market_return": 12,
+        "market_return": 8,
         "limit_up_down": 41,
-        "candidate_mood": 17,
+        "candidate_mood": 12,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -88,12 +88,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=11.84",
-        "avg=-3.17",
+        "avg=-3.52",
         "strong_up=3.95",
-        "strong_down=60.53",
+        "strong_down=68.42",
         "limit=42.0/6.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.48"
+        "candidate_avg=-2.8"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -105,8 +105,8 @@
       "down_stock_pct": 86.84,
       "flat_stock_pct": 1.32,
       "strong_up_pct": 3.95,
-      "strong_down_pct": 60.53,
-      "avg_pct": -3.17,
+      "strong_down_pct": 68.42,
+      "avg_pct": -3.52,
       "limit_up_count": 42,
       "limit_down_count": 6,
       "stale": false,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 261.13,
+      "fallback_age_hours": 261.15,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,8 +124,8 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.48,
-      "strong_count": 1,
+      "avg_pct": -2.8,
+      "strong_count": 0,
       "weak_count": 4
     },
     "mainlines": {
@@ -207,26 +207,9 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=30, breadth_up=11.84, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=29, breadth_up=11.84, budget_x=0.35"
   },
-  "intraday_v1519_green": [
-    {
-      "code": "000593",
-      "name": "德龙汇能",
-      "v1519_flow": "承接增强 78",
-      "rt_pct": "0.46%",
-      "price": "23.88",
-      "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
-    },
-    {
-      "code": "001400",
-      "name": "江顺科技",
-      "v1519_flow": "主力净流确认 61",
-      "rt_pct": "-7.46%",
-      "price": "164.79",
-      "pool": "新能源电池-新能源车零部件 / 候选"
-    }
-  ],
+  "intraday_v1519_green": [],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
