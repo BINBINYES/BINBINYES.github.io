@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 10:10:16",
-  "source_generated_at": "2026-05-19 10:10:16",
-  "market_environment_updated_at": "2026-05-19 10:10:16",
+  "generated_at": "2026-05-19 10:10:59",
+  "source_generated_at": "2026-05-19 10:10:59",
+  "market_environment_updated_at": "2026-05-19 10:10:59",
   "initial_capital": "5.00万",
-  "total_pnl": "546.00",
-  "total_pnl_pct": "1.09%",
-  "equity": "5.05万",
+  "total_pnl": "449.00",
+  "total_pnl_pct": "0.90%",
+  "equity": "5.04万",
   "cash": "本地模型负责同步",
-  "market_value": "1.94万",
-  "floating_pnl": "546.00",
-  "floating_pnl_pct": "2.89%",
+  "market_value": "1.93万",
+  "floating_pnl": "449.00",
+  "floating_pnl_pct": "2.38%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.70",
-      "market_value": "0.98万",
-      "pnl_amount": "438.00",
-      "pnl_pct": "4.67%",
+      "price": "32.39",
+      "market_value": "0.97万",
+      "pnl_amount": "345.00",
+      "pnl_pct": "3.68%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -49,10 +49,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "24.01",
+      "price": "24.00",
       "market_value": "0.96万",
-      "pnl_amount": "108.00",
-      "pnl_pct": "1.14%",
+      "pnl_amount": "104.00",
+      "pnl_pct": "1.10%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -71,7 +71,7 @@
         "breadth": 12,
         "market_return": 7,
         "limit_up_down": 44,
-        "candidate_mood": 13,
+        "candidate_mood": 12,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -88,12 +88,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=11.84",
-        "avg=-3.6",
+        "avg=-3.55",
         "strong_up=3.95",
         "strong_down=69.74",
         "limit=41.0/5.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.52"
+        "candidate_avg=-2.59"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -106,7 +106,7 @@
       "flat_stock_pct": 1.32,
       "strong_up_pct": 3.95,
       "strong_down_pct": 69.74,
-      "avg_pct": -3.6,
+      "avg_pct": -3.55,
       "limit_up_count": 41,
       "limit_down_count": 5,
       "stale": false,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 260.82,
+      "fallback_age_hours": 260.83,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,7 +124,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.52,
+      "avg_pct": -2.59,
       "strong_count": 1,
       "weak_count": 5
     },
@@ -211,36 +211,20 @@
   },
   "intraday_v1519_green": [
     {
-      "code": "300885",
-      "name": "海昌新材",
-      "v1519_flow": "主力净流确认 71",
-      "rt_pct": "5.42%",
-      "price": "32.70",
-      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
-    },
-    {
-      "code": "688256",
-      "name": "DR寒武纪",
-      "v1519_flow": "承接增强 73",
-      "rt_pct": "-2.96%",
-      "price": "1180.98",
-      "pool": "AI算力半导体-半导体制造 / 强候选"
-    },
-    {
-      "code": "603618",
-      "name": "杭电股份",
-      "v1519_flow": "承接增强 100",
-      "rt_pct": "-6.42%",
-      "price": "36.12",
-      "pool": "AI算力半导体-光通信/CPO / 候选"
-    },
-    {
       "code": "301217",
       "name": "铜冠铜箔",
       "v1519_flow": "承接增强 73",
-      "rt_pct": "-1.16%",
-      "price": "86.10",
+      "rt_pct": "-1.30%",
+      "price": "85.98",
       "pool": "新能源电池-电池材料 / 强候选"
+    },
+    {
+      "code": "300885",
+      "name": "海昌新材",
+      "v1519_flow": "主力净流确认 71",
+      "rt_pct": "4.42%",
+      "price": "32.39",
+      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
     }
   ],
   "operation_history_2d": [
