@@ -1,18 +1,18 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 11:26:29",
-  "source_generated_at": "2026-05-19 11:26:29",
-  "market_environment_updated_at": "2026-05-19 11:26:29",
+  "generated_at": "2026-05-19 11:27:16",
+  "source_generated_at": "2026-05-19 11:27:16",
+  "market_environment_updated_at": "2026-05-19 11:27:16",
   "initial_capital": "5.00万",
-  "total_pnl": "627.00",
-  "total_pnl_pct": "1.25%",
-  "equity_pnl_pct": "1.25%",
-  "equity": "5.06万",
-  "equity_detail": "累计盈亏 627.00 / 1.25%",
+  "total_pnl": "668.00",
+  "total_pnl_pct": "1.34%",
+  "equity_pnl_pct": "1.34%",
+  "equity": "5.07万",
+  "equity_detail": "累计盈亏 668.00 / 1.34%",
   "cash": "本地模型负责同步",
   "market_value": "1.95万",
-  "floating_pnl": "627.00",
-  "floating_pnl_pct": "3.32%",
+  "floating_pnl": "668.00",
+  "floating_pnl_pct": "3.54%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -37,10 +37,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.37",
+      "price": "32.48",
       "market_value": "0.97万",
-      "pnl_amount": "339.00",
-      "pnl_pct": "3.62%",
+      "pnl_amount": "372.00",
+      "pnl_pct": "3.97%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -51,10 +51,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "24.46",
+      "price": "24.48",
       "market_value": "0.98万",
-      "pnl_amount": "288.00",
-      "pnl_pct": "3.03%",
+      "pnl_amount": "296.00",
+      "pnl_pct": "3.12%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -67,12 +67,12 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 34,
+      "score": 35,
       "label": "恐惧",
       "components": {
         "breadth": 17,
         "market_return": 25,
-        "limit_up_down": 35,
+        "limit_up_down": 38,
         "candidate_mood": 26,
         "mainline_heat": 80
       },
@@ -90,12 +90,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=17.11",
-        "avg=-2.1",
+        "avg=-2.07",
         "strong_up=6.58",
         "strong_down=40.79",
-        "limit=56.0/9.0",
+        "limit=56.0/8.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-1.52"
+        "candidate_avg=-1.5"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -108,16 +108,16 @@
       "flat_stock_pct": 1.32,
       "strong_up_pct": 6.58,
       "strong_down_pct": 40.79,
-      "avg_pct": -2.1,
+      "avg_pct": -2.07,
       "limit_up_count": 56,
-      "limit_down_count": 9,
+      "limit_down_count": 8,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 262.09,
+      "fallback_age_hours": 262.11,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -126,7 +126,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -1.52,
+      "avg_pct": -1.5,
       "strong_count": 0,
       "weak_count": 3
     },
@@ -209,15 +209,23 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=34, breadth_up=17.11, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=35, breadth_up=17.11, budget_x=0.35"
   },
   "intraday_v1519_green": [
+    {
+      "code": "000593",
+      "name": "德龙汇能",
+      "v1519_flow": "承接增强 81",
+      "rt_pct": "2.99%",
+      "price": "24.48",
+      "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
+    },
     {
       "code": "300885",
       "name": "海昌新材",
       "v1519_flow": "承接增强 91",
-      "rt_pct": "4.35%",
-      "price": "32.37",
+      "rt_pct": "4.71%",
+      "price": "32.48",
       "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
     }
   ],
