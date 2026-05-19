@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 21:44:23",
-  "source_generated_at": "2026-05-19 21:44:23",
-  "market_environment_updated_at": "2026-05-19 21:44:23",
+  "generated_at": "2026-05-19 21:46:20",
+  "source_generated_at": "2026-05-19 21:46:20",
+  "market_environment_updated_at": "2026-05-19 21:46:20",
   "initial_capital": "5.00万",
   "total_pnl": "535.00",
   "total_pnl_pct": "1.07%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 272.39,
+      "fallback_age_hours": 272.42,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -366,14 +366,6 @@
       "pool": "电力电网设备-电力运营 / 候选"
     },
     {
-      "code": "600869",
-      "name": "远东股份",
-      "v1519_flow": "主力净流确认 63",
-      "rt_pct": "1.03%",
-      "price": "21.50",
-      "pool": "电力电网设备-变压器/输变电 / 强候选"
-    },
-    {
       "code": "688025",
       "name": "杰普特",
       "v1519_flow": "主力净流确认 63",
@@ -388,6 +380,14 @@
       "rt_pct": "1.27%",
       "price": "86.69",
       "pool": "新能源电池-电池材料 / 强候选"
+    },
+    {
+      "code": "600869",
+      "name": "远东股份",
+      "v1519_flow": "主力净流确认 63",
+      "rt_pct": "1.03%",
+      "price": "21.50",
+      "pool": "电力电网设备-变压器/输变电 / 强候选"
     },
     {
       "code": "603618",
