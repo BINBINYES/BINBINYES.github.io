@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 11:45:01",
-  "source_generated_at": "2026-05-19 11:45:01",
-  "market_environment_updated_at": "2026-05-19 11:45:01",
+  "generated_at": "2026-05-19 11:46:00",
+  "source_generated_at": "2026-05-19 11:46:00",
+  "market_environment_updated_at": "2026-05-19 11:46:00",
   "initial_capital": "5.00万",
   "total_pnl": "680.00",
   "total_pnl_pct": "1.36%",
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 262.4,
+      "fallback_age_hours": 262.42,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -211,16 +211,7 @@
     },
     "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=36, breadth_up=17.11, budget_x=0.35"
   },
-  "intraday_v1519_green": [
-    {
-      "code": "301511",
-      "name": "德福科技",
-      "v1519_flow": "主力净流确认 60",
-      "rt_pct": "4.84%",
-      "price": "101.50",
-      "pool": "新能源电池-电池材料 / 强候选"
-    }
-  ],
+  "intraday_v1519_green": [],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
