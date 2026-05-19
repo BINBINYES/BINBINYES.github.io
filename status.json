@@ -1,18 +1,18 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 14:24:23",
-  "source_generated_at": "2026-05-19 14:24:23",
-  "market_environment_updated_at": "2026-05-19 14:24:23",
+  "generated_at": "2026-05-19 14:25:16",
+  "source_generated_at": "2026-05-19 14:25:16",
+  "market_environment_updated_at": "2026-05-19 14:25:16",
   "initial_capital": "5.00万",
-  "total_pnl": "659.00",
-  "total_pnl_pct": "1.32%",
-  "equity_pnl_pct": "1.32%",
-  "equity": "5.07万",
-  "equity_detail": "累计盈亏 659.00 / 1.32%",
+  "total_pnl": "647.00",
+  "total_pnl_pct": "1.29%",
+  "equity_pnl_pct": "1.29%",
+  "equity": "5.06万",
+  "equity_detail": "累计盈亏 647.00 / 1.29%",
   "cash": "本地模型负责同步",
   "market_value": "1.95万",
-  "floating_pnl": "659.00",
-  "floating_pnl_pct": "3.49%",
+  "floating_pnl": "647.00",
+  "floating_pnl_pct": "3.43%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -37,10 +37,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.57",
+      "price": "32.53",
       "market_value": "0.98万",
-      "pnl_amount": "399.00",
-      "pnl_pct": "4.26%",
+      "pnl_amount": "387.00",
+      "pnl_pct": "4.13%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -67,13 +67,13 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 47,
+      "score": 46,
       "label": "中性",
       "components": {
-        "breadth": 32,
+        "breadth": 33,
         "market_return": 40,
         "limit_up_down": 47,
-        "candidate_mood": 42,
+        "candidate_mood": 39,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -89,13 +89,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=31.58",
-        "avg=-0.81",
+        "up=32.89",
+        "avg=-0.8",
         "strong_up=11.84",
-        "strong_down=19.74",
+        "strong_down=22.37",
         "limit=82.0/7.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-0.69"
+        "candidate_avg=-0.7"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -103,12 +103,12 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 31.58,
+      "up_stock_pct": 32.89,
       "down_stock_pct": 65.79,
-      "flat_stock_pct": 2.63,
+      "flat_stock_pct": 1.32,
       "strong_up_pct": 11.84,
-      "strong_down_pct": 19.74,
-      "avg_pct": -0.81,
+      "strong_down_pct": 22.37,
+      "avg_pct": -0.8,
       "limit_up_count": 82,
       "limit_down_count": 7,
       "stale": false,
@@ -117,7 +117,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 265.06,
+      "fallback_age_hours": 265.07,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -126,8 +126,8 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -0.69,
-      "strong_count": 2,
+      "avg_pct": -0.7,
+      "strong_count": 1,
       "weak_count": 2
     },
     "mainlines": {
@@ -209,40 +209,16 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=47, breadth_up=31.58, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=46, breadth_up=32.89, budget_x=0.35"
   },
   "intraday_v1519_green": [
     {
-      "code": "600396",
-      "name": "华电辽能",
-      "v1519_flow": "承接增强 81",
-      "rt_pct": "3.89%",
-      "price": "16.30",
-      "pool": "电力电网设备-电力运营 / 候选"
-    },
-    {
-      "code": "600487",
-      "name": "亨通光电",
-      "v1519_flow": "主力净流确认 61",
-      "rt_pct": "5.04%",
-      "price": "75.42",
-      "pool": "AI算力半导体-光通信/CPO / 强候选"
-    },
-    {
-      "code": "300885",
-      "name": "海昌新材",
-      "v1519_flow": "承接增强 82",
-      "rt_pct": "5.00%",
-      "price": "32.57",
-      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
-    },
-    {
-      "code": "301511",
-      "name": "德福科技",
-      "v1519_flow": "主力净流确认 61",
-      "rt_pct": "3.30%",
-      "price": "100.00",
-      "pool": "新能源电池-电池材料 / 强候选"
+      "code": "000593",
+      "name": "德龙汇能",
+      "v1519_flow": "承接增强 85",
+      "rt_pct": "2.61%",
+      "price": "24.39",
+      "pool": "电力电网设备-储能/新能源并网 / 观察-持仓观察"
     }
   ],
   "operation_history_2d": [
