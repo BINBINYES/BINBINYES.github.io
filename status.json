@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 10:10:59",
-  "source_generated_at": "2026-05-19 10:10:59",
-  "market_environment_updated_at": "2026-05-19 10:10:59",
+  "generated_at": "2026-05-19 10:12:00",
+  "source_generated_at": "2026-05-19 10:12:00",
+  "market_environment_updated_at": "2026-05-19 10:12:00",
   "initial_capital": "5.00万",
-  "total_pnl": "449.00",
-  "total_pnl_pct": "0.90%",
+  "total_pnl": "391.00",
+  "total_pnl_pct": "0.78%",
   "equity": "5.04万",
   "cash": "本地模型负责同步",
   "market_value": "1.93万",
-  "floating_pnl": "449.00",
-  "floating_pnl_pct": "2.38%",
+  "floating_pnl": "391.00",
+  "floating_pnl_pct": "2.07%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.39",
+      "price": "32.33",
       "market_value": "0.97万",
-      "pnl_amount": "345.00",
-      "pnl_pct": "3.68%",
+      "pnl_amount": "327.00",
+      "pnl_pct": "3.49%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -49,10 +49,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "24.00",
+      "price": "23.90",
       "market_value": "0.96万",
-      "pnl_amount": "104.00",
-      "pnl_pct": "1.10%",
+      "pnl_amount": "64.00",
+      "pnl_pct": "0.67%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -65,13 +65,13 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 29,
+      "score": 28,
       "label": "恐惧",
       "components": {
         "breadth": 12,
-        "market_return": 7,
+        "market_return": 6,
         "limit_up_down": 44,
-        "candidate_mood": 12,
+        "candidate_mood": 10,
         "mainline_heat": 80
       },
       "stale_penalty": 0,
@@ -88,12 +88,12 @@
       "strong_mainline_total": 60.0,
       "evidence": [
         "up=11.84",
-        "avg=-3.55",
+        "avg=-3.7",
         "strong_up=3.95",
-        "strong_down=69.74",
+        "strong_down=68.42",
         "limit=41.0/5.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.59"
+        "candidate_avg=-2.82"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -105,8 +105,8 @@
       "down_stock_pct": 86.84,
       "flat_stock_pct": 1.32,
       "strong_up_pct": 3.95,
-      "strong_down_pct": 69.74,
-      "avg_pct": -3.55,
+      "strong_down_pct": 68.42,
+      "avg_pct": -3.7,
       "limit_up_count": 41,
       "limit_down_count": 5,
       "stale": false,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 260.83,
+      "fallback_age_hours": 260.85,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,7 +124,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.59,
+      "avg_pct": -2.82,
       "strong_count": 1,
       "weak_count": 5
     },
@@ -207,26 +207,9 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=29, breadth_up=11.84, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=28, breadth_up=11.84, budget_x=0.35"
   },
-  "intraday_v1519_green": [
-    {
-      "code": "301217",
-      "name": "铜冠铜箔",
-      "v1519_flow": "承接增强 73",
-      "rt_pct": "-1.30%",
-      "price": "85.98",
-      "pool": "新能源电池-电池材料 / 强候选"
-    },
-    {
-      "code": "300885",
-      "name": "海昌新材",
-      "v1519_flow": "主力净流确认 71",
-      "rt_pct": "4.42%",
-      "price": "32.39",
-      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
-    }
-  ],
+  "intraday_v1519_green": [],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
