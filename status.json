@@ -1,16 +1,16 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-19 10:46:08",
-  "source_generated_at": "2026-05-19 10:46:08",
-  "market_environment_updated_at": "2026-05-19 10:46:08",
+  "generated_at": "2026-05-19 10:47:07",
+  "source_generated_at": "2026-05-19 10:47:07",
+  "market_environment_updated_at": "2026-05-19 10:47:07",
   "initial_capital": "5.00万",
-  "total_pnl": "446.00",
-  "total_pnl_pct": "0.89%",
-  "equity": "5.04万",
+  "total_pnl": "453.00",
+  "total_pnl_pct": "0.91%",
+  "equity": "5.05万",
   "cash": "本地模型负责同步",
   "market_value": "1.93万",
-  "floating_pnl": "446.00",
-  "floating_pnl_pct": "2.36%",
+  "floating_pnl": "453.00",
+  "floating_pnl_pct": "2.40%",
   "realized_pnl": "0.00",
   "pnl_reset_baseline": "0.00",
   "paper_ret_pct": "模拟仓",
@@ -35,10 +35,10 @@
       "name": "海昌新材",
       "qty": "300",
       "cost": "31.240",
-      "price": "32.46",
+      "price": "32.43",
       "market_value": "0.97万",
-      "pnl_amount": "366.00",
-      "pnl_pct": "3.91%",
+      "pnl_amount": "357.00",
+      "pnl_pct": "3.81%",
       "defense_price": "29.05",
       "strict_price": "28.12",
       "state": "ok",
@@ -49,10 +49,10 @@
       "name": "德龙汇能",
       "qty": "400",
       "cost": "23.740",
-      "price": "23.94",
+      "price": "23.98",
       "market_value": "0.96万",
-      "pnl_amount": "80.00",
-      "pnl_pct": "0.84%",
+      "pnl_amount": "96.00",
+      "pnl_pct": "1.01%",
       "defense_price": "22.08",
       "strict_price": "21.37",
       "state": "ok",
@@ -68,7 +68,7 @@
       "score": 30,
       "label": "恐惧",
       "components": {
-        "breadth": 12,
+        "breadth": 13,
         "market_return": 16,
         "limit_up_down": 38,
         "candidate_mood": 15,
@@ -87,13 +87,13 @@
       "mainline_count": 8,
       "strong_mainline_total": 60.0,
       "evidence": [
-        "up=11.84",
+        "up=13.16",
         "avg=-2.81",
         "strong_up=5.26",
         "strong_down=55.26",
         "limit=46.0/7.0",
         "top_mainline_share=0.2833",
-        "candidate_avg=-2.39"
+        "candidate_avg=-2.36"
       ],
       "method": "capital structure first: breadth distribution, limit-up/down pressure, mainline concentration, candidate flow, news confirmation"
     },
@@ -101,8 +101,8 @@
       "available": true,
       "source_label": "实时行情代理广度",
       "sample_size": 76,
-      "up_stock_pct": 11.84,
-      "down_stock_pct": 86.84,
+      "up_stock_pct": 13.16,
+      "down_stock_pct": 85.53,
       "flat_stock_pct": 1.32,
       "strong_up_pct": 5.26,
       "strong_down_pct": 55.26,
@@ -115,7 +115,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 261.42,
+      "fallback_age_hours": 261.44,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -124,7 +124,7 @@
     },
     "candidate_mood": {
       "sample_size": 16,
-      "avg_pct": -2.39,
+      "avg_pct": -2.36,
       "strong_count": 0,
       "weak_count": 4
     },
@@ -207,9 +207,34 @@
         }
       ]
     },
-    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=30, breadth_up=11.84, budget_x=0.35"
+    "summary": "V151.6 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=30, breadth_up=13.16, budget_x=0.35"
   },
-  "intraday_v1519_green": [],
+  "intraday_v1519_green": [
+    {
+      "code": "603618",
+      "name": "杭电股份",
+      "v1519_flow": "承接增强 100",
+      "rt_pct": "-3.89%",
+      "price": "37.10",
+      "pool": "AI算力半导体-光通信/CPO / 候选"
+    },
+    {
+      "code": "688256",
+      "name": "DR寒武纪",
+      "v1519_flow": "承接增强 74",
+      "rt_pct": "-1.27%",
+      "price": "1201.57",
+      "pool": "AI算力半导体-半导体制造 / 强候选"
+    },
+    {
+      "code": "300885",
+      "name": "海昌新材",
+      "v1519_flow": "主力净流确认 72",
+      "rt_pct": "4.55%",
+      "price": "32.43",
+      "pool": "航空航天军工-航天卫星 / 候选-持仓观察"
+    }
+  ],
   "operation_history_2d": [
     {
       "date": "2026-05-17",
