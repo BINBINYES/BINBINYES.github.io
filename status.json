@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-20 15:08:13",
-  "source_generated_at": "2026-05-20 15:08:13",
-  "market_environment_updated_at": "2026-05-20 15:08:13",
+  "generated_at": "2026-05-20 15:09:06",
+  "source_generated_at": "2026-05-20 15:09:06",
+  "market_environment_updated_at": "2026-05-20 15:09:06",
   "initial_capital": "5.00\u4e07",
   "total_pnl": "80.00",
   "total_pnl_pct": "0.16%",
@@ -57,7 +57,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-20 15:08:13",
+      "now": "2026-05-20 15:09:06",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -72,7 +72,7 @@
     "capital_attack_allowed": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-20 15:08:13",
+      "now": "2026-05-20 15:09:06",
       "phase": "after_close",
       "in_session": false,
       "sell_allowed": false
@@ -80,7 +80,7 @@
     "v1519r_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-20 15:08:13",
+      "now": "2026-05-20 15:09:06",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -118,7 +118,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-20 15:08:13",
+        "now": "2026-05-20 15:09:06",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -133,7 +133,7 @@
       "capital_attack_allowed": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-20 15:08:13",
+        "now": "2026-05-20 15:09:06",
         "phase": "after_close",
         "in_session": false,
         "sell_allowed": false
@@ -141,7 +141,7 @@
       "v1519r_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-20 15:08:13",
+        "now": "2026-05-20 15:09:06",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -331,7 +331,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 289.79,
+      "fallback_age_hours": 289.8,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -6808,6 +6808,28 @@
       "qty": "--",
       "price": "42.58",
       "note": "limit_up_not_fillable pct=10% limit=10%; \u65e7\u6267\u884c\u5c42\u8bef\u6309\u6da8\u505c\u6210\u4ea4\uff0c\u5df2\u64a4\u56de\u4e3a\u672a\u6210\u4ea4\u8bb0\u5f55"
+    },
+    {
+      "date": "2026-05-20",
+      "time": "15:08:53",
+      "type": "USER_MANUAL_BUY",
+      "code": "603308",
+      "name": "????",
+      "action": "??????????V151????",
+      "qty": "100",
+      "price": "73.541",
+      "note": "?????100????73.541?????73.49?A?T+1????????????"
+    },
+    {
+      "date": "2026-05-20",
+      "time": "15:08:53",
+      "type": "USER_MANUAL_BUY",
+      "code": "688001",
+      "name": "????",
+      "action": "??????????V151????",
+      "qty": "200",
+      "price": "61.336",
+      "note": "?????200????61.336?????61.31?A?T+1????????????"
     }
   ],
   "closed_orders": [],
