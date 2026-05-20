@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-21 06:07:12",
-  "source_generated_at": "2026-05-21 06:07:12",
-  "market_environment_updated_at": "2026-05-21 06:07:12",
+  "generated_at": "2026-05-21 06:08:09",
+  "source_generated_at": "2026-05-21 06:08:09",
+  "market_environment_updated_at": "2026-05-21 06:08:09",
   "initial_capital": "5.00\u4e07",
   "total_pnl": "69.70",
   "total_pnl_pct": "0.14%",
@@ -60,7 +60,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 06:07:12",
+      "now": "2026-05-21 06:08:09",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -75,7 +75,7 @@
     "capital_attack_allowed": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 06:07:12",
+      "now": "2026-05-21 06:08:09",
       "phase": "pre_open",
       "in_session": false,
       "sell_allowed": false
@@ -83,7 +83,7 @@
     "v1519r_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 06:07:12",
+      "now": "2026-05-21 06:08:09",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -121,7 +121,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 06:07:12",
+        "now": "2026-05-21 06:08:09",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -136,7 +136,7 @@
       "capital_attack_allowed": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 06:07:12",
+        "now": "2026-05-21 06:08:09",
         "phase": "pre_open",
         "in_session": false,
         "sell_allowed": false
@@ -144,7 +144,7 @@
       "v1519r_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 06:07:12",
+        "now": "2026-05-21 06:08:09",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -386,7 +386,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 304.77,
+      "fallback_age_hours": 304.79,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1710,7 +1710,7 @@
         "score": 41.19,
         "reasons": [
           "\u6f5c\u529b47.92/\u4e1a\u52a148/\u5f3a\u5ea637.84",
-          "V151.9\u8d44\u91d139.91",
+          "V151.9\u8d44\u91d139.9",
           "60\u65e50.89",
           "\u6da8\u5e450.18%",
           "\u5f3a\u5019\u9009"
@@ -1721,7 +1721,7 @@
         "expectation_position_mult": 1.0,
         "expectation_position_text": "1\u4ed3",
         "expectation_action": "\u6b63\u5e38\u4ed3",
-        "expectation_reason": "\u6f5c\u529b47.92/\u4e1a\u52a148/\u5f3a\u5ea637.84\uff1bV151.9\u8d44\u91d139.91\uff1b60\u65e50.89\uff1b\u6da8\u5e450.18%\uff1b\u5f3a\u5019\u9009",
+        "expectation_reason": "\u6f5c\u529b47.92/\u4e1a\u52a148/\u5f3a\u5ea637.84\uff1bV151.9\u8d44\u91d139.9\uff1b60\u65e50.89\uff1b\u6da8\u5e450.18%\uff1b\u5f3a\u5019\u9009",
         "expectation_policy": "V151.15-B\uff1a\u4f4e\u9884\u671f0.5\u4ed3\uff0c\u4e2d\u95f41.0\u4ed3\uff0c\u9ad8\u9884\u671f1.3\u4ed3\uff1b\u4ec5\u7eb8\u9762\u4ed3\u4f4d\u5efa\u8bae\uff0c\u4e0d\u6539\u6838\u5fc3\u4e70\u5356\u3002"
       },
       "603738": {
@@ -3198,7 +3198,7 @@
         "score": 41.19,
         "reasons": [
           "\u6f5c\u529b47.92/\u4e1a\u52a148/\u5f3a\u5ea637.84",
-          "V151.9\u8d44\u91d139.91",
+          "V151.9\u8d44\u91d139.9",
           "60\u65e50.89",
           "\u6da8\u5e450.18%",
           "\u5f3a\u5019\u9009"
@@ -3209,7 +3209,7 @@
         "expectation_position_mult": 1.0,
         "expectation_position_text": "1\u4ed3",
         "expectation_action": "\u6b63\u5e38\u4ed3",
-        "expectation_reason": "\u6f5c\u529b47.92/\u4e1a\u52a148/\u5f3a\u5ea637.84\uff1bV151.9\u8d44\u91d139.91\uff1b60\u65e50.89\uff1b\u6da8\u5e450.18%\uff1b\u5f3a\u5019\u9009",
+        "expectation_reason": "\u6f5c\u529b47.92/\u4e1a\u52a148/\u5f3a\u5ea637.84\uff1bV151.9\u8d44\u91d139.9\uff1b60\u65e50.89\uff1b\u6da8\u5e450.18%\uff1b\u5f3a\u5019\u9009",
         "expectation_policy": "V151.15-B\uff1a\u4f4e\u9884\u671f0.5\u4ed3\uff0c\u4e2d\u95f41.0\u4ed3\uff0c\u9ad8\u9884\u671f1.3\u4ed3\uff1b\u4ec5\u7eb8\u9762\u4ed3\u4f4d\u5efa\u8bae\uff0c\u4e0d\u6539\u6838\u5fc3\u4e70\u5356\u3002"
       },
       {
