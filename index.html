@@ -148,11 +148,37 @@ const $ = id => document.getElementById(id);
 const esc = v => String(v ?? "--").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const txt = v => (v === undefined || v === null || v === "") ? "--" : String(v);
 const num = v => { const x = parseFloat(String(v ?? "").replace(/[,%]/g,"")); return Number.isFinite(x) ? x : 0; };
+const NAME_MAP = {
+  "300885":"\u6d77\u660c\u65b0\u6750","603308":"\u5e94\u6d41\u80a1\u4efd","688001":"\u534e\u5174\u6e90\u521b","000593":"\u5fb7\u9f99\u6c47\u80fd",
+  "603618":"\u676d\u7535\u80a1\u4efd","300390":"\u5929\u534e\u65b0\u80fd","300042":"\u6717\u79d1\u79d1\u6280","688313":"\u4ed5\u4f73\u5149\u5b50"
+};
+const TEXT_MAP = {
+  "MODEL_AUTO_BUY":"\u6a21\u578b\u6a21\u62df\u4e70\u5165","MODEL_AUTO_SELL":"\u6a21\u578b\u6a21\u62df\u5356\u51fa","MODEL_EXPECTATION_REDUCE":"V151.15-B\u4f4e\u9884\u671f\u6a21\u62df\u51cf\u4ed3",
+  "MODEL_BUY_NOT_FILLED":"\u4e70\u5165\u4fe1\u53f7\u672a\u6210\u4ea4","USER_MANUAL_BUY":"\u7528\u6237\u5b9e\u76d8\u624b\u52a8\u4e70\u5165","T1_BLOCKED_STOP":"T+1\u9501\u5b9a\uff0c\u6682\u4e0d\u6a21\u62df\u5356\u51fa",
+  "T1_BLOCKED_EXPECTATION_REDUCE":"T+1\u9501\u5b9a\uff0c\u6682\u4e0d\u6a21\u62df\u51cf\u4ed3","STOP_DEFERRED_OUT_OF_SESSION":"\u975e\u8fde\u7eed\u4ea4\u6613\u65f6\u6bb5\uff0c\u6682\u4e0d\u6a21\u62df\u5356\u51fa",
+  "EXPECTATION_REDUCE_DEFERRED":"\u975e\u8fde\u7eed\u4ea4\u6613\u65f6\u6bb5\uff0c\u4f4e\u9884\u671f\u51cf\u4ed3\u6682\u7f13","REAL_ACCOUNT_MANUAL_BUY_MONITORED":"\u5b9e\u76d8\u624b\u52a8\u4e70\u5165\uff0cV151\u8d1f\u8d23\u76d1\u63a7\u9000\u51fa",
+  "USER_MANUAL_CONFIRMED":"\u7528\u6237\u5df2\u624b\u52a8\u786e\u8ba4","V151.9R_REJECT_RECOVERY_TRIAL":"V151.9-R\u8bef\u62d2\u7edd\u4fee\u6b63\u89c2\u5bdf\u4ed3",
+  "MODEL_AUTO_LOCAL_STRUCTURE":"\u6a21\u578b\u672c\u5730\u7ed3\u6784\u4fe1\u53f7","MODEL_AUTO":"\u6a21\u578b\u81ea\u52a8\u4fe1\u53f7","ok":"\u6b63\u5e38","below_cost":"\u4f4e\u4e8e\u6210\u672c","defense":"\u8dcc\u7834\u9632\u5b88\u7ebf","strict":"\u8dcc\u7834\u4e25\u683c\u7ebf","flow_exit":"\u8d44\u91d1\u8f6c\u5f31/\u9000\u51fa\u76d1\u63a7",
+  "observe":"\u89c2\u5bdf","HOT":"\u5e02\u573a\u504f\u70ed","WARM":"\u5e02\u573a\u504f\u6696","NEUTRAL":"\u5e02\u573a\u4e2d\u6027","COLD":"\u5e02\u573a\u504f\u51b7","RISK_OFF":"\u98ce\u9669\u9000\u6f6e",
+  "BROAD_INFLOW":"\u8d44\u91d1\u6269\u6563\u8fdb\u653b","STRUCTURAL_INFLOW":"\u7ed3\u6784\u6027\u6d41\u5165","OUTFLOW":"\u8d44\u91d1\u9000\u6f6e","CROWDING":"\u8d44\u91d1\u62b1\u56e2"
+};
+function badText(v){ const s = String(v ?? ""); return /\?{2,}|�|鑲|浠|閫|鎸|倉|琛|鐩|妯|闂|绱|璧|涓|鍏|堢|粨|鏃|鎵|寮/.test(s); }
+function cn(v){ const s = txt(v); if(TEXT_MAP[s]) return TEXT_MAP[s]; if(badText(s)) return "--"; return s; }
+function nameOf(code, name){ return NAME_MAP[String(code||"").padStart(6,"0")] || (badText(name) ? "--" : cn(name)); }
+function stateOf(v){ return TEXT_MAP[String(v||"")] || cn(v); }
+function sourceOf(v){ return TEXT_MAP[String(v||"")] || cn(v); }
+function actionOf(x){ return TEXT_MAP[String(x?.type||"")] || cn(x?.action) || cn(x?.type); }
+function noteOf(x){
+  const note = txt(x?.note);
+  if(!badText(note)) return cn(note);
+  if(String(x?.type) === "USER_MANUAL_BUY") return `\u622a\u56fe\u786e\u8ba4\uff1a${esc(x.qty)}\u80a1\uff0c\u6210\u672c${esc(x.price)}\uff1bA\u80a1T+1\uff0c\u5f53\u65e5\u53ea\u76d1\u63a7\u4e0d\u6a21\u62df\u5356\u51fa\u3002`;
+  return "\u65e7\u8bb0\u5f55\u5df2\u542f\u7528\u8fdc\u7aef\u4e2d\u6587\u663e\u793a\u5c42\u3002";
+}
 function tone(v){ const x = num(v); return x > 0 ? "up" : x < 0 ? "down" : "flat"; }
 function pill(text, cls="cyan", title=""){ return `<span class="pill ${cls}" title="${esc(title)}">${esc(text || "--")}</span>`; }
 function flowLabel(r){
   const label = r?.v1519_flow || [r?.hiddenflow_label, r?.hiddenflow_score].filter(Boolean).join(" ") || "--";
-  const s = String(label);
+  const s = cn(label);
   const good = s.includes("承接") || s.includes("主力净流") || s.includes("确认");
   const bad = s.includes("出货") || s.includes("撤退") || s.includes("风险");
   return pill(s, good ? "green" : bad ? "yellow" : "cyan", r?.hiddenflow_reason || r?.reason || "");
@@ -203,8 +229,8 @@ function renderEnv(data){
   const fg = env.fear_greed || {};
   const cap = env.capital_structure || {};
   const gate = data.paper_trading?.auto_buy_gate || data.auto_buy_gate || {};
-  $("envMarket").textContent = env.regime || "--";
-  $("envCapital").textContent = cap.label || cap.state || "--";
+  $("envMarket").textContent = cn(env.regime || "--");
+  $("envCapital").textContent = cn(cap.label || cap.state || "--");
   $("envFear").textContent = [fg.score, fg.label].filter(Boolean).join(" / ") || "--";
   $("fgPolicy").textContent = gate.fear_greed_hard_block_enabled ? "硬门控" : "背景/仓位";
   const blockers = (gate.blockers || []).map(zhBlocker);
@@ -234,7 +260,7 @@ function renderPositions(rows){
   $("posCount").textContent = (rows || []).length + " 只";
   $("positions").innerHTML = (rows && rows.length) ? rows.map(p => `
     <article class="pos">
-      <div class="pos-head"><div><b>${esc(p.code)} ${esc(p.name)}</b><small>${esc(p.state)}</small></div>${flowLabel(p)}</div>
+      <div class="pos-head"><div><b>${esc(p.code)} ${esc(nameOf(p.code,p.name))}</b><small>${esc(stateOf(p.state))}</small></div>${flowLabel(p)}</div>
       <div class="stats">
         <div class="mini"><span>数量</span><strong>${esc(p.qty)}</strong></div>
         <div class="mini"><span>成本</span><strong>${esc(p.cost)}</strong></div>
@@ -263,10 +289,10 @@ function renderLadder(graph){
   $("ladder").innerHTML = rows.length ? rows.map((g, idx) => {
     const nodes = (g.nodes || []).slice(0,8);
     return `<details ${idx < 3 ? "open" : ""}>
-      <summary><div><b>${esc(g.mainline)}</b><span class="muted"> · 龙头 ${esc(g.leader_code)} ${esc(g.leader_name)}</span></div><div>${pill((g.strong_candidates || 0)+" 强","cyan")} ${pill((g.green_count || 0)+" 绿资","green")} ${pill((g.promotion_count || 0)+" 晋级","yellow")}</div></summary>
+      <summary><div><b>${esc(cn(g.mainline))}</b><span class="muted"> · 龙头 ${esc(g.leader_code)} ${esc(nameOf(g.leader_code,g.leader_name))}</span></div><div>${pill((g.strong_candidates || 0)+" 强","cyan")} ${pill((g.green_count || 0)+" 绿资","green")} ${pill((g.promotion_count || 0)+" 晋级","yellow")}</div></summary>
       <div class="nodes">${nodes.map(n => {
         const cls = String(n.ladder_role || "").includes("龙头") ? "hot" : (String(n.v1519_flow || "").includes("承接") ? "good" : "");
-        return `<div class="node ${cls}"><div class="role">${esc(n.ladder_role || n.edge_label || "--")}</div><b>${esc(n.code)} ${esc(n.name)}</b><div class="${tone(n.rt_pct)}">${esc(n.rt_pct)} · ${esc(n.price)}</div><div>${flowLabel(n)}</div></div>`;
+        return `<div class="node ${cls}"><div class="role">${esc(cn(n.ladder_role || n.edge_label || "--"))}</div><b>${esc(n.code)} ${esc(nameOf(n.code,n.name))}</b><div class="${tone(n.rt_pct)}">${esc(n.rt_pct)} · ${esc(n.price)}</div><div>${flowLabel(n)}</div></div>`;
       }).join("")}</div>
     </details>`;
   }).join("") : `<div class="empty">暂无主线梯队网。</div>`;
@@ -280,8 +306,8 @@ function renderIntraday(rows){
   const primary = list.filter(goodIntraday).slice(0,16);
   const other = list.filter(r => !goodIntraday(r)).slice(0,30);
   $("intradayCount").textContent = primary.length + " 条";
-  $("intraday").innerHTML = primary.length ? primary.map(r => `<tr><td><b>${esc(r.code)}</b></td><td class="name">${esc(r.name)}</td><td>${pill(r.label || r.state,"green")}</td><td class="mainline">${esc([r.mainline || r.potential_mainline, r.industry_chain_node, r.candidate_tier].filter(Boolean).join(" / "))}</td><td>${flowLabel(r)}</td><td class="${tone(r.pct ?? r.rt_pct)}">${esc(r.pct ?? r.rt_pct)}</td><td>${esc(r.price)}</td></tr>`).join("") : rowEmpty(7,"暂无分时进攻确认/承接增强。");
-  $("intradayOther").innerHTML = other.length ? other.map(r => `<tr><td>${esc(r.code)}</td><td>${esc(r.name)}</td><td>${esc(r.label || r.state)}</td><td>${flowLabel(r)}</td><td class="mainline">${esc(compact(r.reason || r.hiddenflow_reason,70))}</td></tr>`).join("") : rowEmpty(5,"暂无其它异动。");
+  $("intraday").innerHTML = primary.length ? primary.map(r => `<tr><td><b>${esc(r.code)}</b></td><td class="name">${esc(nameOf(r.code,r.name))}</td><td>${pill(cn(r.label || r.state),"green")}</td><td class="mainline">${esc([cn(r.mainline || r.potential_mainline), cn(r.industry_chain_node), cn(r.candidate_tier)].filter(x=>x&&x!=="--").join(" / "))}</td><td>${flowLabel(r)}</td><td class="${tone(r.pct ?? r.rt_pct)}">${esc(r.pct ?? r.rt_pct)}</td><td>${esc(r.price)}</td></tr>`).join("") : rowEmpty(7,"暂无分时进攻确认/承接增强。");
+  $("intradayOther").innerHTML = other.length ? other.map(r => `<tr><td>${esc(r.code)}</td><td>${esc(nameOf(r.code,r.name))}</td><td>${esc(cn(r.label || r.state))}</td><td>${flowLabel(r)}</td><td class="mainline">${esc(compact(cn(r.reason || r.hiddenflow_reason),70))}</td></tr>`).join("") : rowEmpty(5,"暂无其它异动。");
 }
 function isPromotion(r){ const s = [r.label,r.action,r.tier,r.candidate_tier].join(" "); return s.includes("主线晋级") || s.includes("候选监控") || num(r.promotion_score) >= 70; }
 function renderPromo(promo){
@@ -289,14 +315,14 @@ function renderPromo(promo){
   const primary = list.filter(isPromotion).slice(0,16);
   const other = list.filter(r => !isPromotion(r)).slice(0,30);
   $("promoCount").textContent = primary.length + " 条";
-  $("promo").innerHTML = primary.length ? primary.map(r => `<tr><td><b>${esc(r.code)}</b></td><td class="name">${esc(r.name)}</td><td class="mainline">${esc([r.mainline,r.node].filter(Boolean).join(" / "))}</td><td>${pill(r.label || r.action,"green")}</td><td>${esc(r.promotion_score)}</td><td>${flowLabel(r)}</td><td>${expectLabel(r)}</td><td class="${tone(r.rt_pct)}">${esc(r.rt_pct)}</td></tr>`).join("") : rowEmpty(8,"暂无主线晋级候选。");
-  $("promoOther").innerHTML = other.length ? other.map(r => `<tr><td>${esc(r.code)}</td><td>${esc(r.name)}</td><td>${esc(r.label || r.action)}</td><td class="mainline">${esc(compact(r.blockers || r.reason,80))}</td></tr>`).join("") : rowEmpty(4,"暂无其它晋级观察。");
+  $("promo").innerHTML = primary.length ? primary.map(r => `<tr><td><b>${esc(r.code)}</b></td><td class="name">${esc(nameOf(r.code,r.name))}</td><td class="mainline">${esc([cn(r.mainline),cn(r.node)].filter(x=>x&&x!=="--").join(" / "))}</td><td>${pill(cn(r.label || r.action),"green")}</td><td>${esc(r.promotion_score)}</td><td>${flowLabel(r)}</td><td>${expectLabel(r)}</td><td class="${tone(r.rt_pct)}">${esc(r.rt_pct)}</td></tr>`).join("") : rowEmpty(8,"暂无主线晋级候选。");
+  $("promoOther").innerHTML = other.length ? other.map(r => `<tr><td>${esc(r.code)}</td><td>${esc(nameOf(r.code,r.name))}</td><td>${esc(cn(r.label || r.action))}</td><td class="mainline">${esc(compact(cn(r.blockers || r.reason),80))}</td></tr>`).join("") : rowEmpty(4,"暂无其它晋级观察。");
 }
 function renderHistory(rows){
-  $("history").innerHTML = (rows && rows.length) ? rows.slice().reverse().slice(0,20).map(x => `<div class="hist"><span>${esc(x.date)} ${esc(x.time)} · ${esc(x.type)}</span><strong>${esc(x.code)} ${esc(x.name)} ${esc(x.action)}</strong><span>${esc(x.qty)} 股 / ${esc(x.price)} · ${esc(compact(x.note,88))}</span></div>`).join("") : `<div class="empty">暂无两天内操作记录。</div>`;
+  $("history").innerHTML = (rows && rows.length) ? rows.slice().reverse().slice(0,20).map(x => `<div class="hist"><span>${esc(x.date)} ${esc(x.time)} · ${esc(cn(x.type))}</span><strong>${esc(x.code)} ${esc(nameOf(x.code,x.name))} ${esc(actionOf(x))}</strong><span>${esc(x.qty)} 股 / ${esc(x.price)} · ${esc(compact(noteOf(x),88))}</span></div>`).join("") : `<div class="empty">暂无两天内操作记录。</div>`;
 }
 function renderClosed(rows){
-  $("closed").innerHTML = (rows && rows.length) ? rows.slice().reverse().slice(0,20).map(x => `<div class="hist"><span>${esc(x.date)} ${esc(x.time)}</span><strong>${esc(x.code)} ${esc(x.name)} 卖出 ${esc(x.qty)} 股</strong><span>${esc(x.buy_price)} → ${esc(x.sell_price)} / ${esc(x.pnl_amount)} / ${esc(x.pnl_pct)} · ${esc(x.reason)}</span></div>`).join("") : `<div class="empty">暂无已卖出历史订单。</div>`;
+  $("closed").innerHTML = (rows && rows.length) ? rows.slice().reverse().slice(0,20).map(x => `<div class="hist"><span>${esc(x.date)} ${esc(x.time)}</span><strong>${esc(x.code)} ${esc(nameOf(x.code,x.name))} 卖出 ${esc(x.qty)} 股</strong><span>${esc(x.buy_price)} → ${esc(x.sell_price)} / ${esc(x.pnl_amount)} / ${esc(x.pnl_pct)} · ${esc(cn(x.reason))}</span></div>`).join("") : `<div class="empty">暂无已卖出历史订单。</div>`;
 }
 function sig(rows){ return (rows || []).map(p => [p.code,p.qty,p.cost,p.price,p.state].join(":")).join("|"); }
 function render(data){
