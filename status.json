@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-20 23:46:21",
-  "source_generated_at": "2026-05-20 23:46:21",
-  "market_environment_updated_at": "2026-05-20 23:46:21",
+  "generated_at": "2026-05-20 23:48:18",
+  "source_generated_at": "2026-05-20 23:48:18",
+  "market_environment_updated_at": "2026-05-20 23:48:18",
   "initial_capital": "5.00\u4e07",
   "total_pnl": "69.70",
   "total_pnl_pct": "0.14%",
@@ -60,7 +60,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-20 23:46:21",
+      "now": "2026-05-20 23:48:18",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -75,7 +75,7 @@
     "capital_attack_allowed": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-20 23:46:21",
+      "now": "2026-05-20 23:48:18",
       "phase": "after_close",
       "in_session": false,
       "sell_allowed": false
@@ -83,7 +83,7 @@
     "v1519r_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-20 23:46:21",
+      "now": "2026-05-20 23:48:18",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -121,7 +121,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-20 23:46:21",
+        "now": "2026-05-20 23:48:18",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -136,7 +136,7 @@
       "capital_attack_allowed": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-20 23:46:21",
+        "now": "2026-05-20 23:48:18",
         "phase": "after_close",
         "in_session": false,
         "sell_allowed": false
@@ -144,7 +144,7 @@
       "v1519r_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-20 23:46:21",
+        "now": "2026-05-20 23:48:18",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -386,7 +386,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 298.42,
+      "fallback_age_hours": 298.46,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -4066,7 +4066,7 @@
             "rt_pct": "-2.30%",
             "intraday_state": "INTRADAY_RISK",
             "intraday_label": "\u5206\u65f6\u98ce\u9669",
-            "intraday_score": 25.0,
+            "intraday_score": 17.0,
             "day_location_pct": 13.1,
             "ladder_score": 37.73,
             "v1519_flow": "\u62c9\u9ad8\u51fa\u8d27/\u5047\u7a81\u7834\u98ce\u9669 16",
@@ -4203,7 +4203,7 @@
             "rt_pct": "-3.14%",
             "intraday_state": "WAIT_CONFIRM",
             "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-            "intraday_score": 41.0,
+            "intraday_score": 33.0,
             "day_location_pct": 52.9,
             "ladder_score": 31.5,
             "v1519_flow": "\u62c9\u9ad8\u51fa\u8d27/\u5047\u7a81\u7834\u98ce\u9669 8",
