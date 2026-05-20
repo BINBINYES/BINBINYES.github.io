@@ -1,8 +1,8 @@
 {
   "schema_version": "v151.remote.v1",
-  "generated_at": "2026-05-20 12:37:20",
-  "source_generated_at": "2026-05-20 12:37:20",
-  "market_environment_updated_at": "2026-05-20 12:37:20",
+  "generated_at": "2026-05-20 12:38:27",
+  "source_generated_at": "2026-05-20 12:38:27",
+  "market_environment_updated_at": "2026-05-20 12:38:27",
   "initial_capital": "5.00\u4e07",
   "total_pnl": "112.00",
   "total_pnl_pct": "0.22%",
@@ -77,12 +77,12 @@
     "regime": "NEUTRAL",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 51,
+      "score": 55,
       "label": "\u4e2d\u6027",
       "components": {
         "breadth": 53,
         "market_return": 59,
-        "limit_up_down": 29,
+        "limit_up_down": 50,
         "candidate_mood": 45,
         "mainline_heat": 80
       },
@@ -103,7 +103,7 @@
         "avg=0.71",
         "strong_up=28.95",
         "strong_down=18.42",
-        "limit=41.0/13.0",
+        "limit=1.0/0",
         "top_mainline_share=0.2833",
         "candidate_avg=0.27"
       ],
@@ -187,20 +187,17 @@
       "strong_up_pct": 28.95,
       "strong_down_pct": 18.42,
       "avg_pct": 0.71,
-      "limit_up_count": 41,
-      "limit_down_count": 13,
+      "limit_up_count": 1,
+      "limit_down_count": 0,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 287.27,
+      "fallback_age_hours": 287.29,
       "universe_cache_stale": true,
-      "full_market_live_message": "universe seed too small: 1476",
-      "limit_count_source": "eastmoney_limit_pool",
-      "limit_count_qdate": "20260520",
-      "limit_count_message": "eastmoney limit pools"
+      "full_market_live_message": "universe seed too small: 1476"
     },
     "candidate_mood": {
       "sample_size": 16,
@@ -360,7 +357,7 @@
       ],
       "message": "\u5c40\u90e8\u7ed3\u6784\u70ed\u5ea6\u6765\u81ea\u5f53\u524d\u76d1\u63a7\u6c60\u5b9e\u65f6\u62a5\u4ef7\uff0c\u4ec5\u7528\u4e8e\u8bca\u65ad\u5168\u5e02\u573a\u4ee3\u7406\u662f\u5426\u63a9\u76d6\u677f\u5757\u5f3a\u5f31\u3002"
     },
-    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=51, breadth_up=52.63, budget_x=0.6"
+    "summary": "V151.6 market=NEUTRAL, capital=BALANCED, attack=False, fear_greed=55, breadth_up=52.63, budget_x=0.6"
   },
   "mainline_ladder_graph": {
     "enabled": true,
