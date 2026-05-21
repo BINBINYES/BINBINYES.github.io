@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-21 20:24:15",
-  "source_generated_at": "2026-05-21 20:24:15",
-  "market_environment_updated_at": "2026-05-21 20:24:15",
+  "generated_at": "2026-05-21 20:25:11",
+  "source_generated_at": "2026-05-21 20:25:11",
+  "market_environment_updated_at": "2026-05-21 20:25:11",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -548,7 +548,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 20:24:15",
+      "now": "2026-05-21 20:25:11",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -639,7 +639,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 20:24:15",
+      "now": "2026-05-21 20:25:11",
       "phase": "after_close",
       "in_session": false,
       "sell_allowed": false
@@ -674,7 +674,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 20:24:15",
+      "now": "2026-05-21 20:25:11",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -714,7 +714,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 20:24:15",
+        "now": "2026-05-21 20:25:11",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -805,7 +805,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 20:24:15",
+        "now": "2026-05-21 20:25:11",
         "phase": "after_close",
         "in_session": false,
         "sell_allowed": false
@@ -840,7 +840,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 20:24:15",
+        "now": "2026-05-21 20:25:11",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1010,7 +1010,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 319.05,
+      "fallback_age_hours": 319.07,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1026,7 +1026,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-21 20:24:13",
+      "as_of": "2026-05-21 20:25:11",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -2221,21 +2221,21 @@
       },
       "688025": {
         "code": "688025",
-        "score": 38.0,
+        "score": 37.9,
         "reasons": [
           "\u6f5c\u529b48.98/\u4e1a\u52a136/\u5f3a\u5ea684.72",
-          "\u8d44\u91d1\u627f\u63a549.06",
+          "\u8d44\u91d1\u627f\u63a548.51",
           "60\u65e5134.63",
           "\u6da8\u5e45-6.29%",
           "\u5f3a\u5019\u9009"
         ],
         "name": "\u6770\u666e\u7279",
-        "expectation_score": 38.0,
+        "expectation_score": 37.9,
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_position_mult": 1.0,
         "expectation_position_text": "1\u4ed3",
         "expectation_action": "\u6b63\u5e38\u4ed3",
-        "expectation_reason": "\u6f5c\u529b48.98/\u4e1a\u52a136/\u5f3a\u5ea684.72\uff1b\u8d44\u91d1\u627f\u63a549.06\uff1b60\u65e5134.63\uff1b\u6da8\u5e45-6.29%\uff1b\u5f3a\u5019\u9009",
+        "expectation_reason": "\u6f5c\u529b48.98/\u4e1a\u52a136/\u5f3a\u5ea684.72\uff1b\u8d44\u91d1\u627f\u63a548.51\uff1b60\u65e5134.63\uff1b\u6da8\u5e45-6.29%\uff1b\u5f3a\u5019\u9009",
         "expectation_policy": "\u9884\u671f\u4ed3\u4f4d\uff1a\u4f4e\u9884\u671f0.5\u4ed3\uff0c\u4e2d\u95f41.0\u4ed3\uff0c\u9ad8\u9884\u671f1.3\u4ed3\uff1b\u4ec5\u7eb8\u9762\u4ed3\u4f4d\u5efa\u8bae\uff0c\u4e0d\u6539\u6838\u5fc3\u4e70\u5356\u3002"
       },
       "603026": {
@@ -3132,21 +3132,21 @@
       },
       {
         "code": "688025",
-        "score": 38.0,
+        "score": 37.9,
         "reasons": [
           "\u6f5c\u529b48.98/\u4e1a\u52a136/\u5f3a\u5ea684.72",
-          "\u8d44\u91d1\u627f\u63a549.06",
+          "\u8d44\u91d1\u627f\u63a548.51",
           "60\u65e5134.63",
           "\u6da8\u5e45-6.29%",
           "\u5f3a\u5019\u9009"
         ],
         "name": "\u6770\u666e\u7279",
-        "expectation_score": 38.0,
+        "expectation_score": 37.9,
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_position_mult": 1.0,
         "expectation_position_text": "1\u4ed3",
         "expectation_action": "\u6b63\u5e38\u4ed3",
-        "expectation_reason": "\u6f5c\u529b48.98/\u4e1a\u52a136/\u5f3a\u5ea684.72\uff1b\u8d44\u91d1\u627f\u63a549.06\uff1b60\u65e5134.63\uff1b\u6da8\u5e45-6.29%\uff1b\u5f3a\u5019\u9009",
+        "expectation_reason": "\u6f5c\u529b48.98/\u4e1a\u52a136/\u5f3a\u5ea684.72\uff1b\u8d44\u91d1\u627f\u63a548.51\uff1b60\u65e5134.63\uff1b\u6da8\u5e45-6.29%\uff1b\u5f3a\u5019\u9009",
         "expectation_policy": "\u9884\u671f\u4ed3\u4f4d\uff1a\u4f4e\u9884\u671f0.5\u4ed3\uff0c\u4e2d\u95f41.0\u4ed3\uff0c\u9ad8\u9884\u671f1.3\u4ed3\uff1b\u4ec5\u7eb8\u9762\u4ed3\u4f4d\u5efa\u8bae\uff0c\u4e0d\u6539\u6838\u5fc3\u4e70\u5356\u3002"
       },
       {
@@ -5406,9 +5406,9 @@
             "expectation_position_mult": 1.0,
             "price": "14.23",
             "rt_pct": "-2.13%",
-            "intraday_state": "INTRADAY_RISK",
-            "intraday_label": "\u5206\u65f6\u98ce\u9669",
-            "intraday_score": 29.0,
+            "intraday_state": "WAIT_CONFIRM",
+            "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
+            "intraday_score": 37.0,
             "day_location_pct": 2.8,
             "ladder_score": 33.66,
             "v1519_flow": "\u627f\u63a5\u589e\u5f3a 74",
@@ -5764,6 +5764,27 @@
       "reason": "\u9760\u8fd1\u65e5\u5185\u4f4e\u4f4d 21%\uff1bV151.9 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 88"
     },
     {
+      "code": "600396",
+      "name": "\u534e\u7535\u8fbd\u80fd",
+      "state": "WAIT_CONFIRM",
+      "label": "\u7b49\u5f85\u786e\u8ba4",
+      "score": "37.0",
+      "v1519_flow": "\u627f\u63a5\u589e\u5f3a 74",
+      "rt_pct": "-2.13%",
+      "price": "14.23",
+      "pct_delta": "0.00\u4e2a\u767e\u5206\u70b9",
+      "day_location": "3%",
+      "pool": "\u7535\u529b\u7535\u7f51\u8bbe\u5907-\u7535\u529b\u8fd0\u8425 / \u5019\u9009",
+      "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -0.17%\uff1b\u4e3b\u529b\u51c0\u989d -0.05\u4ebf\uff1b\u5927\u5355\u51c0\u989d -0.52\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 52.46%\uff1bVWAP\u504f\u79bb 2.51%\uff1b\u6536\u76d8\u4f4d\u7f6e 0.79",
+      "pool_reason": "no hard veto, still paper monitoring only",
+      "expectation_label": "\u6b63\u5e38\u9884\u671f",
+      "expectation_score": 39.15,
+      "expectation_position_text": "1\u4ed3",
+      "expectation_reason": "\u6f5c\u529b32.52/\u4e1a\u52a124/\u5f3a\u5ea6100\uff1b\u8d44\u91d1\u627f\u63a573.95\uff1b\u6da8\u5e453.95%\uff1b\u5019\u9009",
+      "action": "WAIT",
+      "reason": "\u9760\u8fd1\u65e5\u5185\u4f4e\u4f4d 3%\uff1bV151.9 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 74"
+    },
+    {
       "code": "300819",
       "name": "\u805a\u6770\u5fae\u7ea4",
       "state": "WAIT_CONFIRM",
@@ -5846,27 +5867,6 @@
       "expectation_reason": "\u6f5c\u529b54.45/\u4e1a\u52a172/\u5f3a\u5ea643.74\uff1b\u8d44\u91d1\u627f\u63a584.07\uff1b\u664b\u7ea752.08\uff1b\u6da8\u5e45-0.5%\uff1b\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
       "action": "AVOID_OR_REDUCE_WATCH",
       "reason": "\u9760\u8fd1\u65e5\u5185\u4f4e\u4f4d 15%"
-    },
-    {
-      "code": "600396",
-      "name": "\u534e\u7535\u8fbd\u80fd",
-      "state": "INTRADAY_RISK",
-      "label": "\u5206\u65f6\u98ce\u9669",
-      "score": "29.0",
-      "v1519_flow": "\u627f\u63a5\u589e\u5f3a 74",
-      "rt_pct": "-2.13%",
-      "price": "14.23",
-      "pct_delta": "0.00\u4e2a\u767e\u5206\u70b9",
-      "day_location": "3%",
-      "pool": "\u7535\u529b\u7535\u7f51\u8bbe\u5907-\u7535\u529b\u8fd0\u8425 / \u5019\u9009",
-      "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -0.17%\uff1b\u4e3b\u529b\u51c0\u989d -0.05\u4ebf\uff1b\u5927\u5355\u51c0\u989d -0.52\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 52.46%\uff1bVWAP\u504f\u79bb 2.51%\uff1b\u6536\u76d8\u4f4d\u7f6e 0.79",
-      "pool_reason": "no hard veto, still paper monitoring only",
-      "expectation_label": "\u6b63\u5e38\u9884\u671f",
-      "expectation_score": 39.15,
-      "expectation_position_text": "1\u4ed3",
-      "expectation_reason": "\u6f5c\u529b32.52/\u4e1a\u52a124/\u5f3a\u5ea6100\uff1b\u8d44\u91d1\u627f\u63a573.95\uff1b\u6da8\u5e453.95%\uff1b\u5019\u9009",
-      "action": "AVOID_OR_REDUCE_WATCH",
-      "reason": "\u4e3b\u529b\u51c0\u989d\u8f83\u4e0a\u4e00\u8f6e\u8f6c\u5f31\uff1b\u9760\u8fd1\u65e5\u5185\u4f4e\u4f4d 3%\uff1bV151.9 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 74"
     },
     {
       "code": "688275",
