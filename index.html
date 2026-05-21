@@ -487,7 +487,9 @@ function renderEnv(data){
   $("gateBadge").className = "pill " + (canBuy ? "green" : "yellow");
   const blockers = uniq([...(gate.hard_blockers || []), ...(gate.blockers || []), ...(gate.promotion_blockers || [])]).map(O.blocker);
   const warnings = uniq(gate.warnings || []).map(O.blocker);
+  const guard = gate.v152_account_guard || {};
   const content = [];
+  if(guard.enabled) content.push(`<span>账户闭环：</span>${O.pill(`回撤${guard.drawdown_pct ?? "--"}%`,"cyan")}${O.pill(`攻击上限${Number(guard.attack_weight || 0) * 100}%`, Number(guard.attack_weight || 0) <= 0 ? "red" : Number(guard.attack_weight || 0) < 1 ? "yellow" : "green")}${O.pill(`可用${guard.available_attack_cash ?? "--"}`,"cyan")}`);
   if(blockers.length) content.push(`<span>阻断：</span>${blockers.slice(0,5).map(x => O.pill(x,"yellow")).join("")}`);
   if(warnings.length) content.push(`<span>提示：</span>${warnings.slice(0,4).map(x => O.pill(x,"cyan")).join("")}`);
   if(!content.length) content.push(`<span>当前没有旧门控诊断项。</span>`);
