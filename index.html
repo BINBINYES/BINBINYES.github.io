@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>V151 远端赛博监控台</title>
+<title>V152 远端赛博监控台</title>
 <style>
 :root{
   color-scheme:dark;
@@ -144,12 +144,16 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 .hist{border-left:3px solid var(--cyan);background:rgba(3,8,18,.45);padding:9px 10px;border-radius:7px;min-width:0}
 .hist strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hist span{display:block;color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.service-card{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.46);padding:9px;min-width:0}
+.service-card b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.service-card span{display:block;color:var(--muted);font-size:12px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:1280px){
   .two,.tables-grid{grid-template-columns:1fr}
   .node-line{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:980px){
-  .grid,.envgrid,.cards{grid-template-columns:1fr 1fr}
+  .grid,.envgrid,.cards,.service-grid{grid-template-columns:1fr 1fr}
   .top{display:block}
   .statusbar{justify-content:flex-start;margin-top:12px}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -157,7 +161,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 }
 @media(max-width:640px){
   .wrap{width:calc(100vw - 16px)}
-  .grid,.envgrid,.cards,.node-line{grid-template-columns:1fr}
+  .grid,.envgrid,.cards,.node-line,.service-grid{grid-template-columns:1fr}
   h1{font-size:24px}
 }
 </style>
@@ -166,7 +170,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 <main class="wrap">
   <header class="top">
     <div>
-      <h1>V151 远端赛博监控台</h1>
+      <h1>V152 远端赛博监控台</h1>
       <div class="sub">桌面模型自动同步，只做研究提醒与纸面模拟，不连接券商下单</div>
     </div>
     <div class="statusbar">
@@ -194,6 +198,11 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     <div id="gateNote" class="note">等待桌面端同步门控状态。</div>
   </section>
 
+  <section class="panel" id="moduleServicePanel">
+    <div class="panel-head"><h2>模型模块服务契约</h2><span id="moduleServiceCount" class="pill cyan">读取中</span></div>
+    <div id="moduleService" class="service-grid"></div>
+  </section>
+
   <section class="two">
     <div class="panel">
       <div class="panel-head"><h2>当前仓位</h2></div>
@@ -207,26 +216,26 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   </section>
 
   <section class="panel ladder">
-    <div class="panel-head"><h2>V151 主线梯队网</h2><span id="ladderCount" class="pill cyan">--</span></div>
+    <div class="panel-head"><h2>V152 主线梯队网</h2><span id="ladderCount" class="pill cyan">--</span></div>
     <div id="ladder"></div>
   </section>
 
   <section class="tables-grid">
     <div class="panel">
       <div class="toolbar">
-        <h2>V151.14 分时异动识别 <span id="intradayCount" class="pill green">--</span></h2>
+        <h2>分时异动识别 <span id="intradayCount" class="pill green">--</span></h2>
         <button class="linkbtn" data-fold="intradayMore">展开其它</button>
       </div>
       <div class="scroll">
         <table class="table-medium">
-          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:96px">状态</th><th>主线/等级</th><th style="width:132px">V151.9资金</th><th style="width:82px">涨幅</th><th style="width:86px">现价</th></tr></thead>
+          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:96px">状态</th><th>主线/等级</th><th style="width:132px">资金承接</th><th style="width:82px">涨幅</th><th style="width:86px">现价</th></tr></thead>
           <tbody id="intraday"></tbody>
         </table>
       </div>
       <div id="intradayMore" class="fold">
         <div class="scroll">
           <table class="table-small">
-            <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:110px">状态</th><th style="width:132px">V151.9资金</th><th>原因</th></tr></thead>
+            <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:110px">状态</th><th style="width:132px">资金承接</th><th>原因</th></tr></thead>
             <tbody id="intradayOther"></tbody>
           </table>
         </div>
@@ -234,12 +243,12 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     </div>
     <div class="panel">
       <div class="toolbar">
-        <h2>V151.5 主线晋级候选映射 <span id="promoCount" class="pill green">--</span></h2>
+        <h2>主线晋级候选映射 <span id="promoCount" class="pill green">--</span></h2>
         <button class="linkbtn" data-fold="promoMore">展开其它</button>
       </div>
       <div class="scroll">
         <table class="table-wide">
-          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th>主线</th><th style="width:122px">动作</th><th style="width:78px">晋级分</th><th style="width:132px">V151.9资金</th><th style="width:118px">预期</th><th style="width:82px">涨幅</th></tr></thead>
+          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th>主线</th><th style="width:122px">动作</th><th style="width:78px">晋级分</th><th style="width:132px">资金承接</th><th style="width:118px">预期</th><th style="width:82px">涨幅</th></tr></thead>
           <tbody id="promo"></tbody>
         </table>
       </div>
@@ -262,6 +271,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 
 <script>
 const $ = id => document.getElementById(id);
+let modelLabels = {};
 
 const Output = (() => {
   const names = {
@@ -269,6 +279,24 @@ const Output = (() => {
     "603618":"杭电股份","300390":"天华新能","300042":"朗科科技","688313":"仕佳光子"
   };
   const text = {
+    "V152_STABLE_ATTACK":"稳定攻击模型",
+    "V151.scan_read":"扫描读取",
+    "V151.ticklike":"准实时合并扫描",
+    "V151.ladder":"主线梯队",
+    "V151.15-B":"预期仓位",
+    "V151.14":"分时异动",
+    "V151.10":"市场诊断",
+    "V151.9-R":"误拒绝修正",
+    "V151.9R":"误拒绝修正",
+    "V151.9":"资金承接",
+    "V151.6":"市场环境",
+    "V151.5":"主线晋级",
+    "V151.4":"主线核心池",
+    "V151.3":"全市场环境",
+    "V151.2":"动态止损",
+    "V151.1":"主升浪调仓",
+    "V151.scan":"扫描读取",
+    "V151":"模型",
     MODEL_AUTO_BUY:"模型模拟买入",
     MODEL_AUTO_SELL:"模型模拟卖出",
     MODEL_EXPECTATION_REDUCE:"低预期模拟减仓",
@@ -276,9 +304,9 @@ const Output = (() => {
     USER_MANUAL_BUY:"用户实盘手动买入",
     USER_MANUAL_SELL:"用户实盘手动卖出",
     USER_MANUAL_CONFIRMED:"用户已手动确认",
-    REAL_ACCOUNT_MANUAL_BUY_MONITORED:"实盘手动买入，V151负责监控退出",
-    V151_9R_REJECT_RECOVERY_TRIAL:"V151.9-R误拒绝修正观察仓",
-    "V151.9R_REJECT_RECOVERY_TRIAL":"V151.9-R误拒绝修正观察仓",
+    REAL_ACCOUNT_MANUAL_BUY_MONITORED:"实盘手动买入，模型负责监控退出",
+    V151_9R_REJECT_RECOVERY_TRIAL:"误拒绝修正观察仓",
+    "资金承接R_REJECT_RECOVERY_TRIAL":"误拒绝修正观察仓",
     MODEL_AUTO_LOCAL_STRUCTURE:"模型本地结构信号",
     T1_BLOCKED_STOP:"T+1锁定，暂不模拟卖出",
     T1_BLOCKED_EXPECTATION_REDUCE:"T+1锁定，暂不模拟减仓",
@@ -326,7 +354,14 @@ const Output = (() => {
     const fallback = opt.fallback ?? "--";
     let s = raw(v).trim();
     if(!s || s === "--") return fallback;
+    if(modelLabels[s]) return modelLabels[s];
     if(text[s]) return text[s];
+    const adapterKeys = Object.keys(modelLabels || {});
+    const fallbackKeys = ["V152_STABLE_ATTACK","V151.scan_read","V151.ticklike","V151.ladder","V151.15-B","V151.14","V151.10","V151.9-R","V151.9R","V151.9","V151.6","V151.5","V151.4","V151.3","V151.2","V151.1","V151.scan","V151"];
+    for(const key of [...adapterKeys, ...fallbackKeys].sort((a,b)=>b.length-a.length)){
+      if(s.includes(key)) s = s.split(key).join(modelLabels[key] || text[key] || key);
+    }
+    s = s.replace(/\.v\d+/g,"");
     if(isBad(s)) return fallback;
     if(enumRe.test(s)) return opt.enumFallback ?? "系统信号";
     return s;
@@ -446,16 +481,17 @@ function renderEnv(data){
   $("envFear").textContent = O.zh(gate.fear_greed ?? fg.score ?? fg.value ?? "--");
   $("fgPolicy").textContent = O.zh(gate.fear_greed_policy || data.paper_trading_rules?.fear_greed_policy || "background_only_position_sizing");
 
-  const canBuy = Boolean(gate.can_auto_buy || gate.can_promotion_auto_buy);
-  $("gateBadge").textContent = canBuy ? "门控可放行" : "门控未放行";
+  const v152 = gate.v152_stable || {};
+  const canBuy = Boolean(v152.enabled || gate.can_v152_scan);
+  $("gateBadge").textContent = canBuy ? "V152独立门控" : "门控未启用";
   $("gateBadge").className = "pill " + (canBuy ? "green" : "yellow");
   const blockers = uniq([...(gate.hard_blockers || []), ...(gate.blockers || []), ...(gate.promotion_blockers || [])]).map(O.blocker);
   const warnings = uniq(gate.warnings || []).map(O.blocker);
   const content = [];
   if(blockers.length) content.push(`<span>阻断：</span>${blockers.slice(0,5).map(x => O.pill(x,"yellow")).join("")}`);
   if(warnings.length) content.push(`<span>提示：</span>${warnings.slice(0,4).map(x => O.pill(x,"cyan")).join("")}`);
-  if(!content.length) content.push(`<span>当前没有硬阻断。</span>`);
-  $("gateNote").innerHTML = `<div class="note-grid">${content.join("")}<span class="muted">恐贪只作为仓位背景，不直接硬拒绝主线晋级票。</span></div>`;
+  if(!content.length) content.push(`<span>当前没有旧门控诊断项。</span>`);
+  $("gateNote").innerHTML = `<div class="note-grid">${content.join("")}<span class="muted">V152使用独立行级门控；旧全局门控只保留诊断展示。</span></div>`;
 }
 
 function renderPositions(rows){
@@ -473,7 +509,7 @@ function renderPositions(rows){
         <div class="mini"><span>浮动</span><strong class="${pnlCls}">${O.esc(O.zh(p.pnl_amount))} / ${O.esc(O.zh(p.pnl_pct))}</strong></div>
         <div class="mini"><span>防守价</span><strong>${O.esc(O.zh(p.defense_price))}</strong></div>
         <div class="mini"><span>严格线</span><strong>${O.esc(O.zh(p.strict_price))}</strong></div>
-        <div class="mini"><span>V151.9资金</span><strong>${flowLabel(p)}</strong></div>
+        <div class="mini"><span>资金承接</span><strong>${flowLabel(p)}</strong></div>
         <div class="mini"><span>预期</span><strong>${expectationLabel(p)}</strong></div>
       </div>
     </div>`;
@@ -621,7 +657,69 @@ function renderClosed(rows){
 function positionSig(rows){
   return (rows || []).map(p => [p.code,p.qty,p.cost,p.price,p.state].join(":")).join("|");
 }
+
+const remoteModuleElementIds = {
+  market_environment:["envMarket","envCapital","envFear","gateNote"],
+  mainline_strength:["mainlines"],
+  positions:["positions"],
+  mainline_ladder:["ladder"],
+  intraday_anomaly:["intraday","intradayOther"],
+  mainline_promotion:["promo","promoOther"],
+  operation_history:["history"],
+  closed_orders:["closed"]
+};
+
+function moduleModeClass(mode){
+  if(mode === "core") return "green";
+  if(mode === "support") return "cyan";
+  if(mode === "diagnostic") return "yellow";
+  if(mode === "hidden") return "";
+  return "red";
+}
+
+function renderModuleService(data){
+  const contract = data?.model_adapter?.module_contract || {};
+  const modules = contract.modules || {};
+  const counts = contract.counts || {};
+  $("moduleServiceCount").textContent = `核心${counts.core || 0} / 支撑${counts.support || 0} / 诊断${counts.diagnostic || 0}`;
+  const priority = ["market_environment","mainline_strength","mainline_ladder","mainline_promotion","intraday_anomaly","positions","paper_trading","candidate_reason"];
+  const rows = priority.map(id => modules[id]).filter(Boolean);
+  $("moduleService").innerHTML = rows.length ? rows.map(m => `<div class="service-card" title="${O.esc(m.reason || "")}">
+    <b>${O.esc(O.zh(m.label || m.id))}</b>
+    <span>${O.pill(m.mode_label || m.mode, moduleModeClass(m.mode))} ${m.affects_trading ? "影响模型决策" : "不影响买卖"}</span>
+  </div>`).join("") : `<div class="empty">等待桌面端同步模型模块契约。</div>`;
+}
+
+function applyRemoteModuleVisibility(data){
+  const modules = data?.model_adapter?.module_contract?.modules || {};
+  Object.entries(remoteModuleElementIds).forEach(([mid, ids]) => {
+    const rule = modules[mid] || {};
+    const mode = String(rule.mode || "support");
+    const hide = mode === "hidden" || mode === "disabled";
+    ids.forEach(id => {
+      const el = $(id); if(!el) return;
+      const panel = el.closest(".panel") || el;
+      panel.style.display = hide ? "none" : "";
+      panel.dataset.modelMode = mode;
+      panel.title = rule.reason ? `${rule.mode_label || mode}：${rule.reason}` : (rule.mode_label || mode);
+    });
+  });
+}
+
+function applyModelAdapter(data){
+  const a = data?.model_adapter || {}, owner = data?.model_owner || {};
+  modelLabels = a.module_labels || {};
+  const title = a.remote_title || owner.remote_title || `${owner.display_name || a.display_name || "自适应模型"} 远端监控台`;
+  document.title = title;
+  const h1 = document.querySelector("h1"); if(h1) h1.textContent = title;
+  document.querySelectorAll(".panel-head h2").forEach(titleEl => {
+    if(/主线梯队/.test(titleEl.textContent || "")) titleEl.textContent = `${a.short_name || owner.short_name || owner.active_model || "模型"} 主线梯队网`;
+  });
+  applyRemoteModuleVisibility(data);
+}
+
 function render(data){
+  applyModelAdapter(data);
   $("dot").classList.toggle("ok", Boolean(data.remote_quote_available));
   $("remoteState").textContent = O.zh(data.remote_status_label || (data.remote_quote_available ? "行情连接可用" : "行情连接不可用"));
   $("updated").textContent = `已更新 ${O.zh(data.generated_at || data.source_generated_at)}`;
@@ -634,11 +732,12 @@ function render(data){
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
   renderHistory(data.operation_history_2d || []);
   renderClosed(data.closed_orders || []);
+  renderModuleService(data);
   const old = localStorage.getItem("v151.remote.positionSig") || "";
   const now = positionSig(data.positions || []);
   if(alarm && old && old !== now){
     ring();
-    notice("V151仓位变化", "模型买卖或仓位结构发生变化。");
+    notice("仓位变化", "模型买卖或仓位结构发生变化。");
   }
   localStorage.setItem("v151.remote.positionSig", now);
 }
@@ -665,3 +764,4 @@ setInterval(load, 60000);
 </script>
 </body>
 </html>
+
