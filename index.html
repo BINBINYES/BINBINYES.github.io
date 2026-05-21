@@ -659,6 +659,7 @@ function positionSig(rows){
 }
 
 const remoteModuleElementIds = {
+  portfolio_summary:["equity","floating","marketValue","realized"],
   market_environment:["envMarket","envCapital","envFear","gateNote"],
   mainline_strength:["mainlines"],
   positions:["positions"],
@@ -681,21 +682,23 @@ function renderModuleService(data){
   const contract = data?.model_adapter?.module_contract || {};
   const modules = contract.modules || {};
   const counts = contract.counts || {};
-  $("moduleServiceCount").textContent = `核心${counts.core || 0} / 支撑${counts.support || 0} / 诊断${counts.diagnostic || 0}`;
-  const priority = ["market_environment","mainline_strength","mainline_ladder","mainline_promotion","intraday_anomaly","positions","paper_trading","candidate_reason"];
-  const rows = priority.map(id => modules[id]).filter(Boolean);
+  $("moduleServiceCount").textContent = `V152服务：核心${counts.core || 0} / 支撑${counts.support || 0}`;
+  const priority = ["market_environment","mainline_strength","mainline_ladder","mainline_promotion","intraday_anomaly","positions","paper_trading","portfolio_summary","operation_history","closed_orders"];
+  const rows = priority.map(id => modules[id]).filter(m => m && ["core","support"].includes(String(m.mode)));
   $("moduleService").innerHTML = rows.length ? rows.map(m => `<div class="service-card" title="${O.esc(m.reason || "")}">
     <b>${O.esc(O.zh(m.label || m.id))}</b>
     <span>${O.pill(m.mode_label || m.mode, moduleModeClass(m.mode))} ${m.affects_trading ? "影响模型决策" : "不影响买卖"}</span>
-  </div>`).join("") : `<div class="empty">等待桌面端同步模型模块契约。</div>`;
+  </div>`).join("") : `<div class="empty">远端只显示为V152服务的核心/支撑模块。</div>`;
 }
 
 function applyRemoteModuleVisibility(data){
   const modules = data?.model_adapter?.module_contract?.modules || {};
+  const hasContract = Object.keys(modules).length > 0;
+  if(!hasContract) return;
   Object.entries(remoteModuleElementIds).forEach(([mid, ids]) => {
     const rule = modules[mid] || {};
-    const mode = String(rule.mode || "support");
-    const hide = mode === "hidden" || mode === "disabled";
+    const mode = String(rule.mode || "hidden");
+    const hide = !["core","support"].includes(mode);
     ids.forEach(id => {
       const el = $(id); if(!el) return;
       const panel = el.closest(".panel") || el;
