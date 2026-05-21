@@ -201,6 +201,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     </div>
     <div class="panel">
       <div class="panel-head"><h2>主线强度</h2></div>
+      <div id="mainlineMeta" class="muted" style="margin:-4px 0 10px">读取中</div>
       <div id="mainlines" class="mainline-list"></div>
     </div>
   </section>
@@ -479,13 +480,21 @@ function renderPositions(rows){
   }).join("") : `<div class="empty">暂无持仓。</div>`;
 }
 
-function renderMainlines(rows){
-  const list = (rows || []).slice(0,8);
+function renderMainlines(mainlines){
+  const meta = Array.isArray(mainlines) ? {} : (mainlines || {});
+  const rows = Array.isArray(mainlines) ? mainlines : (meta.rows || []);
+  const list = rows.slice(0,8);
+  const mode = meta.mode === "dynamic_live_monitor_pool" ? "动态实时聚合" : "静态扫描";
+  const asOf = meta.as_of || "--";
+  const staticAsOf = meta.static_as_of ? `；静态底座 ${meta.static_as_of}` : "";
+  $("mainlineMeta").textContent = `${mode} · 更新 ${asOf}${staticAsOf}`;
   const maxStrong = Math.max(1, ...list.map(r => O.num(r.strong_candidates)));
   $("mainlines").innerHTML = list.length ? list.map(r => {
     const strong = O.num(r.strong_candidates);
     const width = Math.max(3, Math.round(strong / maxStrong * 100));
-    const desc = [r.node, r.top_companies].filter(Boolean).join(" · ");
+    const live = r.live_sample ? `样本${r.live_sample} 上${r.live_up_count || 0}/下${r.live_down_count || 0}` : "";
+    const avg = r.avg_pct !== undefined && r.avg_pct !== null ? `均${r.avg_pct}%` : "";
+    const desc = [r.node, r.top_companies, live, avg].filter(Boolean).join(" · ");
     return `<div class="mainline-row">
       <div><b>${O.esc(O.zh(r.mainline))}</b><div class="muted">${O.esc(O.compact(desc,34))}</div></div>
       <div class="bar"><i style="width:${width}%"></i></div>
@@ -619,7 +628,7 @@ function render(data){
   renderKpi(data);
   renderEnv(data);
   renderPositions(data.positions || []);
-  renderMainlines(data.market_environment?.mainlines?.rows || []);
+  renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
   renderIntraday(data.intraday_v1519_green || data.intraday_anomaly?.rows || []);
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
