@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-21 12:52:17",
-  "source_generated_at": "2026-05-21 12:52:17",
-  "market_environment_updated_at": "2026-05-21 12:52:17",
+  "generated_at": "2026-05-21 12:53:15",
+  "source_generated_at": "2026-05-21 12:53:15",
+  "market_environment_updated_at": "2026-05-21 12:53:15",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -530,13 +530,13 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 12:52:17",
+      "now": "2026-05-21 12:53:15",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
     },
     "regime": "RISK_OFF",
-    "fear_greed": 46.0,
+    "fear_greed": 45.0,
     "breadth_age_hours": 0.0,
     "breadth_stale": false,
     "candidate_mood_avg_pct": 0.37,
@@ -587,7 +587,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 12:52:17",
+      "now": "2026-05-21 12:53:15",
       "phase": "midday_break",
       "in_session": false,
       "sell_allowed": false
@@ -595,7 +595,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 12:52:17",
+      "now": "2026-05-21 12:53:15",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -635,13 +635,13 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 12:52:17",
+        "now": "2026-05-21 12:53:15",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
       },
       "regime": "RISK_OFF",
-      "fear_greed": 46.0,
+      "fear_greed": 45.0,
       "breadth_age_hours": 0.0,
       "breadth_stale": false,
       "candidate_mood_avg_pct": 0.37,
@@ -692,7 +692,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 12:52:17",
+        "now": "2026-05-21 12:53:15",
         "phase": "midday_break",
         "in_session": false,
         "sell_allowed": false
@@ -700,7 +700,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 12:52:17",
+        "now": "2026-05-21 12:53:15",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -746,7 +746,7 @@
     "regime": "RISK_OFF",
     "budget_multiplier": 0.35,
     "fear_greed": {
-      "score": 46,
+      "score": 45,
       "label": "\u4e2d\u6027",
       "components": {
         "breadth": 29,
@@ -846,7 +846,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 311.52,
+      "fallback_age_hours": 311.54,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -862,7 +862,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-21 12:52:17",
+      "as_of": "2026-05-21 12:53:14",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -1053,7 +1053,7 @@
       ],
       "message": "\u5c40\u90e8\u7ed3\u6784\u70ed\u5ea6\u6765\u81ea\u5f53\u524d\u76d1\u63a7\u6c60\u5b9e\u65f6\u62a5\u4ef7\uff0c\u4ec5\u7528\u4e8e\u8bca\u65ad\u5168\u5e02\u573a\u4ee3\u7406\u662f\u5426\u63a9\u76d6\u677f\u5757\u5f3a\u5f31\u3002"
     },
-    "summary": "\u5e02\u573a\u73af\u5883 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=46, breadth_up=28.95, budget_x=0.35"
+    "summary": "\u5e02\u573a\u73af\u5883 market=RISK_OFF, capital=OUTFLOW, attack=False, fear_greed=45, breadth_up=28.95, budget_x=0.35"
   },
   "expectation_positioning": {
     "enabled": true,
