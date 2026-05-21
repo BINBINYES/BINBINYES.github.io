@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-21 15:05:05",
-  "source_generated_at": "2026-05-21 15:05:05",
-  "market_environment_updated_at": "2026-05-21 15:05:05",
+  "generated_at": "2026-05-21 15:06:39",
+  "source_generated_at": "2026-05-21 15:06:39",
+  "market_environment_updated_at": "2026-05-21 15:06:39",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -10,6 +10,7 @@
     "owner_scope": "desktop_console/paper_trading/gates/remote_payload",
     "real_order_enabled": false,
     "broker_order_permission": "manual_confirm_required",
+    "sync_mirror_nonce": "status_latest_refresh_20260521000528",
     "takeover": true,
     "strategy_summary": "\u6253\u677f/\u5361\u4f4d/\u664b\u7ea7\u7a33\u5b9a\u653b\u51fb\u6846\u67b6\uff0c\u5c3e\u76d8\u786e\u8ba4\uff0cA\u80a1T+1\u6a21\u62df\u4ed3\u3002",
     "gate_summary": "\u4f7f\u7528 V152 \u72ec\u7acb\u884c\u7ea7\u95e8\u63a7\uff1b\u65e7 V151 \u5168\u5c40\u95e8\u63a7\u53ea\u4fdd\u7559\u8bca\u65ad\u3002",
@@ -548,7 +549,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 15:05:05",
+      "now": "2026-05-21 15:06:39",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -639,7 +640,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 15:05:05",
+      "now": "2026-05-21 15:06:39",
       "phase": "after_close",
       "in_session": false,
       "sell_allowed": false
@@ -674,7 +675,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 15:05:05",
+      "now": "2026-05-21 15:06:39",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -714,7 +715,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 15:05:05",
+        "now": "2026-05-21 15:06:39",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -805,7 +806,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 15:05:05",
+        "now": "2026-05-21 15:06:39",
         "phase": "after_close",
         "in_session": false,
         "sell_allowed": false
@@ -840,7 +841,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 15:05:05",
+        "now": "2026-05-21 15:06:39",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1010,7 +1011,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 313.74,
+      "fallback_age_hours": 313.76,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1026,7 +1027,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-21 15:05:04",
+      "as_of": "2026-05-21 15:06:39",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
