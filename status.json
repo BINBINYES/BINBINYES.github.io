@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-21 15:08:22",
-  "source_generated_at": "2026-05-21 15:08:22",
-  "market_environment_updated_at": "2026-05-21 15:08:22",
+  "generated_at": "2026-05-21 15:09:30",
+  "source_generated_at": "2026-05-21 15:09:30",
+  "market_environment_updated_at": "2026-05-21 15:09:30",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -548,7 +548,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 15:08:22",
+      "now": "2026-05-21 15:09:30",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -639,7 +639,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 15:08:22",
+      "now": "2026-05-21 15:09:30",
       "phase": "after_close",
       "in_session": false,
       "sell_allowed": false
@@ -674,7 +674,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-21 15:08:22",
+      "now": "2026-05-21 15:09:30",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -714,7 +714,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 15:08:22",
+        "now": "2026-05-21 15:09:30",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -805,7 +805,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 15:08:22",
+        "now": "2026-05-21 15:09:30",
         "phase": "after_close",
         "in_session": false,
         "sell_allowed": false
@@ -840,7 +840,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-21 15:08:22",
+        "now": "2026-05-21 15:09:30",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1010,7 +1010,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 313.79,
+      "fallback_age_hours": 313.81,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1026,7 +1026,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-21 15:08:22",
+      "as_of": "2026-05-21 15:09:29",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -4949,7 +4949,7 @@
             "promotion_score": "67.14",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 50.6",
             "intraday_state": "WAIT_CONFIRM",
             "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
@@ -4957,7 +4957,7 @@
             "day_location_pct": 67.5,
             "ladder_score": 97.2,
             "v1519_flow": "\u627f\u63a5\u589e\u5f3a 86",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 1,
             "ladder_role": "\u9f99\u5934",
             "edge_label": "\u5206\u65f6\u627f\u63a5"
@@ -5002,7 +5002,7 @@
             "promotion_score": "85.65",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 0.00%",
             "intraday_state": "WAIT_CONFIRM",
             "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
@@ -5010,7 +5010,7 @@
             "day_location_pct": null,
             "ladder_score": 78.99,
             "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
-            "reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 2,
             "ladder_role": "\u9f99\u4e00",
             "edge_label": "\u68af\u961f\u89c2\u5bdf"
@@ -5055,7 +5055,7 @@
             "promotion_score": "63.99",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.21%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.2",
             "intraday_state": "INTRADAY_RISK",
             "intraday_label": "\u5206\u65f6\u98ce\u9669",
@@ -5063,7 +5063,7 @@
             "day_location_pct": 20.7,
             "ladder_score": 78.54,
             "v1519_flow": "\u627f\u63a5\u589e\u5f3a 88",
-            "reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 3,
             "ladder_role": "\u9f99\u4e8c",
             "edge_label": "\u5206\u65f6\u627f\u63a5"
@@ -5108,7 +5108,7 @@
             "promotion_score": "86.34",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -2.86%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.86%",
             "intraday_state": "INTRADAY_RISK",
             "intraday_label": "\u5206\u65f6\u98ce\u9669",
@@ -5116,7 +5116,7 @@
             "day_location_pct": 16.2,
             "ladder_score": 78.17,
             "v1519_flow": "\u4e3b\u529b\u51c0\u6d41\u786e\u8ba4 65",
-            "reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 4,
             "ladder_role": "\u9f99\u4e09",
             "edge_label": "\u5206\u65f6\u627f\u63a5"
@@ -5161,7 +5161,7 @@
             "promotion_score": "77.16",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -6.90%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -6.90%",
             "intraday_state": "INTRADAY_RISK",
             "intraday_label": "\u5206\u65f6\u98ce\u9669",
@@ -5169,7 +5169,7 @@
             "day_location_pct": 12.6,
             "ladder_score": 61.76,
             "v1519_flow": "\u4e3b\u529b\u51c0\u6d41\u786e\u8ba4 71",
-            "reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 5,
             "ladder_role": "\u5361\u4f4d",
             "edge_label": "\u5206\u65f6\u627f\u63a5"
@@ -5214,7 +5214,7 @@
             "promotion_score": "61.83",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 53.0\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.7",
             "intraday_state": "WAIT_CONFIRM",
             "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
@@ -5222,7 +5222,7 @@
             "day_location_pct": 5.8,
             "ladder_score": 58.86,
             "v1519_flow": "\u627f\u63a5\u589e\u5f3a 97",
-            "reason": "\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 6,
             "ladder_role": "\u5361\u4f4d",
             "edge_label": "\u5206\u65f6\u627f\u63a5"
@@ -5267,7 +5267,7 @@
             "promotion_score": "68.49",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.00%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.0",
             "intraday_state": "WAIT_CONFIRM",
             "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
@@ -5275,7 +5275,7 @@
             "day_location_pct": 93.3,
             "ladder_score": 56.46,
             "v1519_flow": "\u62c9\u9ad8\u51fa\u8d27/\u5047\u7a81\u7834\u98ce\u9669 15",
-            "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 7,
             "ladder_role": "\u5f3a\u5019\u9009",
             "edge_label": "\u68af\u961f\u89c2\u5bdf"
@@ -5320,7 +5320,7 @@
             "promotion_score": "64.39",
             "promotion_action": "PROMOTION_WATCH",
             "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "promotion_reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "promotion_blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -6.29%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -6.29%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.0",
             "intraday_state": "INTRADAY_RISK",
             "intraday_label": "\u5206\u65f6\u98ce\u9669",
@@ -5328,7 +5328,7 @@
             "day_location_pct": 0.0,
             "ladder_score": 53.32,
             "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 49",
-            "reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18",
             "ladder_rank": 8,
             "ladder_role": "\u5f3a\u5019\u9009",
             "edge_label": "\u68af\u961f\u89c2\u5bdf"
@@ -5999,7 +5999,7 @@
         "rt_pct": "-2.86%",
         "price": "1530.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -2.86%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.86%",
-        "reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "301666",
@@ -6023,7 +6023,7 @@
         "rt_pct": "0.00%",
         "price": "816.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 0.00%",
-        "reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "001309",
@@ -6047,7 +6047,7 @@
         "rt_pct": "-5.73%",
         "price": "656.10",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.73%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.73%",
-        "reason": "\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300042",
@@ -6071,7 +6071,7 @@
         "rt_pct": "-8.18%",
         "price": "67.77",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -8.18%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -8.18%",
-        "reason": "\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688313",
@@ -6095,7 +6095,7 @@
         "rt_pct": "-9.20%",
         "price": "167.88",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -9.20%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.20%",
-        "reason": "\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300857",
@@ -6119,7 +6119,7 @@
         "rt_pct": "-5.44%",
         "price": "258.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.44%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.44%",
-        "reason": "\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688525",
@@ -6143,7 +6143,7 @@
         "rt_pct": "-4.93%",
         "price": "301.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.93%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.93%",
-        "reason": "\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "002281",
@@ -6167,7 +6167,7 @@
         "rt_pct": "-8.08%",
         "price": "217.30",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -8.08%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -8.08%",
-        "reason": "\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688498",
@@ -6191,7 +6191,7 @@
         "rt_pct": "-6.90%",
         "price": "1038.04",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -6.90%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -6.90%",
-        "reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300283",
@@ -6215,7 +6215,7 @@
         "rt_pct": "-5.08%",
         "price": "17.57",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.08%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.08%",
-        "reason": "\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300390",
@@ -6263,7 +6263,7 @@
         "rt_pct": "-8.57%",
         "price": "46.29",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -8.57%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -8.57%",
-        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688048",
@@ -6287,7 +6287,7 @@
         "rt_pct": "-9.39%",
         "price": "356.97",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -9.39%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.39%",
-        "reason": "\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "601869",
@@ -6311,7 +6311,7 @@
         "rt_pct": "-5.57%",
         "price": "375.80",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.57%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.57%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 54.1",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "603629",
@@ -6335,7 +6335,7 @@
         "rt_pct": "-1.00%",
         "price": "179.61",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.00%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "002975",
@@ -6359,7 +6359,7 @@
         "rt_pct": "-7.21%",
         "price": "110.50",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.21%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.21%\uff1b\u5f3a\u5ea6\u4e0d\u8db3 50.9",
-        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "603459",
@@ -6383,7 +6383,7 @@
         "rt_pct": "6.78%",
         "price": "96.01",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 50.6",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "600522",
@@ -6407,7 +6407,7 @@
         "rt_pct": "-7.73%",
         "price": "41.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.73%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.73%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.5",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688025",
@@ -6431,7 +6431,7 @@
         "rt_pct": "-6.29%",
         "price": "380.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -6.29%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -6.29%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "002008",
@@ -6455,7 +6455,7 @@
         "rt_pct": "-1.21%",
         "price": "142.59",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.21%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.2",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300620",
@@ -6479,7 +6479,7 @@
         "rt_pct": "-7.27%",
         "price": "249.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.27%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.27%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.6\uff1b\u5f3a\u5ea6\u4e0d\u8db3 52.2",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "600330",
@@ -6503,7 +6503,7 @@
         "rt_pct": "-4.21%",
         "price": "27.50",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.21%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.21%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.3",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "600487",
@@ -6527,7 +6527,7 @@
         "rt_pct": "-7.76%",
         "price": "69.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.76%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.76%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688256",
@@ -6551,7 +6551,7 @@
         "rt_pct": "-5.25%",
         "price": "1290.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 53.0\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.7",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300308",
@@ -6575,7 +6575,7 @@
         "rt_pct": "-4.21%",
         "price": "993.34",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.21%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.21%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.1",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300502",
@@ -6599,7 +6599,7 @@
         "rt_pct": "-3.74%",
         "price": "566.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -3.74%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.74%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.8\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.6",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "301696",
@@ -6671,7 +6671,7 @@
         "rt_pct": "-4.19%",
         "price": "190.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.19%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.19%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       }
     ],
     "summary": "\u4e3b\u7ebf\u664b\u7ea7\u5019\u9009\u5df2\u6620\u5c04\u5230\u8fdc\u7aef\uff1a\u53ea\u505a\u7814\u7a76/\u7eb8\u9762\u89c2\u5bdf\uff0c\u4e0d\u8fde\u63a5\u5238\u5546\u4e0b\u5355\u3002"
@@ -6729,7 +6729,7 @@
         "rt_pct": "-2.86%",
         "price": "1530.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -2.86%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.86%",
-        "reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "301666",
@@ -6753,7 +6753,7 @@
         "rt_pct": "0.00%",
         "price": "816.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 0.00%",
-        "reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "001309",
@@ -6777,7 +6777,7 @@
         "rt_pct": "-5.73%",
         "price": "656.10",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.73%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.73%",
-        "reason": "\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300042",
@@ -6801,7 +6801,7 @@
         "rt_pct": "-8.18%",
         "price": "67.77",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -8.18%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -8.18%",
-        "reason": "\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688313",
@@ -6825,7 +6825,7 @@
         "rt_pct": "-9.20%",
         "price": "167.88",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -9.20%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.20%",
-        "reason": "\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300857",
@@ -6849,7 +6849,7 @@
         "rt_pct": "-5.44%",
         "price": "258.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.44%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.44%",
-        "reason": "\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688525",
@@ -6873,7 +6873,7 @@
         "rt_pct": "-4.93%",
         "price": "301.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.93%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.93%",
-        "reason": "\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "002281",
@@ -6897,7 +6897,7 @@
         "rt_pct": "-8.08%",
         "price": "217.30",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -8.08%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -8.08%",
-        "reason": "\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688498",
@@ -6921,7 +6921,7 @@
         "rt_pct": "-6.90%",
         "price": "1038.04",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -6.90%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -6.90%",
-        "reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300283",
@@ -6945,7 +6945,7 @@
         "rt_pct": "-5.08%",
         "price": "17.57",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.08%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.08%",
-        "reason": "\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300390",
@@ -6993,7 +6993,7 @@
         "rt_pct": "-8.57%",
         "price": "46.29",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -8.57%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -8.57%",
-        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688048",
@@ -7017,7 +7017,7 @@
         "rt_pct": "-9.39%",
         "price": "356.97",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -9.39%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.39%",
-        "reason": "\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "601869",
@@ -7041,7 +7041,7 @@
         "rt_pct": "-5.57%",
         "price": "375.80",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.57%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.57%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 54.1",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "603629",
@@ -7065,7 +7065,7 @@
         "rt_pct": "-1.00%",
         "price": "179.61",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.00%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "002975",
@@ -7089,7 +7089,7 @@
         "rt_pct": "-7.21%",
         "price": "110.50",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.21%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.21%\uff1b\u5f3a\u5ea6\u4e0d\u8db3 50.9",
-        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "603459",
@@ -7113,7 +7113,7 @@
         "rt_pct": "6.78%",
         "price": "96.01",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 50.6",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.78%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "600522",
@@ -7137,7 +7137,7 @@
         "rt_pct": "-7.73%",
         "price": "41.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.73%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.73%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.5",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688025",
@@ -7161,7 +7161,7 @@
         "rt_pct": "-6.29%",
         "price": "380.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -6.29%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -6.29%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "002008",
@@ -7185,7 +7185,7 @@
         "rt_pct": "-1.21%",
         "price": "142.59",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.21%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.2",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300620",
@@ -7209,7 +7209,7 @@
         "rt_pct": "-7.27%",
         "price": "249.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.27%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.27%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.6\uff1b\u5f3a\u5ea6\u4e0d\u8db3 52.2",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "600330",
@@ -7233,7 +7233,7 @@
         "rt_pct": "-4.21%",
         "price": "27.50",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.21%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.21%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.3",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "600487",
@@ -7257,7 +7257,7 @@
         "rt_pct": "-7.76%",
         "price": "69.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -7.76%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -7.76%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "688256",
@@ -7281,7 +7281,7 @@
         "rt_pct": "-5.25%",
         "price": "1290.90",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 53.0\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.7",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300308",
@@ -7305,7 +7305,7 @@
         "rt_pct": "-4.21%",
         "price": "993.34",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.21%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.21%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 52.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.1",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "300502",
@@ -7329,7 +7329,7 @@
         "rt_pct": "-3.74%",
         "price": "566.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -3.74%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.74%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.8\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.6",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +18"
       },
       {
         "code": "301696",
@@ -7401,7 +7401,7 @@
         "rt_pct": "-4.19%",
         "price": "190.00",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.19%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.19%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +18"
       }
     ],
     "summary": "\u4e3b\u7ebf\u664b\u7ea7\u5019\u9009\u5df2\u6620\u5c04\u5230\u8fdc\u7aef\uff1a\u53ea\u505a\u7814\u7a76/\u7eb8\u9762\u89c2\u5bdf\uff0c\u4e0d\u8fde\u63a5\u5238\u5546\u4e0b\u5355\u3002"
