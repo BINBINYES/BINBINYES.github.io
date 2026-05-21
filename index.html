@@ -462,7 +462,7 @@ setAlarmUI();
 
 function renderKpi(data){
   $("equity").textContent = O.zh(data.equity);
-  $("equityPct").textContent = O.zh(data.equity_detail || data.equity_pnl_pct || data.total_pnl_pct);
+  $("equityPct").textContent = `${O.zh(data.equity_detail || data.equity_pnl_pct || data.total_pnl_pct)} · 可用 ${O.zh(data.cash || "--")}`;
   $("floating").textContent = O.zh(data.floating_pnl);
   $("floating").className = "value " + O.tone(data.floating_pnl);
   $("floatingPct").textContent = O.zh(data.floating_pnl_pct);
