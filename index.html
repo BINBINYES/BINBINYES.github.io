@@ -49,7 +49,7 @@ h2{font-size:16px;margin:0}
   box-shadow:0 0 18px rgba(0,229,255,.08);
   white-space:nowrap;
 }
-.btn{cursor:pointer}
+.btn{cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
 .btn.on{border-color:var(--green);color:var(--green)}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#5a6475;margin-right:6px;box-shadow:0 0 10px #5a6475}
 .dot.ok{background:var(--green);box-shadow:0 0 14px var(--green)}
@@ -176,6 +176,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     <div class="statusbar">
       <div class="badge"><span id="dot" class="dot"></span><span id="remoteState">状态读取中</span></div>
       <div id="updated" class="badge">已更新 --</div>
+      <a class="btn" href="mobile.html">手机简版</a>
       <button id="alarmBtn" class="btn">仓位铃声 OFF</button>
     </div>
   </header>
