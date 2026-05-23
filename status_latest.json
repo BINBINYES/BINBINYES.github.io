@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-23 15:00:14",
-  "source_generated_at": "2026-05-23 15:00:14",
-  "market_environment_updated_at": "2026-05-23 15:00:14",
+  "generated_at": "2026-05-23 15:01:19",
+  "source_generated_at": "2026-05-23 15:01:19",
+  "market_environment_updated_at": "2026-05-23 15:01:19",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -521,12 +521,16 @@
     "strict_stop_loss_pct": -6.0
   },
   "auto_buy_gate": {
-    "can_auto_buy": true,
+    "can_auto_buy": false,
     "can_local_structure_override": false,
     "can_promotion_auto_buy": false,
-    "blockers": [],
+    "blockers": [
+      "not_closing_10m_gate_window"
+    ],
     "soft_blockers": [],
-    "hard_blockers": [],
+    "hard_blockers": [
+      "not_closing_10m_gate_window"
+    ],
     "promotion_blockers": [
       "mainline_promotion_trial_disabled",
       "promotion_auto_buy_disabled"
@@ -537,10 +541,10 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 15:00:14",
+      "now": "2026-05-23 15:01:19",
       "window": "14:50-15:00",
-      "in_window": true,
-      "status": "confirming_buy_requests"
+      "in_window": false,
+      "status": "waiting_for_closing_window"
     },
     "regime": "HOT",
     "fear_greed": 76.0,
@@ -628,10 +632,10 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 15:00:14",
-      "phase": "afternoon_session",
-      "in_session": true,
-      "sell_allowed": true
+      "now": "2026-05-23 15:01:19",
+      "phase": "after_close",
+      "in_session": false,
+      "sell_allowed": false
     },
     "v152_account_guard": {
       "enabled": true,
@@ -663,7 +667,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 15:00:14",
+      "now": "2026-05-23 15:01:19",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -676,12 +680,16 @@
   "paper_trading": {
     "enabled": true,
     "auto_buy_gate": {
-      "can_auto_buy": true,
+      "can_auto_buy": false,
       "can_local_structure_override": false,
       "can_promotion_auto_buy": false,
-      "blockers": [],
+      "blockers": [
+        "not_closing_10m_gate_window"
+      ],
       "soft_blockers": [],
-      "hard_blockers": [],
+      "hard_blockers": [
+        "not_closing_10m_gate_window"
+      ],
       "promotion_blockers": [
         "mainline_promotion_trial_disabled",
         "promotion_auto_buy_disabled"
@@ -692,10 +700,10 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 15:00:14",
+        "now": "2026-05-23 15:01:19",
         "window": "14:50-15:00",
-        "in_window": true,
-        "status": "confirming_buy_requests"
+        "in_window": false,
+        "status": "waiting_for_closing_window"
       },
       "regime": "HOT",
       "fear_greed": 76.0,
@@ -783,10 +791,10 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 15:00:14",
-        "phase": "afternoon_session",
-        "in_session": true,
-        "sell_allowed": true
+        "now": "2026-05-23 15:01:19",
+        "phase": "after_close",
+        "in_session": false,
+        "sell_allowed": false
       },
       "v152_account_guard": {
         "enabled": true,
@@ -818,7 +826,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 15:00:14",
+        "now": "2026-05-23 15:01:19",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1023,7 +1031,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 361.65,
+      "fallback_age_hours": 361.67,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1039,7 +1047,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-23 15:00:13",
+      "as_of": "2026-05-23 15:01:19",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
