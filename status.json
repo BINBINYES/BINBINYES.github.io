@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-23 21:29:25",
-  "source_generated_at": "2026-05-23 21:29:25",
-  "market_environment_updated_at": "2026-05-23 21:29:25",
+  "generated_at": "2026-05-23 21:31:21",
+  "source_generated_at": "2026-05-23 21:31:21",
+  "market_environment_updated_at": "2026-05-23 21:31:21",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -541,7 +541,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 21:29:25",
+      "now": "2026-05-23 21:31:21",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -632,7 +632,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 21:29:25",
+      "now": "2026-05-23 21:31:21",
       "phase": "after_close",
       "in_session": false,
       "sell_allowed": false
@@ -667,7 +667,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 21:29:25",
+      "now": "2026-05-23 21:31:21",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -700,7 +700,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 21:29:25",
+        "now": "2026-05-23 21:31:21",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -791,7 +791,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 21:29:25",
+        "now": "2026-05-23 21:31:21",
         "phase": "after_close",
         "in_session": false,
         "sell_allowed": false
@@ -826,7 +826,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 21:29:25",
+        "now": "2026-05-23 21:31:21",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1031,7 +1031,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 368.14,
+      "fallback_age_hours": 368.17,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1047,7 +1047,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-23 21:29:22",
+      "as_of": "2026-05-23 21:31:21",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -4177,59 +4177,6 @@
             "edge_label": "\u5206\u65f6\u627f\u63a5"
           },
           {
-            "code": "603045",
-            "name": "\u798f\u8fbe\u5408\u91d1",
-            "mainline": "\u65b0\u80fd\u6e90\u7535\u6c60",
-            "node": "\u5149\u4f0f\u8bbe\u5907",
-            "sources": [
-              "intraday",
-              "pool",
-              "promotion"
-            ],
-            "signals": [
-              "\u5206\u65f6",
-              "\u664b\u7ea7",
-              "\u76d1\u63a7\u6c60"
-            ],
-            "candidate_tier": "\u5f3a\u5019\u9009",
-            "monitor_reason": "\u5f3a\u5019\u9009 / \u65b0\u80fd\u6e90\u7535\u6c60 / \u5149\u4f0f\u8bbe\u5907",
-            "pool_reason": "\u5f3a\u5019\u9009 / \u65b0\u80fd\u6e90\u7535\u6c60 / \u5149\u4f0f\u8bbe\u5907",
-            "taxonomy_keyword_hits": "TOPCon;\u5149\u4f0f;\u65b0\u80fd\u6e90;\u65b0\u80fd\u6e90\u8f66;\u7535\u6c60",
-            "hiddenflow_label": "\u8d44\u91d1\u64a4\u9000",
-            "hiddenflow_reason": "\u4e3b\u529b\u51c0\u5360\u6bd4 -5.40%\uff1b\u4e3b\u529b\u51c0\u989d -0.28\u4ebf\uff1b\u5927\u5355\u51c0\u989d 0.11\u4ebf",
-            "hiddenflow_confidence": "medium",
-            "quote_source": "tencent",
-            "industry": "\u91d1\u5c5e\u65b0\u6750\u6599",
-            "expectation_label": "\u6b63\u5e38\u9884\u671f",
-            "expectation_position_text": "1\u4ed3",
-            "expectation_action": "\u6b63\u5e38\u4ed3",
-            "expectation_reason": "\u6f5c\u529b57.81/\u4e1a\u52a160/\u5f3a\u5ea681.78\uff1b\u8d44\u91d1\u627f\u63a535.87\uff1b60\u65e5131.52\uff1b\u6da8\u5e452.29%\uff1b\u5f3a\u5019\u9009",
-            "hiddenflow_score": 35.87,
-            "full_market_potential_score": 57.81,
-            "market_strength_score": 81.78,
-            "ret60": 131.52,
-            "ret_ytd": 216.23,
-            "expectation_score": 60.7,
-            "expectation_position_mult": 1.0,
-            "price": "65.29",
-            "rt_pct": "2.29%",
-            "promotion_score": "59.01",
-            "promotion_action": "PROMOTION_WATCH",
-            "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
-            "promotion_reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.29%\uff1b\u6f5c\u529b\u5206 57.8\uff1b\u5e02\u573a\u5f3a\u5ea6 81.8",
-            "promotion_blockers": "",
-            "intraday_state": "ACCEPTANCE_IMPROVING",
-            "intraday_label": "\u627f\u63a5\u6539\u5584",
-            "intraday_score": 63.0,
-            "day_location_pct": 85.3,
-            "ladder_score": 73.8,
-            "v1519_flow": "\u8d44\u91d1\u64a4\u9000 36",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.29%\uff1b\u6f5c\u529b\u5206 57.8\uff1b\u5e02\u573a\u5f3a\u5ea6 81.8",
-            "ladder_rank": 2,
-            "ladder_role": "\u9f99\u4e00",
-            "edge_label": "\u68af\u961f\u89c2\u5bdf"
-          },
-          {
             "code": "688530",
             "name": "\u6b27\u83b1\u65b0\u6750",
             "mainline": "\u65b0\u80fd\u6e90\u7535\u6c60",
@@ -4278,6 +4225,59 @@
             "ladder_score": 71.27,
             "v1519_flow": "\u62c9\u9ad8\u51fa\u8d27/\u5047\u7a81\u7834\u98ce\u9669 24",
             "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.57%\uff1b\u6f5c\u529b\u5206 56.7\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0",
+            "ladder_rank": 2,
+            "ladder_role": "\u9f99\u4e00",
+            "edge_label": "\u68af\u961f\u89c2\u5bdf"
+          },
+          {
+            "code": "603045",
+            "name": "\u798f\u8fbe\u5408\u91d1",
+            "mainline": "\u65b0\u80fd\u6e90\u7535\u6c60",
+            "node": "\u5149\u4f0f\u8bbe\u5907",
+            "sources": [
+              "intraday",
+              "pool",
+              "promotion"
+            ],
+            "signals": [
+              "\u5206\u65f6",
+              "\u664b\u7ea7",
+              "\u76d1\u63a7\u6c60"
+            ],
+            "candidate_tier": "\u5f3a\u5019\u9009",
+            "monitor_reason": "\u5f3a\u5019\u9009 / \u65b0\u80fd\u6e90\u7535\u6c60 / \u5149\u4f0f\u8bbe\u5907",
+            "pool_reason": "\u5f3a\u5019\u9009 / \u65b0\u80fd\u6e90\u7535\u6c60 / \u5149\u4f0f\u8bbe\u5907",
+            "taxonomy_keyword_hits": "TOPCon;\u5149\u4f0f;\u65b0\u80fd\u6e90;\u65b0\u80fd\u6e90\u8f66;\u7535\u6c60",
+            "hiddenflow_label": "\u8d44\u91d1\u64a4\u9000",
+            "hiddenflow_reason": "\u4e3b\u529b\u51c0\u5360\u6bd4 -5.40%\uff1b\u4e3b\u529b\u51c0\u989d -0.28\u4ebf\uff1b\u5927\u5355\u51c0\u989d 0.11\u4ebf",
+            "hiddenflow_confidence": "medium",
+            "quote_source": "tencent",
+            "industry": "\u91d1\u5c5e\u65b0\u6750\u6599",
+            "expectation_label": "\u6b63\u5e38\u9884\u671f",
+            "expectation_position_text": "1\u4ed3",
+            "expectation_action": "\u6b63\u5e38\u4ed3",
+            "expectation_reason": "\u6f5c\u529b57.81/\u4e1a\u52a160/\u5f3a\u5ea681.78\uff1b\u8d44\u91d1\u627f\u63a535.87\uff1b60\u65e5131.52\uff1b\u6da8\u5e452.29%\uff1b\u5f3a\u5019\u9009",
+            "hiddenflow_score": 35.87,
+            "full_market_potential_score": 57.81,
+            "market_strength_score": 81.78,
+            "ret60": 131.52,
+            "ret_ytd": 216.23,
+            "expectation_score": 60.7,
+            "expectation_position_mult": 1.0,
+            "price": "65.29",
+            "rt_pct": "2.29%",
+            "promotion_score": "59.01",
+            "promotion_action": "PROMOTION_WATCH",
+            "promotion_label": "\u664b\u7ea7\u89c2\u5bdf",
+            "promotion_reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.29%\uff1b\u6f5c\u529b\u5206 57.8\uff1b\u5e02\u573a\u5f3a\u5ea6 81.8",
+            "promotion_blockers": "",
+            "intraday_state": "WAIT_CONFIRM",
+            "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
+            "intraday_score": 55.0,
+            "day_location_pct": 85.3,
+            "ladder_score": 67.8,
+            "v1519_flow": "\u8d44\u91d1\u64a4\u9000 36",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.29%\uff1b\u6f5c\u529b\u5206 57.8\uff1b\u5e02\u573a\u5f3a\u5ea6 81.8",
             "ladder_rank": 3,
             "ladder_role": "\u9f99\u4e8c",
             "edge_label": "\u68af\u961f\u89c2\u5bdf"
