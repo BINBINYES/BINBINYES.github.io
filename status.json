@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-23 14:49:16",
-  "source_generated_at": "2026-05-23 14:49:16",
-  "market_environment_updated_at": "2026-05-23 14:49:16",
+  "generated_at": "2026-05-23 14:50:16",
+  "source_generated_at": "2026-05-23 14:50:16",
+  "market_environment_updated_at": "2026-05-23 14:50:16",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -521,16 +521,12 @@
     "strict_stop_loss_pct": -6.0
   },
   "auto_buy_gate": {
-    "can_auto_buy": false,
+    "can_auto_buy": true,
     "can_local_structure_override": false,
     "can_promotion_auto_buy": false,
-    "blockers": [
-      "not_closing_10m_gate_window"
-    ],
+    "blockers": [],
     "soft_blockers": [],
-    "hard_blockers": [
-      "not_closing_10m_gate_window"
-    ],
+    "hard_blockers": [],
     "promotion_blockers": [
       "mainline_promotion_trial_disabled",
       "promotion_auto_buy_disabled"
@@ -541,10 +537,10 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 14:49:16",
+      "now": "2026-05-23 14:50:16",
       "window": "14:50-15:00",
-      "in_window": false,
-      "status": "waiting_for_closing_window"
+      "in_window": true,
+      "status": "confirming_buy_requests"
     },
     "regime": "HOT",
     "fear_greed": 76.0,
@@ -632,7 +628,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 14:49:16",
+      "now": "2026-05-23 14:50:16",
       "phase": "afternoon_session",
       "in_session": true,
       "sell_allowed": true
@@ -667,7 +663,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-23 14:49:16",
+      "now": "2026-05-23 14:50:16",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -680,16 +676,12 @@
   "paper_trading": {
     "enabled": true,
     "auto_buy_gate": {
-      "can_auto_buy": false,
+      "can_auto_buy": true,
       "can_local_structure_override": false,
       "can_promotion_auto_buy": false,
-      "blockers": [
-        "not_closing_10m_gate_window"
-      ],
+      "blockers": [],
       "soft_blockers": [],
-      "hard_blockers": [
-        "not_closing_10m_gate_window"
-      ],
+      "hard_blockers": [],
       "promotion_blockers": [
         "mainline_promotion_trial_disabled",
         "promotion_auto_buy_disabled"
@@ -700,10 +692,10 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 14:49:16",
+        "now": "2026-05-23 14:50:16",
         "window": "14:50-15:00",
-        "in_window": false,
-        "status": "waiting_for_closing_window"
+        "in_window": true,
+        "status": "confirming_buy_requests"
       },
       "regime": "HOT",
       "fear_greed": 76.0,
@@ -791,7 +783,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 14:49:16",
+        "now": "2026-05-23 14:50:16",
         "phase": "afternoon_session",
         "in_session": true,
         "sell_allowed": true
@@ -826,7 +818,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-23 14:49:16",
+        "now": "2026-05-23 14:50:16",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1031,7 +1023,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 361.47,
+      "fallback_age_hours": 361.49,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1047,7 +1039,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-23 14:49:16",
+      "as_of": "2026-05-23 14:50:15",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
