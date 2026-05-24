@@ -200,7 +200,6 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
       <div class="cell"><span>恐贪分</span><b id="envFear">--</b></div>
       <div class="cell"><span>恐贪策略</span><b id="fgPolicy">背景仓位</b></div>
     </div>
-    <div id="gateNote" class="note">等待桌面端同步门控状态。</div>
   </section>
 
   <section class="two">
@@ -220,27 +219,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     <div id="ladder"></div>
   </section>
 
-  <section class="tables-grid">
-    <div class="panel">
-      <div class="toolbar">
-        <h2>分时异动识别 <span id="intradayCount" class="pill green">--</span></h2>
-        <button class="linkbtn" data-fold="intradayMore">展开其它</button>
-      </div>
-      <div class="scroll">
-        <table class="table-medium">
-          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:96px">状态</th><th>主线/等级</th><th style="width:132px">资金承接</th><th style="width:82px">涨幅</th><th style="width:86px">现价</th></tr></thead>
-          <tbody id="intraday"></tbody>
-        </table>
-      </div>
-      <div id="intradayMore" class="fold">
-        <div class="scroll">
-          <table class="table-small">
-            <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:110px">状态</th><th style="width:132px">资金承接</th><th>原因</th></tr></thead>
-            <tbody id="intradayOther"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+  <section>
     <div class="panel">
       <div class="toolbar">
         <h2>主线晋级候选映射 <span id="promoCount" class="pill green">--</span></h2>
@@ -530,15 +509,6 @@ function renderEnv(data){
   const canBuy = Boolean(v152.enabled || gate.can_v152_scan);
   $("gateBadge").textContent = canBuy ? "V152独立门控" : "门控未启用";
   $("gateBadge").className = "pill " + (canBuy ? "green" : "yellow");
-  const blockers = uniq([...(gate.hard_blockers || []), ...(gate.blockers || []), ...(gate.promotion_blockers || [])]).map(O.blocker);
-  const warnings = uniq(gate.warnings || []).map(O.blocker);
-  const guard = gate.v152_account_guard || {};
-  const content = [];
-  if(guard.enabled) content.push(`<span>账户闭环：</span>${O.pill(`回撤${guard.drawdown_pct ?? "--"}%`,"cyan")}${O.pill(`攻击上限${Number(guard.attack_weight || 0) * 100}%`, Number(guard.attack_weight || 0) <= 0 ? "red" : Number(guard.attack_weight || 0) < 1 ? "yellow" : "green")}${O.pill(`可用${guard.available_attack_cash ?? "--"}`,"cyan")}`);
-  if(blockers.length) content.push(`<span>阻断：</span>${blockers.slice(0,5).map(x => O.pill(x,"yellow")).join("")}`);
-  if(warnings.length) content.push(`<span>提示：</span>${warnings.slice(0,4).map(x => O.pill(x,"cyan")).join("")}`);
-  if(!content.length) content.push(`<span>当前没有旧门控诊断项。</span>`);
-  $("gateNote").innerHTML = `<div class="note-grid">${content.join("")}<span class="muted">V152使用独立行级门控；旧全局门控只保留诊断展示。</span></div>`;
 }
 
 function positionHistoryHtml(p){
@@ -723,11 +693,10 @@ function positionSig(rows){
 
 const remoteModuleElementIds = {
   portfolio_summary:["equity","floating","marketValue","realized"],
-  market_environment:["envMarket","envCapital","envFear","gateNote"],
+  market_environment:["envMarket","envCapital","envFear"],
   mainline_strength:["mainlines"],
   positions:["positions"],
   mainline_ladder:["ladder"],
-  intraday_anomaly:["intraday","intradayOther"],
   mainline_promotion:["promo","promoOther"]
 };
 
@@ -771,7 +740,6 @@ function render(data){
   renderPositions(data.positions || []);
   renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
-  renderIntraday(data.intraday_v1519_green || data.intraday_anomaly?.rows || []);
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
   const old = localStorage.getItem("v151.remote.positionSig") || "";
   const now = positionSig(data.positions || []);
