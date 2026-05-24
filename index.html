@@ -87,6 +87,11 @@ h2{font-size:16px;margin:0}
 .mini{border:1px solid var(--line2);border-radius:7px;padding:7px;background:rgba(8,21,41,.7);min-width:0}
 .mini span{display:block;color:var(--muted);font-size:11px}
 .mini strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pos-history{margin-top:10px;border:1px solid rgba(92,137,173,.22);border-radius:7px;background:rgba(8,21,41,.52);padding:8px;display:grid;gap:6px}
+.pos-history-title{color:#bdeeff;font-size:12px;font-weight:800}
+.pos-history-item{display:grid;grid-template-columns:132px minmax(0,1fr);gap:8px;color:#d8edf8;font-size:12px;line-height:1.35;min-width:0}
+.pos-history-item span{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pos-history-item b{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pill{
   display:inline-flex;
   align-items:center;
@@ -140,10 +145,6 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 .fold{display:none}
 .fold.show{display:block;margin-top:10px}
 .linkbtn{border:1px solid #31506d;background:rgba(9,24,44,.8);color:#cfeeff;border-radius:7px;padding:5px 9px;cursor:pointer;white-space:nowrap}
-.history{display:grid;gap:8px}
-.hist{border-left:3px solid var(--cyan);background:rgba(3,8,18,.45);padding:9px 10px;border-radius:7px;min-width:0}
-.hist strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.hist span{display:block;color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .service-card{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.46);padding:9px;min-width:0}
 .service-card b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -259,10 +260,6 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     </div>
   </section>
 
-  <section class="tables-grid">
-    <div class="panel"><div class="panel-head"><h2>两天内操作历史</h2></div><div id="history" class="history"></div></div>
-    <div class="panel"><div class="panel-head"><h2>已卖出盈亏历史订单</h2></div><div id="closed" class="history"></div></div>
-  </section>
 </main>
 
 <script>
@@ -541,6 +538,18 @@ function renderEnv(data){
   $("gateNote").innerHTML = `<div class="note-grid">${content.join("")}<span class="muted">V152使用独立行级门控；旧全局门控只保留诊断展示。</span></div>`;
 }
 
+function positionHistoryHtml(p){
+  const rows = p.held_operation_history || [];
+  if(!rows.length) return "";
+  return `<div class="pos-history">
+    <div class="pos-history-title">当前持仓操作记录</div>
+    ${rows.slice().reverse().slice(0,6).map(x => `<div class="pos-history-item">
+      <span>${O.esc(O.zh(x.date))} ${O.esc(O.zh(x.time))}</span>
+      <b title="${O.esc(noteOf(x))}">${O.esc(actionOf(x))} ${O.esc(O.zh(x.qty))}股 / ${O.esc(O.zh(x.price))} · ${O.esc(O.compact(noteOf(x),48))}</b>
+    </div>`).join("")}
+  </div>`;
+}
+
 function renderPositions(rows){
   $("positions").innerHTML = rows && rows.length ? rows.map(p => {
     const pnlCls = O.tone(p.pnl_amount || p.pnl_pct);
@@ -559,6 +568,7 @@ function renderPositions(rows){
         <div class="mini"><span>资金承接</span><strong>${flowLabel(p)}</strong></div>
         <div class="mini"><span>预期</span><strong>${expectationLabel(p)}</strong></div>
       </div>
+      ${positionHistoryHtml(p)}
     </div>`;
   }).join("") : `<div class="empty">暂无持仓。</div>`;
 }
@@ -586,11 +596,22 @@ function renderMainlines(mainlines){
   }).join("") : `<div class="empty">暂无主线强度。</div>`;
 }
 
+function ladderStrengthClass(g){
+  const t = O.raw(g?.strength_link_class || g?.strength_tier || g?.strength_link_label);
+  if(/bad|走弱/.test(t)) return "red";
+  if(/ok|强主线/.test(t)) return "green";
+  if(/blue|增强/.test(t)) return "cyan";
+  if(/warn|未匹配/.test(t)) return "yellow";
+  return "cyan";
+}
+
 function renderLadder(graph){
   const rows = graph?.rows || [];
   $("ladderCount").textContent = `${rows.length} 条主线`;
   $("ladder").innerHTML = rows.length ? rows.map((g, idx) => {
     const nodes = (g.nodes || []).slice(0,8);
+    const strengthLabel = O.zh(g.strength_link_label || g.strength_tier || "未联动");
+    const strengthTip = [g.strength_action,g.strength_risk,g.strength_reason].filter(Boolean).join("；");
     const chips = nodes.map(n => {
       const role = O.zh(n.ladder_role || n.edge_label || n.candidate_tier || "候选");
       const cls = role.includes("龙头") || role.includes("高标") ? "hot" : String(n.v1519_flow || "").includes("承接") ? "good" : "";
@@ -603,8 +624,8 @@ function renderLadder(graph){
     }).join("");
     return `<details ${idx < 3 ? "open" : ""}>
       <summary>
-        <div class="summary-title"><b>${O.esc(O.zh(g.mainline))}</b><span class="muted">龙头 ${O.esc(O.code(g.leader_code))} ${O.esc(O.name(g.leader_code,g.leader_name))}</span></div>
-        <div>${O.pill(`${O.zh(g.strong_candidates, {fallback:0})} 强`,"cyan")} ${O.pill(`${O.zh(g.green_count, {fallback:0})} 绿资`,"green")} ${O.pill(`${O.zh(g.promotion_count, {fallback:0})} 晋级`,"yellow")}</div>
+        <div class="summary-title"><b>${O.esc(O.zh(g.mainline))}</b><span class="muted">龙头 ${O.esc(O.code(g.leader_code))} ${O.esc(O.name(g.leader_code,g.leader_name))} · ${O.esc(O.compact(g.strength_action || "",34))}</span></div>
+        <div>${O.pill(strengthLabel,ladderStrengthClass(g),strengthTip)} ${O.pill(`联动分 ${O.zh(g.strength_link_score, {fallback:"--"})}`,"cyan",strengthTip)} ${O.pill(`${O.zh(g.strong_candidates, {fallback:0})} 强`,"cyan")} ${O.pill(`${O.zh(g.green_count, {fallback:0})} 绿资`,"green")} ${O.pill(`${O.zh(g.promotion_count, {fallback:0})} 晋级`,"yellow")}</div>
       </summary>
       <div class="node-line">${chips}</div>
     </details>`;
@@ -687,18 +708,10 @@ function noteOf(x){
   return "旧记录已启用远端中文显示层。";
 }
 function renderHistory(rows){
-  $("history").innerHTML = rows && rows.length ? rows.slice().reverse().slice(0,20).map(x => `<div class="hist">
-    <span>${O.esc(O.zh(x.date))} ${O.esc(O.zh(x.time))} · ${O.esc(O.zh(x.type,{enumFallback:"模型记录"}))}</span>
-    <strong>${O.esc(O.code(x.code))} ${O.esc(O.name(x.code,x.name))} ${O.esc(actionOf(x))}</strong>
-    <span>${O.esc(O.zh(x.qty))} 股 / ${O.esc(O.zh(x.price))} · ${O.esc(O.compact(noteOf(x),88))}</span>
-  </div>`).join("") : `<div class="empty">暂无两天内操作记录。</div>`;
+  return "";
 }
 function renderClosed(rows){
-  $("closed").innerHTML = rows && rows.length ? rows.slice().reverse().slice(0,20).map(x => `<div class="hist">
-    <span>${O.esc(O.zh(x.date))} ${O.esc(O.zh(x.time))}</span>
-    <strong>${O.esc(O.code(x.code))} ${O.esc(O.name(x.code,x.name))} 卖出 ${O.esc(O.zh(x.qty))} 股</strong>
-    <span>${O.esc(O.zh(x.buy_price))} 到 ${O.esc(O.zh(x.sell_price))} / ${O.esc(O.zh(x.pnl_amount))} / ${O.esc(O.zh(x.pnl_pct))} · ${O.esc(O.evidence(x.reason) || O.zh(x.reason))}</span>
-  </div>`).join("") : `<div class="empty">暂无已卖出历史订单。</div>`;
+  return "";
 }
 
 function positionSig(rows){
@@ -712,9 +725,7 @@ const remoteModuleElementIds = {
   positions:["positions"],
   mainline_ladder:["ladder"],
   intraday_anomaly:["intraday","intradayOther"],
-  mainline_promotion:["promo","promoOther"],
-  operation_history:["history"],
-  closed_orders:["closed"]
+  mainline_promotion:["promo","promoOther"]
 };
 
 function applyRemoteModuleVisibility(data){
@@ -759,8 +770,6 @@ function render(data){
   renderLadder(data.mainline_ladder_graph || {});
   renderIntraday(data.intraday_v1519_green || data.intraday_anomaly?.rows || []);
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
-  renderHistory(data.operation_history_2d || []);
-  renderClosed(data.closed_orders || []);
   const old = localStorage.getItem("v151.remote.positionSig") || "";
   const now = positionSig(data.positions || []);
   if(alarm && old && old !== now){
