@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-25 00:49:09",
-  "source_generated_at": "2026-05-25 00:49:09",
-  "market_environment_updated_at": "2026-05-25 00:49:09",
+  "generated_at": "2026-05-25 00:50:03",
+  "source_generated_at": "2026-05-25 00:50:03",
+  "market_environment_updated_at": "2026-05-25 00:50:03",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -552,7 +552,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-25 00:49:09",
+      "now": "2026-05-25 00:50:03",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -653,7 +653,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-25 00:49:09",
+      "now": "2026-05-25 00:50:03",
       "phase": "pre_open",
       "in_session": false,
       "sell_allowed": false
@@ -688,7 +688,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-25 00:49:09",
+      "now": "2026-05-25 00:50:03",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -721,7 +721,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-25 00:49:09",
+        "now": "2026-05-25 00:50:03",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -822,7 +822,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-25 00:49:09",
+        "now": "2026-05-25 00:50:03",
         "phase": "pre_open",
         "in_session": false,
         "sell_allowed": false
@@ -857,7 +857,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-25 00:49:09",
+        "now": "2026-05-25 00:50:03",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1062,7 +1062,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 395.47,
+      "fallback_age_hours": 395.48,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1078,7 +1078,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-25 00:49:09",
+      "as_of": "2026-05-25 00:50:03",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -5728,6 +5728,27 @@
       "reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 84%\uff1b\u4e3b\u529b\u51c0\u5360\u6bd4 7.52%\uff1bV151.9 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 88"
     },
     {
+      "code": "300548",
+      "name": "\u957f\u82af\u535a\u521b",
+      "state": "ACCEPTANCE_IMPROVING",
+      "label": "\u627f\u63a5\u6539\u5584",
+      "score": "73.0",
+      "v1519_flow": "\u627f\u63a5\u589e\u5f3a 81",
+      "rt_pct": "3.81%",
+      "price": "240.30",
+      "pct_delta": "0.00\u4e2a\u767e\u5206\u70b9",
+      "day_location": "87%",
+      "pool": "AI\u7b97\u529b\u534a\u5bfc\u4f53-\u5149\u901a\u4fe1/CPO / \u5f3a\u5019\u9009",
+      "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 8.90%\uff1b\u4e3b\u529b\u51c0\u989d 2.67\u4ebf\uff1b\u5927\u5355\u51c0\u989d 0.47\u4ebf",
+      "pool_reason": "\u5f3a\u5019\u9009 / AI\u7b97\u529b\u534a\u5bfc\u4f53 / \u5149\u901a\u4fe1/CPO",
+      "expectation_label": "\u6b63\u5e38\u9884\u671f",
+      "expectation_score": 60.83,
+      "expectation_position_text": "1\u4ed3",
+      "expectation_reason": "\u6f5c\u529b45.43/\u4e1a\u52a172/\u5f3a\u5ea657.93\uff1b\u8d44\u91d1\u627f\u63a581.18\uff1b60\u65e570.2\uff1b\u6da8\u5e453.81%\uff1b\u5f3a\u5019\u9009",
+      "action": "OBSERVE",
+      "reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 87%\uff1b\u4e3b\u529b\u51c0\u5360\u6bd4 8.90%\uff1bV151.9 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 81"
+    },
+    {
       "code": "002975",
       "name": "\u535a\u6770\u80a1\u4efd",
       "state": "ACCEPTANCE_IMPROVING",
@@ -5789,27 +5810,6 @@
       "expectation_reason": "\u6f5c\u529b68.69/\u4e1a\u52a172/\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u627f\u63a583.94\uff1b\u664b\u7ea774.71\uff1b\u6da8\u5e457.57%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
       "action": "OBSERVE",
       "reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 92%\uff1b\u4e3b\u529b\u51c0\u5360\u6bd4 8.07%"
-    },
-    {
-      "code": "300548",
-      "name": "\u957f\u82af\u535a\u521b",
-      "state": "ACCEPTANCE_IMPROVING",
-      "label": "\u627f\u63a5\u6539\u5584",
-      "score": "65.0",
-      "v1519_flow": "\u627f\u63a5\u589e\u5f3a 81",
-      "rt_pct": "3.81%",
-      "price": "240.30",
-      "pct_delta": "0.00\u4e2a\u767e\u5206\u70b9",
-      "day_location": "87%",
-      "pool": "AI\u7b97\u529b\u534a\u5bfc\u4f53-\u5149\u901a\u4fe1/CPO / \u5f3a\u5019\u9009",
-      "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 8.90%\uff1b\u4e3b\u529b\u51c0\u989d 2.67\u4ebf\uff1b\u5927\u5355\u51c0\u989d 0.47\u4ebf",
-      "pool_reason": "\u5f3a\u5019\u9009 / AI\u7b97\u529b\u534a\u5bfc\u4f53 / \u5149\u901a\u4fe1/CPO",
-      "expectation_label": "\u6b63\u5e38\u9884\u671f",
-      "expectation_score": 60.83,
-      "expectation_position_text": "1\u4ed3",
-      "expectation_reason": "\u6f5c\u529b45.43/\u4e1a\u52a172/\u5f3a\u5ea657.93\uff1b\u8d44\u91d1\u627f\u63a581.18\uff1b60\u65e570.2\uff1b\u6da8\u5e453.81%\uff1b\u5f3a\u5019\u9009",
-      "action": "OBSERVE",
-      "reason": "\u4e3b\u529b\u51c0\u989d\u8f83\u4e0a\u4e00\u8f6e\u8f6c\u5f31\uff1b\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 87%\uff1b\u4e3b\u529b\u51c0\u5360\u6bd4 8.90%\uff1bV151.9 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 81"
     },
     {
       "code": "601869",
