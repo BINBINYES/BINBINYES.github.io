@@ -516,10 +516,14 @@ function positionHistoryHtml(p){
   if(!rows.length) return "";
   return `<div class="pos-history">
     <div class="pos-history-title">当前持仓操作记录</div>
-    ${rows.slice().reverse().slice(0,6).map(x => `<div class="pos-history-item">
-      <span>${O.esc(O.zh(x.date))} ${O.esc(O.zh(x.time))}</span>
-      <b title="${O.esc(noteOf(x))}">${O.esc(actionOf(x))} ${O.esc(O.zh(x.qty))}股 / ${O.esc(O.zh(x.price))} · ${O.esc(O.compact(noteOf(x),48))}</b>
-    </div>`).join("")}
+    ${rows.slice().reverse().slice(0,6).map(x => {
+      const price = O.zh(x.price, {fallback:""});
+      const fallback = `${actionOf(x)} ${O.zh(x.qty)}股${price && price !== "--" ? ` 成交价${price}` : ""}`;
+      return `<div class="pos-history-item">
+        <span>${O.esc(O.zh(x.date))} ${O.esc(O.zh(x.time))}</span>
+        <b>${O.esc(x.summary || fallback)}</b>
+      </div>`;
+    }).join("")}
   </div>`;
 }
 
