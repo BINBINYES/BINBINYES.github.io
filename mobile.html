@@ -180,6 +180,13 @@ h2{font-size:16px;letter-spacing:0}
   overflow:hidden;
   text-overflow:ellipsis;
 }
+.pos .mini b{
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  overflow-wrap:anywhere;
+  line-height:1.35;
+}
 .gate{
   display:flex;
   gap:6px;
@@ -214,9 +221,11 @@ h2{font-size:16px;letter-spacing:0}
 }
 .pos-history b,.pos-history span{
   display:block;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+  overflow:visible;
+  text-overflow:clip;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  line-height:1.35;
 }
 .pos-history span{color:var(--muted)}
 .row{
@@ -237,7 +246,7 @@ h2{font-size:16px;letter-spacing:0}
 .title span{color:var(--muted);font-size:12px}
 .posgrid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(112px,100%),1fr));
+  grid-template-columns:repeat(auto-fit,minmax(min(136px,100%),1fr));
   gap:6px;
   margin-top:8px;
 }
