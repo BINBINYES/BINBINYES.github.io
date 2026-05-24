@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-24 12:43:20",
-  "source_generated_at": "2026-05-24 12:43:20",
-  "market_environment_updated_at": "2026-05-24 12:43:20",
+  "generated_at": "2026-05-24 12:44:13",
+  "source_generated_at": "2026-05-24 12:44:13",
+  "market_environment_updated_at": "2026-05-24 12:44:13",
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
@@ -541,7 +541,7 @@
     "closing_buy_gate": {
       "enabled": true,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-24 12:43:20",
+      "now": "2026-05-24 12:44:13",
       "window": "14:50-15:00",
       "in_window": false,
       "status": "waiting_for_closing_window"
@@ -632,7 +632,7 @@
     "can_v152_scan": true,
     "sell_session": {
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-24 12:43:20",
+      "now": "2026-05-24 12:44:13",
       "phase": "midday_break",
       "in_session": false,
       "sell_allowed": false
@@ -667,7 +667,7 @@
     "v1519r_buy_gate": {
       "enabled": false,
       "timezone": "Asia/Shanghai",
-      "now": "2026-05-24 12:43:20",
+      "now": "2026-05-24 12:44:13",
       "window": "14:30-15:00",
       "in_window": false,
       "status": "waiting_for_v1519r_30m_window",
@@ -700,7 +700,7 @@
       "closing_buy_gate": {
         "enabled": true,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-24 12:43:20",
+        "now": "2026-05-24 12:44:13",
         "window": "14:50-15:00",
         "in_window": false,
         "status": "waiting_for_closing_window"
@@ -791,7 +791,7 @@
       "can_v152_scan": true,
       "sell_session": {
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-24 12:43:20",
+        "now": "2026-05-24 12:44:13",
         "phase": "midday_break",
         "in_session": false,
         "sell_allowed": false
@@ -826,7 +826,7 @@
       "v1519r_buy_gate": {
         "enabled": false,
         "timezone": "Asia/Shanghai",
-        "now": "2026-05-24 12:43:20",
+        "now": "2026-05-24 12:44:13",
         "window": "14:30-15:00",
         "in_window": false,
         "status": "waiting_for_v1519r_30m_window",
@@ -1031,7 +1031,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 383.37,
+      "fallback_age_hours": 383.39,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1047,7 +1047,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-24 12:43:20",
+      "as_of": "2026-05-24 12:44:12",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -5994,6 +5994,27 @@
       "reason": "\u4e3b\u529b\u51c0\u5360\u6bd4 9.02%"
     },
     {
+      "code": "600522",
+      "name": "\u4e2d\u5929\u79d1\u6280",
+      "state": "WAIT_CONFIRM",
+      "label": "\u7b49\u5f85\u786e\u8ba4",
+      "score": "55.0",
+      "v1519_flow": "\u627f\u63a5\u589e\u5f3a 79",
+      "rt_pct": "4.58%",
+      "price": "43.82",
+      "pct_delta": "0.00\u4e2a\u767e\u5206\u70b9",
+      "day_location": "96%",
+      "pool": "AI\u7b97\u529b\u534a\u5bfc\u4f53-\u5149\u901a\u4fe1/CPO / \u5f3a\u5019\u9009",
+      "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 5.69%\uff1b\u4e3b\u529b\u51c0\u989d 5.58\u4ebf\uff1b\u5927\u5355\u51c0\u989d 1.27\u4ebf",
+      "pool_reason": "\u5f3a\u5019\u9009 / AI\u7b97\u529b\u534a\u5bfc\u4f53 / \u5149\u901a\u4fe1/CPO",
+      "expectation_label": "\u9ad8\u9884\u671f",
+      "expectation_score": 67.84,
+      "expectation_position_text": "1.3\u4ed3",
+      "expectation_reason": "\u6f5c\u529b52.5/\u4e1a\u52a1100/\u5f3a\u5ea673.29\uff1b\u8d44\u91d1\u627f\u63a578.77\uff1b60\u65e583.12\uff1b\u6da8\u5e454.58%\uff1b\u5f3a\u5019\u9009",
+      "action": "WAIT",
+      "reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 96%"
+    },
+    {
       "code": "600487",
       "name": "\u4ea8\u901a\u5149\u7535",
       "state": "WAIT_CONFIRM",
@@ -6055,27 +6076,6 @@
       "expectation_reason": "\u6f5c\u529b51.43/\u4e1a\u52a184/\u5f3a\u5ea6100\uff1b\u8d44\u91d1\u627f\u63a559.17\uff1b60\u65e5770.64\uff1b\u6da8\u5e453.7%\uff1b\u5f3a\u5019\u9009",
       "action": "WAIT",
       "reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 99%"
-    },
-    {
-      "code": "001309",
-      "name": "\u5fb7\u660e\u5229",
-      "state": "WAIT_CONFIRM",
-      "label": "\u7b49\u5f85\u786e\u8ba4",
-      "score": "55.0",
-      "v1519_flow": "\u4e3b\u529b\u51c0\u6d41\u786e\u8ba4 64",
-      "rt_pct": "2.73%",
-      "price": "674.00",
-      "pct_delta": "0.00\u4e2a\u767e\u5206\u70b9",
-      "day_location": "78%",
-      "pool": "AI\u7b97\u529b\u534a\u5bfc\u4f53-\u534a\u5bfc\u4f53\u5236\u9020 / \u6838\u5fc3\u5019\u9009",
-      "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 3.04%\uff1b\u4e3b\u529b\u51c0\u989d 2.69\u4ebf\uff1b\u5927\u5355\u51c0\u989d -0.78\u4ebf",
-      "pool_reason": "\u6838\u5fc3\u5019\u9009 / AI\u7b97\u529b\u534a\u5bfc\u4f53 / \u534a\u5bfc\u4f53\u5236\u9020",
-      "expectation_label": "\u9ad8\u9884\u671f",
-      "expectation_score": 74.48,
-      "expectation_position_text": "1.3\u4ed3",
-      "expectation_reason": "\u6f5c\u529b65.15/\u4e1a\u52a148/\u5f3a\u5ea691.18\uff1b\u8d44\u91d1\u627f\u63a564.11\uff1b\u664b\u7ea778.53\uff1b\u6da8\u5e452.73%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
-      "action": "WAIT",
-      "reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 78%"
     }
   ],
   "mainline_promotion": {
