@@ -202,6 +202,23 @@ h2{font-size:16px;letter-spacing:0}
   background:rgba(3,8,17,.48);
   padding:10px;
 }
+.pos-history{
+  margin-top:8px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:rgba(10,24,43,.6);
+  padding:8px;
+  display:grid;
+  gap:5px;
+  font-size:12px;
+}
+.pos-history b,.pos-history span{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.pos-history span{color:var(--muted)}
 .row{
   display:flex;
   align-items:flex-start;
@@ -252,13 +269,14 @@ h2{font-size:16px;letter-spacing:0}
   z-index:4;
   width:min(560px,100%);
   display:grid;
-  grid-template-columns:repeat(4,minmax(56px,1fr));
+  grid-template-columns:repeat(3,minmax(56px,1fr));
   gap:7px;
   padding:8px 12px calc(8px + env(safe-area-inset-bottom));
   border-top:1px solid rgba(4,223,244,.22);
   background:rgba(2,7,15,.94);
   backdrop-filter:blur(12px);
 }
+#records,[data-screen="records"]{display:none!important}
 .tab{
   min-height:44px;
   padding:6px 4px;
@@ -448,6 +466,18 @@ function noteText(x){
   return "桌面模型记录";
 }
 
+function actionText(x){
+  return zh(x?.action || x?.type || "模型动作");
+}
+function heldHistoryHtml(p){
+  const rows = p.held_operation_history || [];
+  if(!rows.length) return "";
+  return `<div class="pos-history">
+    <b>当前持仓操作记录</b>
+    ${rows.slice().reverse().slice(0,4).map(x => `<span>${esc(zh(x.date))} ${esc(zh(x.time))} · ${esc(actionText(x))} ${esc(zh(x.qty))}股 / ${esc(zh(x.price))}</span>`).join("")}
+  </div>`;
+}
+
 let alarm = localStorage.getItem("v152.remote.mobile.alarm") === "1";
 function setAlarm(){
   $("alarmBtn").classList.toggle("on", alarm);
@@ -542,7 +572,7 @@ function posCard(p, brief = false){
       <div class="mini"><span>防守</span><b>${esc(zh(p.defense_price))}</b></div>
       <div class="mini"><span>严格</span><b>${esc(zh(p.strict_price))}</b></div>`}
     </div>
-    ${brief ? "" : `<div class="signalline">${flowPill(p)}${pill(zh(p.expectation_label || p.expectation_position_text),"cyan")}</div>`}
+    ${brief ? "" : `<div class="signalline">${flowPill(p)}${pill(zh(p.expectation_label || p.expectation_position_text),"cyan")}</div>${heldHistoryHtml(p)}`}
   </article>`;
 }
 function renderPositions(rows){
