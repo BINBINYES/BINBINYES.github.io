@@ -478,12 +478,17 @@ function noteText(x){
 function actionText(x){
   return zh(x?.action || x?.type || "模型动作");
 }
+function heldActionText(x){
+  const price = zh(x?.price,"");
+  const fallback = `${actionText(x)} ${zh(x?.qty)}股${price && price !== "--" ? ` 成交价${price}` : ""}`;
+  return zh(x?.summary || fallback);
+}
 function heldHistoryHtml(p){
   const rows = p.held_operation_history || [];
   if(!rows.length) return "";
   return `<div class="pos-history">
     <b>当前持仓操作记录</b>
-    ${rows.slice().reverse().slice(0,4).map(x => `<span>${esc(zh(x.date))} ${esc(zh(x.time))} · ${esc(actionText(x))} ${esc(zh(x.qty))}股 / ${esc(zh(x.price))}</span>`).join("")}
+    ${rows.slice().reverse().slice(0,4).map(x => `<span>${esc(zh(x.date))} ${esc(zh(x.time))} · ${esc(heldActionText(x))}</span>`).join("")}
   </div>`;
 }
 
