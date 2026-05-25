@@ -38,7 +38,7 @@ button,a{font:inherit;min-width:0}
   max-width:100%;
   min-height:100vh;
   margin:0 auto;
-  padding:max(12px,env(safe-area-inset-top)) 12px calc(88px + env(safe-area-inset-bottom));
+  padding:max(12px,env(safe-area-inset-top)) 12px calc(12px + env(safe-area-inset-bottom));
 }
 .top{
   display:grid;
@@ -324,17 +324,17 @@ h2{font-size:16px;letter-spacing:0}
 .down{color:var(--green)}
 .flat{color:var(--muted)}
 .tabs{
-  position:fixed;
-  left:50%;
-  bottom:0;
-  transform:translateX(-50%);
+  position:sticky;
+  top:max(8px,env(safe-area-inset-top));
   z-index:4;
-  width:min(560px,100%);
+  width:100%;
   display:grid;
   grid-template-columns:repeat(3,minmax(56px,1fr));
   gap:7px;
-  padding:8px 12px calc(8px + env(safe-area-inset-bottom));
+  margin-bottom:10px;
+  padding:8px 0;
   border-top:1px solid rgba(4,223,244,.22);
+  border-bottom:1px solid rgba(4,223,244,.22);
   background:rgba(2,7,15,.94);
   backdrop-filter:blur(12px);
 }
@@ -352,7 +352,7 @@ h2{font-size:16px;letter-spacing:0}
 }
 @media(max-width:560px){
   .app{padding-left:10px;padding-right:10px}
-  .tabs{padding-left:10px;padding-right:10px;gap:6px}
+  .tabs{gap:6px}
   .status{grid-template-columns:1fr}
   .actions{width:100%}
   .head{flex-wrap:wrap}
@@ -384,6 +384,13 @@ h2{font-size:16px;letter-spacing:0}
     <div class="updated"><span id="updated">已更新 --</span><span id="positionCount">--</span></div>
   </header>
 
+  <nav class="tabs">
+    <button class="tab on" data-screen="overview">概览</button>
+    <button class="tab" data-screen="holdings">仓位</button>
+    <button class="tab" data-screen="signals">信号</button>
+    <button class="tab" data-screen="records">记录</button>
+  </nav>
+
   <section id="overview" class="screen active">
     <article class="panel block" data-module="mainline_strength">
       <div class="head"><h2>主线强度</h2><span id="mainlineStrengthCount" class="pill green">--</span></div>
@@ -391,14 +398,12 @@ h2{font-size:16px;letter-spacing:0}
       <div id="mainlineStrength" class="strength-list"></div>
     </article>
     <article class="panel block" data-module="market_environment">
-      <div class="head"><h2>环境与门控</h2><span id="gateBadge" class="pill cyan">读取中</span></div>
+      <div class="head"><h2>环境</h2><span id="envBadge" class="pill cyan">读取中</span></div>
       <div class="env">
         <div class="cell"><span>市场温度</span><b id="envMarket">--</b></div>
         <div class="cell"><span>资金结构</span><b id="envCapital">--</b></div>
         <div class="cell"><span>恐贪分</span><b id="envFear">--</b></div>
       </div>
-      <div id="gateTags" class="gate"></div>
-      <div id="gateNote" class="note">等待桌面端同步。</div>
     </article>
   </section>
 
@@ -437,13 +442,6 @@ h2{font-size:16px;letter-spacing:0}
     </article>
   </section>
 </main>
-
-<nav class="tabs">
-  <button class="tab on" data-screen="overview">概览</button>
-  <button class="tab" data-screen="holdings">仓位</button>
-  <button class="tab" data-screen="signals">信号</button>
-  <button class="tab" data-screen="records">记录</button>
-</nav>
 
 <script>
 const $ = id => document.getElementById(id);
@@ -627,25 +625,13 @@ function renderKpi(data){
 }
 function renderEnv(data){
   const env = data.market_environment || {};
-  const gate = data.auto_buy_gate || {};
   const fg = env.fear_greed || {};
-  $("envMarket").textContent = zh(gate.regime || env.regime || env.market_state);
-  $("envCapital").textContent = zh(gate.capital_label || gate.capital_state || env.capital_label || env.capital_state);
-  $("envFear").textContent = zh(gate.fear_greed ?? fg.score ?? fg.value ?? "--");
-  const v152 = gate.v152_stable || {};
-  const allowed = Boolean(v152.enabled || gate.can_v152_scan);
-  $("gateBadge").textContent = allowed ? "独立门控" : "诊断中";
-  $("gateBadge").className = "pill " + (allowed ? "green" : "yellow");
-  const blockers = [...new Set([...(gate.hard_blockers || []),...(gate.blockers || []),...(gate.promotion_blockers || [])])].map(blocker).slice(0,4);
-  const warnings = [...new Set(gate.warnings || [])].map(blocker).slice(0,3);
-  $("gateTags").innerHTML = [
-    ...blockers.map(x => pill(x,"yellow")),
-    ...warnings.map(x => pill(x,"cyan"))
-  ].join("");
-  const guard = gate.v152_account_guard || {};
-  $("gateNote").innerHTML = guard.enabled
-    ? `账户闭环：回撤 ${esc(zh(guard.drawdown_pct))}%；攻击上限 ${esc(String(Math.round(Number(guard.attack_weight || 0) * 100)))}%；可用 ${esc(zh(guard.available_attack_cash))}。`
-    : blockers.length ? "当前有门控诊断项，先看阻断标签与持仓变化。" : "当前未见全局阻断，行级门控仍按模型逐票判断。";
+  const capital = env.capital_structure || {};
+  $("envMarket").textContent = zh(env.regime || env.market_state);
+  $("envCapital").textContent = zh(capital.label || capital.state || env.capital_label || env.capital_state);
+  $("envFear").textContent = zh(fg.score ?? fg.value ?? "--");
+  $("envBadge").textContent = data.remote_quote_available ? "实时" : "等待";
+  $("envBadge").className = "pill " + (data.remote_quote_available ? "green" : "yellow");
 }
 function posCard(p, brief = false){
   const stateCls = /严格|防守|低于/.test(zh(p.state)) ? "yellow" : "cyan";
