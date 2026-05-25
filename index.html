@@ -1,41 +1,829 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>V152 远端监控台</title>
+<title>V152 远端赛博监控台</title>
 <style>
-:root{color-scheme:dark;--bg:#030812;--panel:#071427;--panel2:#0b1931;--line:#0d86a6;--line2:#153752;--text:#f4f9ff;--muted:#86aeca;--cyan:#00e5ff;--green:#00f5a0;--pink:#ff2f84;--yellow:#ffd35c}*{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}body{margin:0;color:var(--text);font:14px/1.45 "Microsoft YaHei","PingFang SC",Inter,system-ui,sans-serif;background:linear-gradient(rgba(0,229,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.045) 1px,transparent 1px),radial-gradient(circle at 12% 0%,rgba(255,47,132,.16),transparent 28%),radial-gradient(circle at 88% 5%,rgba(0,245,160,.12),transparent 28%),var(--bg);background-size:32px 32px,32px 32px,auto,auto,auto}.wrap{width:min(1480px,calc(100vw - 28px));margin:0 auto;padding:18px 0 34px}.top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}h1{font-size:28px;line-height:1.05;margin:0 0 6px;color:#fff;text-shadow:0 0 18px rgba(0,229,255,.35)}h2{font-size:16px;margin:0}.sub,.muted{color:var(--muted)}.sub{font-size:13px}.statusbar{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.badge,.btn{border:1px solid rgba(0,229,255,.45);background:rgba(7,20,39,.78);color:var(--text);border-radius:8px;padding:7px 10px;box-shadow:0 0 18px rgba(0,229,255,.08);white-space:nowrap}.btn{cursor:pointer}.btn.on{border-color:var(--green);color:var(--green)}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#5a6475;margin-right:6px;box-shadow:0 0 10px #5a6475}.dot.ok{background:var(--green);box-shadow:0 0 14px var(--green)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:12px}.two{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:12px;margin-bottom:12px}.tables{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-bottom:12px}.panel{min-width:0;overflow:hidden;background:linear-gradient(180deg,rgba(11,25,49,.9),rgba(5,13,27,.94));border:1px solid rgba(0,229,255,.32);border-radius:8px;padding:14px;box-shadow:0 0 0 1px rgba(255,255,255,.02) inset,0 18px 60px rgba(0,0,0,.28)}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.kpi .label{color:var(--muted);font-size:12px}.kpi .value{font-size:24px;font-weight:800;margin-top:6px}.up{color:var(--pink)}.down{color:var(--green)}.flat{color:var(--muted)}.envgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:10px}.cell{border:1px solid var(--line2);background:rgba(3,8,18,.45);border-radius:8px;padding:10px}.cell span{display:block;color:var(--muted);font-size:12px}.cell b{display:block;font-size:19px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.note{border:1px solid rgba(255,211,92,.45);background:rgba(255,154,61,.09);border-radius:8px;padding:9px 10px;color:#ffdca0}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pos{border:1px solid rgba(0,229,255,.26);border-radius:8px;background:rgba(3,8,18,.58);padding:12px}.pos-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}.pos b{font-size:16px}.pos small{display:block;color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.mini{border:1px solid var(--line2);border-radius:7px;padding:7px;background:rgba(8,21,41,.7)}.mini span{display:block;color:var(--muted);font-size:11px}.mini strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pill{display:inline-flex;align-items:center;max-width:100%;gap:4px;border:1px solid #31506d;border-radius:999px;padding:3px 8px;font-weight:700;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:rgba(9,24,44,.88)}.pill.green{border-color:rgba(0,245,160,.62);color:var(--green);background:rgba(0,245,160,.09)}.pill.red{border-color:rgba(255,47,132,.62);color:#ff7dad;background:rgba(255,47,132,.09)}.pill.yellow{border-color:rgba(255,211,92,.68);color:var(--yellow);background:rgba(255,211,92,.1)}.pill.cyan{border-color:rgba(0,229,255,.62);color:var(--cyan);background:rgba(0,229,255,.08)}.scroll{overflow-x:auto;max-width:100%;border:1px solid var(--line2);border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:720px}th{color:#9cc6e8;text-align:left;font-size:12px;background:rgba(9,35,59,.88)}th,td{padding:9px 10px;border-bottom:1px solid rgba(92,137,173,.22);vertical-align:middle;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}td.wrap{white-space:normal;word-break:break-word;line-height:1.35}.name{font-weight:800}.empty{color:#9bb8d0;border:1px dashed #29435e;border-radius:8px;padding:14px;background:rgba(3,8,18,.35)}.mainline-list{display:grid;gap:8px}.mainline-row{display:grid;grid-template-columns:190px minmax(0,1fr) 54px;gap:12px;align-items:center;border-bottom:1px solid rgba(92,137,173,.18);padding:7px 0}.mainline-row:last-child{border-bottom:0}.mainline-row b,.mainline-row .muted{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bar{height:9px;border:1px solid rgba(0,229,255,.35);border-radius:999px;background:#09213b;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--yellow),var(--pink));border-radius:999px}.history{display:grid;gap:8px}.hist{border-left:3px solid var(--cyan);background:rgba(3,8,18,.45);padding:9px 10px;border-radius:7px}.hist strong,.hist span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.hist span{color:var(--muted);font-size:12px}@media(max-width:1280px){.two,.tables{grid-template-columns:1fr}}@media(max-width:980px){.grid,.envgrid,.cards{grid-template-columns:1fr 1fr}.top{display:block}.statusbar{justify-content:flex-start;margin-top:12px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.mainline-row{grid-template-columns:1fr 1fr 42px}}@media(max-width:640px){.wrap{width:calc(100vw - 16px)}.grid,.envgrid,.cards{grid-template-columns:1fr}h1{font-size:24px}}
+:root{
+  color-scheme:dark;
+  --bg:#030812;
+  --panel:#071427;
+  --panel2:#0b1931;
+  --line:#0d86a6;
+  --line2:#14324d;
+  --text:#f4f9ff;
+  --muted:#80a7c8;
+  --cyan:#00e5ff;
+  --green:#00f5a0;
+  --pink:#ff2f84;
+  --yellow:#ffd35c;
+  --orange:#ff9a3d;
+}
+*{box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
+body{
+  margin:0;
+  color:var(--text);
+  font:14px/1.45 "Microsoft YaHei","PingFang SC",Inter,system-ui,sans-serif;
+  background:
+    linear-gradient(rgba(0,229,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,229,255,.05) 1px,transparent 1px),
+    radial-gradient(circle at 12% 0%,rgba(255,47,132,.18),transparent 28%),
+    radial-gradient(circle at 88% 5%,rgba(0,245,160,.14),transparent 28%),
+    var(--bg);
+  background-size:32px 32px,32px 32px,auto,auto,auto;
+}
+.wrap{width:min(1480px,calc(100vw - 28px));margin:0 auto;padding:18px 0 34px;min-width:0}
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px;min-width:0}
+h1{font-size:28px;line-height:1.05;margin:0 0 6px;letter-spacing:0;color:#fff;text-shadow:0 0 18px rgba(0,229,255,.35)}
+h2{font-size:16px;margin:0}
+.sub{color:var(--muted);font-size:13px}
+.statusbar{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;min-width:0}
+.badge,.btn{
+  border:1px solid rgba(0,229,255,.45);
+  background:rgba(7,20,39,.78);
+  color:var(--text);
+  border-radius:8px;
+  padding:7px 10px;
+  box-shadow:0 0 18px rgba(0,229,255,.08);
+  white-space:nowrap;
+}
+.btn{cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.btn.on{border-color:var(--green);color:var(--green)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#5a6475;margin-right:6px;box-shadow:0 0 10px #5a6475}
+.dot.ok{background:var(--green);box-shadow:0 0 14px var(--green)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.two{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:12px;margin-bottom:12px}
+.tables-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-bottom:12px}
+.panel{
+  min-width:0;
+  overflow:hidden;
+  background:linear-gradient(180deg,rgba(11,25,49,.9),rgba(5,13,27,.94));
+  border:1px solid rgba(0,229,255,.32);
+  border-radius:8px;
+  padding:14px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.02) inset,0 18px 60px rgba(0,0,0,.28);
+}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;min-width:0}
+.kpi .label{color:var(--muted);font-size:12px}
+.kpi .value{font-size:24px;font-weight:800;margin-top:6px}
+.up{color:var(--pink)}
+.down{color:var(--green)}
+.flat{color:var(--muted)}
+.warn{color:var(--yellow)}
+.envgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:10px}
+.cell{border:1px solid var(--line2);background:rgba(3,8,18,.45);border-radius:8px;padding:10px;min-width:0}
+.cell span{display:block;color:var(--muted);font-size:12px}
+.cell b{display:block;font-size:19px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.note{border:1px solid rgba(255,211,92,.45);background:rgba(255,154,61,.09);border-radius:8px;padding:9px 10px;color:#ffdca0}
+.note-grid{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:10px}
+.pos{border:1px solid rgba(0,229,255,.26);border-radius:8px;background:rgba(3,8,18,.58);padding:12px;min-width:0}
+.pos-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px;min-width:0}
+.pos-head>div{min-width:0;flex:1 1 220px}
+.pos-head b{display:block;font-size:16px;line-height:1.35;white-space:normal;overflow-wrap:anywhere}
+.pos small{display:block;color:var(--muted);margin-top:3px;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.35}
+.pos .pill{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.25}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(126px,1fr));gap:7px}
+.mini{border:1px solid var(--line2);border-radius:7px;padding:7px;background:rgba(8,21,41,.7);min-width:0}
+.mini span{display:block;color:var(--muted);font-size:11px}
+.mini strong{display:block;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.35}
+.pos-history{margin-top:10px;border:1px solid rgba(92,137,173,.22);border-radius:7px;background:rgba(8,21,41,.52);padding:8px;display:grid;gap:6px}
+.pos-history-title{color:#bdeeff;font-size:12px;font-weight:800}
+.pos-history-item{display:grid;grid-template-columns:minmax(116px,150px) minmax(0,1fr);gap:8px;color:#d8edf8;font-size:12px;line-height:1.35;min-width:0}
+.pos-history-item span{color:var(--muted);white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+.pos-history-item b{font-size:12px;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  max-width:100%;
+  gap:4px;
+  border:1px solid #31506d;
+  border-radius:999px;
+  padding:3px 8px;
+  font-weight:700;
+  font-size:12px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  background:rgba(9,24,44,.88);
+}
+.pill.green{border-color:rgba(0,245,160,.62);color:var(--green);background:rgba(0,245,160,.09)}
+.pill.red{border-color:rgba(255,47,132,.62);color:#ff7dad;background:rgba(255,47,132,.09)}
+.pill.yellow{border-color:rgba(255,211,92,.68);color:var(--yellow);background:rgba(255,211,92,.1)}
+.pill.cyan{border-color:rgba(0,229,255,.62);color:var(--cyan);background:rgba(0,229,255,.08)}
+.scroll{overflow-x:auto;max-width:100%;border:1px solid var(--line2);border-radius:8px}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+.table-small{min-width:660px}
+.table-medium{min-width:720px}
+.table-wide{min-width:780px}
+th{color:#9cc6e8;text-align:left;font-size:12px;background:rgba(9,35,59,.88);position:sticky;top:0;z-index:1}
+th,td{padding:9px 10px;border-bottom:1px solid rgba(92,137,173,.22);vertical-align:middle;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
+.name{font-weight:800}
+.muted{color:var(--muted)}
+.empty{color:#9bb8d0;border:1px dashed #29435e;border-radius:8px;padding:14px;background:rgba(3,8,18,.35)}
+.mainline-list{display:grid;gap:8px}
+.mainline-row{display:grid;grid-template-columns:190px minmax(0,1fr) 54px;gap:12px;align-items:center;border-bottom:1px solid rgba(92,137,173,.18);padding:7px 0;min-width:0}
+.mainline-row:last-child{border-bottom:0}
+.mainline-row b,.mainline-row .muted{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar{height:9px;border:1px solid rgba(0,229,255,.35);border-radius:999px;background:#09213b;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--yellow),var(--pink));border-radius:999px}
+.ladder{margin-bottom:12px}
+.ladder details{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.42);margin-bottom:8px;overflow:hidden}
+.ladder summary{list-style:none;cursor:pointer;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.ladder summary::-webkit-details-marker{display:none}
+.summary-title{min-width:0}
+.summary-title b,.summary-title span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node-line{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:0 12px 12px}
+.node-chip{min-width:0;border-left:3px solid var(--cyan);background:rgba(9,24,44,.75);border-radius:7px;padding:8px}
+.node-chip.hot{border-left-color:var(--pink)}
+.node-chip.good{border-left-color:var(--green)}
+.node-chip .role{color:#bdeeff;font-size:12px;margin-bottom:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node-chip b,.node-chip div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;min-width:0}
+.toolbar h2{display:flex;align-items:center;gap:8px;min-width:0;white-space:nowrap}
+.fold{display:none}
+.fold.show{display:block;margin-top:10px}
+.linkbtn{border:1px solid #31506d;background:rgba(9,24,44,.8);color:#cfeeff;border-radius:7px;padding:5px 9px;cursor:pointer;white-space:nowrap}
+.service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.service-card{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.46);padding:9px;min-width:0}
+.service-card b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.service-card span{display:block;color:var(--muted);font-size:12px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:1280px){
+  .two,.tables-grid{grid-template-columns:1fr}
+  .node-line{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:980px){
+  .grid,.envgrid,.service-grid{grid-template-columns:1fr 1fr}
+  .top{display:block}
+  .statusbar{justify-content:flex-start;margin-top:12px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mainline-row{grid-template-columns:1fr 1fr 42px}
+}
+@media(max-width:640px){
+  .wrap{width:calc(100vw - 16px)}
+  .grid,.envgrid,.cards,.node-line,.service-grid{grid-template-columns:1fr}
+  .pos-history-item{grid-template-columns:1fr}
+  h1{font-size:24px}
+}
 </style>
 </head>
 <body>
 <main class="wrap">
-<header class="top"><div><h1 id="title">V152 远端监控台</h1><div class="sub">桌面模型自动同步，只做研究提醒与纸面模拟，不连接券商下单</div></div><div class="statusbar"><div class="badge"><span id="dot" class="dot"></span><span id="remoteState">状态读取中</span></div><div id="updated" class="badge">已更新 --</div><button id="alarmBtn" class="btn">仓位铃声 OFF</button></div></header>
-<section class="grid"><div class="panel kpi"><div class="label">总权益</div><div id="equity" class="value">--</div><div id="equityPct" class="muted">--</div></div><div class="panel kpi"><div class="label">浮动盈亏</div><div id="floating" class="value">--</div><div id="floatingPct" class="muted">--</div></div><div class="panel kpi"><div class="label">持仓市值</div><div id="marketValue" class="value">--</div><div id="posCount" class="muted">--</div></div><div class="panel kpi"><div class="label">已实现盈亏</div><div id="realized" class="value">--</div><div class="muted">重置后口径</div></div></section>
-<section class="panel"><div class="panel-head"><h2>全市场环境 / 情绪 / 门控</h2><span id="gateBadge" class="pill cyan">读取中</span></div><div class="envgrid"><div class="cell"><span>市场温度</span><b id="envMarket">--</b></div><div class="cell"><span>资金结构</span><b id="envCapital">--</b></div><div class="cell"><span>恐贪分</span><b id="envFear">--</b></div><div class="cell"><span>攻击状态</span><b id="attackState">--</b></div></div><div id="gateNote" class="note">等待桌面端同步门控状态。</div></section>
-<section class="two"><div class="panel"><div class="panel-head"><h2>当前持仓</h2></div><div id="positions" class="cards"></div></div><div class="panel"><div class="panel-head"><h2>主线强度</h2></div><div id="mainlineMeta" class="muted" style="margin:-4px 0 10px">读取中</div><div id="mainlines" class="mainline-list"></div></div></section>
-<section class="tables"><div class="panel"><div class="panel-head"><h2>分时异动识别</h2><span id="intradayCount" class="pill green">--</span></div><div class="scroll"><table><thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:120px">状态</th><th>主线/等级</th><th style="width:140px">资金承接</th><th style="width:82px">涨幅</th><th style="width:86px">现价</th></tr></thead><tbody id="intraday"></tbody></table></div></div><div class="panel"><div class="panel-head"><h2>主线晋级候选映射</h2><span id="promoCount" class="pill green">--</span></div><div class="scroll"><table><thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th>主线</th><th style="width:122px">动作</th><th style="width:78px">晋级分</th><th style="width:132px">资金承接</th><th style="width:90px">涨幅</th></tr></thead><tbody id="promo"></tbody></table></div></div></section>
-<section class="tables"><div class="panel"><div class="panel-head"><h2>两天内操作历史</h2></div><div id="history" class="history"></div></div><div class="panel"><div class="panel-head"><h2>已卖出盈亏历史订单</h2></div><div id="closed" class="history"></div></div></section>
+  <header class="top">
+    <div>
+      <h1>V152 远端赛博监控台</h1>
+      <div class="sub">桌面模型自动同步，只做研究提醒与纸面模拟，不连接券商下单</div>
+    </div>
+    <div class="statusbar">
+      <div class="badge"><span id="dot" class="dot"></span><span id="remoteState">状态读取中</span></div>
+      <div id="updated" class="badge">已更新 --</div>
+      <a class="btn" href="mobile.html">手机简版</a>
+      <button id="alarmBtn" class="btn">仓位铃声 OFF</button>
+    </div>
+  </header>
+
+  <section class="grid">
+    <div class="panel kpi"><div class="label">总权益</div><div id="equity" class="value">--</div><div id="equityPct" class="muted">--</div></div>
+    <div class="panel kpi"><div class="label">浮动盈亏</div><div id="floating" class="value">--</div><div id="floatingPct" class="muted">--</div></div>
+    <div class="panel kpi"><div class="label">持仓市值</div><div id="marketValue" class="value">--</div><div id="posCount" class="muted">--</div></div>
+    <div class="panel kpi"><div class="label">已实现盈亏</div><div id="realized" class="value">--</div><div class="muted">重置后口径</div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>全市场环境 / 预期 / 门控</h2><span id="gateBadge" class="pill cyan">读取中</span></div>
+    <div class="envgrid">
+      <div class="cell"><span>市场温度</span><b id="envMarket">--</b></div>
+      <div class="cell"><span>资金结构</span><b id="envCapital">--</b></div>
+      <div class="cell"><span>恐贪分</span><b id="envFear">--</b></div>
+      <div class="cell"><span>恐贪策略</span><b id="fgPolicy">背景仓位</b></div>
+    </div>
+  </section>
+
+  <section class="two">
+    <div class="panel">
+      <div class="panel-head"><h2>当前仓位</h2></div>
+      <div id="positions" class="cards"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>主线强度</h2></div>
+      <div id="mainlineMeta" class="muted" style="margin:-4px 0 10px">读取中</div>
+      <div id="mainlines" class="mainline-list"></div>
+    </div>
+  </section>
+
+  <section class="panel ladder">
+    <div class="panel-head"><h2>V152 主线梯队网</h2><span id="ladderCount" class="pill cyan">--</span></div>
+    <div id="ladder"></div>
+  </section>
+
+  <section>
+    <div class="panel">
+      <div class="toolbar">
+        <h2>主线晋级候选映射 <span id="promoCount" class="pill green">--</span></h2>
+        <button class="linkbtn" data-fold="promoMore">展开其它</button>
+      </div>
+      <div class="scroll">
+        <table class="table-wide">
+          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th>主线</th><th style="width:122px">动作</th><th style="width:78px">晋级分</th><th style="width:132px">承接状态</th><th style="width:118px">预期</th><th style="width:82px">涨幅</th></tr></thead>
+          <tbody id="promo"></tbody>
+        </table>
+      </div>
+      <div id="promoMore" class="fold">
+        <div class="scroll">
+          <table class="table-small">
+            <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:112px">动作</th><th>阻止/理由</th></tr></thead>
+            <tbody id="promoOther"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
+
 <script>
-const $=id=>document.getElementById(id);const raw=v=>v===undefined||v===null||v===""?"--":String(v);const esc=v=>raw(v).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));const num=v=>{const x=parseFloat(raw(v).replace(/[,％%万]/g,""));return Number.isFinite(x)?x:0};const tone=v=>num(v)>0?"up":num(v)<0?"down":"flat";
-const TEXT={V152_STABLE_ATTACK:"稳定攻击模型",MAINLINE_PROMOTION_MONITOR:"主线晋级监控",BUYABLE6:"可买六条件",NO_SZ_MAIN_10CM:"排除深市主板10cm",NO_AEROSPACE:"排除航空航天弱主线",NO_LONG3:"排除龙三",ACCOUNT_DD_LOCKS:"账户回撤锁",SH_MAIN_10CM:"沪市主板10cm",SZ_MAIN_10CM:"深市主板10cm",CHINEXT_20CM:"创业板20cm",STAR_20CM:"科创板20cm",dynamic_live_monitor_pool:"动态实时监控池",local_csv:"本地缓存",tencent:"腾讯行情",eastmoney:"东方财富行情",sina:"新浪行情",MODEL_AUTO_BUY:"模型模拟买入",MODEL_AUTO_SELL:"模型模拟卖出",MODEL_AUTO_STOP:"模型模拟止损卖出",MODEL_AUTO_REDUCE:"模型模拟减仓",MODEL_EXPECTATION_REDUCE:"低预期模拟减仓",MODEL_BUY_NOT_FILLED:"买入信号未成交",USER_MANUAL_BUY:"用户手动买入",USER_MANUAL_SELL:"用户手动卖出",USER_MANUAL_SELL_SYNC:"用户手动卖出同步",USER_MANUAL_CONFIRMED:"用户已手动确认",REAL_ACCOUNT_MANUAL_BUY_MONITORED:"手动买入后模型监控退出",MODEL_AUTO_LOCAL_STRUCTURE:"模型本地结构信号",T1_BLOCKED_STOP:"T+1锁定，暂不模拟卖出",T1_BLOCKED_EXPECTATION_REDUCE:"T+1锁定，暂不模拟减仓",STOP_DEFERRED_OUT_OF_SESSION:"非连续交易时段，暂不模拟卖出",EXPECTATION_REDUCE_DEFERRED:"非连续交易时段，低预期减仓暂缓",PROMOTION_CANDIDATE_MONITOR:"主线晋级",PROMOTION_WATCH:"晋级观察",MODEL_TRIAL_BUY_WATCH:"试买观察",NO_PROMOTION:"暂不晋级",WAIT_CONFIRM:"等待确认",WAIT:"等待",OBSERVE:"观察",ATTACK_CONFIRMED:"分时进攻确认",ACCEPTANCE_IMPROVING:"承接增强",WATCH_BUY_POINT:"买点观察",INTRADAY_RISK:"分时风险",ok:"正常",observe:"观察",below_cost:"低于成本",defense:"跌破防守线",strict:"跌破严格线",flow_exit:"资金转弱/退出监控",manual_confirm_required:"需要手动确认",HOT:"市场偏热",WARM:"市场偏暖",NEUTRAL:"市场中性",COLD:"市场偏冷",RISK_OFF:"风险退潮",DATA_STALE:"数据失真",BROAD_INFLOW:"资金扩散进攻",STRUCTURAL_INFLOW:"结构性流入",OUTFLOW:"资金退潮",CROWDING:"资金抱团",LOCAL_ROTATION_TRAP:"局部轮动陷阱",background_only_position_sizing:"仅用于仓位权重",waiting_for_closing_window:"等待尾盘确认窗口",after_close:"收盘后",afternoon_session:"下午交易时段",waiting_for_v1519r_30m_window:"等待误拒绝修正窗口",v1519r_trial_disabled:"误拒绝修正试买未开启",regime_risk_off:"市场处于风险退潮",not_closing_10m_gate_window:"未到尾盘确认窗口",mainline_promotion_trial_disabled:"主线晋级试买未开启",promotion_auto_buy_disabled:"晋级自动买入未开启",auto_buy_disabled:"自动模拟买入未开启",connected:"已连接",disconnected:"未连接",running:"运行中"};
-function zh(v,fallback="--"){let s=raw(v).trim();if(!s||s==="--")return fallback;if(TEXT[s])return TEXT[s];for(const k of Object.keys(TEXT).sort((a,b)=>b.length-a.length)){if(s.includes(k))s=s.split(k).join(TEXT[k])}s=s.replace(/\.v\d+/g,"");if(/[�锟閼闂閹鐠娴妗鍊濡瀵绾搁杩滅]/.test(s)||/\?{2,}/.test(s))return fallback;if(/^[a-z0-9_.-]+(?:_[a-z0-9_.-]+)+$/i.test(s))return "系统信号";return s}
-function blockerOne(v){const s=raw(v).trim();if(!s||s==="无")return "";if(TEXT[s])return TEXT[s];if(s.startsWith("candidate_mood<"))return "候选池热度低于"+s.split("<")[1];if(s.startsWith("fear_greed<"))return "恐贪分低于"+s.split("<")[1];if(s.startsWith("market_env_age>"))return "全市场环境扫描超时";if(s.startsWith("regime_"))return "市场温度未放行";if(s.startsWith("capital_structure_"))return "资金结构未放行";return zh(s,"门控提示")}
-function blockerText(v){return raw(v).split(/[;；,]/).map(x=>blockerOne(x)).filter(Boolean).join("；")}
-function evidence(v){let s=zh(v,"");if(!s)return "";const reps=[["model=","模型="],["board=","板块="],["mainline=","主线="],["node=","产业节点="],["mainline_strong=","主线强候选数="],["hiddenflow=--","资金承接=缺失"],["hiddenflow=","资金承接="],["rt_pct=","涨幅="],["depth_source=","数据来源="]];for(const [a,b] of reps)s=s.split(a).join(b);return s.replace(/\s*\/\s*/g,"；").replace(/\s*;\s*/g,"；")}
-const pill=(s,c="cyan")=>`<span class="pill ${c}">${esc(zh(s))}</span>`;const posSig=rows=>(rows||[]).map(p=>[p.code,p.qty,p.cost,p.price,p.state,p.source].join(":")).join("|");let alarm=localStorage.getItem("v152.remote.alarm")==="1";function alarmUi(){$("alarmBtn").classList.toggle("on",alarm);$("alarmBtn").textContent=alarm?"仓位铃声 ON":"仓位铃声 OFF"}function ring(){try{const C=window.AudioContext||window.webkitAudioContext;const ctx=new C();[0,.18,.36,.54].forEach((t,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type="square";o.frequency.value=i%2?1280:920;g.gain.setValueAtTime(.0001,ctx.currentTime+t);g.gain.exponentialRampToValueAtTime(.28,ctx.currentTime+t+.02);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+t+.16);o.connect(g);g.connect(ctx.destination);o.start(ctx.currentTime+t);o.stop(ctx.currentTime+t+.18)})}catch(e){}}$("alarmBtn").onclick=()=>{alarm=!alarm;localStorage.setItem("v152.remote.alarm",alarm?"1":"0");alarmUi();if(alarm)ring()};alarmUi();
-function flow(r){const s=zh(r?.v1519_flow||[r?.hiddenflow_label,r?.hiddenflow_score].filter(Boolean).join(" ")||"--");const good=/承接|确认|增强|净流/.test(s),bad=/出货|风险|转弱|撤退/.test(s);return pill(s,good?"green":bad?"yellow":"cyan")}function exp(r){const s=zh([r?.expectation_label,r?.expectation_position_text].filter(Boolean).join(" "),"");return pill(s||"--",/高/.test(s)?"green":/低/.test(s)?"yellow":"cyan")}
-function renderKpi(d){$("equity").textContent=zh(d.equity);$("equityPct").textContent=`${zh(d.equity_detail||d.total_pnl_pct)} · 可用 ${zh(d.cash)}`;$("floating").textContent=zh(d.floating_pnl);$("floating").className="value "+tone(d.floating_pnl);$("floatingPct").textContent=zh(d.floating_pnl_pct);$("marketValue").textContent=zh(d.market_value);$("posCount").textContent=`${zh(d.positions_count||0)} 只持仓`;$("realized").textContent=zh(d.realized_pnl);$("realized").className="value "+tone(d.realized_pnl)}
-function renderEnv(d){const e=d.market_environment||{},g=d.auto_buy_gate||{},fg=e.fear_greed||{},cap=e.capital_structure||{};$("envMarket").textContent=zh(g.regime||e.regime);$("envCapital").textContent=zh(g.capital_label||cap.label||cap.state);$("envFear").textContent=zh(g.fear_greed??fg.score);$("attackState").textContent=g.can_auto_buy?"允许进攻":"等待/阻断";$("gateBadge").textContent=g.can_auto_buy?"允许进攻":"V152门控";$("gateBadge").className="pill "+(g.can_auto_buy?"green":"yellow");const bs=[...(g.hard_blockers||[]),...(g.blockers||[]),...(g.promotion_blockers||[])].slice(0,7);$("gateNote").innerHTML=bs.length?`阻断/提示：${bs.map(x=>pill(blockerText(x)||zh(x),"yellow")).join(" ")}`:"当前没有主要阻断项。"}
-function renderPositions(rows){$("positions").innerHTML=rows&&rows.length?rows.map(p=>`<div class="pos"><div class="pos-head"><div><b>${esc(p.code)} ${esc(zh(p.name))}</b><small>${esc(zh(p.source||p.quote_source||""))}</small></div>${pill(zh(p.level||p.state),p.level==="ok"?"green":"yellow")}</div><div class="stats"><div class="mini"><span>数量</span><strong>${esc(p.qty)}</strong></div><div class="mini"><span>成本</span><strong>${esc(p.cost)}</strong></div><div class="mini"><span>现价</span><strong>${esc(p.price)}</strong></div><div class="mini"><span>浮动</span><strong class="${tone(p.pnl_pct)}">${esc(p.pnl_amount)} / ${esc(p.pnl_pct)}%</strong></div><div class="mini"><span>防守价</span><strong>${esc(p.defense_price)}</strong></div><div class="mini"><span>严格线</span><strong>${esc(p.strict_price)}</strong></div><div class="mini"><span>资金承接</span><strong>${flow(p)}</strong></div><div class="mini"><span>预期</span><strong>${exp(p)}</strong></div></div></div>`).join(""):`<div class="empty">暂无持仓。</div>`}
-function renderMainlines(m){const meta=Array.isArray(m)?{}:(m||{}),rows=Array.isArray(m)?m:(meta.rows||[]),list=rows.slice(0,8),max=Math.max(1,...list.map(r=>num(r.strong_candidates)));$("mainlineMeta").textContent=`${zh(meta.mode||"动态/静态聚合")} · 更新 ${zh(meta.as_of)}`;$("mainlines").innerHTML=list.length?list.map(r=>{const strong=num(r.strong_candidates),w=Math.max(3,Math.round(strong/max*100));return `<div class="mainline-row"><div><b>${esc(zh(r.mainline))}</b><div class="muted">${esc(zh([r.node,r.top_companies].filter(Boolean).join(" · "),""))}</div></div><div class="bar"><i style="width:${w}%"></i></div><div class="up"><b>${strong} 强</b></div></div>`}).join(""):`<div class="empty">暂无主线强度。</div>`}
-function renderIntraday(rows){const good=(rows||[]).filter(r=>/承接|确认|增强|净流/.test(zh(r.v1519_flow||r.label||r.state||""))).slice(0,18);$("intradayCount").textContent=`${good.length} 条`;$("intraday").innerHTML=good.length?good.map(r=>`<tr><td><b>${esc(r.code)}</b></td><td class="name">${esc(zh(r.name))}</td><td>${pill(zh(r.label||r.state),"green")}</td><td title="${esc(zh(r.pool||""))}">${esc(zh(r.pool||[r.mainline,r.node,r.candidate_tier].filter(Boolean).join(" / ")))}</td><td>${flow(r)}</td><td class="${tone(r.rt_pct||r.pct)}">${esc(r.rt_pct||r.pct)}</td><td>${esc(r.price)}</td></tr>`).join(""):`<tr><td colspan="7" class="muted">暂无分时进攻确认或承接增强。</td></tr>`}
-function renderPromo(p){const rows=((p||{}).rows||[]).filter(r=>zh(r.action_zh||r.label||r.action||"").includes("晋级")||num(r.promotion_score)>=70).slice(0,18);$("promoCount").textContent=`${rows.length} 条`;$("promo").innerHTML=rows.length?rows.map(r=>`<tr><td><b>${esc(r.code)}</b></td><td class="name">${esc(zh(r.name))}</td><td>${esc(zh(r.theme||[r.mainline,r.node].filter(Boolean).join(" / ")))}</td><td>${pill(zh(r.action_zh||r.label||r.action),"green")}</td><td>${esc(r.promotion_score)}</td><td>${flow(r)}</td><td class="${tone(r.rt_pct)}">${esc(r.rt_pct)}</td></tr>`).join(""):`<tr><td colspan="7" class="muted">暂无主线晋级候选。</td></tr>`}
-function renderHistory(rows){$("history").innerHTML=rows&&rows.length?rows.slice().reverse().slice(0,20).map(x=>`<div class="hist"><span>${esc(x.date)} ${esc(x.time)} · ${esc(zh(x.type))}</span><strong>${esc(x.code)} ${esc(zh(x.name))} ${esc(zh(x.action))}</strong><span>${esc(x.qty)} 股 / ${esc(x.price)} · ${esc(evidence(x.note)||zh(x.note,""))}</span></div>`).join(""):`<div class="empty">暂无两天内操作记录。</div>`}
-function renderClosed(rows){$("closed").innerHTML=rows&&rows.length?rows.slice().reverse().slice(0,20).map(x=>`<div class="hist"><span>${esc(x.date)} ${esc(x.time)}</span><strong>${esc(x.code)} ${esc(zh(x.name))} 卖出 ${esc(x.qty)} 股</strong><span>${esc(x.buy_price)} 到 ${esc(x.sell_price)} / ${esc(x.pnl_amount)} / ${esc(x.pnl_pct)} · ${esc(evidence(x.reason)||zh(x.reason,""))}</span></div>`).join(""):`<div class="empty">暂无已卖出历史订单。</div>`}
-function render(d){const title=d.model_adapter?.remote_title||d.model_owner?.remote_title||"V152 远端监控台";document.title=zh(title);$("title").textContent=zh(title);$("dot").classList.toggle("ok",!!d.remote_quote_available);$("remoteState").textContent=zh(d.remote_status_label||(d.remote_quote_available?"行情连接可用":"行情连接不可用"));$("updated").textContent=`已更新 ${zh(d.generated_at||d.source_generated_at)}`;renderKpi(d);renderEnv(d);renderPositions(d.positions||[]);renderMainlines(d.market_environment?.mainlines||[]);renderIntraday(d.intraday_v1519_green||d.intraday_anomaly?.rows||[]);renderPromo(d.mainline_promotion_mapping||d.mainline_promotion||{});renderHistory(d.operation_history_2d||[]);renderClosed(d.closed_orders||[]);const old=localStorage.getItem("v152.remote.positionSig")||"",now=posSig(d.positions||[]);if(alarm&&old&&old!==now){ring();if("Notification" in window&&Notification.permission==="granted")new Notification("仓位变化",{body:"模型买卖或仓位结构发生变化。"})}localStorage.setItem("v152.remote.positionSig",now)}
-async function load(){try{for(const f of["status.json","status_latest.json"]){const r=await fetch(f+"?t="+Date.now(),{cache:"no-store"});if(r.ok){render(await r.json());return}}throw new Error("状态文件不可用")}catch(e){$("dot").classList.remove("ok");$("remoteState").textContent="状态不可用";$("positions").innerHTML=`<div class="empty">远端状态加载失败：${esc(e.message)}</div>`}}if("Notification" in window&&Notification.permission==="default")Notification.requestPermission().catch(()=>{});load();setInterval(load,60000);
+const $ = id => document.getElementById(id);
+let modelLabels = {};
+
+const Output = (() => {
+  const names = {
+    "300885":"海昌新材","603308":"应流股份","688001":"华兴源创","000593":"德龙汇能",
+    "603618":"杭电股份","300390":"天华新能","300042":"朗科科技","688313":"仕佳光子"
+  };
+  const text = {
+    "V152_STABLE_ATTACK":"稳定攻击模型",
+    "MAINLINE_PROMOTION_MONITOR":"主线晋级监控",
+    "BUYABLE6":"可买六条件",
+    "NO_SZ_MAIN_10CM":"排除深市主板10cm",
+    "NO_AEROSPACE":"排除航空航天弱主线",
+    "NO_LONG3":"排除龙三",
+    "ACCOUNT_DD_LOCKS":"账户回撤锁",
+    "SH_MAIN_10CM":"沪市主板10cm",
+    "SZ_MAIN_10CM":"深市主板10cm",
+    "CHINEXT_20CM":"创业板20cm",
+    "STAR_20CM":"科创板20cm",
+    "dynamic_live_monitor_pool":"动态实时监控池",
+    "tencent":"腾讯行情",
+    "eastmoney":"东方财富行情",
+    "sina":"新浪行情",
+    "local_csv":"本地缓存",
+    "V151.scan_read":"扫描读取",
+    "V151.ticklike":"准实时合并扫描",
+    "V151.ladder":"主线梯队",
+    "V151.15-B":"预期仓位",
+    "V151.14":"分时异动",
+    "V151.10":"市场诊断",
+    "V151.9-R":"误拒绝修正",
+    "V151.9R":"误拒绝修正",
+    "V151.9":"承接状态",
+    "V151.6":"市场环境",
+    "V151.5":"主线晋级",
+    "V151.4":"主线核心池",
+    "V151.3":"全市场环境",
+    "V151.2":"动态止损",
+    "V151.1":"主升浪调仓",
+    "V151.scan":"扫描读取",
+    "V151":"模型",
+    MODEL_AUTO_BUY:"模型模拟买入",
+    MODEL_AUTO_SELL:"模型模拟卖出",
+    MODEL_EXPECTATION_REDUCE:"低预期模拟减仓",
+    MODEL_BUY_NOT_FILLED:"买入信号未成交",
+    USER_MANUAL_BUY:"用户实盘手动买入",
+    USER_MANUAL_SELL:"用户实盘手动卖出",
+    USER_MANUAL_CONFIRMED:"用户已手动确认",
+    REAL_ACCOUNT_MANUAL_BUY_MONITORED:"实盘手动买入，模型负责监控退出",
+    V151_9R_REJECT_RECOVERY_TRIAL:"误拒绝修正观察仓",
+    MODEL_AUTO_LOCAL_STRUCTURE:"模型本地结构信号",
+    T1_BLOCKED_STOP:"T+1锁定，暂不模拟卖出",
+    T1_BLOCKED_EXPECTATION_REDUCE:"T+1锁定，暂不模拟减仓",
+    STOP_DEFERRED_OUT_OF_SESSION:"非连续交易时段，暂不模拟卖出",
+    EXPECTATION_REDUCE_DEFERRED:"非连续交易时段，低预期减仓暂缓",
+    PROMOTION_CANDIDATE_MONITOR:"主线晋级",
+    PROMOTION_WATCH:"晋级观察",
+    MODEL_TRIAL_BUY_WATCH:"试买观察",
+    NO_PROMOTION:"暂不晋级",
+    WAIT_CONFIRM:"等待确认",
+    WAIT:"等待",
+    OBSERVE:"观察",
+    ATTACK_CONFIRMED:"分时进攻确认",
+    ACCEPTANCE_IMPROVING:"承接增强",
+    WATCH_BUY_POINT:"买点观察",
+    INTRADAY_RISK:"分时风险",
+    ok:"正常",
+    observe:"观察",
+    below_cost:"低于成本",
+    defense:"跌破防守线",
+    strict:"跌破严格线",
+    flow_exit:"资金转弱/退出监控",
+    manual_confirm_required:"需要手动确认",
+    connected:"已连接",
+    disconnected:"未连接",
+    HOT:"市场偏热",
+    WARM:"市场偏暖",
+    NEUTRAL:"市场中性",
+    COLD:"市场偏冷",
+    RISK_OFF:"风险退潮",
+    DATA_STALE:"数据失真",
+    BROAD_INFLOW:"资金扩散进攻",
+    STRUCTURAL_INFLOW:"结构性流入",
+    OUTFLOW:"资金退潮",
+    CROWDING:"资金抱团",
+    LOCAL_ROTATION_TRAP:"局部轮动陷阱",
+    background_only_position_sizing:"仅用于仓位权重",
+    waiting_for_closing_window:"等待尾盘确认窗口",
+    after_close:"收盘后",
+    afternoon_session:"下午交易时段",
+    waiting_for_v1519r_30m_window:"等待误拒绝修正窗口",
+    v1519r_trial_disabled:"误拒绝修正试买未开启"
+  };
+  const badRe = /锟|�|閼|闂|閹|鐠|娴|妗|鍊|濡|瀵|绾搁|杩滅|璧涘|\?\//;
+  const enumRe = /^[A-Z0-9_.-]+(?:_[A-Z0-9_.-]+)+$/;
+  function raw(v){ return (v === undefined || v === null || v === "") ? "--" : String(v); }
+  function isBad(v){ const s = raw(v); return badRe.test(s) || /\?{2,}/.test(s); }
+  function zh(v, opt = {}){
+    const fallback = opt.fallback ?? "--";
+    let s = raw(v).trim();
+    if(!s || s === "--") return fallback;
+    if(modelLabels[s]) return modelLabels[s];
+    if(text[s]) return text[s];
+    const adapterKeys = Object.keys(modelLabels || {});
+    const fallbackKeys = ["V152_STABLE_ATTACK","V151.scan_read","V151.ticklike","V151.ladder","V151.15-B","V151.14","V151.10","V151.9-R","V151.9R","V151.9","V151.6","V151.5","V151.4","V151.3","V151.2","V151.1","V151.scan","V151"];
+    for(const key of [...adapterKeys, ...fallbackKeys].sort((a,b)=>b.length-a.length)){
+      if(s.includes(key)) s = s.split(key).join(modelLabels[key] || text[key] || key);
+    }
+    s = s.replace(/\.v\d+/g,"");
+    if(isBad(s)) return fallback;
+    if(enumRe.test(s)) return opt.enumFallback ?? "系统信号";
+    return s;
+  }
+  function code(v){ return raw(v).padStart(6,"0"); }
+  function name(codeValue, nameValue){
+    const c = code(codeValue);
+    return names[c] || zh(nameValue, {fallback:"--"});
+  }
+  function compact(v, max = 42, opt = {}){
+    const s = zh(v, opt);
+    return s.length > max ? s.slice(0, max) + "..." : s;
+  }
+  function blocker(v){
+    const s = raw(v);
+    if(text[s]) return text[s];
+    if(s === "regime_risk_off") return "市场处于风险退潮";
+    if(s === "market_breadth_stale") return "全市场涨跌家数数据过期";
+    if(s === "not_closing_10m_gate_window") return "未到尾盘确认窗口";
+    if(s === "mainline_promotion_trial_disabled") return "主线晋级试买未开启";
+    if(s === "promotion_auto_buy_disabled") return "晋级自动买入未开启";
+    if(s.startsWith("market_env_age>")) return "全市场环境扫描超时";
+    if(s.startsWith("candidate_mood<")) return "候选池热度低于" + s.split("<")[1];
+    if(s.startsWith("fear_greed<")) return "恐贪分低于" + s.split("<")[1];
+    if(s.startsWith("regime_")) return "市场温度未放行";
+    if(s.startsWith("capital_structure_")) return "资金结构未放行";
+    if(enumRe.test(s)) return "门控阻断";
+    return zh(s);
+  }
+  function evidence(v){
+    let s = zh(v, {fallback:""});
+    if(!s) return "";
+    const replacements = [
+      ["MAINLINE_PROMOTION_MONITOR", "主线晋级监控"],
+      ["MODEL_AUTO_LOCAL_STRUCTURE", "模型本地结构信号"],
+      ["V152_STABLE_ATTACK", "稳定攻击模型"],
+      ["SH_MAIN_10CM", "沪市主板10cm"],
+      ["SZ_MAIN_10CM", "深市主板10cm"],
+      ["CHINEXT_20CM", "创业板20cm"],
+      ["STAR_20CM", "科创板20cm"],
+      ["dynamic_live_monitor_pool", "动态实时监控池"],
+      ["USER_MANUAL_SELL_SYNC", "用户手动卖出同步"],
+      ["model=", "模型="],
+      ["board=", "板块="],
+      ["mainline=", "主线="],
+      ["node=", "产业节点="],
+      ["mainline_strong=", "主线强候选数="],
+      ["hiddenflow=--", "承接=缺失"],
+      ["hiddenflow=", "承接="],
+      ["rt_pct=", "涨幅="],
+      ["depth_source=", "数据来源="]
+    ];
+    for(const [oldText, newText] of replacements) s = s.split(oldText).join(newText);
+    return s.replace(/\s*\/\s*/g, "；").replace(/\s*;\s*/g, "；");
+  }
+  function blockerText(v){
+    return raw(v).split(/[;；,]/).map(x => blocker(x.trim())).filter(Boolean).join("；");
+  }
+  function esc(v){
+    return raw(v).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  }
+  function num(v){
+    const x = parseFloat(raw(v).replace(/[,%万]/g,""));
+    return Number.isFinite(x) ? x : 0;
+  }
+  function tone(v){ const x = num(v); return x > 0 ? "up" : x < 0 ? "down" : "flat"; }
+  function pill(label, cls = "cyan", title = ""){
+    return `<span class="pill ${cls}" title="${esc(zh(title,{fallback:""}))}">${esc(label || "--")}</span>`;
+  }
+  return {zh, evidence, blockerText, code, name, compact, blocker, esc, num, tone, pill, raw};
+})();
+
+const O = Output;
+const emptyRow = (cols, text) => `<tr><td colspan="${cols}" class="muted">${O.esc(text)}</td></tr>`;
+const uniq = arr => [...new Set((arr || []).map(x => O.raw(x)).filter(x => x && x !== "--"))];
+
+function flowLabel(r){
+  const score = r?.hiddenflow_score ?? r?.flow_score ?? "";
+  const raw = r?.v1519_flow || [r?.hiddenflow_label, score].filter(Boolean).join(" ") || "--";
+  const s = O.zh(raw, {fallback:"--"});
+  const good = /主力净流入|承接|确认|增强/.test(s);
+  const risk = /出货|风险|转弱|撤退/.test(s);
+  return O.pill(s, good ? "green" : risk ? "yellow" : "cyan", r?.hiddenflow_reason || r?.capital_evidence || "");
+}
+
+function expectationLabel(r){
+  const s = O.zh([r?.expectation_label, r?.expectation_position_text].filter(Boolean).join(" "), {fallback:"--"});
+  if(s === "--") return O.pill("--","cyan");
+  return O.pill(s, s.includes("高预期") ? "green" : s.includes("低预期") ? "yellow" : "cyan", r?.expectation_reason || "");
+}
+
+function addLegClass(r){
+  const s = O.raw(r?.v152_add_leg_light || "");
+  if(s === "green") return "green";
+  if(s === "bad" || s === "red") return "red";
+  if(s === "warn" || s === "yellow") return "yellow";
+  return "cyan";
+}
+
+function addLegLine(r){
+  const stop = O.zh(r?.v152_add_leg_dynamic_stop_price, {fallback:""});
+  const gap = O.zh(r?.v152_add_leg_stop_gap_pct, {fallback:""});
+  const pnl = O.zh(r?.v152_add_leg_pnl_pct, {fallback:""});
+  const parts = [];
+  if(stop) parts.push(`动态线 ${stop}`);
+  if(gap) parts.push(`距线 ${gap}`);
+  if(pnl) parts.push(`腿盈亏 ${pnl}`);
+  return parts.length ? parts.join(" / ") : "未开启";
+}
+
+let alarm = localStorage.getItem("v151.remote.alarm") === "1";
+const POSITION_ALARM_SIG_KEY = "v152.remote.positionTradeSig.v2";
+const POSITION_ALARM_AT_KEY = "v152.remote.positionTradeSig.alertAt";
+const POSITION_ALARM_COOLDOWN_MS = 30000;
+function setAlarmUI(){
+  $("alarmBtn").classList.toggle("on", alarm);
+  $("alarmBtn").textContent = alarm ? "仓位铃声 ON" : "仓位铃声 OFF";
+}
+function ring(){
+  try{
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    [0,0.18,0.36,0.54].forEach((t,i)=>{
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = "square";
+      o.frequency.value = i % 2 ? 1280 : 920;
+      g.gain.setValueAtTime(.0001, ctx.currentTime + t);
+      g.gain.exponentialRampToValueAtTime(.28, ctx.currentTime + t + .02);
+      g.gain.exponentialRampToValueAtTime(.0001, ctx.currentTime + t + .16);
+      o.connect(g); g.connect(ctx.destination);
+      o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + .18);
+    });
+  }catch(e){}
+}
+function notice(title, body){
+  if("Notification" in window && Notification.permission === "granted") new Notification(title,{body});
+}
+$("alarmBtn").onclick = () => {
+  alarm = !alarm;
+  localStorage.setItem("v151.remote.alarm", alarm ? "1" : "0");
+  if(alarm) localStorage.setItem(POSITION_ALARM_SIG_KEY, positionSig(window.__lastRemotePositions || []));
+  setAlarmUI();
+};
+document.querySelectorAll("[data-fold]").forEach(btn => btn.onclick = () => {
+  const el = $(btn.dataset.fold);
+  el.classList.toggle("show");
+  btn.textContent = el.classList.contains("show") ? "收起其它" : "展开其它";
+});
+setAlarmUI();
+
+function renderKpi(data){
+  $("equity").textContent = O.zh(data.equity);
+  $("equityPct").textContent = `${O.zh(data.equity_detail || data.equity_pnl_pct || data.total_pnl_pct)} · 可用 ${O.zh(data.cash || "--")}`;
+  $("floating").textContent = O.zh(data.floating_pnl);
+  $("floating").className = "value " + O.tone(data.floating_pnl);
+  $("floatingPct").textContent = O.zh(data.floating_pnl_pct);
+  $("marketValue").textContent = O.zh(data.market_value);
+  $("posCount").textContent = `${O.zh(data.positions_count, {fallback:0})} 只持仓`;
+  $("realized").textContent = O.zh(data.realized_pnl);
+  $("realized").className = "value " + O.tone(data.realized_pnl);
+}
+
+function renderEnv(data){
+  const env = data.market_environment || {};
+  const gate = data.auto_buy_gate || {};
+  const fg = env.fear_greed || {};
+  $("envMarket").textContent = O.zh(gate.regime || env.regime || env.market_state);
+  $("envCapital").textContent = O.zh(gate.capital_label || gate.capital_state || env.capital_label || env.capital_state);
+  $("envFear").textContent = O.zh(gate.fear_greed ?? fg.score ?? fg.value ?? "--");
+  $("fgPolicy").textContent = O.zh(gate.fear_greed_policy || data.paper_trading_rules?.fear_greed_policy || "background_only_position_sizing");
+
+  const v152 = gate.v152_stable || {};
+  const canBuy = Boolean(v152.enabled || gate.can_v152_scan);
+  $("gateBadge").textContent = canBuy ? "V152独立门控" : "门控未启用";
+  $("gateBadge").className = "pill " + (canBuy ? "green" : "yellow");
+}
+
+function positionHistoryHtml(p){
+  const rows = p.held_operation_history || [];
+  if(!rows.length) return "";
+  return `<div class="pos-history">
+    <div class="pos-history-title">当前持仓操作记录</div>
+    ${rows.slice().reverse().slice(0,6).map(x => {
+      const price = O.zh(x.price, {fallback:""});
+      const fallback = `${actionOf(x)} ${O.zh(x.qty)}股${price && price !== "--" ? ` 成交价${price}` : ""}`;
+      return `<div class="pos-history-item">
+        <span>${O.esc(O.zh(x.date))} ${O.esc(O.zh(x.time))}</span>
+        <b>${O.esc(x.summary || fallback)}</b>
+      </div>`;
+    }).join("")}
+  </div>`;
+}
+
+function renderPositions(rows){
+  $("positions").innerHTML = rows && rows.length ? rows.map(p => {
+    const pnlCls = O.tone(p.pnl_amount || p.pnl_pct);
+    const addLegLabel = O.zh(p.v152_add_leg_label || "未加仓");
+    const addLegDetail = addLegLine(p);
+    return `<div class="pos">
+      <div class="pos-head">
+        <div><b>${O.esc(O.code(p.code))} ${O.esc(O.name(p.code,p.name))}</b><small>${O.esc(O.zh(p.source))}</small></div>
+        ${O.pill(O.zh(p.state),"cyan")}
+      </div>
+      <div class="stats">
+        <div class="mini"><span>数量</span><strong>${O.esc(O.zh(p.qty))}</strong></div>
+        <div class="mini"><span>成本</span><strong>${O.esc(O.zh(p.cost))}</strong></div>
+        <div class="mini"><span>现价</span><strong>${O.esc(O.zh(p.price))}</strong></div>
+        <div class="mini"><span>浮动</span><strong class="${pnlCls}">${O.esc(O.zh(p.pnl_amount))} / ${O.esc(O.zh(p.pnl_pct))}</strong></div>
+        <div class="mini"><span>防守价</span><strong>${O.esc(O.zh(p.defense_price))}</strong></div>
+        <div class="mini"><span>严格线</span><strong>${O.esc(O.zh(p.strict_price))}</strong></div>
+        <div class="mini"><span>加仓腿</span><strong>${O.pill(addLegLabel, addLegClass(p), p.v152_add_leg_reason || "")}</strong></div>
+        <div class="mini"><span>动态线</span><strong>${O.esc(addLegDetail)}</strong></div>
+        <div class="mini"><span>承接状态</span><strong>${flowLabel(p)}</strong></div>
+        <div class="mini"><span>预期</span><strong>${expectationLabel(p)}</strong></div>
+      </div>
+      ${positionHistoryHtml(p)}
+    </div>`;
+  }).join("") : `<div class="empty">暂无持仓。</div>`;
+}
+
+function renderMainlines(mainlines){
+  const meta = Array.isArray(mainlines) ? {} : (mainlines || {});
+  const rows = Array.isArray(mainlines) ? mainlines : (meta.rows || []);
+  const list = rows.slice(0,8);
+  const mode = meta.mode === "dynamic_live_monitor_pool" ? "动态实时聚合" : "静态扫描";
+  const asOf = meta.as_of || "--";
+  const staticAsOf = meta.static_as_of ? `；静态底座 ${meta.static_as_of}` : "";
+  $("mainlineMeta").textContent = `${mode} · 更新 ${asOf}${staticAsOf}`;
+  const maxStrong = Math.max(1, ...list.map(r => O.num(r.strong_candidates)));
+  $("mainlines").innerHTML = list.length ? list.map(r => {
+    const strong = O.num(r.strong_candidates);
+    const width = Math.max(3, Math.round(strong / maxStrong * 100));
+    const live = r.live_sample ? `样本${r.live_sample} 上${r.live_up_count || 0}/下${r.live_down_count || 0}` : "";
+    const avg = r.avg_pct !== undefined && r.avg_pct !== null ? `均${r.avg_pct}%` : "";
+    const desc = [r.node, r.top_companies, live, avg].filter(Boolean).join(" · ");
+    return `<div class="mainline-row">
+      <div><b>${O.esc(O.zh(r.mainline))}</b><div class="muted">${O.esc(O.compact(desc,34))}</div></div>
+      <div class="bar"><i style="width:${width}%"></i></div>
+      <div class="up"><b>${O.esc(strong)} 强</b></div>
+    </div>`;
+  }).join("") : `<div class="empty">暂无主线强度。</div>`;
+}
+
+function ladderStrengthClass(g){
+  const t = O.raw(g?.strength_link_class || g?.strength_tier || g?.strength_link_label);
+  if(/bad|走弱/.test(t)) return "red";
+  if(/ok|强主线/.test(t)) return "green";
+  if(/blue|增强/.test(t)) return "cyan";
+  if(/warn|未匹配/.test(t)) return "yellow";
+  return "cyan";
+}
+
+function renderLadder(graph){
+  const rows = graph?.rows || [];
+  $("ladderCount").textContent = `${rows.length} 条主线`;
+  $("ladder").innerHTML = rows.length ? rows.map((g, idx) => {
+    const nodes = (g.nodes || []).slice(0,8);
+    const strengthLabel = O.zh(g.strength_link_label || g.strength_tier || "未联动");
+    const strengthTip = [g.strength_action,g.strength_risk,g.strength_reason].filter(Boolean).join("；");
+    const chips = nodes.map(n => {
+      const role = O.zh(n.ladder_role || n.edge_label || n.candidate_tier || "候选");
+      const cls = role.includes("龙头") || role.includes("高标") ? "hot" : String(n.v1519_flow || "").includes("承接") ? "good" : "";
+      return `<div class="node-chip ${cls}">
+        <div class="role">${O.esc(role)}</div>
+        <b>${O.esc(O.code(n.code))} ${O.esc(O.name(n.code,n.name))}</b>
+        <div class="${O.tone(n.rt_pct)}">${O.esc(O.zh(n.rt_pct))} · ${O.esc(O.zh(n.price))}</div>
+        <div>${flowLabel(n)}</div>
+      </div>`;
+    }).join("");
+    return `<details ${idx < 3 ? "open" : ""}>
+      <summary>
+        <div class="summary-title"><b>${O.esc(O.zh(g.mainline))}</b><span class="muted">龙头 ${O.esc(O.code(g.leader_code))} ${O.esc(O.name(g.leader_code,g.leader_name))} · ${O.esc(O.compact(g.strength_action || "",34))}</span></div>
+        <div>${O.pill(strengthLabel,ladderStrengthClass(g),strengthTip)} ${O.pill(`联动分 ${O.zh(g.strength_link_score, {fallback:"--"})}`,"cyan",strengthTip)} ${O.pill(`${O.zh(g.strong_candidates, {fallback:0})} 强`,"cyan")} ${O.pill(`${O.zh(g.green_count, {fallback:0})} 绿资`,"green")} ${O.pill(`${O.zh(g.promotion_count, {fallback:0})} 晋级`,"yellow")}</div>
+      </summary>
+      <div class="node-line">${chips}</div>
+    </details>`;
+  }).join("") : `<div class="empty">暂无主线梯队网。</div>`;
+}
+
+function goodIntraday(r){
+  const s = [r.label,r.state,r.hiddenflow_label,r.v1519_flow,r.capital_evidence].map(x => O.zh(x,{fallback:""})).join(" ");
+  return /分时进攻确认|承接增强|承接改善|主力净流入|确认/.test(s);
+}
+
+function renderIntraday(rows){
+  const list = rows || [];
+  const primary = list.filter(goodIntraday).slice(0,16);
+  const other = list.filter(r => !goodIntraday(r)).slice(0,30);
+  $("intradayCount").textContent = `${primary.length} 条`;
+  $("intraday").innerHTML = primary.length ? primary.map(r => {
+    const pool = r.pool || [r.mainline || r.potential_mainline, r.industry_chain_node, r.candidate_tier].filter(Boolean).join(" / ");
+    return `<tr>
+      <td><b>${O.esc(O.code(r.code))}</b></td>
+      <td class="name">${O.esc(O.name(r.code,r.name))}</td>
+      <td>${O.pill(O.zh(r.label || r.state || "WAIT_CONFIRM", {enumFallback:"等待确认"}),"green")}</td>
+      <td title="${O.esc(pool)}">${O.esc(O.compact(pool,28))}</td>
+      <td>${flowLabel(r)}</td>
+      <td class="${O.tone(r.pct ?? r.rt_pct)}">${O.esc(O.zh(r.pct ?? r.rt_pct))}</td>
+      <td>${O.esc(O.zh(r.price))}</td>
+    </tr>`;
+  }).join("") : emptyRow(7,"暂无分时进攻确认或承接增强。");
+  $("intradayOther").innerHTML = other.length ? other.map(r => `<tr>
+    <td>${O.esc(O.code(r.code))}</td>
+    <td>${O.esc(O.name(r.code,r.name))}</td>
+    <td>${O.esc(O.zh(r.label || r.state, {enumFallback:"观察"}))}</td>
+    <td>${flowLabel(r)}</td>
+    <td class="wrapcell">${O.esc(O.compact(r.reason || r.hiddenflow_reason || r.capital_evidence,70))}</td>
+  </tr>`).join("") : emptyRow(5,"暂无其它异动。");
+}
+
+function isPromotion(r){
+  const s = [r.action_zh,r.label,r.action,r.tier,r.level,r.candidate_tier].map(x => O.zh(x,{fallback:""})).join(" ");
+  return s.includes("主线晋级") || s.includes("候选监控") || O.num(r.promotion_score) >= 70;
+}
+
+function renderPromo(promo){
+  const list = promo?.rows || [];
+  const primary = list.filter(isPromotion).slice(0,16);
+  const other = list.filter(r => !isPromotion(r)).slice(0,30);
+  $("promoCount").textContent = `${primary.length} 条`;
+  $("promo").innerHTML = primary.length ? primary.map(r => {
+    const theme = [r.mainline, r.node].filter(Boolean).join(" / ");
+    const actionText = O.zh(r.action_zh || r.label || r.action, {enumFallback:"晋级观察"});
+    return `<tr>
+      <td><b>${O.esc(O.code(r.code))}</b></td>
+      <td class="name">${O.esc(O.name(r.code,r.name))}</td>
+      <td title="${O.esc(theme)}">${O.esc(O.compact(theme,24))}</td>
+      <td>${O.pill(actionText,"green")}</td>
+      <td>${O.esc(O.zh(r.promotion_score))}</td>
+      <td>${flowLabel(r)}</td>
+      <td>${expectationLabel(r)}</td>
+      <td class="${O.tone(r.rt_pct)}">${O.esc(O.zh(r.rt_pct))}</td>
+    </tr>`;
+  }).join("") : emptyRow(8,"暂无主线晋级候选。");
+  $("promoOther").innerHTML = other.length ? other.map(r => {
+    const actionText = O.zh(r.action_zh || r.label || r.action, {enumFallback:"观察"});
+    return `<tr>
+      <td>${O.esc(O.code(r.code))}</td>
+      <td>${O.esc(O.name(r.code,r.name))}</td>
+      <td>${O.esc(actionText)}</td>
+      <td class="wrapcell">${O.esc(O.compact(O.blockerText(r.blockers) || r.reason,80))}</td>
+    </tr>`;
+  }).join("") : emptyRow(4,"暂无其它晋级观察。");
+}
+
+function actionOf(x){
+  return O.zh(x?.action || x?.type, {enumFallback:"模型动作"});
+}
+function noteOf(x){
+  const note = O.evidence(x?.note);
+  if(note) return note;
+  if(x?.type === "USER_MANUAL_BUY") return `截图确认：${O.zh(x.qty)}股，成本${O.zh(x.price)}；A股T+1，当日只监控不模拟卖出。`;
+  return "旧记录已启用远端中文显示层。";
+}
+function renderHistory(rows){
+  return "";
+}
+function renderClosed(rows){
+  return "";
+}
+
+function posNum(v){ const n = Number(String(v ?? "").replace(/[%，,]/g,"").replace(/[^\d.+-]/g,"")); return Number.isFinite(n) ? n : NaN; }
+function posCode(v){ const d = String(v ?? "").replace(/\D/g,""); return d ? d.padStart(6,"0").slice(-6) : String(v ?? "").trim(); }
+function posQty(v){ const n = posNum(v); return Number.isFinite(n) ? String(Math.round(n)) : ""; }
+function positionSig(rows){
+  return (rows || []).map(p => [posCode(p.code),posQty(p.qty)].join(":")).sort().join("|");
+}
+function shouldPositionAlarm(now){
+  const old = localStorage.getItem(POSITION_ALARM_SIG_KEY) || "";
+  if(!old){ localStorage.setItem(POSITION_ALARM_SIG_KEY, now); return false; }
+  if(old === now) return false;
+  localStorage.setItem(POSITION_ALARM_SIG_KEY, now);
+  const ts = Date.now();
+  const last = Number(localStorage.getItem(POSITION_ALARM_AT_KEY) || 0);
+  if(ts - last < POSITION_ALARM_COOLDOWN_MS) return false;
+  localStorage.setItem(POSITION_ALARM_AT_KEY, String(ts));
+  return true;
+}
+
+const remoteModuleElementIds = {
+  portfolio_summary:["equity","floating","marketValue","realized"],
+  market_environment:["envMarket","envCapital","envFear"],
+  mainline_strength:["mainlines"],
+  positions:["positions"],
+  mainline_ladder:["ladder"],
+  mainline_promotion:["promo","promoOther"]
+};
+
+function applyRemoteModuleVisibility(data){
+  const modules = data?.model_adapter?.module_contract?.modules || {};
+  const hasContract = Object.keys(modules).length > 0;
+  if(!hasContract) return;
+  Object.entries(remoteModuleElementIds).forEach(([mid, ids]) => {
+    const rule = modules[mid] || {};
+    const mode = String(rule.mode || "hidden");
+    const hide = !["core","support"].includes(mode);
+    ids.forEach(id => {
+      const el = $(id); if(!el) return;
+      const panel = el.closest(".panel") || el;
+      panel.style.display = hide ? "none" : "";
+      panel.dataset.modelMode = mode;
+      panel.title = rule.reason ? `${rule.mode_label || mode}：${rule.reason}` : (rule.mode_label || mode);
+    });
+  });
+}
+
+function applyModelAdapter(data){
+  const a = data?.model_adapter || {}, owner = data?.model_owner || {};
+  modelLabels = a.module_labels || {};
+  const title = a.remote_title || owner.remote_title || `${owner.display_name || a.display_name || "自适应模型"} 远端监控台`;
+  document.title = title;
+  const h1 = document.querySelector("h1"); if(h1) h1.textContent = title;
+  document.querySelectorAll(".panel-head h2").forEach(titleEl => {
+    if(/主线梯队/.test(titleEl.textContent || "")) titleEl.textContent = `${a.short_name || owner.short_name || owner.active_model || "模型"} 主线梯队网`;
+  });
+  applyRemoteModuleVisibility(data);
+}
+
+function render(data){
+  applyModelAdapter(data);
+  $("dot").classList.toggle("ok", Boolean(data.remote_quote_available));
+  $("remoteState").textContent = O.zh(data.remote_status_label || (data.remote_quote_available ? "行情连接可用" : "行情连接不可用"));
+  $("updated").textContent = `已更新 ${O.zh(data.generated_at || data.source_generated_at)}`;
+  renderKpi(data);
+  renderEnv(data);
+  renderPositions(data.positions || []);
+  renderMainlines(data.market_environment?.mainlines || []);
+  renderLadder(data.mainline_ladder_graph || {});
+  renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
+  window.__lastRemotePositions = data.positions || [];
+  const now = positionSig(data.positions || []);
+  if(alarm && shouldPositionAlarm(now)){
+    ring();
+    notice("仓位变化", "模型买卖、加仓、减仓或清仓导致仓位结构发生变化。");
+  }
+}
+
+async function load(){
+  try{
+    let lastError = "";
+    const statusSources = [
+      "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/v152-live-status/status_latest.json",
+      "status_latest.json",
+      "status.json",
+    ];
+    for(const file of statusSources){
+      const joiner = file.includes("?") ? "&" : "?";
+      const r = await fetch(file + joiner + "t=" + Date.now(), {cache:"no-store"});
+      if(r.ok){
+        render(await r.json());
+        return;
+      }
+      lastError = "HTTP " + r.status + " @ " + file;
+    }
+    throw new Error(lastError || "status unavailable");
+  }catch(e){
+    $("dot").classList.remove("ok");
+    $("remoteState").textContent = "状态不可用";
+    $("updated").textContent = "加载失败";
+    $("positions").innerHTML = `<div class="empty">远端状态加载失败：${O.esc(e.message)}。请强制刷新或稍后再试。</div>`;
+  }
+}
+
+if("Notification" in window && Notification.permission === "default"){
+  Notification.requestPermission().catch(()=>{});
+}
+load();
+setInterval(load, 60000);
 </script>
 </body>
 </html>
+
