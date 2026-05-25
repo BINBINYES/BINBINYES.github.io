@@ -448,7 +448,7 @@ function expectationLabel(r){
 }
 
 let alarm = localStorage.getItem("v151.remote.alarm") === "1";
-const POSITION_ALARM_SIG_KEY = "v152.remote.positionTradeSig.v1";
+const POSITION_ALARM_SIG_KEY = "v152.remote.positionTradeSig.v2";
 const POSITION_ALARM_AT_KEY = "v152.remote.positionTradeSig.alertAt";
 const POSITION_ALARM_COOLDOWN_MS = 30000;
 function setAlarmUI(){
@@ -697,9 +697,8 @@ function renderClosed(rows){
 function posNum(v){ const n = Number(String(v ?? "").replace(/[%，,]/g,"").replace(/[^\d.+-]/g,"")); return Number.isFinite(n) ? n : NaN; }
 function posCode(v){ const d = String(v ?? "").replace(/\D/g,""); return d ? d.padStart(6,"0").slice(-6) : String(v ?? "").trim(); }
 function posQty(v){ const n = posNum(v); return Number.isFinite(n) ? String(Math.round(n)) : ""; }
-function posCost(v){ const n = posNum(v); return Number.isFinite(n) ? n.toFixed(3) : ""; }
 function positionSig(rows){
-  return (rows || []).map(p => [posCode(p.code),posQty(p.qty),posCost(p.cost)].join(":")).sort().join("|");
+  return (rows || []).map(p => [posCode(p.code),posQty(p.qty)].join(":")).sort().join("|");
 }
 function shouldPositionAlarm(now){
   const old = localStorage.getItem(POSITION_ALARM_SIG_KEY) || "";
