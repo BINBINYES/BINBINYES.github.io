@@ -81,7 +81,7 @@ h2{font-size:16px;letter-spacing:0}
   box-shadow:0 0 10px #627082;
 }
 .dot.ok{background:var(--green);box-shadow:0 0 14px var(--green)}
-.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;min-width:0}
+.actions{display:grid;grid-template-columns:1fr;gap:7px;min-width:0}
 .button{
   display:inline-flex;
   align-items:center;
@@ -323,7 +323,6 @@ h2{font-size:16px;letter-spacing:0}
     <div class="status">
       <div class="state"><i id="dot" class="dot"></i><b id="remoteState">状态读取中</b></div>
       <div class="actions">
-        <a class="button" href="index.html">桌面版</a>
         <button id="alarmBtn" class="button">铃声 OFF</button>
       </div>
     </div>
@@ -366,9 +365,9 @@ h2{font-size:16px;letter-spacing:0}
       <div class="head"><h2>分时强信号</h2><span id="intradayCount" class="pill green">--</span></div>
       <div id="intraday" class="signals"></div>
     </article>
-    <article class="panel block" data-module="mainline_promotion">
-      <div class="head"><h2>主线晋级</h2><span id="promoCount" class="pill green">--</span></div>
-      <div id="promo" class="signals"></div>
+    <article class="panel block" data-module="mainline_monitor_pool">
+      <div class="head"><h2>核心候选池</h2><span id="candidateCount" class="pill green">--</span></div>
+      <div id="candidatePool" class="signals"></div>
     </article>
   </section>
 
@@ -396,9 +395,9 @@ const $ = id => document.getElementById(id);
 let modelLabels = {};
 const Text = {
   V152_STABLE_ATTACK:"稳定攻击模型",
-  MAINLINE_PROMOTION_MONITOR:"主线晋级监控",
-  PROMOTION_CANDIDATE_MONITOR:"主线晋级",
-  PROMOTION_WATCH:"晋级观察",
+  MAINLINE_PROMOTION_MONITOR:"核心候选监控",
+  PROMOTION_CANDIDATE_MONITOR:"核心候选",
+  PROMOTION_WATCH:"候选观察",
   MODEL_AUTO_BUY:"模型模拟买入",
   MODEL_AUTO_SELL:"模型模拟卖出",
   MODEL_AUTO_LOCAL_STRUCTURE:"模型本地结构信号",
@@ -627,27 +626,25 @@ function goodIntraday(r){
 }
 function signalCard(r, kind){
   const mainline = [r.mainline || r.potential_mainline,r.node || r.industry_chain_node,r.candidate_tier].filter(Boolean).map(x => zh(x,"")).join(" / ");
-  const action = zh(r.action_zh || r.label || r.action || r.state, kind === "promo" ? "晋级观察" : "等待确认");
+  const action = zh(r.v152_gate_label || r.action_zh || r.label || r.signal || r.action || r.state || r.level, kind === "candidate" ? "核心候选" : "等待确认");
   const price = zh(r.price ?? r.rt_price ?? "--");
   const pct = zh(r.pct ?? r.rt_pct ?? "--");
+  const extra = kind === "candidate" ? pill(zh(r.level || r.candidate_tier || r.state,"核心候选"),"yellow") : "";
   return `<article class="signal">
     <div class="row">
       <div class="title"><b>${esc(code(r.code))} ${esc(zh(r.name))}</b><span>${esc(compact(mainline,42))}</span></div>
       ${pill(action,"green")}
     </div>
-    <div class="signalline">${flowPill(r)}${kind === "promo" ? pill(`晋级 ${zh(r.promotion_score)}`,"yellow") : ""}${pill(`${pct} / ${price}`,"cyan")}</div>
+    <div class="signalline">${flowPill(r)}${extra}${pill(`${pct} / ${price}`,"cyan")}</div>
   </article>`;
 }
 function renderSignals(data){
   const intraday = (data.intraday_v1519_green || data.intraday_anomaly?.rows || []).filter(goodIntraday).slice(0,6);
-  const promo = (data.mainline_promotion_mapping?.rows || data.mainline_promotion?.rows || []).filter(r => {
-    const s = [r.action_zh,r.label,r.action,r.tier,r.level,r.candidate_tier].map(x => zh(x,"")).join(" ");
-    return s.includes("主线晋级") || s.includes("候选监控") || num(r.promotion_score) >= 70;
-  }).slice(0,6);
+  const candidates = (data.core_candidate_pool?.rows || data.candidate_pool?.rows || data.mainline_monitor_pool?.rows || []).slice(0,8);
   $("intradayCount").textContent = `${intraday.length} 条`;
-  $("promoCount").textContent = `${promo.length} 条`;
+  $("candidateCount").textContent = `${candidates.length} 条`;
   $("intraday").innerHTML = intraday.length ? intraday.map(r => signalCard(r,"intraday")).join("") : `<div class="empty">暂无分时进攻确认。</div>`;
-  $("promo").innerHTML = promo.length ? promo.map(r => signalCard(r,"promo")).join("") : `<div class="empty">暂无主线晋级候选。</div>`;
+  $("candidatePool").innerHTML = candidates.length ? candidates.map(r => signalCard(r,"candidate")).join("") : `<div class="empty">暂无核心候选池。</div>`;
 }
 function renderHistory(rows){
   $("history").innerHTML = rows && rows.length ? rows.slice().reverse().slice(0,10).map(x => `<article class="item">
