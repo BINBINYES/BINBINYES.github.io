@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -202,6 +202,17 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     </div>
   </section>
 
+  <section class="panel">
+    <div class="panel-head"><h2>资金分析</h2><span id="capitalCount" class="pill cyan">--</span></div>
+    <div id="capitalSummary" class="note" style="margin-bottom:10px">读取中</div>
+    <div class="scroll">
+      <table class="table-wide">
+        <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th style="width:120px">状态</th><th style="width:92px">涨幅</th><th style="width:130px">外/内盘</th><th style="width:150px">K线相对</th><th style="width:180px">实时校验</th><th style="width:190px">多日比对</th><th>证据</th></tr></thead>
+        <tbody id="capitalRows"></tbody>
+      </table>
+    </div>
+  </section>
+
   <section class="two">
     <div class="panel">
       <div class="panel-head"><h2>当前仓位</h2></div>
@@ -227,7 +238,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
       </div>
       <div class="scroll">
         <table class="table-wide">
-          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th>主线</th><th style="width:122px">动作</th><th style="width:78px">晋级分</th><th style="width:132px">资金承接</th><th style="width:118px">预期</th><th style="width:82px">涨幅</th></tr></thead>
+          <thead><tr><th style="width:88px">代码</th><th style="width:110px">名称</th><th>主线</th><th style="width:122px">动作</th><th style="width:78px">晋级分</th><th style="width:132px">资金分析</th><th style="width:118px">预期</th><th style="width:82px">涨幅</th></tr></thead>
           <tbody id="promo"></tbody>
         </table>
       </div>
@@ -278,7 +289,7 @@ const Output = (() => {
     "V151.10":"市场诊断",
     "V151.9-R":"误拒绝修正",
     "V151.9R":"误拒绝修正",
-    "V151.9":"资金承接",
+    "V151.9":"资金分析",
     "V151.6":"市场环境",
     "V151.5":"主线晋级",
     "V151.4":"主线核心池",
@@ -296,7 +307,7 @@ const Output = (() => {
     USER_MANUAL_CONFIRMED:"用户已手动确认",
     REAL_ACCOUNT_MANUAL_BUY_MONITORED:"实盘手动买入，模型负责监控退出",
     V151_9R_REJECT_RECOVERY_TRIAL:"误拒绝修正观察仓",
-    "资金承接R_REJECT_RECOVERY_TRIAL":"误拒绝修正观察仓",
+    "资金分析R_REJECT_RECOVERY_TRIAL":"误拒绝修正观察仓",
     MODEL_AUTO_LOCAL_STRUCTURE:"模型本地结构信号",
     T1_BLOCKED_STOP:"T+1锁定，暂不模拟卖出",
     T1_BLOCKED_EXPECTATION_REDUCE:"T+1锁定，暂不模拟减仓",
@@ -403,8 +414,8 @@ const Output = (() => {
       ["mainline=", "主线="],
       ["node=", "产业节点="],
       ["mainline_strong=", "主线强候选数="],
-      ["hiddenflow=--", "资金承接=缺失"],
-      ["hiddenflow=", "资金承接="],
+      ["hiddenflow=--", "资金分析=缺失"],
+      ["hiddenflow=", "资金分析="],
       ["rt_pct=", "涨幅="],
       ["depth_source=", "数据来源="]
     ];
@@ -445,6 +456,25 @@ function expectationLabel(r){
   const s = O.zh([r?.expectation_label, r?.expectation_position_text].filter(Boolean).join(" "), {fallback:"--"});
   if(s === "--") return O.pill("--","cyan");
   return O.pill(s, s.includes("高预期") ? "green" : s.includes("低预期") ? "yellow" : "cyan", r?.expectation_reason || "");
+}
+
+function addLegClass(r){
+  const s = O.raw(r?.v152_add_leg_light || "");
+  if(s === "green") return "green";
+  if(s === "bad" || s === "red") return "red";
+  if(s === "warn" || s === "yellow") return "yellow";
+  return "cyan";
+}
+
+function addLegLine(r){
+  const stop = O.zh(r?.v152_add_leg_dynamic_stop_price, {fallback:""});
+  const gap = O.zh(r?.v152_add_leg_stop_gap_pct, {fallback:""});
+  const pnl = O.zh(r?.v152_add_leg_pnl_pct, {fallback:""});
+  const parts = [];
+  if(stop) parts.push(`动态线 ${stop}`);
+  if(gap) parts.push(`距线 ${gap}`);
+  if(pnl) parts.push(`腿盈亏 ${pnl}`);
+  return parts.length ? parts.join(" / ") : "未开启";
 }
 
 let alarm = localStorage.getItem("v151.remote.alarm") === "1";
@@ -514,6 +544,52 @@ function renderEnv(data){
   $("gateBadge").className = "pill " + (canBuy ? "green" : "yellow");
 }
 
+function capitalStatusClass(status){
+  if(status === "strong") return "green";
+  if(status === "risk") return "yellow";
+  if(status === "watch") return "cyan";
+  return "cyan";
+}
+function capitalCrossClass(status){
+  const s = O.raw(status);
+  if(s.includes("confirm_support") || s.includes("outer_support")) return "green";
+  if(s.includes("confirm_risk") || s.includes("outer_risk")) return "yellow";
+  if(s.includes("conflict") || s.includes("fetch_failed") || s.includes("missing_after_fetch")) return "yellow";
+  return "cyan";
+}
+function capitalHistoryClass(status){
+  const s = O.raw(status);
+  if(s.includes("support") || s.includes("improving")) return "green";
+  if(s.includes("risk") || s.includes("weakening")) return "yellow";
+  if(s.includes("neutral")) return "cyan";
+  return "cyan";
+}
+
+function renderCapitalAnalysis(data){
+  const c = data.capital_analysis || {};
+  const rows = c.rows || [];
+  $("capitalCount").textContent = `${O.zh(c.total ?? rows.length ?? 0)} 只`;
+  $("capitalSummary").textContent = O.zh(c.summary || c.policy || "等待资金分析数据。");
+  $("capitalRows").innerHTML = rows.slice(0,18).map(r => {
+    const outer = r.rt_outer_ratio_pct == null || r.rt_outer_ratio_pct === "" ? "--" : `${O.zh(r.rt_outer_ratio_pct)}%`;
+    const inner = r.rt_inner_ratio_pct == null || r.rt_inner_ratio_pct === "" ? "--" : `${O.zh(r.rt_inner_ratio_pct)}%`;
+    const vwap = r.vwap_gap_pct == null || r.vwap_gap_pct === "" ? "--" : `${O.zh(r.vwap_gap_pct)}%`;
+    const loc = r.day_location_pct == null || r.day_location_pct === "" ? "--" : `${O.zh(r.day_location_pct)}%`;
+    const evidence = r.hiddenflow_reason || r.volume_reason || r.vol_struct_reason || "";
+    return `<tr>
+      <td><b>${O.esc(O.code(r.code))}</b></td>
+      <td class="name">${O.esc(O.name(r.code,r.name))}</td>
+      <td>${O.pill(O.zh(r.status_label || "--"), capitalStatusClass(r.status))}</td>
+      <td class="${O.tone(r.pct)}">${O.esc(O.zh(r.pct))}</td>
+      <td>${O.esc(`外 ${outer} / 内 ${inner}`)}</td>
+      <td>${O.esc(`VWAP ${vwap} / 位置 ${loc}`)}</td>
+      <td>${O.pill(O.zh(r.hiddenflow_cross_check || "--"), capitalCrossClass(r.hiddenflow_cross_check_status), r.hiddenflow_cross_check || "")}</td>
+      <td>${O.pill(O.zh(r.bid_ask_history_label || "--"), capitalHistoryClass(r.bid_ask_history_status), r.bid_ask_history_reason || "")}</td>
+      <td class="wrapcell">${O.esc(O.compact(evidence,84))}</td>
+    </tr>`;
+  }).join("") || emptyRow(9,"暂无资金分析数据。");
+}
+
 function positionHistoryHtml(p){
   const rows = p.held_operation_history || [];
   if(!rows.length) return "";
@@ -533,6 +609,8 @@ function positionHistoryHtml(p){
 function renderPositions(rows){
   $("positions").innerHTML = rows && rows.length ? rows.map(p => {
     const pnlCls = O.tone(p.pnl_amount || p.pnl_pct);
+    const addLegLabel = O.zh(p.v152_add_leg_label || "未加仓");
+    const addLegDetail = addLegLine(p);
     return `<div class="pos">
       <div class="pos-head">
         <div><b>${O.esc(O.code(p.code))} ${O.esc(O.name(p.code,p.name))}</b><small>${O.esc(O.zh(p.source))}</small></div>
@@ -545,7 +623,9 @@ function renderPositions(rows){
         <div class="mini"><span>浮动</span><strong class="${pnlCls}">${O.esc(O.zh(p.pnl_amount))} / ${O.esc(O.zh(p.pnl_pct))}</strong></div>
         <div class="mini"><span>防守价</span><strong>${O.esc(O.zh(p.defense_price))}</strong></div>
         <div class="mini"><span>严格线</span><strong>${O.esc(O.zh(p.strict_price))}</strong></div>
-        <div class="mini"><span>资金承接</span><strong>${flowLabel(p)}</strong></div>
+        <div class="mini"><span>加仓腿</span><strong>${O.pill(addLegLabel, addLegClass(p), p.v152_add_leg_reason || "")}</strong></div>
+        <div class="mini"><span>动态线</span><strong>${O.esc(addLegDetail)}</strong></div>
+        <div class="mini"><span>资金分析</span><strong>${flowLabel(p)}</strong></div>
         <div class="mini"><span>预期</span><strong>${expectationLabel(p)}</strong></div>
       </div>
       ${positionHistoryHtml(p)}
@@ -715,6 +795,7 @@ function shouldPositionAlarm(now){
 const remoteModuleElementIds = {
   portfolio_summary:["equity","floating","marketValue","realized"],
   market_environment:["envMarket","envCapital","envFear"],
+  capital_analysis:["capitalSummary","capitalRows","capitalCount"],
   mainline_strength:["mainlines"],
   positions:["positions"],
   mainline_ladder:["ladder"],
@@ -758,6 +839,7 @@ function render(data){
   $("updated").textContent = `已更新 ${O.zh(data.generated_at || data.source_generated_at)}`;
   renderKpi(data);
   renderEnv(data);
+  renderCapitalAnalysis(data);
   renderPositions(data.positions || []);
   renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
