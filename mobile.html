@@ -493,6 +493,9 @@ function heldHistoryHtml(p){
 }
 
 let alarm = localStorage.getItem("v152.remote.mobile.alarm") === "1";
+const POSITION_ALARM_SIG_KEY = "v152.remote.mobile.positionTradeSig.v1";
+const POSITION_ALARM_AT_KEY = "v152.remote.mobile.positionTradeSig.alertAt";
+const POSITION_ALARM_COOLDOWN_MS = 30000;
 function setAlarm(){
   $("alarmBtn").classList.toggle("on", alarm);
   $("alarmBtn").textContent = alarm ? "铃声 ON" : "铃声 OFF";
@@ -518,18 +521,33 @@ function notifyPosition(){
     new Notification("仓位变化",{body:"模型买卖或仓位结构发生变化。"});
   }
 }
+function posNum(v){ const n = Number(String(v ?? "").replace(/[%，,]/g,"").replace(/[^\d.+-]/g,"")); return Number.isFinite(n) ? n : NaN; }
+function posCode(v){ const d = String(v ?? "").replace(/\D/g,""); return d ? d.padStart(6,"0").slice(-6) : String(v ?? "").trim(); }
+function posQty(v){ const n = posNum(v); return Number.isFinite(n) ? String(Math.round(n)) : ""; }
+function posCost(v){ const n = posNum(v); return Number.isFinite(n) ? n.toFixed(3) : ""; }
 function positionSig(rows){
-  return (rows || []).map(p => [p.code,p.qty,p.cost,p.price,p.state].join(":")).join("|");
+  return (rows || []).map(p => [posCode(p.code),posQty(p.qty),posCost(p.cost)].join(":")).sort().join("|");
+}
+function shouldPositionAlarm(now){
+  const old = localStorage.getItem(POSITION_ALARM_SIG_KEY) || "";
+  if(!old){ localStorage.setItem(POSITION_ALARM_SIG_KEY, now); return false; }
+  if(old === now) return false;
+  localStorage.setItem(POSITION_ALARM_SIG_KEY, now);
+  const ts = Date.now();
+  const last = Number(localStorage.getItem(POSITION_ALARM_AT_KEY) || 0);
+  if(ts - last < POSITION_ALARM_COOLDOWN_MS) return false;
+  localStorage.setItem(POSITION_ALARM_AT_KEY, String(ts));
+  return true;
 }
 $("alarmBtn").onclick = async () => {
   alarm = !alarm;
   localStorage.setItem("v152.remote.mobile.alarm", alarm ? "1" : "0");
   setAlarm();
   if(alarm){
+    localStorage.setItem(POSITION_ALARM_SIG_KEY, positionSig(window.__lastMobilePositions || []));
     if("Notification" in window && Notification.permission === "default"){
       try{ await Notification.requestPermission(); }catch(e){}
     }
-    ring();
   }
 };
 document.querySelectorAll(".tab").forEach(btn => btn.onclick = () => {
@@ -672,13 +690,12 @@ function render(data){
   renderSignals(data);
   renderHistory(data.operation_history_2d || []);
   renderClosed(data.closed_orders || []);
-  const oldSig = localStorage.getItem("v152.remote.mobile.positionSig") || "";
+  window.__lastMobilePositions = data.positions || [];
   const newSig = positionSig(data.positions || []);
-  if(alarm && oldSig && oldSig !== newSig){
+  if(alarm && shouldPositionAlarm(newSig)){
     ring();
     notifyPosition();
   }
-  localStorage.setItem("v152.remote.mobile.positionSig", newSig);
 }
 async function load(){
   try{
