@@ -633,6 +633,23 @@ function renderEnv(data){
   $("envBadge").textContent = data.remote_quote_available ? "实时" : "等待";
   $("envBadge").className = "pill " + (data.remote_quote_available ? "green" : "yellow");
 }
+function addLegClass(p){
+  const s = String(p?.v152_add_leg_light || "");
+  if(s === "green") return "green";
+  if(s === "bad" || s === "red") return "red";
+  if(s === "warn" || s === "yellow") return "yellow";
+  return "cyan";
+}
+function addLegText(p){
+  const stop = zh(p?.v152_add_leg_dynamic_stop_price, "");
+  const gap = zh(p?.v152_add_leg_stop_gap_pct, "");
+  const pnl = zh(p?.v152_add_leg_pnl_pct, "");
+  const parts = [];
+  if(stop) parts.push(`动态线 ${stop}`);
+  if(gap) parts.push(`距线 ${gap}`);
+  if(pnl) parts.push(`腿盈亏 ${pnl}`);
+  return parts.length ? parts.join(" / ") : "未开启";
+}
 function posCard(p, brief = false){
   const stateCls = /严格|防守|低于/.test(zh(p.state)) ? "yellow" : "cyan";
   return `<article class="pos">
@@ -646,7 +663,9 @@ function posCard(p, brief = false){
       <div class="mini"><span>浮动</span><b class="${tone(p.pnl_amount || p.pnl_pct)}">${esc(zh(p.pnl_amount))} / ${esc(zh(p.pnl_pct))}</b></div>
       ${brief ? "" : `<div class="mini"><span>成本</span><b>${esc(zh(p.cost))}</b></div>
       <div class="mini"><span>防守</span><b>${esc(zh(p.defense_price))}</b></div>
-      <div class="mini"><span>严格</span><b>${esc(zh(p.strict_price))}</b></div>`}
+      <div class="mini"><span>严格</span><b>${esc(zh(p.strict_price))}</b></div>
+      <div class="mini"><span>加仓腿</span><b>${pill(zh(p.v152_add_leg_label || "未加仓"),addLegClass(p))}</b></div>
+      <div class="mini"><span>动态线</span><b>${esc(addLegText(p))}</b></div>`}
     </div>
     ${brief ? "" : `<div class="signalline">${flowPill(p)}${pill(zh(p.expectation_label || p.expectation_position_text),"cyan")}</div>${heldHistoryHtml(p)}`}
   </article>`;
