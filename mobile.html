@@ -493,9 +493,10 @@ function heldHistoryHtml(p){
 }
 
 let alarm = localStorage.getItem("v152.remote.mobile.alarm") === "1";
-const POSITION_ALARM_SIG_KEY = "v152.remote.mobile.positionTradeSig.v1";
+const POSITION_ALARM_SIG_KEY = "v152.remote.mobile.positionTradeSig.v2";
 const POSITION_ALARM_AT_KEY = "v152.remote.mobile.positionTradeSig.alertAt";
 const POSITION_ALARM_COOLDOWN_MS = 30000;
+const MOBILE_SCREEN_KEY = "v152.remote.mobile.activeScreen";
 function setAlarm(){
   $("alarmBtn").classList.toggle("on", alarm);
   $("alarmBtn").textContent = alarm ? "铃声 ON" : "铃声 OFF";
@@ -524,9 +525,8 @@ function notifyPosition(){
 function posNum(v){ const n = Number(String(v ?? "").replace(/[%，,]/g,"").replace(/[^\d.+-]/g,"")); return Number.isFinite(n) ? n : NaN; }
 function posCode(v){ const d = String(v ?? "").replace(/\D/g,""); return d ? d.padStart(6,"0").slice(-6) : String(v ?? "").trim(); }
 function posQty(v){ const n = posNum(v); return Number.isFinite(n) ? String(Math.round(n)) : ""; }
-function posCost(v){ const n = posNum(v); return Number.isFinite(n) ? n.toFixed(3) : ""; }
 function positionSig(rows){
-  return (rows || []).map(p => [posCode(p.code),posQty(p.qty),posCost(p.cost)].join(":")).sort().join("|");
+  return (rows || []).map(p => [posCode(p.code),posQty(p.qty)].join(":")).sort().join("|");
 }
 function shouldPositionAlarm(now){
   const old = localStorage.getItem(POSITION_ALARM_SIG_KEY) || "";
@@ -550,11 +550,15 @@ $("alarmBtn").onclick = async () => {
     }
   }
 };
-document.querySelectorAll(".tab").forEach(btn => btn.onclick = () => {
-  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x === btn));
-  document.querySelectorAll(".screen").forEach(x => x.classList.toggle("active", x.id === btn.dataset.screen));
-});
+function selectMobileScreen(screenId){
+  const target = document.getElementById(screenId) ? screenId : "overview";
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x.dataset.screen === target));
+  document.querySelectorAll(".screen").forEach(x => x.classList.toggle("active", x.id === target));
+  localStorage.setItem(MOBILE_SCREEN_KEY, target);
+}
+document.querySelectorAll(".tab").forEach(btn => btn.onclick = () => selectMobileScreen(btn.dataset.screen));
 setAlarm();
+selectMobileScreen(localStorage.getItem(MOBILE_SCREEN_KEY) || "overview");
 
 function renderKpi(data){
   $("equity").textContent = zh(data.equity);
