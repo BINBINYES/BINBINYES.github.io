@@ -337,6 +337,10 @@ h2{font-size:16px;letter-spacing:0}
   </section>
 
   <section id="overview" class="screen active">
+    <article class="panel block" data-module="mainline_strength">
+      <div class="head"><h2>主线强度</h2><span id="mainlineStrengthCount" class="pill green">--</span></div>
+      <div id="mainlineStrength" class="signals"></div>
+    </article>
     <article class="panel block" data-module="market_environment">
       <div class="head"><h2>环境与门控</h2><span id="gateBadge" class="pill cyan">读取中</span></div>
       <div class="env">
@@ -638,6 +642,32 @@ function signalCard(r, kind){
     <div class="signalline">${flowPill(r)}${extra}${pill(`${pct} / ${price}`,"cyan")}</div>
   </article>`;
 }
+function mainlineStrengthCard(line){
+  const title = zh(line.mainline || line.theme || "主线");
+  const leader = line.leader_code ? `${code(line.leader_code)} ${zh(line.leader_name)}` : "等待龙头确认";
+  const label = zh(line.strength_link_label || line.strength_tier || "强度观察");
+  const score = zh(line.strength_link_score ?? line.avg_score ?? "--");
+  const action = zh(line.strength_action || line.strength_reason || line.strength_risk || "等待强度更新");
+  const toneCls = /风险|退潮|弱|不匹配|失真/.test(label + action) ? "yellow" : "green";
+  const stats = [
+    `核心 ${zh(line.core_candidates ?? "--")}`,
+    `强候选 ${zh(line.strong_candidates ?? "--")}`,
+    `红盘 ${zh(line.live_up_count ?? line.green_count ?? "--")}`
+  ].join(" / ");
+  return `<article class="signal">
+    <div class="row">
+      <div class="title"><b>${esc(title)}</b><span>${esc(leader)}</span></div>
+      ${pill(label,toneCls)}
+    </div>
+    <div class="signalline">${pill(`强度 ${score}`,"cyan")}${pill(stats,"cyan")}</div>
+    <div class="sub">${esc(compact(action,72))}</div>
+  </article>`;
+}
+function renderMainlineStrength(data){
+  const rows = (data.mainline_strength?.rows || data.mainline_ladder_graph?.rows || []).slice(0,5);
+  $("mainlineStrengthCount").textContent = `${rows.length} 条`;
+  $("mainlineStrength").innerHTML = rows.length ? rows.map(mainlineStrengthCard).join("") : `<div class="empty">暂无主线强度。</div>`;
+}
 function renderSignals(data){
   const intraday = (data.intraday_v1519_green || data.intraday_anomaly?.rows || []).filter(goodIntraday).slice(0,6);
   const candidates = (data.core_candidate_pool?.rows || data.candidate_pool?.rows || data.mainline_monitor_pool?.rows || []).slice(0,8);
@@ -686,6 +716,7 @@ function render(data){
   $("remoteState").textContent = zh(data.remote_status_label || (data.remote_quote_available ? "行情连接可用" : "行情连接不可用"));
   $("updated").textContent = `已更新 ${zh(data.generated_at || data.source_generated_at)}`;
   renderKpi(data);
+  renderMainlineStrength(data);
   renderEnv(data);
   renderPositions(data.positions || []);
   renderSignals(data);
