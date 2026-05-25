@@ -448,6 +448,9 @@ function expectationLabel(r){
 }
 
 let alarm = localStorage.getItem("v151.remote.alarm") === "1";
+const POSITION_ALARM_SIG_KEY = "v152.remote.positionTradeSig.v1";
+const POSITION_ALARM_AT_KEY = "v152.remote.positionTradeSig.alertAt";
+const POSITION_ALARM_COOLDOWN_MS = 30000;
 function setAlarmUI(){
   $("alarmBtn").classList.toggle("on", alarm);
   $("alarmBtn").textContent = alarm ? "仓位铃声 ON" : "仓位铃声 OFF";
@@ -474,8 +477,8 @@ function notice(title, body){
 $("alarmBtn").onclick = () => {
   alarm = !alarm;
   localStorage.setItem("v151.remote.alarm", alarm ? "1" : "0");
+  if(alarm) localStorage.setItem(POSITION_ALARM_SIG_KEY, positionSig(window.__lastRemotePositions || []));
   setAlarmUI();
-  if(alarm) ring();
 };
 document.querySelectorAll("[data-fold]").forEach(btn => btn.onclick = () => {
   const el = $(btn.dataset.fold);
@@ -691,8 +694,23 @@ function renderClosed(rows){
   return "";
 }
 
+function posNum(v){ const n = Number(String(v ?? "").replace(/[%，,]/g,"").replace(/[^\d.+-]/g,"")); return Number.isFinite(n) ? n : NaN; }
+function posCode(v){ const d = String(v ?? "").replace(/\D/g,""); return d ? d.padStart(6,"0").slice(-6) : String(v ?? "").trim(); }
+function posQty(v){ const n = posNum(v); return Number.isFinite(n) ? String(Math.round(n)) : ""; }
+function posCost(v){ const n = posNum(v); return Number.isFinite(n) ? n.toFixed(3) : ""; }
 function positionSig(rows){
-  return (rows || []).map(p => [p.code,p.qty,p.cost,p.price,p.state].join(":")).join("|");
+  return (rows || []).map(p => [posCode(p.code),posQty(p.qty),posCost(p.cost)].join(":")).sort().join("|");
+}
+function shouldPositionAlarm(now){
+  const old = localStorage.getItem(POSITION_ALARM_SIG_KEY) || "";
+  if(!old){ localStorage.setItem(POSITION_ALARM_SIG_KEY, now); return false; }
+  if(old === now) return false;
+  localStorage.setItem(POSITION_ALARM_SIG_KEY, now);
+  const ts = Date.now();
+  const last = Number(localStorage.getItem(POSITION_ALARM_AT_KEY) || 0);
+  if(ts - last < POSITION_ALARM_COOLDOWN_MS) return false;
+  localStorage.setItem(POSITION_ALARM_AT_KEY, String(ts));
+  return true;
 }
 
 const remoteModuleElementIds = {
@@ -745,13 +763,12 @@ function render(data){
   renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
-  const old = localStorage.getItem("v151.remote.positionSig") || "";
+  window.__lastRemotePositions = data.positions || [];
   const now = positionSig(data.positions || []);
-  if(alarm && old && old !== now){
+  if(alarm && shouldPositionAlarm(now)){
     ring();
-    notice("仓位变化", "模型买卖或仓位结构发生变化。");
+    notice("仓位变化", "模型买卖、加仓、减仓或清仓导致仓位结构发生变化。");
   }
-  localStorage.setItem("v151.remote.positionSig", now);
 }
 
 async function load(){
