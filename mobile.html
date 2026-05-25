@@ -384,13 +384,6 @@ h2{font-size:16px;letter-spacing:0}
     <div class="updated"><span id="updated">已更新 --</span><span id="positionCount">--</span></div>
   </header>
 
-  <section class="grid" data-module="portfolio_summary">
-    <article class="panel kpi"><span>总权益</span><strong id="equity">--</strong><span id="equityMeta">--</span></article>
-    <article class="panel kpi"><span>浮动盈亏</span><strong id="floating">--</strong><span id="floatingPct">--</span></article>
-    <article class="panel kpi"><span>持仓市值</span><strong id="marketValue">--</strong><span id="cash">--</span></article>
-    <article class="panel kpi"><span>已实现盈亏</span><strong id="realized">--</strong><span>重置后口径</span></article>
-  </section>
-
   <section id="overview" class="screen active">
     <article class="panel block" data-module="mainline_strength">
       <div class="head"><h2>主线强度</h2><span id="mainlineStrengthCount" class="pill green">--</span></div>
@@ -407,13 +400,15 @@ h2{font-size:16px;letter-spacing:0}
       <div id="gateTags" class="gate"></div>
       <div id="gateNote" class="note">等待桌面端同步。</div>
     </article>
-    <article class="panel block" data-module="positions">
-      <div class="head"><h2>仓位速览</h2><span id="riskCount" class="pill cyan">--</span></div>
-      <div id="positionBrief" class="cards"></div>
-    </article>
   </section>
 
   <section id="holdings" class="screen">
+    <section class="grid" data-module="portfolio_summary">
+      <article class="panel kpi"><span>总权益</span><strong id="equity">--</strong><span id="equityMeta">--</span></article>
+      <article class="panel kpi"><span>浮动盈亏</span><strong id="floating">--</strong><span id="floatingPct">--</span></article>
+      <article class="panel kpi"><span>持仓市值</span><strong id="marketValue">--</strong><span id="cash">--</span></article>
+      <article class="panel kpi"><span>已实现盈亏</span><strong id="realized">--</strong><span>重置后口径</span></article>
+    </section>
     <article class="panel block" data-module="positions">
       <div class="head"><h2>当前仓位</h2><span id="holdingCount" class="pill cyan">--</span></div>
       <div id="positions" class="cards"></div>
@@ -672,12 +667,8 @@ function posCard(p, brief = false){
 }
 function renderPositions(rows){
   const list = rows || [];
-  const risk = list.filter(p => zh(p.state) !== "正常" && zh(p.state) !== "观察").length;
   $("holdingCount").textContent = `${list.length} 只`;
-  $("riskCount").textContent = risk ? `${risk} 只需盯` : "仓位正常";
-  $("riskCount").className = "pill " + (risk ? "yellow" : "green");
   $("positionCount").textContent = `${list.length} 只持仓`;
-  $("positionBrief").innerHTML = list.length ? list.slice(0,3).map(p => posCard(p,true)).join("") : `<div class="empty">暂无持仓。</div>`;
   $("positions").innerHTML = list.length ? list.map(p => posCard(p,false)).join("") : `<div class="empty">暂无持仓。</div>`;
 }
 function goodIntraday(r){
@@ -838,7 +829,7 @@ async function load(){
     $("dot").classList.remove("ok");
     $("remoteState").textContent = "状态不可用";
     $("updated").textContent = "加载失败";
-    $("positionBrief").innerHTML = `<div class="empty">远端状态加载失败：${esc(err.message)}。</div>`;
+    $("positions").innerHTML = `<div class="empty">远端状态加载失败：${esc(err.message)}。</div>`;
   }
 }
 load();
