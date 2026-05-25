@@ -81,7 +81,7 @@ h2{font-size:16px;letter-spacing:0}
   box-shadow:0 0 10px #627082;
 }
 .dot.ok{background:var(--green);box-shadow:0 0 14px var(--green)}
-.actions{display:grid;grid-template-columns:1fr;gap:7px;min-width:0}
+.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;min-width:0}
 .button{
   display:inline-flex;
   align-items:center;
@@ -323,6 +323,7 @@ h2{font-size:16px;letter-spacing:0}
     <div class="status">
       <div class="state"><i id="dot" class="dot"></i><b id="remoteState">状态读取中</b></div>
       <div class="actions">
+        <a class="button" href="index.html">桌面版</a>
         <button id="alarmBtn" class="button">铃声 OFF</button>
       </div>
     </div>
