@@ -202,6 +202,59 @@ h2{font-size:16px;letter-spacing:0}
   overflow-wrap:anywhere;
 }
 .cards,.timeline,.signals{display:grid;gap:8px}
+.strength-meta{
+  margin:-3px 0 8px;
+  color:#8ecfff;
+  font-size:12px;
+  overflow-wrap:anywhere;
+}
+.strength-list{display:grid}
+.strength-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(116px,58%) 48px;
+  gap:10px;
+  align-items:center;
+  min-width:0;
+  padding:10px 0;
+  border-bottom:1px solid rgba(67,112,147,.32);
+}
+.strength-row:last-child{border-bottom:0}
+.strength-title{
+  font-weight:800;
+  color:var(--text);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.strength-sub{
+  margin-top:3px;
+  color:#83d4ff;
+  font-size:12px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.strength-meter{
+  height:8px;
+  border:1px solid rgba(4,223,244,.65);
+  border-radius:999px;
+  background:#041326;
+  overflow:hidden;
+}
+.strength-fill{
+  display:block;
+  height:100%;
+  min-width:4px;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#1df2c0 0%,#32efac 28%,#fff068 48%,#ff7b4d 68%,#ff2f93 100%);
+  box-shadow:0 0 10px rgba(255,47,147,.45);
+}
+.strength-num{
+  color:var(--pink);
+  font-weight:900;
+  text-align:right;
+  white-space:nowrap;
+}
 .pos,.signal,.item{
   min-width:0;
   border:1px solid var(--line);
@@ -308,6 +361,7 @@ h2{font-size:16px;letter-spacing:0}
   h1{font-size:21px}
   .grid{grid-template-columns:1fr}
   .env,.posgrid{grid-template-columns:repeat(auto-fit,minmax(min(128px,100%),1fr))}
+  .strength-row{grid-template-columns:minmax(0,1fr) 36% 42px;gap:7px}
   .block{padding:10px}
   .pos,.signal,.item{padding:9px}
 }
@@ -340,7 +394,8 @@ h2{font-size:16px;letter-spacing:0}
   <section id="overview" class="screen active">
     <article class="panel block" data-module="mainline_strength">
       <div class="head"><h2>主线强度</h2><span id="mainlineStrengthCount" class="pill green">--</span></div>
-      <div id="mainlineStrength" class="signals"></div>
+      <div id="mainlineStrengthMeta" class="strength-meta">等待桌面端同步。</div>
+      <div id="mainlineStrength" class="strength-list"></div>
     </article>
     <article class="panel block" data-module="market_environment">
       <div class="head"><h2>环境与门控</h2><span id="gateBadge" class="pill cyan">读取中</span></div>
@@ -643,31 +698,65 @@ function signalCard(r, kind){
     <div class="signalline">${flowPill(r)}${extra}${pill(`${pct} / ${price}`,"cyan")}</div>
   </article>`;
 }
-function mainlineStrengthCard(line){
+function strengthValue(line){
+  const primary = [
+    line.strong_candidates,
+    line.strong_count,
+    line.strong_total
+  ];
+  for(const value of primary){
+    if(value === undefined || value === null || value === "") continue;
+    const n = num(value);
+    if(Number.isFinite(n)) return Math.max(0, Math.round(n));
+  }
+  const fallback = [
+    line.companies,
+    line.node_count,
+    line.shown_count,
+    line.live_up_count,
+    line.green_count,
+    line.core_candidates
+  ];
+  for(const value of fallback){
+    const n = num(value);
+    if(Number.isFinite(n) && n > 0) return Math.round(n);
+  }
+  return 0;
+}
+function strengthSubtitle(line){
+  if(line.top_companies){
+    return [line.node,line.top_companies].filter(Boolean).map(x => zh(x,"")).join(" · ");
+  }
+  const nodes = (line.nodes || []).slice(0,4).map(node => {
+    const part = [node.node,node.name].filter(Boolean).map(x => zh(x,"")).join(" · ");
+    return part || zh(node.name || node.code,"");
+  }).filter(Boolean);
+  if(nodes.length) return nodes.join("；");
+  if(line.leader_name) return [line.leader_role,line.leader_name].filter(Boolean).map(x => zh(x,"")).join(" · ");
+  return zh(line.strength_reason || line.summary || "等待主线聚合");
+}
+function mainlineStrengthCard(line, maxValue){
   const title = zh(line.mainline || line.theme || "主线");
-  const leader = line.leader_code ? `${code(line.leader_code)} ${zh(line.leader_name)}` : "等待龙头确认";
-  const label = zh(line.strength_link_label || line.strength_tier || "强度观察");
-  const score = zh(line.strength_link_score ?? line.avg_score ?? "--");
-  const action = zh(line.strength_action || line.strength_reason || line.strength_risk || "等待强度更新");
-  const toneCls = /风险|退潮|弱|不匹配|失真/.test(label + action) ? "yellow" : "green";
-  const stats = [
-    `核心 ${zh(line.core_candidates ?? "--")}`,
-    `强候选 ${zh(line.strong_candidates ?? "--")}`,
-    `红盘 ${zh(line.live_up_count ?? line.green_count ?? "--")}`
-  ].join(" / ");
-  return `<article class="signal">
-    <div class="row">
-      <div class="title"><b>${esc(title)}</b><span>${esc(leader)}</span></div>
-      ${pill(label,toneCls)}
+  const value = strengthValue(line);
+  const width = maxValue > 0 ? Math.max(value ? 5 : 2, Math.min(100, value / maxValue * 100)) : 2;
+  return `<div class="strength-row">
+    <div class="strength-text">
+      <div class="strength-title">${esc(title)}</div>
+      <div class="strength-sub">${esc(compact(strengthSubtitle(line),56))}</div>
     </div>
-    <div class="signalline">${pill(`强度 ${score}`,"cyan")}${pill(stats,"cyan")}</div>
-    <div class="sub">${esc(compact(action,72))}</div>
-  </article>`;
+    <div class="strength-meter"><i class="strength-fill" style="width:${width.toFixed(1)}%"></i></div>
+    <div class="strength-num">${value} 强</div>
+  </div>`;
 }
 function renderMainlineStrength(data){
-  const rows = (data.mainline_strength?.rows || data.mainline_ladder_graph?.rows || []).slice(0,5);
+  const mainlines = data.market_environment?.mainlines || {};
+  const rows = (mainlines.rows || data.mainline_strength?.rows || data.mainline_ladder_graph?.rows || []).slice(0,8);
+  const maxValue = Math.max(1,...rows.map(strengthValue));
+  const updated = zh(mainlines.as_of || data.market_environment_updated_at || data.generated_at || data.source_generated_at);
+  const staticBase = zh(mainlines.static_as_of || mainlines.static_base_date || "");
   $("mainlineStrengthCount").textContent = `${rows.length} 条`;
-  $("mainlineStrength").innerHTML = rows.length ? rows.map(mainlineStrengthCard).join("") : `<div class="empty">暂无主线强度。</div>`;
+  $("mainlineStrengthMeta").textContent = `动态实时聚合 · 更新 ${updated}${staticBase ? `；静态底座 ${staticBase}` : ""}`;
+  $("mainlineStrength").innerHTML = rows.length ? rows.map(row => mainlineStrengthCard(row,maxValue)).join("") : `<div class="empty">暂无主线强度。</div>`;
 }
 function renderSignals(data){
   const intraday = (data.intraday_v1519_green || data.intraday_anomaly?.rows || []).filter(goodIntraday).slice(0,6);
