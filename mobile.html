@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>V152 杩滅鎵嬫満鐩戞帶</title>
+<title>V152 远端手机监控</title>
 <style>
 :root{
   color-scheme:dark;
@@ -371,77 +371,77 @@ h2{font-size:16px;letter-spacing:0}
 <main class="app">
   <header class="top">
     <div>
-      <h1 id="title">V152 杩滅鎵嬫満鐩戞帶</h1>
-      <div class="sub">绾搁潰妯℃嫙涓庢寔浠撹瀵?/div>
+      <h1 id="title">V152 远端手机监控</h1>
+      <div class="sub">纸面模拟与持仓观察</div>
     </div>
     <div class="status">
-      <div class="state"><i id="dot" class="dot"></i><b id="remoteState">鐘舵€佽鍙栦腑</b></div>
+      <div class="state"><i id="dot" class="dot"></i><b id="remoteState">状态读取中</b></div>
       <div class="actions">
-        <a class="button" href="index.html">妗岄潰鐗?/a>
-        <button id="alarmBtn" class="button">閾冨０ OFF</button>
+        <a class="button" href="index.html">桌面版</a>
+        <button id="alarmBtn" class="button">铃声 OFF</button>
       </div>
     </div>
-    <div class="updated"><span id="updated">宸叉洿鏂?--</span><span id="positionCount">--</span></div>
+    <div class="updated"><span id="updated">已更新 --</span><span id="positionCount">--</span></div>
   </header>
 
   <nav class="tabs">
-    <button class="tab on" data-screen="overview">姒傝</button>
-    <button class="tab" data-screen="holdings">浠撲綅</button>
-    <button class="tab" data-screen="signals">淇″彿</button>
-    <button class="tab" data-screen="records">璁板綍</button>
+    <button class="tab on" data-screen="overview">概览</button>
+    <button class="tab" data-screen="holdings">仓位</button>
+    <button class="tab" data-screen="signals">信号</button>
+    <button class="tab" data-screen="records">记录</button>
   </nav>
 
   <section id="overview" class="screen active">
     <article class="panel block" data-module="mainline_strength">
-      <div class="head"><h2>涓荤嚎寮哄害</h2><span id="mainlineStrengthCount" class="pill green">--</span></div>
-      <div id="mainlineStrengthMeta" class="strength-meta">绛夊緟妗岄潰绔悓姝ャ€?/div>
+      <div class="head"><h2>主线强度</h2><span id="mainlineStrengthCount" class="pill green">--</span></div>
+      <div id="mainlineStrengthMeta" class="strength-meta">等待桌面端同步。</div>
       <div id="mainlineStrength" class="strength-list"></div>
     </article>
     <article class="panel block" data-module="market_environment">
-      <div class="head"><h2>鐜</h2><span id="envBadge" class="pill cyan">璇诲彇涓?/span></div>
+      <div class="head"><h2>环境</h2><span id="envBadge" class="pill cyan">读取中</span></div>
       <div class="env">
-        <div class="cell"><span>甯傚満娓╁害</span><b id="envMarket">--</b></div>
-        <div class="cell"><span>璧勯噾缁撴瀯</span><b id="envCapital">--</b></div>
-        <div class="cell"><span>鎭愯椽鍒?/span><b id="envFear">--</b></div>
+        <div class="cell"><span>市场温度</span><b id="envMarket">--</b></div>
+        <div class="cell"><span>资金结构</span><b id="envCapital">--</b></div>
+        <div class="cell"><span>恐贪分</span><b id="envFear">--</b></div>
       </div>
     </article>
     <article class="panel block" data-module="paper_trading">
-      <div class="head"><h2>绾搁潰妯℃嫙闂幆</h2><span id="paperRuntimeBadge" class="pill cyan">璇诲彇涓?/span></div>
-      <div id="paperRuntimeSummary" class="strength-meta">绛夊緟妗岄潰妯″瀷鍚屾杩愯鐘舵€併€?/div>
+      <div class="head"><h2>纸面模拟闭环</h2><span id="paperRuntimeBadge" class="pill cyan">读取中</span></div>
+      <div id="paperRuntimeSummary" class="strength-meta">等待桌面模型同步运行状态。</div>
     </article>
   </section>
 
   <section id="holdings" class="screen">
     <section class="grid" data-module="portfolio_summary">
-      <article class="panel kpi"><span>鎬绘潈鐩?/span><strong id="equity">--</strong><span id="equityMeta">--</span></article>
-      <article class="panel kpi"><span>娴姩鐩堜簭</span><strong id="floating">--</strong><span id="floatingPct">--</span></article>
-      <article class="panel kpi"><span>鎸佷粨甯傚€?/span><strong id="marketValue">--</strong><span id="cash">--</span></article>
-      <article class="panel kpi"><span>宸插疄鐜扮泩浜?/span><strong id="realized">--</strong><span>閲嶇疆鍚庡彛寰?/span></article>
+      <article class="panel kpi"><span>总权益</span><strong id="equity">--</strong><span id="equityMeta">--</span></article>
+      <article class="panel kpi"><span>浮动盈亏</span><strong id="floating">--</strong><span id="floatingPct">--</span></article>
+      <article class="panel kpi"><span>持仓市值</span><strong id="marketValue">--</strong><span id="cash">--</span></article>
+      <article class="panel kpi"><span>已实现盈亏</span><strong id="realized">--</strong><span>重置后口径</span></article>
     </section>
     <article class="panel block" data-module="positions">
-      <div class="head"><h2>褰撳墠浠撲綅</h2><span id="holdingCount" class="pill cyan">--</span></div>
+      <div class="head"><h2>当前仓位</h2><span id="holdingCount" class="pill cyan">--</span></div>
       <div id="positions" class="cards"></div>
     </article>
   </section>
 
   <section id="signals" class="screen">
     <article class="panel block" data-module="intraday_anomaly">
-      <div class="head"><h2>鍒嗘椂寮轰俊鍙?/h2><span id="intradayCount" class="pill green">--</span></div>
+      <div class="head"><h2>分时强信号</h2><span id="intradayCount" class="pill green">--</span></div>
       <div id="intraday" class="signals"></div>
     </article>
     <article class="panel block" data-module="mainline_monitor_pool">
-      <div class="head"><h2>鏍稿績鍊欓€夋睜</h2><span id="candidateCount" class="pill green">--</span></div>
+      <div class="head"><h2>核心候选池</h2><span id="candidateCount" class="pill green">--</span></div>
       <div id="candidatePool" class="signals"></div>
     </article>
   </section>
 
   <section id="records" class="screen">
     <article class="panel block" data-module="operation_history">
-      <div class="head"><h2>涓ゅぉ鎿嶄綔</h2><span class="pill cyan">鏈€杩?/span></div>
+      <div class="head"><h2>两天操作</h2><span class="pill cyan">最近</span></div>
       <div id="history" class="timeline"></div>
     </article>
     <article class="panel block" data-module="closed_orders">
-      <div class="head"><h2>鍗栧嚭璁板綍</h2><span class="pill cyan">鐩堜簭</span></div>
+      <div class="head"><h2>卖出记录</h2><span class="pill cyan">盈亏</span></div>
       <div id="closed" class="timeline"></div>
     </article>
   </section>
@@ -451,41 +451,41 @@ h2{font-size:16px;letter-spacing:0}
 const $ = id => document.getElementById(id);
 let modelLabels = {};
 const Text = {
-  V152_STABLE_ATTACK:"绋冲畾鏀诲嚮妯″瀷",
-  MAINLINE_PROMOTION_MONITOR:"鏍稿績鍊欓€夌洃鎺?,
-  PROMOTION_CANDIDATE_MONITOR:"鏍稿績鍊欓€?,
-  PROMOTION_WATCH:"鍊欓€夎瀵?,
-  MODEL_AUTO_BUY:"妯″瀷妯℃嫙涔板叆",
-  MODEL_AUTO_SELL:"妯″瀷妯℃嫙鍗栧嚭",
-  MODEL_AUTO_LOCAL_STRUCTURE:"妯″瀷鏈湴缁撴瀯淇″彿",
-  MODEL_EXPECTATION_REDUCE:"浣庨鏈熸ā鎷熷噺浠?,
-  USER_MANUAL_BUY:"鐢ㄦ埛瀹炵洏鎵嬪姩涔板叆",
-  USER_MANUAL_SELL:"鐢ㄦ埛瀹炵洏鎵嬪姩鍗栧嚭",
-  WAIT_CONFIRM:"绛夊緟纭",
-  WAIT:"绛夊緟",
-  OBSERVE:"瑙傚療",
-  ATTACK_CONFIRMED:"鍒嗘椂杩涙敾纭",
-  ACCEPTANCE_IMPROVING:"鎵挎帴澧炲己",
-  WATCH_BUY_POINT:"涔扮偣瑙傚療",
-  INTRADAY_RISK:"鍒嗘椂椋庨櫓",
-  ok:"姝ｅ父",
-  observe:"瑙傚療",
-  below_cost:"浣庝簬鎴愭湰",
-  defense:"璺岀牬闃插畧绾?,
-  strict:"璺岀牬涓ユ牸绾?,
-  HOT:"甯傚満鍋忕儹",
-  WARM:"甯傚満鍋忔殩",
-  NEUTRAL:"甯傚満涓€?,
-  COLD:"甯傚満鍋忓喎",
-  RISK_OFF:"椋庨櫓閫€娼?,
-  DATA_STALE:"鏁版嵁澶辩湡",
-  BROAD_INFLOW:"璧勯噾鎵╂暎杩涙敾",
-  STRUCTURAL_INFLOW:"缁撴瀯鎬ф祦鍏?,
-  OUTFLOW:"璧勯噾閫€娼?,
-  CROWDING:"璧勯噾鎶卞洟",
-  LOCAL_ROTATION_TRAP:"灞€閮ㄨ疆鍔ㄩ櫡闃?
+  V152_STABLE_ATTACK:"稳定攻击模型",
+  MAINLINE_PROMOTION_MONITOR:"核心候选监控",
+  PROMOTION_CANDIDATE_MONITOR:"核心候选",
+  PROMOTION_WATCH:"候选观察",
+  MODEL_AUTO_BUY:"模型模拟买入",
+  MODEL_AUTO_SELL:"模型模拟卖出",
+  MODEL_AUTO_LOCAL_STRUCTURE:"模型本地结构信号",
+  MODEL_EXPECTATION_REDUCE:"低预期模拟减仓",
+  USER_MANUAL_BUY:"用户实盘手动买入",
+  USER_MANUAL_SELL:"用户实盘手动卖出",
+  WAIT_CONFIRM:"等待确认",
+  WAIT:"等待",
+  OBSERVE:"观察",
+  ATTACK_CONFIRMED:"分时进攻确认",
+  ACCEPTANCE_IMPROVING:"承接增强",
+  WATCH_BUY_POINT:"买点观察",
+  INTRADAY_RISK:"分时风险",
+  ok:"正常",
+  observe:"观察",
+  below_cost:"低于成本",
+  defense:"跌破防守线",
+  strict:"跌破严格线",
+  HOT:"市场偏热",
+  WARM:"市场偏暖",
+  NEUTRAL:"市场中性",
+  COLD:"市场偏冷",
+  RISK_OFF:"风险退潮",
+  DATA_STALE:"数据失真",
+  BROAD_INFLOW:"资金扩散进攻",
+  STRUCTURAL_INFLOW:"结构性流入",
+  OUTFLOW:"资金退潮",
+  CROWDING:"资金抱团",
+  LOCAL_ROTATION_TRAP:"局部轮动陷阱"
 };
-const badRe = /閿焲锟絴闁紎闂倈闁箌閻爘濞磡濡梶閸妡婵鐎祙缁炬悂|鏉╂粎|鐠ф稑|\?\//;
+const badRe = /锟|�|閼|闂|閹|鐠|娴|妗|鍊|濡|瀵|绾搁|杩滅|璧涘|\?\//;
 const enumRe = /^[A-Z0-9_.-]+(?:_[A-Z0-9_.-]+)+$/;
 function raw(v){ return v === undefined || v === null || v === "" ? "--" : String(v); }
 function zh(v, fallback = "--"){
@@ -495,11 +495,11 @@ function zh(v, fallback = "--"){
   if(Text[s]) return Text[s];
   Object.keys(modelLabels || {}).sort((a,b)=>b.length-a.length).forEach(key => { s = s.split(key).join(modelLabels[key]); });
   if(badRe.test(s) || /\?{2,}/.test(s)) return fallback;
-  if(enumRe.test(s)) return "绯荤粺淇″彿";
+  if(enumRe.test(s)) return "系统信号";
   return s.replace(/\.v\d+/g,"");
 }
 function esc(v){ return raw(v).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
-function num(v){ const x = parseFloat(raw(v).replace(/[,%涓嘳/g,"")); return Number.isFinite(x) ? x : 0; }
+function num(v){ const x = parseFloat(raw(v).replace(/[,%万]/g,"")); return Number.isFinite(x) ? x : 0; }
 function tone(v){ const x = num(v); return x > 0 ? "up" : x < 0 ? "down" : "flat"; }
 function code(v){ return raw(v).padStart(6,"0"); }
 function compact(v, n = 48){ const s = zh(v,""); return s.length > n ? s.slice(0,n) + "..." : s; }
@@ -509,42 +509,42 @@ function flowText(r){
 }
 function flowPill(r){
   const s = flowText(r);
-  const cls = /鍑鸿揣|椋庨櫓|杞急|鎾ら€€/.test(s) ? "yellow" : /鎵挎帴|纭|澧炲己|鍑€娴佸叆/.test(s) ? "green" : "cyan";
+  const cls = /出货|风险|转弱|撤退/.test(s) ? "yellow" : /承接|确认|增强|净流入/.test(s) ? "green" : "cyan";
   return pill(s, cls);
 }
 function blocker(v){
   const s = raw(v);
-  if(s === "regime_risk_off") return "甯傚満椋庨櫓閫€娼?;
-  if(s === "market_breadth_stale") return "娑ㄨ穼瀹舵暟杩囨湡";
-  if(s === "not_closing_10m_gate_window") return "鏈埌灏剧洏绐楀彛";
-  if(s.startsWith("market_env_age>")) return "鐜鎵弿瓒呮椂";
-  if(s.startsWith("candidate_mood<")) return "鍊欓€夌儹搴﹀亸浣?;
-  if(s.startsWith("fear_greed<")) return "鎭愯椽鍒嗗亸浣?;
-  if(s.startsWith("capital_structure_")) return "璧勯噾缁撴瀯鏈斁琛?;
-  if(s.startsWith("regime_")) return "甯傚満娓╁害鏈斁琛?;
-  return zh(s,"闂ㄦ帶璇婃柇");
+  if(s === "regime_risk_off") return "市场风险退潮";
+  if(s === "market_breadth_stale") return "涨跌家数过期";
+  if(s === "not_closing_10m_gate_window") return "未到尾盘窗口";
+  if(s.startsWith("market_env_age>")) return "环境扫描超时";
+  if(s.startsWith("candidate_mood<")) return "候选热度偏低";
+  if(s.startsWith("fear_greed<")) return "恐贪分偏低";
+  if(s.startsWith("capital_structure_")) return "资金结构未放行";
+  if(s.startsWith("regime_")) return "市场温度未放行";
+  return zh(s,"门控诊断");
 }
 function noteText(x){
   const text = zh(x?.note,"");
   if(text) return compact(text,72);
-  if(x?.type === "USER_MANUAL_BUY") return `鎴浘纭锛?{zh(x.qty)}鑲★紝鎴愭湰${zh(x.price)}`;
-  return "妗岄潰妯″瀷璁板綍";
+  if(x?.type === "USER_MANUAL_BUY") return `截图确认：${zh(x.qty)}股，成本${zh(x.price)}`;
+  return "桌面模型记录";
 }
 
 function actionText(x){
-  return zh(x?.action || x?.type || "妯″瀷鍔ㄤ綔");
+  return zh(x?.action || x?.type || "模型动作");
 }
 function heldActionText(x){
   const price = zh(x?.price,"");
-  const fallback = `${actionText(x)} ${zh(x?.qty)}鑲?{price && price !== "--" ? ` 鎴愪氦浠?{price}` : ""}`;
+  const fallback = `${actionText(x)} ${zh(x?.qty)}股${price && price !== "--" ? ` 成交价${price}` : ""}`;
   return zh(x?.summary || fallback);
 }
 function heldHistoryHtml(p){
   const rows = p.held_operation_history || [];
   if(!rows.length) return "";
   return `<div class="pos-history">
-    <b>褰撳墠鎸佷粨鎿嶄綔璁板綍</b>
-    ${rows.slice().reverse().slice(0,4).map(x => `<span>${esc(zh(x.date))} ${esc(zh(x.time))} 路 ${esc(heldActionText(x))}</span>`).join("")}
+    <b>当前持仓操作记录</b>
+    ${rows.slice().reverse().slice(0,4).map(x => `<span>${esc(zh(x.date))} ${esc(zh(x.time))} · ${esc(heldActionText(x))}</span>`).join("")}
   </div>`;
 }
 
@@ -555,7 +555,7 @@ const POSITION_ALARM_COOLDOWN_MS = 30000;
 const MOBILE_SCREEN_KEY = "v152.remote.mobile.activeScreen";
 function setAlarm(){
   $("alarmBtn").classList.toggle("on", alarm);
-  $("alarmBtn").textContent = alarm ? "閾冨０ ON" : "閾冨０ OFF";
+  $("alarmBtn").textContent = alarm ? "铃声 ON" : "铃声 OFF";
 }
 function ring(){
   try{
@@ -575,10 +575,10 @@ function ring(){
 }
 function notifyPosition(){
   if("Notification" in window && Notification.permission === "granted"){
-    new Notification("浠撲綅鍙樺寲",{body:"妯″瀷涔板崠鎴栦粨浣嶇粨鏋勫彂鐢熷彉鍖栥€?});
+    new Notification("仓位变化",{body:"模型买卖或仓位结构发生变化。"});
   }
 }
-function posNum(v){ const n = Number(String(v ?? "").replace(/[%锛?]/g,"").replace(/[^\d.+-]/g,"")); return Number.isFinite(n) ? n : NaN; }
+function posNum(v){ const n = Number(String(v ?? "").replace(/[%，,]/g,"").replace(/[^\d.+-]/g,"")); return Number.isFinite(n) ? n : NaN; }
 function posCode(v){ const d = String(v ?? "").replace(/\D/g,""); return d ? d.padStart(6,"0").slice(-6) : String(v ?? "").trim(); }
 function posQty(v){ const n = posNum(v); return Number.isFinite(n) ? String(Math.round(n)) : ""; }
 function positionSig(rows){
@@ -623,7 +623,7 @@ function renderKpi(data){
   $("floating").className = tone(data.floating_pnl);
   $("floatingPct").textContent = zh(data.floating_pnl_pct);
   $("marketValue").textContent = zh(data.market_value);
-  $("cash").textContent = `鍙敤 ${zh(data.cash)}`;
+  $("cash").textContent = `可用 ${zh(data.cash)}`;
   $("realized").textContent = zh(data.realized_pnl);
   $("realized").className = tone(data.realized_pnl);
 }
@@ -634,7 +634,7 @@ function renderEnv(data){
   $("envMarket").textContent = zh(env.regime || env.market_state);
   $("envCapital").textContent = zh(capital.label || capital.state || env.capital_label || env.capital_state);
   $("envFear").textContent = zh(fg.score ?? fg.value ?? "--");
-  $("envBadge").textContent = data.remote_quote_available ? "瀹炴椂" : "绛夊緟";
+  $("envBadge").textContent = data.remote_quote_available ? "实时" : "等待";
   $("envBadge").className = "pill " + (data.remote_quote_available ? "green" : "yellow");
 }
 function paperRuntimeClass(rt){
@@ -646,22 +646,22 @@ function paperRuntimeClass(rt){
 }
 function paperBlockerText(v){
   const s = raw(v);
-  if(s === "not_closing_10m_gate_window") return "鏈埌灏剧洏纭绐楀彛";
-  if(enumRe.test(s)) return "闂ㄦ帶绛夊緟";
+  if(s === "not_closing_10m_gate_window") return "未到尾盘确认窗口";
+  if(enumRe.test(s)) return "门控等待";
   return zh(s);
 }
 function renderPaperRuntime(data){
   const rt = data.paper_runtime || data.paper_trading?.runtime || {};
   const cand = rt.candidate || {}, quotes = rt.quotes || {}, pos = rt.positions || {};
-  const blockers = (rt.blockers || []).filter(Boolean).map(paperBlockerText).join("锛?) || "鏃?;
-  const warnings = (rt.warnings || []).filter(Boolean).map(x => zh(x)).join("锛?) || "鏃?;
-  const buy = (rt.buy_blockers || []).filter(Boolean).map(paperBlockerText).join("锛?) || "鏃?;
-  const staleCodes = (pos.stale_quote_codes || []).filter(Boolean).join("/") || "鏃?;
-  $("paperRuntimeBadge").textContent = zh(rt.label || "绛夊緟杩愯鎬?);
+  const blockers = (rt.blockers || []).filter(Boolean).map(paperBlockerText).join("；") || "无";
+  const warnings = (rt.warnings || []).filter(Boolean).map(x => zh(x)).join("；") || "无";
+  const buy = (rt.buy_blockers || []).filter(Boolean).map(paperBlockerText).join("；") || "无";
+  const staleCodes = (pos.stale_quote_codes || []).filter(Boolean).join("/") || "无";
+  $("paperRuntimeBadge").textContent = zh(rt.label || "等待运行态");
   $("paperRuntimeBadge").className = "pill " + paperRuntimeClass(rt);
-  $("paperRuntimeSummary").innerHTML = `${esc(zh(rt.summary || "绛夊緟妗岄潰妯″瀷鍚屾杩愯鐘舵€併€?))}<br>` +
-    `蹇収 ${esc(zh(rt.snapshot_age_seconds ?? "--"))}s锛涘€欓€?${cand.exists ? "瀛樺湪" : "缂哄け"}${cand.stale ? " / 杩囨湡" : ""}${cand.fallback_used ? " / 澶囩敤閫傞厤鍣? : ""}锛涜鎯?${esc(zh(quotes.live_count ?? 0))}/${esc(zh(quotes.total ?? 0))}锛涙寔浠撴姤浠疯繃鏈?${esc(staleCodes)}銆?br>` +
-    `瀹炴椂闃绘尅锛?{esc(blockers)}锛涜瘖鏂彁閱掞細${esc(warnings)}锛涗拱鍏ョ瓑寰咃細${esc(buy)}銆俙;
+  $("paperRuntimeSummary").innerHTML = `${esc(zh(rt.summary || "等待桌面模型同步运行状态。"))}<br>` +
+    `快照 ${esc(zh(rt.snapshot_age_seconds ?? "--"))}s；候选 ${cand.exists ? "存在" : "缺失"}${cand.stale ? " / 过期" : ""}${cand.fallback_used ? " / 备用适配器" : ""}；行情 ${esc(zh(quotes.live_count ?? 0))}/${esc(zh(quotes.total ?? 0))}；持仓报价过期 ${esc(staleCodes)}。<br>` +
+    `实时阻挡：${esc(blockers)}；诊断提醒：${esc(warnings)}；买入等待：${esc(buy)}。`;
 }
 function addLegClass(p){
   const s = String(p?.v152_add_leg_light || "");
@@ -675,47 +675,47 @@ function addLegText(p){
   const gap = zh(p?.v152_add_leg_stop_gap_pct, "");
   const pnl = zh(p?.v152_add_leg_pnl_pct, "");
   const parts = [];
-  if(stop) parts.push(`鍔ㄦ€佺嚎 ${stop}`);
-  if(gap) parts.push(`璺濈嚎 ${gap}`);
-  if(pnl) parts.push(`鑵跨泩浜?${pnl}`);
-  return parts.length ? parts.join(" / ") : "鏈紑鍚?;
+  if(stop) parts.push(`动态线 ${stop}`);
+  if(gap) parts.push(`距线 ${gap}`);
+  if(pnl) parts.push(`腿盈亏 ${pnl}`);
+  return parts.length ? parts.join(" / ") : "未开启";
 }
 function posCard(p, brief = false){
-  const stateCls = /涓ユ牸|闃插畧|浣庝簬/.test(zh(p.state)) ? "yellow" : "cyan";
+  const stateCls = /严格|防守|低于/.test(zh(p.state)) ? "yellow" : "cyan";
   return `<article class="pos">
     <div class="row">
-      <div class="title"><b>${esc(code(p.code))} ${esc(zh(p.name))}</b><span>${esc(zh(p.source,"妗岄潰鍚屾"))}</span></div>
+      <div class="title"><b>${esc(code(p.code))} ${esc(zh(p.name))}</b><span>${esc(zh(p.source,"桌面同步"))}</span></div>
       ${pill(zh(p.state),stateCls)}
     </div>
     <div class="posgrid">
-      <div class="mini"><span>鏁伴噺</span><b>${esc(zh(p.qty))}</b></div>
-      <div class="mini"><span>鐜颁环</span><b>${esc(zh(p.price))}</b></div>
-      <div class="mini"><span>娴姩</span><b class="${tone(p.pnl_amount || p.pnl_pct)}">${esc(zh(p.pnl_amount))} / ${esc(zh(p.pnl_pct))}</b></div>
-      ${brief ? "" : `<div class="mini"><span>鎴愭湰</span><b>${esc(zh(p.cost))}</b></div>
-      <div class="mini"><span>闃插畧</span><b>${esc(zh(p.defense_price))}</b></div>
-      <div class="mini"><span>涓ユ牸</span><b>${esc(zh(p.strict_price))}</b></div>
-      <div class="mini"><span>鍔犱粨鑵?/span><b>${pill(zh(p.v152_add_leg_label || "鏈姞浠?),addLegClass(p))}</b></div>
-      <div class="mini"><span>鍔ㄦ€佺嚎</span><b>${esc(addLegText(p))}</b></div>`}
+      <div class="mini"><span>数量</span><b>${esc(zh(p.qty))}</b></div>
+      <div class="mini"><span>现价</span><b>${esc(zh(p.price))}</b></div>
+      <div class="mini"><span>浮动</span><b class="${tone(p.pnl_amount || p.pnl_pct)}">${esc(zh(p.pnl_amount))} / ${esc(zh(p.pnl_pct))}</b></div>
+      ${brief ? "" : `<div class="mini"><span>成本</span><b>${esc(zh(p.cost))}</b></div>
+      <div class="mini"><span>防守</span><b>${esc(zh(p.defense_price))}</b></div>
+      <div class="mini"><span>严格</span><b>${esc(zh(p.strict_price))}</b></div>
+      <div class="mini"><span>加仓腿</span><b>${pill(zh(p.v152_add_leg_label || "未加仓"),addLegClass(p))}</b></div>
+      <div class="mini"><span>动态线</span><b>${esc(addLegText(p))}</b></div>`}
     </div>
     ${brief ? "" : `<div class="signalline">${flowPill(p)}${pill(zh(p.expectation_label || p.expectation_position_text),"cyan")}</div>${heldHistoryHtml(p)}`}
   </article>`;
 }
 function renderPositions(rows){
   const list = rows || [];
-  $("holdingCount").textContent = `${list.length} 鍙猔;
-  $("positionCount").textContent = `${list.length} 鍙寔浠揱;
-  $("positions").innerHTML = list.length ? list.map(p => posCard(p,false)).join("") : `<div class="empty">鏆傛棤鎸佷粨銆?/div>`;
+  $("holdingCount").textContent = `${list.length} 只`;
+  $("positionCount").textContent = `${list.length} 只持仓`;
+  $("positions").innerHTML = list.length ? list.map(p => posCard(p,false)).join("") : `<div class="empty">暂无持仓。</div>`;
 }
 function goodIntraday(r){
   const s = [r.label,r.state,r.hiddenflow_label,r.v1519_flow,r.capital_evidence].map(x => zh(x,"")).join(" ");
-  return /鍒嗘椂杩涙敾纭|鎵挎帴澧炲己|鎵挎帴鏀瑰杽|涓诲姏鍑€娴佸叆|纭/.test(s);
+  return /分时进攻确认|承接增强|承接改善|主力净流入|确认/.test(s);
 }
 function signalCard(r, kind){
   const mainline = [r.mainline || r.potential_mainline,r.node || r.industry_chain_node,r.candidate_tier].filter(Boolean).map(x => zh(x,"")).join(" / ");
-  const action = zh(r.v152_gate_label || r.action_zh || r.label || r.signal || r.action || r.state || r.level, kind === "candidate" ? "鏍稿績鍊欓€? : "绛夊緟纭");
+  const action = zh(r.v152_gate_label || r.action_zh || r.label || r.signal || r.action || r.state || r.level, kind === "candidate" ? "核心候选" : "等待确认");
   const price = zh(r.price ?? r.rt_price ?? "--");
   const pct = zh(r.pct ?? r.rt_pct ?? "--");
-  const extra = kind === "candidate" ? pill(zh(r.level || r.candidate_tier || r.state,"鏍稿績鍊欓€?),"yellow") : "";
+  const extra = kind === "candidate" ? pill(zh(r.level || r.candidate_tier || r.state,"核心候选"),"yellow") : "";
   return `<article class="signal">
     <div class="row">
       <div class="title"><b>${esc(code(r.code))} ${esc(zh(r.name))}</b><span>${esc(compact(mainline,42))}</span></div>
@@ -751,18 +751,18 @@ function strengthValue(line){
 }
 function strengthSubtitle(line){
   if(line.top_companies){
-    return [line.node,line.top_companies].filter(Boolean).map(x => zh(x,"")).join(" 路 ");
+    return [line.node,line.top_companies].filter(Boolean).map(x => zh(x,"")).join(" · ");
   }
   const nodes = (line.nodes || []).slice(0,4).map(node => {
-    const part = [node.node,node.name].filter(Boolean).map(x => zh(x,"")).join(" 路 ");
+    const part = [node.node,node.name].filter(Boolean).map(x => zh(x,"")).join(" · ");
     return part || zh(node.name || node.code,"");
   }).filter(Boolean);
-  if(nodes.length) return nodes.join("锛?);
-  if(line.leader_name) return [line.leader_role,line.leader_name].filter(Boolean).map(x => zh(x,"")).join(" 路 ");
-  return zh(line.strength_reason || line.summary || "绛夊緟涓荤嚎鑱氬悎");
+  if(nodes.length) return nodes.join("；");
+  if(line.leader_name) return [line.leader_role,line.leader_name].filter(Boolean).map(x => zh(x,"")).join(" · ");
+  return zh(line.strength_reason || line.summary || "等待主线聚合");
 }
 function mainlineStrengthCard(line, maxValue){
-  const title = zh(line.mainline || line.theme || "涓荤嚎");
+  const title = zh(line.mainline || line.theme || "主线");
   const value = strengthValue(line);
   const width = maxValue > 0 ? Math.max(value ? 5 : 2, Math.min(100, value / maxValue * 100)) : 2;
   return `<div class="strength-row">
@@ -771,7 +771,7 @@ function mainlineStrengthCard(line, maxValue){
       <div class="strength-sub">${esc(compact(strengthSubtitle(line),56))}</div>
     </div>
     <div class="strength-meter"><i class="strength-fill" style="width:${width.toFixed(1)}%"></i></div>
-    <div class="strength-num">${value} 寮?/div>
+    <div class="strength-num">${value} 强</div>
   </div>`;
 }
 function renderMainlineStrength(data){
@@ -780,31 +780,31 @@ function renderMainlineStrength(data){
   const maxValue = Math.max(1,...rows.map(strengthValue));
   const updated = zh(mainlines.as_of || data.market_environment_updated_at || data.generated_at || data.source_generated_at);
   const staticBase = zh(mainlines.static_as_of || mainlines.static_base_date || "");
-  $("mainlineStrengthCount").textContent = `${rows.length} 鏉;
-  $("mainlineStrengthMeta").textContent = `鍔ㄦ€佸疄鏃惰仛鍚?路 鏇存柊 ${updated}${staticBase ? `锛涢潤鎬佸簳搴?${staticBase}` : ""}`;
-  $("mainlineStrength").innerHTML = rows.length ? rows.map(row => mainlineStrengthCard(row,maxValue)).join("") : `<div class="empty">鏆傛棤涓荤嚎寮哄害銆?/div>`;
+  $("mainlineStrengthCount").textContent = `${rows.length} 条`;
+  $("mainlineStrengthMeta").textContent = `动态实时聚合 · 更新 ${updated}${staticBase ? `；静态底座 ${staticBase}` : ""}`;
+  $("mainlineStrength").innerHTML = rows.length ? rows.map(row => mainlineStrengthCard(row,maxValue)).join("") : `<div class="empty">暂无主线强度。</div>`;
 }
 function renderSignals(data){
   const intraday = (data.intraday_v1519_green || data.intraday_anomaly?.rows || []).filter(goodIntraday).slice(0,6);
   const candidates = (data.core_candidate_pool?.rows || data.candidate_pool?.rows || data.mainline_monitor_pool?.rows || []).slice(0,8);
-  $("intradayCount").textContent = `${intraday.length} 鏉;
-  $("candidateCount").textContent = `${candidates.length} 鏉;
-  $("intraday").innerHTML = intraday.length ? intraday.map(r => signalCard(r,"intraday")).join("") : `<div class="empty">鏆傛棤鍒嗘椂杩涙敾纭銆?/div>`;
-  $("candidatePool").innerHTML = candidates.length ? candidates.map(r => signalCard(r,"candidate")).join("") : `<div class="empty">鏆傛棤鏍稿績鍊欓€夋睜銆?/div>`;
+  $("intradayCount").textContent = `${intraday.length} 条`;
+  $("candidateCount").textContent = `${candidates.length} 条`;
+  $("intraday").innerHTML = intraday.length ? intraday.map(r => signalCard(r,"intraday")).join("") : `<div class="empty">暂无分时进攻确认。</div>`;
+  $("candidatePool").innerHTML = candidates.length ? candidates.map(r => signalCard(r,"candidate")).join("") : `<div class="empty">暂无核心候选池。</div>`;
 }
 function renderHistory(rows){
   $("history").innerHTML = rows && rows.length ? rows.slice().reverse().slice(0,10).map(x => `<article class="item">
     <span>${esc(zh(x.date))} ${esc(zh(x.time))}</span>
-    <b>${esc(code(x.code))} ${esc(zh(x.name))} ${esc(zh(x.action || x.type,"妯″瀷鍔ㄤ綔"))}</b>
-    <span>${esc(zh(x.qty))} 鑲?/ ${esc(zh(x.price))} 路 ${esc(noteText(x))}</span>
-  </article>`).join("") : `<div class="empty">鏆傛棤涓ゅぉ鎿嶄綔璁板綍銆?/div>`;
+    <b>${esc(code(x.code))} ${esc(zh(x.name))} ${esc(zh(x.action || x.type,"模型动作"))}</b>
+    <span>${esc(zh(x.qty))} 股 / ${esc(zh(x.price))} · ${esc(noteText(x))}</span>
+  </article>`).join("") : `<div class="empty">暂无两天操作记录。</div>`;
 }
 function renderClosed(rows){
   $("closed").innerHTML = rows && rows.length ? rows.slice().reverse().slice(0,10).map(x => `<article class="item">
     <span>${esc(zh(x.date))} ${esc(zh(x.time))}</span>
-    <b>${esc(code(x.code))} ${esc(zh(x.name))} 鍗栧嚭 ${esc(zh(x.qty))} 鑲?/b>
-    <span>${esc(zh(x.buy_price))} 鍒?${esc(zh(x.sell_price))} 路 ${esc(zh(x.pnl_amount))} / ${esc(zh(x.pnl_pct))}</span>
-  </article>`).join("") : `<div class="empty">鏆傛棤鍗栧嚭璁板綍銆?/div>`;
+    <b>${esc(code(x.code))} ${esc(zh(x.name))} 卖出 ${esc(zh(x.qty))} 股</b>
+    <span>${esc(zh(x.buy_price))} 到 ${esc(zh(x.sell_price))} · ${esc(zh(x.pnl_amount))} / ${esc(zh(x.pnl_pct))}</span>
+  </article>`).join("") : `<div class="empty">暂无卖出记录。</div>`;
 }
 function applyModuleVisibility(data){
   const modules = data?.model_adapter?.module_contract?.modules || {};
@@ -820,8 +820,8 @@ function applyModel(data){
   const adapter = data.model_adapter || {};
   const owner = data.model_owner || {};
   modelLabels = adapter.module_labels || {};
-  const name = adapter.short_name || owner.short_name || owner.active_model || "妯″瀷";
-  const title = `${name} 杩滅鎵嬫満鐩戞帶`;
+  const name = adapter.short_name || owner.short_name || owner.active_model || "模型";
+  const title = `${name} 远端手机监控`;
   document.title = title;
   $("title").textContent = title;
   applyModuleVisibility(data);
@@ -829,8 +829,8 @@ function applyModel(data){
 function render(data){
   applyModel(data);
   $("dot").classList.toggle("ok", Boolean(data.remote_quote_available));
-  $("remoteState").textContent = zh(data.remote_status_label || (data.remote_quote_available ? "琛屾儏杩炴帴鍙敤" : "琛屾儏杩炴帴涓嶅彲鐢?));
-  $("updated").textContent = `宸叉洿鏂?${zh(data.generated_at || data.source_generated_at)}`;
+  $("remoteState").textContent = zh(data.remote_status_label || (data.remote_quote_available ? "行情连接可用" : "行情连接不可用"));
+  $("updated").textContent = `已更新 ${zh(data.generated_at || data.source_generated_at)}`;
   renderKpi(data);
   renderMainlineStrength(data);
   renderEnv(data);
@@ -860,12 +860,12 @@ async function load(){
       if(res.ok){ render(await res.json()); return; }
       lastError = `HTTP ${res.status}`;
     }
-    throw new Error(lastError || "鐘舵€佷笉鍙敤");
+    throw new Error(lastError || "状态不可用");
   }catch(err){
     $("dot").classList.remove("ok");
-    $("remoteState").textContent = "鐘舵€佷笉鍙敤";
-    $("updated").textContent = "鍔犺浇澶辫触";
-    $("positions").innerHTML = `<div class="empty">杩滅鐘舵€佸姞杞藉け璐ワ細${esc(err.message)}銆?/div>`;
+    $("remoteState").textContent = "状态不可用";
+    $("updated").textContent = "加载失败";
+    $("positions").innerHTML = `<div class="empty">远端状态加载失败：${esc(err.message)}。</div>`;
   }
 }
 load();
