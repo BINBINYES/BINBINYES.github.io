@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-27 00:49:12",
-  "source_generated_at": "2026-05-27 00:49:12",
-  "market_environment_updated_at": "2026-05-27 00:49:12",
+  "generated_at": "2026-05-27 00:49:57",
+  "source_generated_at": "2026-05-27 00:49:57",
+  "market_environment_updated_at": "2026-05-27 00:49:57",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -377,7 +377,7 @@
         "status": "warn",
         "blocked": false,
         "repairable": true,
-        "detail": "\u5019\u9009 46\uff1b\u5e74\u9f84 35421s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668\uff08\u65e7V96\u6587\u4ef6\u5907\u7528\uff0c\u4e0d\u53c2\u4e0e\u95e8\u63a7\uff09"
+        "detail": "\u5019\u9009 46\uff1b\u5e74\u9f84 35466s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668\uff08\u65e7V96\u6587\u4ef6\u5907\u7528\uff0c\u4e0d\u53c2\u4e0e\u95e8\u63a7\uff09"
       },
       {
         "stage": "data",
@@ -1008,7 +1008,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 443.47,
+      "fallback_age_hours": 443.48,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1024,7 +1024,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-27 00:49:11",
+      "as_of": "2026-05-27 00:49:57",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -1975,7 +1975,7 @@
             "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.92%\uff1b\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 84.8\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
             "ladder_role": "\u9f99\u5934",
             "edge_label": "\u664b\u7ea7\u786e\u8ba4",
-            "ladder_score": 104.46,
+            "ladder_score": 98.46,
             "mainline_strength_tier": "\u8054\u52a8\u589e\u5f3a",
             "mainline_strength_label": "\u589e\u5f3a\u8054\u52a8",
             "mainline_strength_action": "\u5141\u8bb8\u8fdb\u5165\u91cd\u70b9\u89c2\u5bdf\u6c60",
