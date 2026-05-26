@@ -617,8 +617,10 @@ setAlarm();
 selectMobileScreen(localStorage.getItem(MOBILE_SCREEN_KEY) || "overview");
 
 function renderKpi(data){
+  const guard = data.auto_buy_gate?.v152_account_guard || data.paper_trading?.auto_buy_gate?.v152_account_guard || {};
+  const guardLine = accountGuardMeta(guard);
   $("equity").textContent = zh(data.equity);
-  $("equityMeta").textContent = zh(data.equity_detail || data.total_pnl_pct);
+  $("equityMeta").textContent = [zh(data.equity_detail || data.total_pnl_pct), guardLine].filter(Boolean).join(" · ");
   $("floating").textContent = zh(data.floating_pnl);
   $("floating").className = tone(data.floating_pnl);
   $("floatingPct").textContent = zh(data.floating_pnl_pct);
@@ -626,6 +628,16 @@ function renderKpi(data){
   $("cash").textContent = `可用 ${zh(data.cash)}`;
   $("realized").textContent = zh(data.realized_pnl);
   $("realized").className = tone(data.realized_pnl);
+}
+function pct4(v){
+  const n = Number(String(v ?? "").replace("%",""));
+  return Number.isFinite(n) ? n.toFixed(4) + "%" : "";
+}
+function accountGuardMeta(g){
+  if(!g || g.drawdown_pct === undefined || g.drawdown_pct === null || g.drawdown_pct === "") return "";
+  const parts = [`回撤 ${pct4(g.drawdown_pct)}`];
+  if(g.attack_weight_pct !== undefined && g.attack_weight_pct !== null && g.attack_weight_pct !== "") parts.push(`攻击仓上限 ${Number(g.attack_weight_pct).toFixed(0)}%`);
+  return parts.join(" / ");
 }
 function renderEnv(data){
   const env = data.market_environment || {};
