@@ -202,11 +202,6 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     </div>
   </section>
 
-  <section class="panel" data-module="paper_trading">
-    <div class="panel-head"><h2>纸面模拟执行闭环</h2><span id="paperRuntimeBadge" class="pill cyan">读取中</span></div>
-    <div id="paperRuntimeSummary" class="muted">等待桌面模型同步运行状态。</div>
-  </section>
-
   <section class="two">
     <div class="panel">
       <div class="panel-head"><h2>当前仓位</h2></div>
@@ -537,28 +532,6 @@ function renderEnv(data){
   $("gateBadge").className = "pill " + (canBuy ? "green" : "yellow");
 }
 
-function paperRuntimeClass(rt){
-  const state = String(rt?.state || "");
-  if(state === "running") return "green";
-  if(state === "input_blocked") return "red";
-  if(state === "gate_wait") return "yellow";
-  return "cyan";
-}
-
-function renderPaperRuntime(data){
-  const rt = data.paper_runtime || data.paper_trading?.runtime || {};
-  const cand = rt.candidate || {}, quotes = rt.quotes || {}, pos = rt.positions || {};
-  const blockers = (rt.blockers || []).filter(Boolean).map(x => O.blocker(x)).join("；") || "无";
-  const warnings = (rt.warnings || []).filter(Boolean).map(x => O.zh(x)).join("；") || "无";
-  const buy = (rt.buy_blockers || []).filter(Boolean).map(x => O.blocker(x)).join("；") || "无";
-  const staleCodes = (pos.stale_quote_codes || []).filter(Boolean).join("/") || "无";
-  $("paperRuntimeBadge").textContent = O.zh(rt.label || "等待运行态");
-  $("paperRuntimeBadge").className = "pill " + paperRuntimeClass(rt);
-  $("paperRuntimeSummary").innerHTML = `${O.esc(O.zh(rt.summary || "等待桌面模型同步运行状态。"))}<br>` +
-    `快照：${O.esc(O.zh(rt.snapshot_age_seconds ?? "--"))}s；候选：${cand.exists ? "存在" : "缺失"}${cand.stale ? " / 过期" : ""}${cand.fallback_used ? " / 备用适配器" : ""}；行情：${O.esc(O.zh(quotes.live_count ?? 0))}/${O.esc(O.zh(quotes.total ?? 0))}；持仓报价过期：${O.esc(staleCodes)}。<br>` +
-    `实时阻挡：${O.esc(blockers)}；诊断提醒：${O.esc(warnings)}；买入等待：${O.esc(buy)}。`;
-}
-
 function positionHistoryHtml(p){
   const rows = p.held_operation_history || [];
   if(!rows.length) return "";
@@ -766,7 +739,7 @@ const remoteModuleElementIds = {
   market_environment:["envMarket","envCapital","envFear"],
   mainline_strength:["mainlines"],
   positions:["positions"],
-  paper_trading:["paperRuntimeSummary"],
+  paper_trading:[],
   mainline_ladder:["ladder"],
   mainline_promotion:["promo","promoOther"]
 };
@@ -808,7 +781,6 @@ function render(data){
   $("updated").textContent = `已更新 ${O.zh(data.generated_at || data.source_generated_at)}`;
   renderKpi(data);
   renderEnv(data);
-  renderPaperRuntime(data);
   renderPositions(data.positions || []);
   renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
