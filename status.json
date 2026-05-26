@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-27 04:00:03",
-  "source_generated_at": "2026-05-27 04:00:03",
-  "market_environment_updated_at": "2026-05-27 04:00:03",
+  "generated_at": "2026-05-27 04:00:56",
+  "source_generated_at": "2026-05-27 04:00:56",
+  "market_environment_updated_at": "2026-05-27 04:00:56",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -377,7 +377,7 @@
         "status": "warn",
         "blocked": false,
         "repairable": true,
-        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 46871s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668\uff08\u65e7V96\u6587\u4ef6\u5907\u7528\uff0c\u4e0d\u53c2\u4e0e\u95e8\u63a7\uff09"
+        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 46925s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668\uff08\u65e7V96\u6587\u4ef6\u5907\u7528\uff0c\u4e0d\u53c2\u4e0e\u95e8\u63a7\uff09"
       },
       {
         "stage": "data",
@@ -1008,7 +1008,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 446.65,
+      "fallback_age_hours": 446.67,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -1024,7 +1024,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-27 04:00:03",
+      "as_of": "2026-05-27 04:00:56",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -2684,7 +2684,7 @@
             "pct_delta": "",
             "day_location": "29.7",
             "blockers": "\u65e0",
-            "reason": "\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26",
+            "reason": "\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20",
             "ladder_role": "\u9f99\u5934",
             "edge_label": "\u5206\u65f6\u627f\u63a5",
             "ladder_score": 77.97,
@@ -2725,7 +2725,7 @@
             "pct_delta": "",
             "day_location": "99.1",
             "blockers": "\u65e0",
-            "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26",
+            "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20",
             "ladder_role": "\u9f99\u4e00",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 62.26,
@@ -2766,7 +2766,7 @@
             "pct_delta": "",
             "day_location": "",
             "blockers": "\u65e0",
-            "reason": "\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +26",
+            "reason": "\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +20",
             "ladder_role": "\u9f99\u4e8c",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 57.11,
@@ -2807,7 +2807,7 @@
             "pct_delta": "",
             "day_location": "32.3",
             "blockers": "\u65e0",
-            "reason": "\u65b0\u95fb\u5f3a\u5316 +26",
+            "reason": "\u65b0\u95fb\u5f3a\u5316 +20",
             "ladder_role": "\u9f99\u4e09",
             "edge_label": "\u5206\u65f6\u627f\u63a5",
             "ladder_score": 52.11,
@@ -2848,7 +2848,7 @@
             "pct_delta": "",
             "day_location": "20.3",
             "blockers": "\u65e0",
-            "reason": "\u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +26",
+            "reason": "\u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +20",
             "ladder_role": "\u5f3a\u5019\u9009",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 48.72,
@@ -2889,7 +2889,7 @@
             "pct_delta": "",
             "day_location": "29.7",
             "blockers": "\u65e0",
-            "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26",
+            "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20",
             "ladder_role": "\u5f3a\u5019\u9009",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 47.14,
@@ -2930,7 +2930,7 @@
             "pct_delta": "",
             "day_location": "49.3",
             "blockers": "\u65e0",
-            "reason": "\u65b0\u95fb\u5f3a\u5316 +26",
+            "reason": "\u65b0\u95fb\u5f3a\u5316 +20",
             "ladder_role": "\u5f3a\u5019\u9009",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 40.16,
@@ -3418,7 +3418,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 2.58%\uff1b\u4e3b\u529b\u51c0\u989d 0.28\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 51.75%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41 / \u4e0b\u8dcc\u627f\u63a5",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 41.04,
         "expectation_position_text": "1\u4ed3",
@@ -3428,7 +3428,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.2"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.2"
       },
       {
         "code": "301696",
@@ -3452,7 +3452,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 3.59%\uff1b\u4e3b\u529b\u51c0\u989d 0.60\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 45.97%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41 / \u4e0b\u8dcc\u627f\u63a5",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%",
         "expectation_label": "\u9ad8\u9884\u671f",
         "expectation_score": 55.48,
         "expectation_position_text": "1.3\u4ed3",
@@ -3462,7 +3462,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%"
       },
       {
         "code": "603045",
@@ -3622,7 +3622,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -22.82%\uff1b\u4e3b\u529b\u51c0\u989d -1.93\u4ebf\uff1b\u5927\u5355\u51c0\u989d 0.18\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 84.60%",
         "flow_risk_tags": "\u4e0b\u8dcc\u627f\u63a5",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 ...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 ...",
         "expectation_label": "\u9ad8\u9884\u671f",
         "expectation_score": 48.3,
         "expectation_position_text": "1.3\u4ed3",
@@ -3632,7 +3632,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.99%"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.99%"
       },
       {
         "code": "300696",
@@ -3656,7 +3656,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -4.02%\uff1b\u4e3b\u529b\u51c0\u989d -0.13\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 49.37%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 34.58,
         "expectation_position_text": "1\u4ed3",
@@ -3666,7 +3666,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 28.8"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 28.8"
       },
       {
         "code": "688811",
@@ -3690,7 +3690,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -4.89%\uff1b\u4e3b\u529b\u51c0\u989d -0.27\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 50.26%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
         "expectation_label": "\u9ad8\u9884\u671f",
         "expectation_score": 43.25,
         "expectation_position_text": "1.3\u4ed3",
@@ -3700,7 +3700,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4"
       },
       {
         "code": "603629",
@@ -3792,7 +3792,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -8.46%\uff1b\u4e3b\u529b\u51c0\u989d -1.77\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 49.98%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 37.18,
         "expectation_position_text": "1\u4ed3",
@@ -3802,7 +3802,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 47.5"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 47.5"
       },
       {
         "code": "300283",
@@ -3928,7 +3928,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -11.86%\uff1b\u4e3b\u529b\u51c0\u989d -1.59\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 47.44%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 40.34,
         "expectation_position_text": "1\u4ed3",
@@ -3938,7 +3938,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.4"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.4"
       },
       {
         "code": "600105",
@@ -4109,7 +4109,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 2.58%\uff1b\u4e3b\u529b\u51c0\u989d 0.28\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 51.75%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41 / \u4e0b\u8dcc\u627f\u63a5",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 41.04,
         "expectation_position_text": "1\u4ed3",
@@ -4119,7 +4119,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.2"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=58.42 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.2"
       },
       {
         "code": "301696",
@@ -4143,7 +4143,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 3.59%\uff1b\u4e3b\u529b\u51c0\u989d 0.60\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 45.97%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41 / \u4e0b\u8dcc\u627f\u63a5",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%",
         "expectation_label": "\u9ad8\u9884\u671f",
         "expectation_score": 55.48,
         "expectation_position_text": "1.3\u4ed3",
@@ -4153,7 +4153,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=72.61 / \u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -0.05%"
       },
       {
         "code": "603045",
@@ -4313,7 +4313,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -22.82%\uff1b\u4e3b\u529b\u51c0\u989d -1.93\u4ebf\uff1b\u5927\u5355\u51c0\u989d 0.18\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 84.60%",
         "flow_risk_tags": "\u4e0b\u8dcc\u627f\u63a5",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 ...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 ...",
         "expectation_label": "\u9ad8\u9884\u671f",
         "expectation_score": 48.3,
         "expectation_position_text": "1.3\u4ed3",
@@ -4323,7 +4323,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.99%"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=86.71 / \u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.99%"
       },
       {
         "code": "300696",
@@ -4347,7 +4347,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -4.02%\uff1b\u4e3b\u529b\u51c0\u989d -0.13\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 49.37%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 34.58,
         "expectation_position_text": "1\u4ed3",
@@ -4357,7 +4357,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 28.8"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=57.49 / \u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 28.8"
       },
       {
         "code": "688811",
@@ -4381,7 +4381,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -4.89%\uff1b\u4e3b\u529b\u51c0\u989d -0.27\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 50.26%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
         "expectation_label": "\u9ad8\u9884\u671f",
         "expectation_score": 43.25,
         "expectation_position_text": "1.3\u4ed3",
@@ -4391,7 +4391,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.98 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4"
       },
       {
         "code": "603629",
@@ -4483,7 +4483,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -8.46%\uff1b\u4e3b\u529b\u51c0\u989d -1.77\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 49.98%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 37.18,
         "expectation_position_text": "1\u4ed3",
@@ -4493,7 +4493,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 47.5"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=63.51 / \u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 47.5"
       },
       {
         "code": "300283",
@@ -4619,7 +4619,7 @@
         "capital_evidence": "\u4e3b\u529b\u51c0\u5360\u6bd4 -11.86%\uff1b\u4e3b\u529b\u51c0\u989d -1.59\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 47.44%\uff1b\u672a\u53d6\u5f97\u5206\u949f\u8d44\u91d1\u6d41\uff0c\u5df2\u4f7f\u7528\u4e1c\u65b9\u8d22\u5bcc\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41\u5b57\u6bb5",
         "flow_risk_tags": "\u5206\u949f\u8d44\u91d1\u672a\u8986\u76d6_\u4f7f\u7528\u5b9e\u65f6\u4e3b\u529b\u51c0\u6d41",
         "pool": "",
-        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b...",
+        "pool_reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b...",
         "expectation_label": "\u6b63\u5e38\u9884\u671f",
         "expectation_score": 40.34,
         "expectation_position_text": "1\u4ed3",
@@ -4629,7 +4629,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.4"
+        "reason": "\u664b\u7ea7\u89c2\u5bdf / score=67.7 / \u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20 / \u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.4"
       },
       {
         "code": "600105",
@@ -4742,7 +4742,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.99%",
-        "reason": "\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "688808",
@@ -4844,7 +4844,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -0.05%",
-        "reason": "\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "001309",
@@ -5048,7 +5048,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.4",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "002281",
@@ -5150,7 +5150,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "603738",
@@ -5184,7 +5184,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 47.5",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "688530",
@@ -5354,7 +5354,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.2",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "688048",
@@ -5422,7 +5422,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 28.8",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "601869",
@@ -5773,7 +5773,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -9.99%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -9.99%",
-        "reason": "\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "688808",
@@ -5875,7 +5875,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -0.05%",
-        "reason": "\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "001309",
@@ -6079,7 +6079,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -5.16%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -5.16%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 51.4",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "002281",
@@ -6181,7 +6181,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.06%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "603738",
@@ -6215,7 +6215,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -4.72%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -4.72%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 47.5",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 88.5\uff1b\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "688530",
@@ -6385,7 +6385,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -2.75%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -2.75%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 49.2\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.2",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "688048",
@@ -6453,7 +6453,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -3.25%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.25%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 48.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 28.8",
-        "reason": "\u65b0\u95fb\u5f3a\u5316 +26"
+        "reason": "\u65b0\u95fb\u5f3a\u5316 +20"
       },
       {
         "code": "601869",
