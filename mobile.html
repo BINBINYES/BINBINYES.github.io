@@ -405,10 +405,6 @@ h2{font-size:16px;letter-spacing:0}
         <div class="cell"><span>恐贪分</span><b id="envFear">--</b></div>
       </div>
     </article>
-    <article class="panel block" data-module="paper_trading">
-      <div class="head"><h2>纸面模拟闭环</h2><span id="paperRuntimeBadge" class="pill cyan">读取中</span></div>
-      <div id="paperRuntimeSummary" class="strength-meta">等待桌面模型同步运行状态。</div>
-    </article>
   </section>
 
   <section id="holdings" class="screen">
@@ -649,31 +645,11 @@ function renderEnv(data){
   $("envBadge").textContent = data.remote_quote_available ? "实时" : "等待";
   $("envBadge").className = "pill " + (data.remote_quote_available ? "green" : "yellow");
 }
-function paperRuntimeClass(rt){
-  const state = String(rt?.state || "");
-  if(state === "running") return "green";
-  if(state === "input_blocked") return "red";
-  if(state === "gate_wait") return "yellow";
-  return "cyan";
-}
 function paperBlockerText(v){
   const s = raw(v);
   if(s === "not_closing_10m_gate_window") return "未到尾盘确认窗口";
   if(enumRe.test(s)) return "门控等待";
   return zh(s);
-}
-function renderPaperRuntime(data){
-  const rt = data.paper_runtime || data.paper_trading?.runtime || {};
-  const cand = rt.candidate || {}, quotes = rt.quotes || {}, pos = rt.positions || {};
-  const blockers = (rt.blockers || []).filter(Boolean).map(paperBlockerText).join("；") || "无";
-  const warnings = (rt.warnings || []).filter(Boolean).map(x => zh(x)).join("；") || "无";
-  const buy = (rt.buy_blockers || []).filter(Boolean).map(paperBlockerText).join("；") || "无";
-  const staleCodes = (pos.stale_quote_codes || []).filter(Boolean).join("/") || "无";
-  $("paperRuntimeBadge").textContent = zh(rt.label || "等待运行态");
-  $("paperRuntimeBadge").className = "pill " + paperRuntimeClass(rt);
-  $("paperRuntimeSummary").innerHTML = `${esc(zh(rt.summary || "等待桌面模型同步运行状态。"))}<br>` +
-    `快照 ${esc(zh(rt.snapshot_age_seconds ?? "--"))}s；候选 ${cand.exists ? "存在" : "缺失"}${cand.stale ? " / 过期" : ""}${cand.fallback_used ? " / 备用适配器" : ""}；行情 ${esc(zh(quotes.live_count ?? 0))}/${esc(zh(quotes.total ?? 0))}；持仓报价过期 ${esc(staleCodes)}。<br>` +
-    `实时阻挡：${esc(blockers)}；诊断提醒：${esc(warnings)}；买入等待：${esc(buy)}。`;
 }
 function addLegClass(p){
   const s = String(p?.v152_add_leg_light || "");
@@ -846,7 +822,6 @@ function render(data){
   renderKpi(data);
   renderMainlineStrength(data);
   renderEnv(data);
-  renderPaperRuntime(data);
   renderPositions(data.positions || []);
   renderSignals(data);
   renderHistory(data.operation_history_2d || []);
