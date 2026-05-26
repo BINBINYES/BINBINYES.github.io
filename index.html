@@ -247,6 +247,46 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 <script>
 const $ = id => document.getElementById(id);
 let modelLabels = {};
+let heartbeatTimer = null;
+let heartbeatEndpoint = "";
+function remoteSessionId(){
+  const key = "v152.remote.session";
+  try{
+    let id = localStorage.getItem(key);
+    if(!id){
+      id = (window.crypto && window.crypto.randomUUID) ? window.crypto.randomUUID() : `s_${Date.now()}_${Math.random().toString(16).slice(2)}`;
+      localStorage.setItem(key, id);
+    }
+    return id;
+  }catch(_){
+    return `s_${Date.now()}_${Math.random().toString(16).slice(2)}`;
+  }
+}
+function setupHeartbeat(cfg, page){
+  const h = cfg || {};
+  const endpoint = String(h.endpoint || "").replace(/\/+$/,"");
+  if(!h.enabled || !endpoint){
+    if(heartbeatTimer) clearInterval(heartbeatTimer);
+    heartbeatTimer = null;
+    heartbeatEndpoint = "";
+    return;
+  }
+  const send = () => {
+    fetch(`${endpoint}/heartbeat`, {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({session_id:remoteSessionId(), page, model:"V152", at:Date.now()}),
+      keepalive:true
+    }).catch(()=>{});
+  };
+  const interval = Math.max(15, Number(h.interval_seconds) || 30) * 1000;
+  if(heartbeatEndpoint !== endpoint){
+    if(heartbeatTimer) clearInterval(heartbeatTimer);
+    heartbeatEndpoint = endpoint;
+    send();
+    heartbeatTimer = setInterval(send, interval);
+  }
+}
 
 const Output = (() => {
   const names = {
@@ -776,6 +816,7 @@ function applyModelAdapter(data){
 
 function render(data){
   applyModelAdapter(data);
+  setupHeartbeat(data.remote_heartbeat, "desktop");
   $("dot").classList.toggle("ok", Boolean(data.remote_quote_available));
   $("remoteState").textContent = O.zh(data.remote_status_label || (data.remote_quote_available ? "行情连接可用" : "行情连接不可用"));
   $("updated").textContent = `已更新 ${O.zh(data.generated_at || data.source_generated_at)}`;
