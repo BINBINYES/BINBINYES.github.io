@@ -838,18 +838,32 @@ async function load(){
   try{
     let lastError = "";
     const statusSources = [
-      "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/v152-live-status/status_latest.json",
       "status_latest.json",
       "status.json",
+      "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/v152-live-status/status_latest.json",
     ];
+    let best = null;
     for(const file of statusSources){
-      const joiner = file.includes("?") ? "&" : "?";
-      const r = await fetch(file + joiner + "t=" + Date.now(), {cache:"no-store"});
-      if(r.ok){
-        render(await r.json());
-        return;
+      try{
+        const joiner = file.includes("?") ? "&" : "?";
+        const r = await fetch(file + joiner + "t=" + Date.now(), {cache:"no-store"});
+        if(!r.ok){
+          lastError = "HTTP " + r.status + " @ " + file;
+          continue;
+        }
+        const data = await r.json();
+        const rawTime = String(data.generated_at || data.source_generated_at || "").replace(" ", "T");
+        const stamp = Date.parse(rawTime + (rawTime.includes("T") ? "+08:00" : "")) || 0;
+        if(!best || stamp >= best.stamp){
+          best = {data, stamp, file};
+        }
+      }catch(sourceError){
+        lastError = sourceError.message + " @ " + file;
       }
-      lastError = "HTTP " + r.status + " @ " + file;
+    }
+    if(best){
+      render(best.data);
+      return;
     }
     throw new Error(lastError || "status unavailable");
   }catch(e){
