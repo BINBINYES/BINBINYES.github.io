@@ -877,17 +877,31 @@ function render(data){
 async function load(){
   try{
     const sources = [
-      "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/v152-live-status/status_latest.json",
       "status_latest.json",
-      "status.json"
+      "status.json",
+      "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/v152-live-status/status_latest.json"
     ];
     let lastError = "";
+    let best = null;
     for(const source of sources){
-      const joiner = source.includes("?") ? "&" : "?";
-      const res = await fetch(source + joiner + "t=" + Date.now(), {cache:"no-store"});
-      if(res.ok){ render(await res.json()); return; }
-      lastError = `HTTP ${res.status}`;
+      try{
+        const joiner = source.includes("?") ? "&" : "?";
+        const res = await fetch(source + joiner + "t=" + Date.now(), {cache:"no-store"});
+        if(!res.ok){
+          lastError = `HTTP ${res.status} @ ${source}`;
+          continue;
+        }
+        const data = await res.json();
+        const rawTime = String(data.generated_at || data.source_generated_at || "").replace(" ", "T");
+        const stamp = Date.parse(rawTime + (rawTime.includes("T") ? "+08:00" : "")) || 0;
+        if(!best || stamp >= best.stamp){
+          best = {data, stamp, source};
+        }
+      }catch(sourceError){
+        lastError = `${sourceError.message} @ ${source}`;
+      }
     }
+    if(best){ render(best.data); return; }
     throw new Error(lastError || "状态不可用");
   }catch(err){
     $("dot").classList.remove("ok");
