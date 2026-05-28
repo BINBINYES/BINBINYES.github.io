@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-28 08:05:34",
-  "source_generated_at": "2026-05-28 08:05:34",
-  "market_environment_updated_at": "2026-05-28 08:05:34",
+  "generated_at": "2026-05-28 08:06:21",
+  "source_generated_at": "2026-05-28 08:06:21",
+  "market_environment_updated_at": "2026-05-28 08:06:21",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -377,7 +377,7 @@
         "status": "warn",
         "blocked": false,
         "repairable": true,
-        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 1256s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668\uff08\u65e7V96\u6587\u4ef6\u5907\u7528\uff0c\u4e0d\u53c2\u4e0e\u95e8\u63a7\uff09"
+        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 1302s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668\uff08\u65e7V96\u6587\u4ef6\u5907\u7528\uff0c\u4e0d\u53c2\u4e0e\u95e8\u63a7\uff09"
       },
       {
         "stage": "data",
@@ -937,12 +937,12 @@
     "regime": "COLD",
     "budget_multiplier": 0.6,
     "fear_greed": {
-      "score": 49,
+      "score": 46,
       "label": "\u4e2d\u6027",
       "components": {
         "breadth": 42,
         "market_return": 42,
-        "limit_up_down": 47,
+        "limit_up_down": 31,
         "candidate_mood": 47,
         "mainline_heat": 73
       },
@@ -963,7 +963,7 @@
         "avg=-0.66",
         "strong_up=18.42",
         "strong_down=27.63",
-        "limit=2.0/1.0",
+        "limit=47.0/22.0",
         "top_mainline_share=0.3548",
         "candidate_avg=0.01"
       ],
@@ -1032,17 +1032,20 @@
       "strong_up_pct": 18.42,
       "strong_down_pct": 27.63,
       "avg_pct": -0.66,
-      "limit_up_count": 2,
-      "limit_down_count": 1,
+      "limit_up_count": 47,
+      "limit_down_count": 22,
       "stale": false,
       "age_hours": 0.0,
       "quality": "proxy",
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 474.74,
+      "fallback_age_hours": 474.76,
       "universe_cache_stale": true,
-      "full_market_live_message": "universe seed too small: 1476"
+      "full_market_live_message": "universe seed too small: 1476",
+      "limit_count_source": "eastmoney_limit_pool",
+      "limit_count_qdate": "20260527",
+      "limit_count_message": "eastmoney limit pools"
     },
     "candidate_mood": {
       "sample_size": 16,
@@ -1053,7 +1056,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-28 08:05:34",
+      "as_of": "2026-05-28 08:06:21",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -1244,7 +1247,7 @@
       ],
       "message": "\u5c40\u90e8\u7ed3\u6784\u70ed\u5ea6\u6765\u81ea\u5f53\u524d\u76d1\u63a7\u6c60\u5b9e\u65f6\u62a5\u4ef7\uff0c\u4ec5\u7528\u4e8e\u8bca\u65ad\u5168\u5e02\u573a\u4ee3\u7406\u662f\u5426\u63a9\u76d6\u677f\u5757\u5f3a\u5f31\u3002"
     },
-    "summary": "\u5e02\u573a\u73af\u5883 market=COLD, capital=BALANCED, attack=False, fear_greed=49, breadth_up=42.11, budget_x=0.6"
+    "summary": "\u5e02\u573a\u73af\u5883 market=COLD, capital=BALANCED, attack=False, fear_greed=46, breadth_up=42.11, budget_x=0.6"
   },
   "expectation_positioning": {
     "enabled": true,
