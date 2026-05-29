@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-05-30 02:06:04",
-  "source_generated_at": "2026-05-30 02:06:04",
-  "market_environment_updated_at": "2026-05-30 02:06:04",
+  "generated_at": "2026-05-30 02:06:49",
+  "source_generated_at": "2026-05-30 02:06:49",
+  "market_environment_updated_at": "2026-05-30 02:06:49",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -351,7 +351,7 @@
   "core_execution": {
     "status": "blocked",
     "label": "\u89c4\u5219\u963b\u6321",
-    "summary": "\u89c4\u5219\u963b\u6321\uff1a\u5f02\u5e38 0\uff0c\u89c4\u5219\u963b\u6321 1\uff0c\u5f85\u89c2\u5bdf 2\u3002",
+    "summary": "\u89c4\u5219\u963b\u6321\uff1a\u5f02\u5e38 0\uff0c\u89c4\u5219\u963b\u6321 1\uff0c\u5f85\u89c2\u5bdf 3\u3002",
     "selected_scenario": "ADD_TRAIL4_ARM3_READD_5M_PORTFOLIO",
     "add_leg_exit_profile": "ADD_TRAIL4_ARM3_READD",
     "checks": [
@@ -377,7 +377,7 @@
         "status": "warn",
         "blocked": false,
         "repairable": true,
-        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 36406s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668"
+        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 36451s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668"
       },
       {
         "stage": "data",
@@ -433,7 +433,7 @@
         "status": "ok",
         "blocked": false,
         "repairable": false,
-        "detail": "owner=V152_CORE_MODEL\uff1bauto_sell=True\uff1b\u5356\u51fa\u65f6\u6bb5=pre_open / allowed=False"
+        "detail": "owner=V152_CORE_MODEL\uff1bauto_sell=True\uff1b\u5356\u51fa\u65f6\u6bb5=non_trading_day / allowed=False"
       },
       {
         "stage": "sell",
@@ -504,7 +504,7 @@
       "status": "waiting_for_closing_window"
     },
     "sell_session": {
-      "phase": "pre_open",
+      "phase": "non_trading_day",
       "sell_allowed": false
     },
     "capital_label": "\u8d44\u91d1\u9000\u6f6e",
@@ -533,7 +533,7 @@
         "status": "waiting_for_closing_window"
       },
       "sell_session": {
-        "phase": "pre_open",
+        "phase": "non_trading_day",
         "sell_allowed": false
       },
       "capital_label": "\u8d44\u91d1\u9000\u6f6e",
@@ -770,7 +770,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 516.75,
+      "fallback_age_hours": 516.76,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -786,7 +786,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-05-30 02:06:04",
+      "as_of": "2026-05-30 02:06:47",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -2761,7 +2761,7 @@
         "strength_tier": "\u5f31\u8054\u52a8",
         "strength_link_label": "\u5f31\u8054\u52a8\u89c2\u5bdf",
         "strength_link_class": "off",
-        "strength_link_score": 45.08,
+        "strength_link_score": 44.33,
         "strength_action": "\u53ea\u4fdd\u7559\u89c2\u5bdf\uff0c\u4e0d\u4f5c\u4e3a\u4e3b\u653b\u4f9d\u636e",
         "strength_risk": "\u5f3a\u5019\u9009\u3001\u7eff\u8d44\u6216\u664b\u7ea7\u6570\u91cf\u4e0d\u8db3",
         "strength_reason": "\u5f3a\u5019\u90091\uff1b\u6838\u5fc30\uff1b\u7eff\u8d441\uff1b\u664b\u7ea70\uff1b\u5747\u6da810.00%\uff1b\u5747\u520648.5",
@@ -2805,7 +2805,7 @@
             "reason": "\u5f3a\u5019\u9009 / \u7535\u529b\u7535\u7f51\u8bbe\u5907 / \u53d8\u538b\u5668/\u8f93\u53d8\u7535",
             "ladder_role": "\u9ad8\u6807\u00b7\u9f99\u5934",
             "edge_label": "\u5206\u65f6\u627f\u63a5",
-            "ladder_score": 76.25,
+            "ladder_score": 70.25,
             "mainline_strength_tier": "\u5f31\u8054\u52a8",
             "mainline_strength_label": "\u5f31\u8054\u52a8\u89c2\u5bdf",
             "mainline_strength_action": "\u53ea\u4fdd\u7559\u89c2\u5bdf\uff0c\u4e0d\u4f5c\u4e3a\u4e3b\u653b\u4f9d\u636e",
