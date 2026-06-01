@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-06-02 03:58:59",
-  "source_generated_at": "2026-06-02 03:58:59",
-  "market_environment_updated_at": "2026-06-02 03:58:59",
+  "generated_at": "2026-06-02 03:59:46",
+  "source_generated_at": "2026-06-02 03:59:46",
+  "market_environment_updated_at": "2026-06-02 03:59:46",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -385,7 +385,7 @@
         "status": "warn",
         "blocked": false,
         "repairable": true,
-        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 46771s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668"
+        "detail": "\u5019\u9009 45\uff1b\u5e74\u9f84 46818s\uff1b\u6765\u6e90 V152\u5019\u9009\u8bfb\u53d6\u9002\u914d\u5668"
       },
       {
         "stage": "data",
@@ -703,7 +703,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 590.63,
+      "fallback_age_hours": 590.65,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -719,7 +719,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-06-02 03:58:58",
+      "as_of": "2026-06-02 03:59:45",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
