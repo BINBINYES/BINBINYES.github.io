@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -897,7 +897,41 @@ function render(data){
     notifyPosition();
   }
 }
+const REMOTE_CACHE_KEY = "v152.remote.mobile.lastGoodStatus.v1";
+let remoteLoadInFlight = false;
+function statusStamp(data){
+  const rawTime = String(data?.generated_at || data?.source_generated_at || "").replace(" ", "T");
+  return Date.parse(rawTime + (rawTime.includes("T") ? "+08:00" : "")) || 0;
+}
+function rememberRemoteStatus(data){
+  try{ localStorage.setItem(REMOTE_CACHE_KEY, JSON.stringify({data, savedAt:Date.now()})); }catch(_){}
+}
+function cachedRemoteStatus(){
+  try{
+    const raw = localStorage.getItem(REMOTE_CACHE_KEY);
+    if(!raw) return null;
+    const item = JSON.parse(raw);
+    return item && item.data ? item : null;
+  }catch(_){ return null; }
+}
+async function fetchStatusSource(source, timeoutMs=4000){
+  const controller = new AbortController();
+  const timer = setTimeout(()=>controller.abort(), timeoutMs);
+  try{
+    const joiner = source.includes("?") ? "&" : "?";
+    const res = await fetch(source + joiner + "t=" + Date.now(), {cache:"no-store", signal:controller.signal});
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return {ok:true, data, stamp:statusStamp(data), source};
+  }catch(err){
+    return {ok:false, error:(err && err.name === "AbortError") ? "超时" : (err.message || String(err)), source};
+  }finally{
+    clearTimeout(timer);
+  }
+}
 async function load(){
+  if(remoteLoadInFlight) return;
+  remoteLoadInFlight = true;
   try{
     const sources = [
       "status_latest.json",
@@ -906,33 +940,31 @@ async function load(){
       "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/main/status.json",
       "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/v152-live-status/status_latest.json"
     ];
-    let lastError = "";
-    let best = null;
-    for(const source of sources){
-      try{
-        const joiner = source.includes("?") ? "&" : "?";
-        const res = await fetch(source + joiner + "t=" + Date.now(), {cache:"no-store"});
-        if(!res.ok){
-          lastError = `HTTP ${res.status} @ ${source}`;
-          continue;
-        }
-        const data = await res.json();
-        const rawTime = String(data.generated_at || data.source_generated_at || "").replace(" ", "T");
-        const stamp = Date.parse(rawTime + (rawTime.includes("T") ? "+08:00" : "")) || 0;
-        if(!best || stamp >= best.stamp){
-          best = {data, stamp, source};
-        }
-      }catch(sourceError){
-        lastError = `${sourceError.message} @ ${source}`;
-      }
+    const results = await Promise.all(sources.map(source => fetchStatusSource(source)));
+    const good = results.filter(x => x.ok && x.data);
+    const best = good.sort((a,b)=>b.stamp-a.stamp)[0] || null;
+    if(best){
+      render(best.data);
+      rememberRemoteStatus(best.data);
+      return;
     }
-    if(best){ render(best.data); return; }
+    const cached = cachedRemoteStatus();
+    if(cached?.data){
+      render(cached.data);
+      $("dot").classList.remove("ok");
+      $("remoteState").textContent = "连接波动，显示最近快照";
+      $("updated").textContent = `最近快照 ${zh(cached.data.generated_at || cached.data.source_generated_at || "--")}`;
+      return;
+    }
+    const lastError = results.map(x => `${x.error || "失败"} @ ${x.source}`).join("；");
     throw new Error(lastError || "状态不可用");
   }catch(err){
     $("dot").classList.remove("ok");
     $("remoteState").textContent = "状态不可用";
     $("updated").textContent = "加载失败";
     $("positions").innerHTML = `<div class="empty">远端状态加载失败：${esc(err.message)}。</div>`;
+  }finally{
+    remoteLoadInFlight = false;
   }
 }
 load();
