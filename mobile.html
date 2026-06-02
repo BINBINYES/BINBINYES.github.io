@@ -372,7 +372,7 @@ h2{font-size:16px;letter-spacing:0}
   <header class="top">
     <div>
       <h1 id="title">V152 远端手机监控</h1>
-      <div class="sub">纸面模拟与持仓观察</div>
+      <div class="sub">V152 核心纸面执行与持仓观察</div>
     </div>
     <div class="status">
       <div class="state"><i id="dot" class="dot"></i><b id="remoteState">状态读取中</b></div>
@@ -708,6 +708,25 @@ function addLegText(p){
   if(pnl) parts.push(`腿盈亏 ${pnl}`);
   return parts.length ? parts.join(" / ") : "未开启";
 }
+function stopClass(p){
+  const s = String(p?.v152_stop_light || "");
+  if(s === "bad" || s === "red") return "red";
+  if(s === "ok" || s === "green") return "green";
+  if(s === "warn" || s === "yellow") return "yellow";
+  return "cyan";
+}
+function stopText(p){
+  const price = zh(p?.v152_active_stop_price, "");
+  const pct = zh(p?.v152_active_stop_pct, "");
+  const gap = zh(p?.v152_stop_distance_pct, "");
+  const peak = zh(p?.v152_mainwave_peak_profit_pct, "");
+  const parts = [];
+  if(price) parts.push(`线 ${price}`);
+  if(pct) parts.push(`成本 ${pct}`);
+  if(gap) parts.push(`距线 ${gap}`);
+  if(peak) parts.push(`高点 ${peak}`);
+  return parts.length ? parts.join(" / ") : "等待行情";
+}
 function posCard(p, brief = false){
   const stateCls = /严格|防守|低于/.test(zh(p.state)) ? "yellow" : "cyan";
   return `<article class="pos">
@@ -722,6 +741,8 @@ function posCard(p, brief = false){
       ${brief ? "" : `<div class="mini"><span>成本</span><b>${esc(zh(p.cost))}</b></div>
       <div class="mini"><span>防守</span><b>${esc(zh(p.defense_price))}</b></div>
       <div class="mini"><span>严格</span><b>${esc(zh(p.strict_price))}</b></div>
+      <div class="mini"><span>止损阶段</span><b>${pill(zh(p.v152_stop_stage || "等待行情"),stopClass(p))}</b></div>
+      <div class="mini"><span>止损线</span><b>${esc(stopText(p))}</b></div>
       <div class="mini"><span>加仓腿</span><b>${pill(zh(p.v152_add_leg_label || "未加仓"),addLegClass(p))}</b></div>
       <div class="mini"><span>动态线</span><b>${esc(addLegText(p))}</b></div>`}
     </div>
@@ -743,13 +764,15 @@ function signalCard(r, kind){
   const action = zh(r.v152_gate_label || r.action_zh || r.label || r.signal || r.action || r.state || r.level, kind === "candidate" ? "核心候选" : "等待确认");
   const price = zh(r.price ?? r.rt_price ?? "--");
   const pct = zh(r.pct ?? r.rt_pct ?? "--");
+  const tick = r.tick_signal ? pill(`${zh(r.tick_signal)} ${r.tick_score ?? ""}`,"blue") : "";
+  const aux = r.v152_auxiliary_merge ? pill(zh(r.v152_auxiliary_merge),"cyan") : "";
   const extra = kind === "candidate" ? pill(zh(r.level || r.candidate_tier || r.state,"核心候选"),"yellow") : "";
   return `<article class="signal">
     <div class="row">
       <div class="title"><b>${esc(code(r.code))} ${esc(zh(r.name))}</b><span>${esc(compact(mainline,42))}</span></div>
       ${pill(action,"green")}
     </div>
-    <div class="signalline">${flowPill(r)}${extra}${pill(`${pct} / ${price}`,"cyan")}</div>
+    <div class="signalline">${flowPill(r)}${extra}${tick}${aux}${pill(`${pct} / ${price}`,"cyan")}</div>
   </article>`;
 }
 function strengthValue(line){
