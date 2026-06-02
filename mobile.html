@@ -691,23 +691,6 @@ function paperBlockerText(v){
   if(enumRe.test(s)) return "门控等待";
   return zh(s);
 }
-function addLegClass(p){
-  const s = String(p?.v152_add_leg_light || "");
-  if(s === "green") return "green";
-  if(s === "bad" || s === "red") return "red";
-  if(s === "warn" || s === "yellow") return "yellow";
-  return "cyan";
-}
-function addLegText(p){
-  const stop = zh(p?.v152_add_leg_dynamic_stop_price, "");
-  const gap = zh(p?.v152_add_leg_stop_gap_pct, "");
-  const pnl = zh(p?.v152_add_leg_pnl_pct, "");
-  const parts = [];
-  if(stop) parts.push(`动态线 ${stop}`);
-  if(gap) parts.push(`距线 ${gap}`);
-  if(pnl) parts.push(`腿盈亏 ${pnl}`);
-  return parts.length ? parts.join(" / ") : "未开启";
-}
 function stopClass(p){
   const s = String(p?.v152_stop_light || "");
   if(s === "bad" || s === "red") return "red";
@@ -743,8 +726,7 @@ function posCard(p, brief = false){
       <div class="mini"><span>严格</span><b>${esc(zh(p.strict_price))}</b></div>
       <div class="mini"><span>止损阶段</span><b>${pill(zh(p.v152_stop_stage || "等待行情"),stopClass(p))}</b></div>
       <div class="mini"><span>止损线</span><b>${esc(stopText(p))}</b></div>
-      <div class="mini"><span>加仓腿</span><b>${pill(zh(p.v152_add_leg_label || "未加仓"),addLegClass(p))}</b></div>
-      <div class="mini"><span>动态线</span><b>${esc(addLegText(p))}</b></div>`}
+      `}
     </div>
     ${brief ? "" : `<div class="signalline">${flowPill(p)}${pill(zh(p.expectation_label || p.expectation_position_text),"cyan")}</div>${heldHistoryHtml(p)}`}
   </article>`;
