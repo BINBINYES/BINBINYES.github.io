@@ -486,25 +486,6 @@ function expectationLabel(r){
   return O.pill(s, s.includes("高预期") ? "green" : s.includes("低预期") ? "yellow" : "cyan", r?.expectation_reason || "");
 }
 
-function addLegClass(r){
-  const s = O.raw(r?.v152_add_leg_light || "");
-  if(s === "green") return "green";
-  if(s === "bad" || s === "red") return "red";
-  if(s === "warn" || s === "yellow") return "yellow";
-  return "cyan";
-}
-
-function addLegLine(r){
-  const stop = O.zh(r?.v152_add_leg_dynamic_stop_price, {fallback:""});
-  const gap = O.zh(r?.v152_add_leg_stop_gap_pct, {fallback:""});
-  const pnl = O.zh(r?.v152_add_leg_pnl_pct, {fallback:""});
-  const parts = [];
-  if(stop) parts.push(`动态线 ${stop}`);
-  if(gap) parts.push(`距线 ${gap}`);
-  if(pnl) parts.push(`腿盈亏 ${pnl}`);
-  return parts.length ? parts.join(" / ") : "未开启";
-}
-
 function stopClass(r){
   const s = O.raw(r?.v152_stop_light || "");
   if(s === "bad" || s === "red") return "red";
@@ -612,8 +593,6 @@ function positionHistoryHtml(p){
 function renderPositions(rows){
   $("positions").innerHTML = rows && rows.length ? rows.map(p => {
     const pnlCls = O.tone(p.pnl_amount || p.pnl_pct);
-    const addLegLabel = O.zh(p.v152_add_leg_label || "未加仓");
-    const addLegDetail = addLegLine(p);
     const stopLabel = O.zh(p.v152_stop_stage || "等待行情");
     const stopDetail = stopLine(p);
     return `<div class="pos">
@@ -630,8 +609,6 @@ function renderPositions(rows){
         <div class="mini"><span>严格线</span><strong>${O.esc(O.zh(p.strict_price))}</strong></div>
         <div class="mini"><span>止损阶段</span><strong>${O.pill(stopLabel, stopClass(p), p.v152_stop_reason || "")}</strong></div>
         <div class="mini"><span>止损线</span><strong>${O.esc(stopDetail)}</strong></div>
-        <div class="mini"><span>加仓腿</span><strong>${O.pill(addLegLabel, addLegClass(p), p.v152_add_leg_reason || "")}</strong></div>
-        <div class="mini"><span>动态线</span><strong>${O.esc(addLegDetail)}</strong></div>
         <div class="mini"><span>承接状态</span><strong>${flowLabel(p)}</strong></div>
         <div class="mini"><span>预期</span><strong>${expectationLabel(p)}</strong></div>
       </div>
