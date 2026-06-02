@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -175,7 +175,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   <header class="top">
     <div>
       <h1>V152 远端赛博监控台</h1>
-      <div class="sub">桌面模型自动同步，只做研究提醒与纸面模拟，不连接券商下单</div>
+      <div class="sub">桌面模型自动同步；纸面买卖归属 V152 核心模型，远端只做状态观察，不连接券商下单</div>
     </div>
     <div class="statusbar">
       <div class="badge"><span id="dot" class="dot"></span><span id="remoteState">状态读取中</span></div>
@@ -505,6 +505,27 @@ function addLegLine(r){
   return parts.length ? parts.join(" / ") : "未开启";
 }
 
+function stopClass(r){
+  const s = O.raw(r?.v152_stop_light || "");
+  if(s === "bad" || s === "red") return "red";
+  if(s === "ok" || s === "green") return "green";
+  if(s === "warn" || s === "yellow") return "yellow";
+  return "cyan";
+}
+
+function stopLine(r){
+  const price = O.zh(r?.v152_active_stop_price, {fallback:""});
+  const pct = O.zh(r?.v152_active_stop_pct, {fallback:""});
+  const gap = O.zh(r?.v152_stop_distance_pct, {fallback:""});
+  const peak = O.zh(r?.v152_mainwave_peak_profit_pct, {fallback:""});
+  const parts = [];
+  if(price) parts.push(`线 ${price}`);
+  if(pct) parts.push(`成本 ${pct}`);
+  if(gap) parts.push(`距线 ${gap}`);
+  if(peak) parts.push(`高点 ${peak}`);
+  return parts.length ? parts.join(" / ") : "等待行情";
+}
+
 let alarm = localStorage.getItem("v151.remote.alarm") === "1";
 const POSITION_ALARM_SIG_KEY = "v152.remote.positionTradeSig.v2";
 const POSITION_ALARM_AT_KEY = "v152.remote.positionTradeSig.alertAt";
@@ -593,6 +614,8 @@ function renderPositions(rows){
     const pnlCls = O.tone(p.pnl_amount || p.pnl_pct);
     const addLegLabel = O.zh(p.v152_add_leg_label || "未加仓");
     const addLegDetail = addLegLine(p);
+    const stopLabel = O.zh(p.v152_stop_stage || "等待行情");
+    const stopDetail = stopLine(p);
     return `<div class="pos">
       <div class="pos-head">
         <div><b>${O.esc(O.code(p.code))} ${O.esc(O.name(p.code,p.name))}</b><small>${O.esc(O.zh(p.source))}</small></div>
@@ -605,6 +628,8 @@ function renderPositions(rows){
         <div class="mini"><span>浮动</span><strong class="${pnlCls}">${O.esc(O.zh(p.pnl_amount))} / ${O.esc(O.zh(p.pnl_pct))}</strong></div>
         <div class="mini"><span>防守价</span><strong>${O.esc(O.zh(p.defense_price))}</strong></div>
         <div class="mini"><span>严格线</span><strong>${O.esc(O.zh(p.strict_price))}</strong></div>
+        <div class="mini"><span>止损阶段</span><strong>${O.pill(stopLabel, stopClass(p), p.v152_stop_reason || "")}</strong></div>
+        <div class="mini"><span>止损线</span><strong>${O.esc(stopDetail)}</strong></div>
         <div class="mini"><span>加仓腿</span><strong>${O.pill(addLegLabel, addLegClass(p), p.v152_add_leg_reason || "")}</strong></div>
         <div class="mini"><span>动态线</span><strong>${O.esc(addLegDetail)}</strong></div>
         <div class="mini"><span>承接状态</span><strong>${flowLabel(p)}</strong></div>
