@@ -619,30 +619,31 @@ function healthClass(status){
   return "cyan";
 }
 function renderLiveHealth(data){
+  const health = data.live_replay_health || {};
   const five = data.v152_live_5m_entry_bridge || {};
   const audit = data.v152_live_replay_parity_audit || {};
   const fiveMod = scanModule(data, "v152_live_5m_entry_bridge");
   const auditMod = scanModule(data, "v152_live_replay_parity_audit");
   const native = data.data_health?.v152_native_candidate || {};
   const remote = data.remote_sync || {};
-  const pair = parseCoveragePair(five.fetch_message || fiveMod.coverage || "");
-  const covered = Number(five.covered_rows ?? pair.covered ?? 0);
-  const total = Number(five.rows ?? pair.total ?? native.rows ?? data.candidate_rows ?? 0);
-  const ready = Number(five.entry_ok_rows ?? (audit.rows_detail || []).filter(x => x.live_5m_entry_ok && x.gate_allow_buy).length ?? 0);
-  const violations = Number(audit.violation_rows ?? audit.hard_violations ?? native.replay_parity_violation_rows ?? 0);
+  const pair = parseCoveragePair(health.five_m_coverage || five.fetch_message || fiveMod.coverage || "");
+  const covered = Number(health.covered_rows ?? five.covered_rows ?? pair.covered ?? 0);
+  const total = Number(health.rows ?? five.rows ?? pair.total ?? native.rows ?? data.candidate_rows ?? 0);
+  const ready = Number(health.entry_ok_rows ?? five.entry_ok_rows ?? (audit.rows_detail || []).filter(x => x.live_5m_entry_ok && x.gate_allow_buy).length ?? 0);
+  const violations = Number(health.hard_violations ?? audit.violation_rows ?? audit.hard_violations ?? native.replay_parity_violation_rows ?? 0);
   $("live5mCoverage").textContent = `${covered}/${total}`;
   $("live5mReady").textContent = `${ready} 条`;
   $("liveAuditStatus").textContent = violations ? `硬违规 ${violations}` : "硬违规 0";
   $("liveRemoteSync").textContent = O.zh(remote.status || "--");
-  const ok = total > 0 && covered >= total && violations === 0 && (remote.ok || remote.status === "synced");
+  const ok = total > 0 && covered >= total && violations === 0 && (!data.remote_sync || remote.ok || remote.status === "synced");
   $("liveHealthBadge").textContent = ok ? "闭环可读" : "需要关注";
   $("liveHealthBadge").className = "pill " + (ok ? "green" : "yellow");
   $("liveHealthNote").innerHTML = [
-    O.pill(O.zh(fiveMod.status_label || five.fetch_message || "5m证据"), healthClass(fiveMod.status)),
-    O.pill(O.zh(auditMod.status_label || audit.status_label || "口径审计"), healthClass(auditMod.status)),
+    O.pill(O.zh(health.five_m_status_label || fiveMod.status_label || five.fetch_message || "5m证据"), healthClass(health.status || fiveMod.status)),
+    O.pill(O.zh(health.audit_status_label || auditMod.status_label || audit.status_label || "口径审计"), healthClass(health.status || auditMod.status)),
     O.pill(O.zh(remote.status || "--"), healthClass(remote.status)),
-    `<span>${O.esc(O.compact(five.fetch_message || fiveMod.coverage || "等待5m数据", 84))}</span>`,
-    `<span>${O.esc(O.compact(audit.summary || auditMod.coverage || "等待审计", 116))}</span>`
+    `<span>${O.esc(O.compact(health.five_m_coverage || five.fetch_message || fiveMod.coverage || "等待5m数据", 84))}</span>`,
+    `<span>${O.esc(O.compact(health.audit_summary || audit.summary || auditMod.coverage || "等待审计", 116))}</span>`
   ].join(" ");
 }
 
