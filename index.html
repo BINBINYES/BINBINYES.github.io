@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -200,6 +200,17 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
       <div class="cell"><span>恐贪分</span><b id="envFear">--</b></div>
       <div class="cell"><span>恐贪策略</span><b id="fgPolicy">背景仓位</b></div>
     </div>
+  </section>
+
+  <section class="panel" data-module="scan_read_framework">
+    <div class="panel-head"><h2>V152 实盘口径健康</h2><span id="liveHealthBadge" class="pill cyan">读取中</span></div>
+    <div class="service-grid">
+      <div class="service-card"><b id="live5mCoverage">--</b><span>5m 入场证据</span></div>
+      <div class="service-card"><b id="live5mReady">--</b><span>买点证据</span></div>
+      <div class="service-card"><b id="liveAuditStatus">--</b><span>回测口径审计</span></div>
+      <div class="service-card"><b id="liveRemoteSync">--</b><span>远端同步</span></div>
+    </div>
+    <div id="liveHealthNote" class="note" style="margin-top:10px">等待桌面同步。</div>
   </section>
 
   <section class="two">
@@ -486,6 +497,25 @@ function expectationLabel(r){
   return O.pill(s, s.includes("高预期") ? "green" : s.includes("低预期") ? "yellow" : "cyan", r?.expectation_reason || "");
 }
 
+function addLegClass(r){
+  const s = O.raw(r?.v152_add_leg_light || "");
+  if(s === "green") return "green";
+  if(s === "bad" || s === "red") return "red";
+  if(s === "warn" || s === "yellow") return "yellow";
+  return "cyan";
+}
+
+function addLegLine(r){
+  const stop = O.zh(r?.v152_add_leg_dynamic_stop_price, {fallback:""});
+  const gap = O.zh(r?.v152_add_leg_stop_gap_pct, {fallback:""});
+  const pnl = O.zh(r?.v152_add_leg_pnl_pct, {fallback:""});
+  const parts = [];
+  if(stop) parts.push(`动态线 ${stop}`);
+  if(gap) parts.push(`距线 ${gap}`);
+  if(pnl) parts.push(`腿盈亏 ${pnl}`);
+  return parts.length ? parts.join(" / ") : "未开启";
+}
+
 function stopClass(r){
   const s = O.raw(r?.v152_stop_light || "");
   if(s === "bad" || s === "red") return "red";
@@ -574,6 +604,42 @@ function renderEnv(data){
   $("gateBadge").className = "pill " + (canBuy ? "green" : "yellow");
 }
 
+function scanModule(data, id){
+  return (data.scan_read_framework?.modules || []).find(x => x.module_id === id) || {};
+}
+function healthClass(status){
+  const s = String(status || "").toLowerCase();
+  if(["green","ok","synced"].includes(s)) return "green";
+  if(["red","bad","error"].includes(s)) return "red";
+  if(["yellow","warn","syncing"].includes(s)) return "yellow";
+  return "cyan";
+}
+function renderLiveHealth(data){
+  const five = data.v152_live_5m_entry_bridge || {};
+  const audit = data.v152_live_replay_parity_audit || {};
+  const fiveMod = scanModule(data, "v152_live_5m_entry_bridge");
+  const auditMod = scanModule(data, "v152_live_replay_parity_audit");
+  const remote = data.remote_sync || {};
+  const covered = Number(five.covered_rows ?? 0);
+  const total = Number(five.rows ?? data.candidate_rows ?? 0);
+  const ready = Number(five.entry_ok_rows ?? 0);
+  const violations = Number(audit.violation_rows ?? 0);
+  $("live5mCoverage").textContent = `${covered}/${total}`;
+  $("live5mReady").textContent = `${ready} 条`;
+  $("liveAuditStatus").textContent = violations ? `硬违规 ${violations}` : "硬违规 0";
+  $("liveRemoteSync").textContent = O.zh(remote.status || "--");
+  const ok = covered > 0 && violations === 0;
+  $("liveHealthBadge").textContent = ok ? "闭环可读" : "需要关注";
+  $("liveHealthBadge").className = "pill " + (ok ? "green" : "yellow");
+  $("liveHealthNote").innerHTML = [
+    O.pill(O.zh(fiveMod.status_label || five.fetch_message || "5m证据"), healthClass(fiveMod.status)),
+    O.pill(O.zh(auditMod.status_label || audit.status_label || "口径审计"), healthClass(auditMod.status)),
+    O.pill(O.zh(remote.status || "--"), healthClass(remote.status)),
+    `<span>${O.esc(O.compact(five.fetch_message || fiveMod.coverage || "等待5m数据", 84))}</span>`,
+    `<span>${O.esc(O.compact(audit.summary || auditMod.coverage || "等待审计", 116))}</span>`
+  ].join(" ");
+}
+
 function positionHistoryHtml(p){
   const rows = p.held_operation_history || [];
   if(!rows.length) return "";
@@ -593,6 +659,8 @@ function positionHistoryHtml(p){
 function renderPositions(rows){
   $("positions").innerHTML = rows && rows.length ? rows.map(p => {
     const pnlCls = O.tone(p.pnl_amount || p.pnl_pct);
+    const addLegLabel = O.zh(p.v152_add_leg_label || "未加仓");
+    const addLegDetail = addLegLine(p);
     const stopLabel = O.zh(p.v152_stop_stage || "等待行情");
     const stopDetail = stopLine(p);
     return `<div class="pos">
@@ -609,6 +677,8 @@ function renderPositions(rows){
         <div class="mini"><span>严格线</span><strong>${O.esc(O.zh(p.strict_price))}</strong></div>
         <div class="mini"><span>止损阶段</span><strong>${O.pill(stopLabel, stopClass(p), p.v152_stop_reason || "")}</strong></div>
         <div class="mini"><span>止损线</span><strong>${O.esc(stopDetail)}</strong></div>
+        <div class="mini"><span>加仓腿</span><strong>${O.pill(addLegLabel, addLegClass(p), p.v152_add_leg_reason || "")}</strong></div>
+        <div class="mini"><span>动态线</span><strong>${O.esc(addLegDetail)}</strong></div>
         <div class="mini"><span>承接状态</span><strong>${flowLabel(p)}</strong></div>
         <div class="mini"><span>预期</span><strong>${expectationLabel(p)}</strong></div>
       </div>
@@ -824,6 +894,7 @@ function render(data){
   $("updated").textContent = `已更新 ${O.zh(data.generated_at || data.source_generated_at)}`;
   renderKpi(data);
   renderEnv(data);
+  renderLiveHealth(data);
   renderPositions(data.positions || []);
   renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
@@ -836,43 +907,9 @@ function render(data){
   }
 }
 
-const REMOTE_CACHE_KEY = "v152.remote.lastGoodStatus.v1";
-let remoteLoadInFlight = false;
-function statusStamp(data){
-  const rawTime = String(data?.generated_at || data?.source_generated_at || "").replace(" ", "T");
-  return Date.parse(rawTime + (rawTime.includes("T") ? "+08:00" : "")) || 0;
-}
-function rememberRemoteStatus(data){
-  try{ localStorage.setItem(REMOTE_CACHE_KEY, JSON.stringify({data, savedAt:Date.now()})); }catch(_){}
-}
-function cachedRemoteStatus(){
-  try{
-    const raw = localStorage.getItem(REMOTE_CACHE_KEY);
-    if(!raw) return null;
-    const item = JSON.parse(raw);
-    return item && item.data ? item : null;
-  }catch(_){ return null; }
-}
-async function fetchStatusSource(file, timeoutMs=4000){
-  const controller = new AbortController();
-  const timer = setTimeout(()=>controller.abort(), timeoutMs);
-  try{
-    const joiner = file.includes("?") ? "&" : "?";
-    const r = await fetch(file + joiner + "t=" + Date.now(), {cache:"no-store", signal:controller.signal});
-    if(!r.ok) throw new Error("HTTP " + r.status);
-    const data = await r.json();
-    return {ok:true, data, stamp:statusStamp(data), file};
-  }catch(err){
-    return {ok:false, error:(err && err.name === "AbortError") ? "超时" : (err.message || String(err)), file};
-  }finally{
-    clearTimeout(timer);
-  }
-}
-
 async function load(){
-  if(remoteLoadInFlight) return;
-  remoteLoadInFlight = true;
   try{
+    let lastError = "";
     const statusSources = [
       "status_latest.json",
       "status.json",
@@ -880,31 +917,35 @@ async function load(){
       "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/main/status.json",
       "https://raw.githubusercontent.com/BINBINYES/BINBINYES.github.io/v152-live-status/status_latest.json",
     ];
-    const results = await Promise.all(statusSources.map(file => fetchStatusSource(file)));
-    const good = results.filter(x => x.ok && x.data);
-    let best = good.sort((a,b)=>b.stamp-a.stamp)[0] || null;
+    let best = null;
+    for(const file of statusSources){
+      try{
+        const joiner = file.includes("?") ? "&" : "?";
+        const r = await fetch(file + joiner + "t=" + Date.now(), {cache:"no-store"});
+        if(!r.ok){
+          lastError = "HTTP " + r.status + " @ " + file;
+          continue;
+        }
+        const data = await r.json();
+        const rawTime = String(data.generated_at || data.source_generated_at || "").replace(" ", "T");
+        const stamp = Date.parse(rawTime + (rawTime.includes("T") ? "+08:00" : "")) || 0;
+        if(!best || stamp >= best.stamp){
+          best = {data, stamp, file};
+        }
+      }catch(sourceError){
+        lastError = sourceError.message + " @ " + file;
+      }
+    }
     if(best){
       render(best.data);
-      rememberRemoteStatus(best.data);
       return;
     }
-    const cached = cachedRemoteStatus();
-    if(cached?.data){
-      render(cached.data);
-      $("dot").classList.remove("ok");
-      $("remoteState").textContent = "连接波动，显示最近快照";
-      $("updated").textContent = `最近快照 ${O.zh(cached.data.generated_at || cached.data.source_generated_at || "--")}`;
-      return;
-    }
-    const lastError = results.map(x => `${x.error || "失败"} @ ${x.file}`).join("；");
     throw new Error(lastError || "status unavailable");
   }catch(e){
     $("dot").classList.remove("ok");
     $("remoteState").textContent = "状态不可用";
     $("updated").textContent = "加载失败";
     $("positions").innerHTML = `<div class="empty">远端状态加载失败：${O.esc(e.message)}。请强制刷新或稍后再试。</div>`;
-  }finally{
-    remoteLoadInFlight = false;
   }
 }
 
