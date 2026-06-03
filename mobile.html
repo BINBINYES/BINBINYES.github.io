@@ -698,6 +698,10 @@ function renderEnv(data){
 function scanModule(data, id){
   return (data.scan_read_framework?.modules || []).find(x => x.module_id === id) || {};
 }
+function parseCoveragePair(v){
+  const m = String(v || "").match(/(\d+)\s*\/\s*(\d+)/);
+  return m ? { covered: Number(m[1]), total: Number(m[2]) } : { covered: 0, total: 0 };
+}
 function healthClass(status){
   const s = String(status || "").toLowerCase();
   if(["green","ok","synced"].includes(s)) return "green";
@@ -710,16 +714,18 @@ function renderLiveHealth(data){
   const audit = data.v152_live_replay_parity_audit || {};
   const fiveMod = scanModule(data, "v152_live_5m_entry_bridge");
   const auditMod = scanModule(data, "v152_live_replay_parity_audit");
+  const native = data.data_health?.v152_native_candidate || {};
   const remote = data.remote_sync || {};
-  const covered = Number(five.covered_rows ?? 0);
-  const total = Number(five.rows ?? data.candidate_rows ?? 0);
-  const ready = Number(five.entry_ok_rows ?? 0);
-  const violations = Number(audit.violation_rows ?? 0);
+  const pair = parseCoveragePair(five.fetch_message || fiveMod.coverage || "");
+  const covered = Number(five.covered_rows ?? pair.covered ?? 0);
+  const total = Number(five.rows ?? pair.total ?? native.rows ?? data.candidate_rows ?? 0);
+  const ready = Number(five.entry_ok_rows ?? (audit.rows_detail || []).filter(x => x.live_5m_entry_ok && x.gate_allow_buy).length ?? 0);
+  const violations = Number(audit.violation_rows ?? audit.hard_violations ?? native.replay_parity_violation_rows ?? 0);
   $("live5mCoverage").textContent = `${covered}/${total}`;
   $("live5mReady").textContent = `${ready} 条`;
   $("liveAuditStatus").textContent = violations ? `硬违规 ${violations}` : "硬违规 0";
   $("liveRemoteSync").textContent = zh(remote.status || "--");
-  const ok = covered > 0 && violations === 0;
+  const ok = total > 0 && covered >= total && violations === 0 && (remote.ok || remote.status === "synced");
   $("liveHealthBadge").textContent = ok ? "闭环可读" : "需要关注";
   $("liveHealthBadge").className = "pill " + (ok ? "green" : "yellow");
   $("liveHealthNote").innerHTML = [
