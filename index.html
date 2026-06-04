@@ -132,18 +132,32 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 .mainline-row b,.mainline-row .muted{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bar{height:9px;border:1px solid rgba(0,229,255,.35);border-radius:999px;background:#09213b;overflow:hidden}
 .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--yellow),var(--pink));border-radius:999px}
-.ladder{margin-bottom:12px}
-.ladder details{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.42);margin-bottom:8px;overflow:hidden}
-.ladder summary{list-style:none;cursor:pointer;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
-.ladder summary::-webkit-details-marker{display:none}
+.mainline-3d-panel{margin-bottom:12px}
+.mainline-3d-shell{display:grid;grid-template-columns:minmax(420px,.92fr) minmax(540px,1.08fr);gap:12px;align-items:stretch;perspective:1500px}
+.mainline-3d-stage{min-width:0;display:grid;gap:12px;transform-style:preserve-3d}
+.ladder-plane{position:relative;min-width:0;border:1px solid rgba(0,229,255,.28);border-radius:8px;background:linear-gradient(180deg,rgba(8,24,45,.9),rgba(3,8,18,.86));padding:10px;box-shadow:0 18px 34px rgba(0,0,0,.22),0 0 0 1px rgba(255,255,255,.02) inset;transform:rotateX(2deg) rotateY(-2deg) translateZ(0);transform-style:preserve-3d;animation:planeFloat 8s ease-in-out infinite}
+.ladder-plane:nth-child(2n){animation-delay:-1.6s;transform:rotateX(1.4deg) rotateY(1.6deg) translateZ(-8px)}
+.ladder-plane:nth-child(3n){animation-delay:-3.2s}
+.ladder-plane::before{content:"";position:absolute;left:16px;top:58px;bottom:12px;width:2px;border-radius:2px;background:linear-gradient(180deg,rgba(255,47,132,.75),rgba(0,229,255,.2));transform:translateZ(-18px);opacity:.5}
+.ladder-plane.primary{border-color:rgba(0,229,255,.5);transform:rotateX(1deg) rotateY(-1.4deg) translateZ(10px)}
+.ladder-plane-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start;min-width:0}
+.ladder-metrics{display:flex;justify-content:flex-end;gap:5px;flex-wrap:wrap;min-width:0}
 .summary-title{min-width:0}
 .summary-title b,.summary-title span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.node-line{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:0 12px 12px}
-.node-chip{min-width:0;border-left:3px solid var(--cyan);background:rgba(9,24,44,.75);border-radius:7px;padding:8px}
-.node-chip.hot{border-left-color:var(--pink)}
-.node-chip.good{border-left-color:var(--green)}
+.node-line{display:grid;grid-template-columns:repeat(auto-fit,minmax(156px,1fr));gap:8px;padding-top:10px;transform-style:preserve-3d}
+.node-chip{min-width:0;min-height:88px;border-left:3px solid var(--cyan);background:rgba(9,24,44,.78);border-radius:7px;padding:8px;box-shadow:0 12px 22px rgba(0,0,0,.18);transform:translateZ(8px);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.node-chip.hot{border-left-color:var(--pink);transform:translateZ(22px);box-shadow:0 14px 26px rgba(255,47,132,.12)}
+.node-chip.good{border-left-color:var(--green);transform:translateZ(14px);box-shadow:0 14px 24px rgba(0,245,160,.09)}
+.node-chip:hover{transform:translateY(-2px) translateZ(30px);box-shadow:0 18px 32px rgba(0,0,0,.28)}
 .node-chip .role{color:#bdeeff;font-size:12px;margin-bottom:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .node-chip b,.node-chip div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node-index{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-right:5px;border:1px solid rgba(0,229,255,.45);border-radius:50%;color:var(--cyan);font-size:11px}
+.mainline-discovery-dock{min-width:0;border:1px solid rgba(0,229,255,.28);border-radius:8px;background:linear-gradient(180deg,rgba(8,23,43,.9),rgba(3,8,18,.82));padding:10px;box-shadow:0 18px 34px rgba(0,0,0,.2);transform:rotateY(1.4deg) translateZ(8px);animation:dockFloat 9s ease-in-out infinite}
+.dock-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;min-width:0}
+.dock-head b{white-space:nowrap}
+.mainline-discovery-scroll{max-height:440px}
+@keyframes planeFloat{0%,100%{transform:rotateX(2deg) rotateY(-2deg) translateZ(0)}50%{transform:rotateX(.6deg) rotateY(-.8deg) translateZ(12px)}}
+@keyframes dockFloat{0%,100%{transform:rotateY(1.4deg) translateZ(8px)}50%{transform:rotateY(.4deg) translateZ(16px)}}
 .toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;min-width:0}
 .toolbar h2{display:flex;align-items:center;gap:8px;min-width:0;white-space:nowrap}
 .fold{display:none}
@@ -161,8 +175,9 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 .agent-action{border-left:3px solid var(--cyan);background:rgba(9,24,44,.72);border-radius:7px;padding:8px 10px;line-height:1.35}
 .agent-step{display:inline-flex;align-items:center;gap:6px;margin:2px 6px 0 0;color:var(--muted);font-size:12px}
 @media(max-width:1280px){
-  .two,.tables-grid{grid-template-columns:1fr}
+  .two,.tables-grid,.mainline-3d-shell{grid-template-columns:1fr}
   .node-line{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mainline-discovery-dock{transform:none}
 }
 @media(max-width:980px){
   .grid,.envgrid,.service-grid{grid-template-columns:1fr 1fr}
@@ -176,6 +191,10 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   .grid,.envgrid,.cards,.node-line,.service-grid{grid-template-columns:1fr}
   .pos-history-item{grid-template-columns:1fr}
   h1{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ladder-plane,.mainline-discovery-dock{animation:none}
+  .node-chip,.node-chip.hot,.node-chip.good{transform:none}
 }
 </style>
 </head>
@@ -250,18 +269,19 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     </div>
   </section>
 
-  <section class="panel ladder">
-    <div class="panel-head"><h2>V152 主线梯队网</h2><div class="poll-pills"><span id="ladderPolling" class="pill cyan">轮询 --</span><span id="ladderCount" class="pill cyan">--</span></div></div>
-    <div id="ladder"></div>
-  </section>
-
-  <section class="panel">
-    <div class="panel-head"><h2>主线发现 / 分支识别</h2><div class="poll-pills"><span id="mainlineDiscoveryPolling" class="pill cyan">轮询 --</span><span id="mainlineDiscoveryCount" class="pill cyan">--</span></div></div>
-    <div class="scroll">
-      <table class="table-wide">
-        <thead><tr><th style="width:136px">主线</th><th style="width:132px">分支</th><th style="width:86px">状态</th><th style="width:78px">分数</th><th style="width:68px">强票</th><th style="width:72px">涨停</th><th style="width:72px">跌停</th><th>证据</th></tr></thead>
-        <tbody id="mainlineDiscovery"></tbody>
-      </table>
+  <section class="panel mainline-3d-panel">
+    <div class="panel-head"><h2 id="mainlineFusionTitle">V152 主线3D联动图 / 分支识别</h2><div class="poll-pills"><span id="ladderPolling" class="pill cyan">轮询 --</span><span id="mainlineDiscoveryPolling" class="pill cyan">轮询 --</span><span id="ladderCount" class="pill cyan">--</span><span id="mainlineDiscoveryCount" class="pill cyan">--</span></div></div>
+    <div class="mainline-3d-shell">
+      <div id="ladder" class="mainline-3d-stage"></div>
+      <div class="mainline-discovery-dock">
+        <div class="dock-head"><b>主线发现 / 分支识别</b><span class="pill cyan">诊断层</span></div>
+        <div class="scroll mainline-discovery-scroll">
+          <table class="table-wide">
+            <thead><tr><th style="width:136px">主线</th><th style="width:132px">分支</th><th style="width:86px">状态</th><th style="width:78px">分数</th><th style="width:68px">强票</th><th style="width:72px">涨停</th><th style="width:72px">跌停</th><th>证据</th></tr></thead>
+            <tbody id="mainlineDiscovery"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -855,21 +875,22 @@ function renderLadder(graph){
       const role = O.zh(n.ladder_role || n.edge_label || n.candidate_tier || "候选");
       const basis = O.zh(n.ladder_basis || n.edge_label || "", {fallback:""});
       const cls = n.limit_hit || role.includes("涨停") ? "hot" : String(n.v152_capital_acceptance_text || n.v1519_flow || role).includes("承接") ? "good" : "";
+      const rank = O.zh(n.ladder_rank || "", {fallback:""});
       return `<div class="node-chip ${cls}" title="${O.esc(basis)}">
-        <div class="role">${O.esc(role)}</div>
+        <div class="role">${rank ? `<span class="node-index">${O.esc(rank)}</span>` : ""}${O.esc(role)}</div>
         <b>${O.esc(O.code(n.code))} ${O.esc(O.name(n.code,n.name))}</b>
         <div class="${O.tone(n.rt_pct)}">${O.esc(O.zh(n.rt_pct))} · ${O.esc(O.zh(n.price))}</div>
         <div>${flowLabel(n)}</div>
         <div class="muted">${O.esc(O.compact(basis,36))}</div>
       </div>`;
     }).join("");
-    return `<details ${idx < 3 ? "open" : ""}>
-      <summary>
+    return `<article class="ladder-plane ${idx === 0 ? "primary" : ""}" style="--depth:${idx}">
+      <div class="ladder-plane-head">
         <div class="summary-title"><b>${O.esc(O.zh(g.mainline))}</b><span class="muted">龙头 ${O.esc(O.code(g.leader_code))} ${O.esc(O.name(g.leader_code,g.leader_name))} · ${O.esc(O.compact(g.strength_action || "",34))}</span></div>
-        <div>${O.pill(strengthLabel,ladderStrengthClass(g),strengthTip)} ${O.pill(`联动分 ${O.zh(g.strength_link_score, {fallback:"--"})}`,"cyan",strengthTip)} ${O.pill(`${O.zh(g.strong_candidates, {fallback:0})} 强`,"cyan")} ${O.pill(`${O.zh(g.green_count, {fallback:0})} 绿资`,"green")} ${O.pill(`${O.zh(g.promotion_count, {fallback:0})} 晋级`,"yellow")}</div>
-      </summary>
+        <div class="ladder-metrics">${O.pill(strengthLabel,ladderStrengthClass(g),strengthTip)} ${O.pill(`联动分 ${O.zh(g.strength_link_score, {fallback:"--"})}`,"cyan",strengthTip)} ${O.pill(`${O.zh(g.strong_candidates, {fallback:0})} 强`,"cyan")} ${O.pill(`${O.zh(g.green_count, {fallback:0})} 绿资`,"green")} ${O.pill(`${O.zh(g.promotion_count, {fallback:0})} 晋级`,"yellow")}</div>
+      </div>
       <div class="node-line">${chips}</div>
-    </details>`;
+    </article>`;
   }).join("") : `<div class="empty">暂无主线梯队网。</div>`;
 }
 
@@ -1007,6 +1028,8 @@ function applyModelAdapter(data){
   const title = a.remote_title || owner.remote_title || `${owner.display_name || a.display_name || "自适应模型"} 远端监控台`;
   document.title = title;
   const h1 = document.querySelector("h1"); if(h1) h1.textContent = title;
+  const fusionTitle = $("mainlineFusionTitle");
+  if(fusionTitle) fusionTitle.textContent = `${a.short_name || owner.short_name || owner.active_model || "模型"} 主线3D联动图 / 分支识别`;
   document.querySelectorAll(".panel-head h2").forEach(titleEl => {
     if(/主线梯队/.test(titleEl.textContent || "")) titleEl.textContent = `${a.short_name || owner.short_name || owner.active_model || "模型"} 主线梯队网`;
   });
