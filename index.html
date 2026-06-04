@@ -677,7 +677,7 @@ function renderPollingBadges(data){
   setPollingBadge("scanFrameworkPolling", {}, activity, globalMod);
   setPollingBadge("discoveryAgentPolling", scanModule(data, "v152_discovery_agent_report"), activity);
   setPollingBadge("positionsPolling", scanModule(data, "positions"), activity);
-  setPollingBadge("mainlineStrengthPolling", scanModule(data, "market_environment"), activity);
+  setPollingBadge("mainlineStrengthPolling", scanModule(data, "mainline_discovery"), activity);
   setPollingBadge("ladderPolling", scanModule(data, "mainline_ladder"), activity);
   setPollingBadge("mainlineDiscoveryPolling", scanModule(data, "mainline_discovery"), activity);
   setPollingBadge("promoPolling", scanModule(data, "mainline_promotion"), activity);
@@ -845,7 +845,6 @@ function cleanMainlineEvidence(v){
 
 function discoveryMainlineStrength(data){
   const rows = data?.mainline_discovery?.rows || [];
-  if(!rows.length) return data?.market_environment?.mainlines || [];
   return {
     mode: "mainline_discovery",
     as_of: data.generated_at || data.source_generated_at || "--",
