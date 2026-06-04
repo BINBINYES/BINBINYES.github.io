@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-06-05 00:26:19",
-  "source_generated_at": "2026-06-05 00:26:19",
-  "market_environment_updated_at": "2026-06-05 00:26:19",
+  "generated_at": "2026-06-05 00:27:23",
+  "source_generated_at": "2026-06-05 00:27:23",
+  "market_environment_updated_at": "2026-06-05 00:27:23",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -680,7 +680,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 659.08,
+      "fallback_age_hours": 659.1,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -696,7 +696,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-06-05 00:25:47",
+      "as_of": "2026-06-05 00:26:52",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -2363,7 +2363,7 @@
             "v152_auxiliary_merge": "",
             "capital_analysis_label": "",
             "capital_analysis_summary": "",
-            "intraday_label": "\u627f\u63a5\u6539\u5584",
+            "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
             "intraday_reason": "",
             "promotion_score": "76.17",
             "score": "76.17",
@@ -2386,7 +2386,7 @@
             "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 13.02%\uff1b\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +6",
             "ladder_role": "\u9ad8\u6807\u00b7\u9f99\u4e8c",
             "edge_label": "\u5206\u65f6\u627f\u63a5",
-            "ladder_score": 110.34,
+            "ladder_score": 104.34,
             "mainline_strength_tier": "\u5f3a\u4e3b\u7ebf",
             "mainline_strength_label": "\u5f3a\u4e3b\u7ebf\u8054\u52a8",
             "mainline_strength_action": "\u6838\u5fc3\u7968\u4e0e\u5f3a\u5019\u9009\u524d\u7f6e\u76d1\u63a7",
