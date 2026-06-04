@@ -113,6 +113,8 @@ h2{font-size:16px;margin:0}
 .pill.red{border-color:rgba(255,47,132,.62);color:#ff7dad;background:rgba(255,47,132,.09)}
 .pill.yellow{border-color:rgba(255,211,92,.68);color:var(--yellow);background:rgba(255,211,92,.1)}
 .pill.cyan{border-color:rgba(0,229,255,.62);color:var(--cyan);background:rgba(0,229,255,.08)}
+.poll-pills{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap;min-width:0}
+.poll-pills .pill{max-width:220px}
 .scroll{overflow-x:auto;max-width:100%;border:1px solid var(--line2);border-radius:8px}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 .table-small{min-width:660px}
@@ -151,6 +153,13 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 .service-card{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.46);padding:9px;min-width:0}
 .service-card b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .service-card span{display:block;color:var(--muted);font-size:12px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.agent-report{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.42);overflow:hidden}
+.agent-report summary{cursor:pointer;list-style:none;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.agent-report summary::-webkit-details-marker{display:none}
+.agent-report summary b,.agent-report summary span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.agent-body{display:grid;gap:8px;padding:0 12px 12px}
+.agent-action{border-left:3px solid var(--cyan);background:rgba(9,24,44,.72);border-radius:7px;padding:8px 10px;line-height:1.35}
+.agent-step{display:inline-flex;align-items:center;gap:6px;margin:2px 6px 0 0;color:var(--muted);font-size:12px}
 @media(max-width:1280px){
   .two,.tables-grid{grid-template-columns:1fr}
   .node-line{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -180,6 +189,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     <div class="statusbar">
       <div class="badge"><span id="dot" class="dot"></span><span id="remoteState">状态读取中</span></div>
       <div id="updated" class="badge">已更新 --</div>
+      <div id="globalPollingBadge" class="badge">全局轮询 --</div>
       <a class="btn" href="mobile.html">手机简版</a>
       <button id="alarmBtn" class="btn">仓位铃声 OFF</button>
     </div>
@@ -193,7 +203,7 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   </section>
 
   <section class="panel">
-    <div class="panel-head"><h2>全市场环境 / 预期 / 门控</h2><span id="gateBadge" class="pill cyan">读取中</span></div>
+    <div class="panel-head"><h2>全市场环境 / 预期 / 门控</h2><div class="poll-pills"><span id="envPolling" class="pill cyan">轮询 --</span><span id="gateBadge" class="pill cyan">读取中</span></div></div>
     <div class="envgrid">
       <div class="cell"><span>市场温度</span><b id="envMarket">--</b></div>
       <div class="cell"><span>资金结构</span><b id="envCapital">--</b></div>
@@ -203,37 +213,62 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   </section>
 
   <section class="panel" data-module="scan_read_framework">
-    <div class="panel-head"><h2>V152 实盘口径健康</h2><span id="liveHealthBadge" class="pill cyan">读取中</span></div>
+    <div class="panel-head"><h2>V152 实盘口径健康</h2><div class="poll-pills"><span id="scanFrameworkPolling" class="pill cyan">轮询 --</span><span id="liveHealthBadge" class="pill cyan">读取中</span></div></div>
     <div class="service-grid">
       <div class="service-card"><b id="live5mCoverage">--</b><span>5m 入场证据</span></div>
       <div class="service-card"><b id="live5mReady">--</b><span>买点证据</span></div>
       <div class="service-card"><b id="liveAuditStatus">--</b><span>回测口径审计</span></div>
       <div class="service-card"><b id="liveRemoteSync">--</b><span>远端同步</span></div>
+      <div class="service-card"><b id="modulePolling">--</b><span>全模块轮询</span></div>
     </div>
     <div id="liveHealthNote" class="note" style="margin-top:10px">等待桌面同步。</div>
   </section>
 
+  <section id="discoveryAgentPanel" class="panel">
+    <div class="panel-head"><h2>发掘Agent</h2><div class="poll-pills"><span id="discoveryAgentPolling" class="pill cyan">轮询 --</span><span id="discoveryAgentBadge" class="pill cyan">读取中</span></div></div>
+    <details id="discoveryAgentDetails" class="agent-report">
+      <summary>
+        <div class="summary-title"><b id="discoveryAgentSummary">等待日报</b><span id="discoveryAgentMeta" class="muted">点击查看今天做了什么</span></div>
+        <span class="pill cyan">日报</span>
+      </summary>
+      <div class="agent-body">
+        <div id="discoveryAgentActions"></div>
+        <div id="discoveryAgentSteps"></div>
+      </div>
+    </details>
+  </section>
+
   <section class="two">
     <div class="panel">
-      <div class="panel-head"><h2>当前仓位</h2></div>
+      <div class="panel-head"><h2>当前仓位</h2><span id="positionsPolling" class="pill cyan">轮询 --</span></div>
       <div id="positions" class="cards"></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><h2>主线强度</h2></div>
+      <div class="panel-head"><h2>主线强度</h2><span id="mainlineStrengthPolling" class="pill cyan">轮询 --</span></div>
       <div id="mainlineMeta" class="muted" style="margin:-4px 0 10px">读取中</div>
       <div id="mainlines" class="mainline-list"></div>
     </div>
   </section>
 
   <section class="panel ladder">
-    <div class="panel-head"><h2>V152 主线梯队网</h2><span id="ladderCount" class="pill cyan">--</span></div>
+    <div class="panel-head"><h2>V152 主线梯队网</h2><div class="poll-pills"><span id="ladderPolling" class="pill cyan">轮询 --</span><span id="ladderCount" class="pill cyan">--</span></div></div>
     <div id="ladder"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>主线发现 / 分支识别</h2><div class="poll-pills"><span id="mainlineDiscoveryPolling" class="pill cyan">轮询 --</span><span id="mainlineDiscoveryCount" class="pill cyan">--</span></div></div>
+    <div class="scroll">
+      <table class="table-wide">
+        <thead><tr><th style="width:136px">主线</th><th style="width:132px">分支</th><th style="width:86px">状态</th><th style="width:78px">分数</th><th style="width:68px">强票</th><th style="width:72px">涨停</th><th style="width:72px">跌停</th><th>证据</th></tr></thead>
+        <tbody id="mainlineDiscovery"></tbody>
+      </table>
+    </div>
   </section>
 
   <section>
     <div class="panel">
       <div class="toolbar">
-        <h2>主线晋级候选映射 <span id="promoCount" class="pill green">--</span></h2>
+        <h2>主线晋级候选映射 <span id="promoPolling" class="pill cyan">轮询 --</span> <span id="promoCount" class="pill green">--</span></h2>
         <button class="linkbtn" data-fold="promoMore">展开其它</button>
       </div>
       <div class="scroll">
@@ -483,12 +518,12 @@ const emptyRow = (cols, text) => `<tr><td colspan="${cols}" class="muted">${O.es
 const uniq = arr => [...new Set((arr || []).map(x => O.raw(x)).filter(x => x && x !== "--"))];
 
 function flowLabel(r){
-  const score = r?.hiddenflow_score ?? r?.flow_score ?? "";
-  const raw = r?.v1519_flow || [r?.hiddenflow_label, score].filter(Boolean).join(" ") || "--";
+  const score = r?.v152_capital_acceptance_score ?? r?.hiddenflow_score ?? r?.flow_score ?? "";
+  const raw = r?.v152_capital_acceptance_text || r?.v1519_flow || [r?.v152_capital_acceptance_label || r?.hiddenflow_label, score].filter(Boolean).join(" ") || "--";
   const s = O.zh(raw, {fallback:"--"});
   const good = /主力净流入|承接|确认|增强/.test(s);
   const risk = /出货|风险|转弱|撤退/.test(s);
-  return O.pill(s, good ? "green" : risk ? "yellow" : "cyan", r?.hiddenflow_reason || r?.capital_evidence || "");
+  return O.pill(s, good ? "green" : risk ? "yellow" : "cyan", r?.v152_capital_acceptance_reason || r?.hiddenflow_reason || r?.capital_evidence || "");
 }
 
 function expectationLabel(r){
@@ -607,6 +642,46 @@ function renderEnv(data){
 function scanModule(data, id){
   return (data.scan_read_framework?.modules || []).find(x => x.module_id === id) || {};
 }
+function pollClass(status){
+  const s = String(status || "").toLowerCase();
+  if(["green","ok","stable","polling"].includes(s)) return "green";
+  if(["red","bad","error"].includes(s)) return "red";
+  if(["yellow","warn","degraded"].includes(s)) return "yellow";
+  return "cyan";
+}
+function setPollingBadge(id, mod, activity, fallback = {}){
+  const el = $(id);
+  if(!el) return;
+  const m = mod || {};
+  const a = activity || {};
+  const seq = m.poll_seq ?? fallback.poll_seq ?? a.poll_seq ?? "--";
+  const seconds = m.poll_seconds ?? fallback.poll_seconds ?? a.snapshot_poll_seconds ?? "";
+  const label = m.polling_label || fallback.polling_label || a.label || "轮询中";
+  const checked = m.last_checked_at || fallback.last_checked_at || a.generated_at || "";
+  const suffix = seconds ? ` · ${seconds}s` : "";
+  el.textContent = `${O.zh(label)} #${O.zh(seq, {fallback:"--"})}${suffix}`;
+  el.className = "pill " + pollClass(m.status || fallback.status || a.status);
+  el.title = checked ? `最近检查 ${checked}` : "等待轮询心跳";
+}
+function renderPollingBadges(data){
+  const activity = data.module_activity || {};
+  const globalMod = {
+    polling_label: activity.label || "轮询中",
+    poll_seq: activity.poll_seq,
+    poll_seconds: activity.snapshot_poll_seconds,
+    last_checked_at: activity.generated_at,
+    status: activity.status || "polling"
+  };
+  setPollingBadge("envPolling", scanModule(data, "market_environment"), activity);
+  setPollingBadge("globalPollingBadge", {}, activity, globalMod);
+  setPollingBadge("scanFrameworkPolling", {}, activity, globalMod);
+  setPollingBadge("discoveryAgentPolling", scanModule(data, "v152_discovery_agent_report"), activity);
+  setPollingBadge("positionsPolling", scanModule(data, "positions"), activity);
+  setPollingBadge("mainlineStrengthPolling", scanModule(data, "market_environment"), activity);
+  setPollingBadge("ladderPolling", scanModule(data, "mainline_ladder"), activity);
+  setPollingBadge("mainlineDiscoveryPolling", scanModule(data, "mainline_discovery"), activity);
+  setPollingBadge("promoPolling", scanModule(data, "mainline_promotion"), activity);
+}
 function parseCoveragePair(v){
   const m = String(v || "").match(/(\d+)\s*\/\s*(\d+)/);
   return m ? { covered: Number(m[1]), total: Number(m[2]) } : { covered: 0, total: 0 };
@@ -626,6 +701,7 @@ function renderLiveHealth(data){
   const auditMod = scanModule(data, "v152_live_replay_parity_audit");
   const native = data.data_health?.v152_native_candidate || {};
   const remote = data.remote_sync || {};
+  const activity = data.module_activity || {};
   const pair = parseCoveragePair(health.five_m_coverage || five.fetch_message || fiveMod.coverage || "");
   const covered = Number(health.covered_rows ?? five.covered_rows ?? pair.covered ?? 0);
   const total = Number(health.rows ?? five.rows ?? pair.total ?? native.rows ?? data.candidate_rows ?? 0);
@@ -636,6 +712,7 @@ function renderLiveHealth(data){
   $("live5mReady").textContent = `${ready} 条`;
   $("liveAuditStatus").textContent = violations ? `硬违规 ${violations}` : "硬违规 0";
   $("liveRemoteSync").textContent = O.zh(remoteLabel);
+  $("modulePolling").textContent = activity.enabled ? `${O.zh(activity.label || "轮询中")} #${O.zh(activity.poll_seq, {fallback:0})}/${O.zh(activity.tick_poll_seq, {fallback:0})}` : "--";
   const ok = total > 0 && covered >= total && violations === 0 && (!data.remote_sync || remote.ok || remote.status === "synced");
   $("liveHealthBadge").textContent = ok ? "闭环可读" : "需要关注";
   $("liveHealthBadge").className = "pill " + (ok ? "green" : "yellow");
@@ -646,6 +723,46 @@ function renderLiveHealth(data){
     `<span>${O.esc(O.compact(health.five_m_coverage || five.fetch_message || fiveMod.coverage || "等待5m数据", 84))}</span>`,
     `<span>${O.esc(O.compact(health.audit_summary || audit.summary || auditMod.coverage || "等待审计", 116))}</span>`
   ].join(" ");
+}
+
+function renderDiscoveryAgent(report){
+  const r = report || {};
+  const ok = Boolean(r.ok);
+  $("discoveryAgentBadge").textContent = ok ? `${O.zh(r.mode_label || "已运行")}日报` : "等待日报";
+  $("discoveryAgentBadge").className = "pill " + (ok ? "green" : "yellow");
+  $("discoveryAgentSummary").textContent = O.compact(r.summary || "等待发掘Agent盘中/盘后任务写入日报。", 96);
+  const meta = [r.target_date, r.mode_label, r.latest_run_mtime, r.latest_run_file].filter(Boolean).join(" · ");
+  $("discoveryAgentMeta").textContent = meta || "点击查看今天做了什么";
+  const actions = r.actions || [];
+  $("discoveryAgentActions").innerHTML = actions.length ? actions.map(x => (
+    `<div class="agent-action">${O.esc(O.compact(x, 150))}</div>`
+  )).join("") : `<div class="empty">暂无发掘日报。</div>`;
+  const steps = r.steps || [];
+  $("discoveryAgentSteps").innerHTML = steps.length ? steps.map(s => {
+    const cls = s.ok ? "green" : "yellow";
+    const text = `${O.zh(s.name)} ${s.ok ? "OK" : "待查"} ${O.zh(s.started_at_beijing, {fallback:""})}`;
+    return `<span class="agent-step">${O.pill(text, cls)}</span>`;
+  }).join("") : `<span class="muted">等待任务步骤。</span>`;
+}
+
+function renderMainlineDiscovery(discovery){
+  const rows = discovery?.rows || [];
+  $("mainlineDiscoveryCount").textContent = `${rows.length} 条`;
+  $("mainlineDiscovery").innerHTML = rows.length ? rows.slice(0,16).map(r => {
+    const up = r.limit_up_count ?? r.limit_count ?? 0;
+    const down = r.limit_down_count ?? 0;
+    const downCls = O.num(down) > 0 ? "down" : "flat";
+    return `<tr>
+      <td title="${O.esc(O.zh(r.mainline_id))}"><b>${O.esc(O.compact(r.mainline_id,18))}</b></td>
+      <td title="${O.esc(O.zh(r.branch_id))}">${O.esc(O.compact(r.branch_id,18))}</td>
+      <td>${O.pill(O.zh(r.lifecycle_state || "观察"), O.num(down) > 0 ? "yellow" : "cyan")}</td>
+      <td>${O.esc(O.zh(r.mainline_score))}</td>
+      <td>${O.esc(O.zh(r.strong_count, {fallback:0}))}</td>
+      <td class="up">${O.esc(O.zh(up, {fallback:0}))}</td>
+      <td class="${downCls}">${O.esc(O.zh(down, {fallback:0}))}</td>
+      <td class="wrapcell" title="${O.esc(O.evidence(r.evidence || ""))}">${O.esc(O.compact(O.evidence(r.evidence || ""), 92))}</td>
+    </tr>`;
+  }).join("") : emptyRow(8,"暂无主线发现数据。");
 }
 
 function positionHistoryHtml(p){
@@ -736,7 +853,7 @@ function renderLadder(graph){
     const strengthTip = [g.strength_action,g.strength_risk,g.strength_reason].filter(Boolean).join("；");
     const chips = nodes.map(n => {
       const role = O.zh(n.ladder_role || n.edge_label || n.candidate_tier || "候选");
-      const cls = role.includes("龙头") || role.includes("高标") ? "hot" : String(n.v1519_flow || "").includes("承接") ? "good" : "";
+      const cls = role.includes("龙头") || role.includes("高标") ? "hot" : String(n.v152_capital_acceptance_text || n.v1519_flow || "").includes("承接") ? "good" : "";
       return `<div class="node-chip ${cls}">
         <div class="role">${O.esc(role)}</div>
         <b>${O.esc(O.code(n.code))} ${O.esc(O.name(n.code,n.name))}</b>
@@ -755,7 +872,7 @@ function renderLadder(graph){
 }
 
 function goodIntraday(r){
-  const s = [r.label,r.state,r.hiddenflow_label,r.v1519_flow,r.capital_evidence].map(x => O.zh(x,{fallback:""})).join(" ");
+  const s = [r.label,r.state,r.v152_capital_acceptance_label,r.v152_capital_acceptance_text,r.hiddenflow_label,r.v1519_flow,r.capital_evidence].map(x => O.zh(x,{fallback:""})).join(" ");
   return /分时进攻确认|承接增强|承接改善|主力净流入|确认/.test(s);
 }
 
@@ -903,9 +1020,12 @@ function render(data){
   renderKpi(data);
   renderEnv(data);
   renderLiveHealth(data);
+  renderPollingBadges(data);
+  renderDiscoveryAgent(data.v152_discovery_agent_report || {});
   renderPositions(data.positions || []);
   renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
+  renderMainlineDiscovery(data.mainline_discovery || {});
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
   window.__lastRemotePositions = data.positions || [];
   const now = positionSig(data.positions || []);
