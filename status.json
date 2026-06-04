@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-06-04 15:20:25",
-  "source_generated_at": "2026-06-04 15:20:25",
-  "market_environment_updated_at": "2026-06-04 15:20:25",
+  "generated_at": "2026-06-04 15:21:20",
+  "source_generated_at": "2026-06-04 15:21:20",
+  "market_environment_updated_at": "2026-06-04 15:21:20",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -472,12 +472,12 @@
   "remote_quote_available": true,
   "remote_status_label": "\u884c\u60c5\u8fde\u63a5\u53ef\u7528",
   "live_replay_health": {
-    "covered_rows": 51,
+    "covered_rows": 55,
     "rows": 62,
     "entry_ok_rows": 0,
     "hard_violations": 0,
     "status": "warn",
-    "five_m_coverage": "51/62 \u4eca\u65e55m; sources=tencent_5m; 5m budget timeout 24s",
+    "five_m_coverage": "55/62 \u4eca\u65e55m; sources=https://push2his.eastmoney.com/api/qt/stock/kline/get,tencent_5m; 5m budget timeout 24s",
     "audit_summary": "\u5b9e\u76d8\u5019\u9009\u56de\u6d4b\u53e3\u5f84\u5ba1\u8ba1\uff1a6\u6761\uff0c\u786c\u8fdd\u89c40\uff0c\u6392\u5e8f\u8bef\u5dee0\uff0cTOP2\u914d\u989d\u8fdd\u89c40\uff0c\u6da8\u505c\u4e70\u5165\u8fdd\u89c40\uff0c5m\u95e8\u63a7\u9519\u914d0\uff0c\u53ef\u4e70\u8bc1\u636e0\u3002",
     "five_m_status_label": "\u964d\u7ea7",
     "audit_status_label": "\u964d\u7ea7"
@@ -680,7 +680,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 649.98,
+      "fallback_age_hours": 650.0,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -696,7 +696,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-06-04 15:19:54",
+      "as_of": "2026-06-04 15:20:48",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -2066,7 +2066,7 @@
         "limit_count": 0,
         "leader_codes": "300390\uff1b301217\uff1b301511\uff1b002407",
         "leader_names": "\u5929\u534e\u65b0\u80fd\uff1b\u94dc\u51a0\u94dc\u7b94\uff1b\u5fb7\u798f\u79d1\u6280\uff1b\u591a\u6c1f\u591a",
-        "evidence": "\u6837\u672c47\uff1b\u6765\u6e905\uff1b\u5f3a33\uff1b\u6838\u5fc35\uff1b\u664b\u7ea71\uff1b\u5206\u65f615\uff1b\u6da8\u505c\uff1b\u5c01\u677f0\uff1b\u5747\u6da8-3.47%\uff1b\u8d44\u91d118.3\uff1b\u98ce\u966911\uff1b\u73af\u5883\u5c42:\u94dc\u51a0\u94dc\u7b94\uff1b\u591a\u6c1f\u591a\uff1b\u5fb7\u798f\u79d1\u6280\uff1b\u5929\u534e\u65b0\u80fd\uff1b\u5929\u9f50\u9502\u4e1a"
+        "evidence": "\u6837\u672c47\uff1b\u6765\u6e905\uff1b\u5f3a33\uff1b\u6838\u5fc35\uff1b\u664b\u7ea71\uff1b\u5206\u65f615\uff1b\u6da8\u505c\uff1b\u5c01\u677f0\uff1b\u5747\u6da8-3.47%\uff1b\u8d44\u91d118.7\uff1b\u98ce\u966911\uff1b\u73af\u5883\u5c42:\u94dc\u51a0\u94dc\u7b94\uff1b\u591a\u6c1f\u591a\uff1b\u5fb7\u798f\u79d1\u6280\uff1b\u5929\u534e\u65b0\u80fd\uff1b\u5929\u9f50\u9502\u4e1a"
       },
       {
         "mainline_id": "\u65b0\u80fd\u6e90\u7535\u6c60",
@@ -4165,7 +4165,7 @@
         "discovery_lifecycle": "\u5206\u6b67",
         "discovery_capital": "\u8d44\u91d1\u9000\u6f6e",
         "discovery_confidence": 98.0,
-        "discovery_evidence": "\u6837\u672c47\uff1b\u6765\u6e905\uff1b\u5f3a33\uff1b\u6838\u5fc35\uff1b\u664b\u7ea71\uff1b\u5206\u65f615\uff1b\u6da8\u505c\uff1b\u5c01\u677f0\uff1b\u5747\u6da8-3.47%\uff1b\u8d44\u91d118.3\uff1b\u98ce\u966911\uff1b\u73af\u5883\u5c42:\u94dc\u51a0\u94dc\u7b94\uff1b\u591a\u6c1f\u591a\uff1b\u5fb7\u798f\u79d1\u6280\uff1b\u5929\u534e\u65b0\u80fd\uff1b\u5929\u9f50\u9502\u4e1a",
+        "discovery_evidence": "\u6837\u672c47\uff1b\u6765\u6e905\uff1b\u5f3a33\uff1b\u6838\u5fc35\uff1b\u664b\u7ea71\uff1b\u5206\u65f615\uff1b\u6da8\u505c\uff1b\u5c01\u677f0\uff1b\u5747\u6da8-3.47%\uff1b\u8d44\u91d118.7\uff1b\u98ce\u966911\uff1b\u73af\u5883\u5c42:\u94dc\u51a0\u94dc\u7b94\uff1b\u591a\u6c1f\u591a\uff1b\u5fb7\u798f\u79d1\u6280\uff1b\u5929\u534e\u65b0\u80fd\uff1b\u5929\u9f50\u9502\u4e1a",
         "level": "\u6838\u5fc3\u5019\u9009",
         "state": "\u664b\u7ea7\u89c2\u5bdf",
         "signal": "\u5206\u65f6\u8fdb\u653b\u786e\u8ba4",
@@ -4512,7 +4512,7 @@
         "discovery_lifecycle": "\u5206\u6b67",
         "discovery_capital": "\u8d44\u91d1\u9000\u6f6e",
         "discovery_confidence": 98.0,
-        "discovery_evidence": "\u6837\u672c47\uff1b\u6765\u6e905\uff1b\u5f3a33\uff1b\u6838\u5fc35\uff1b\u664b\u7ea71\uff1b\u5206\u65f615\uff1b\u6da8\u505c\uff1b\u5c01\u677f0\uff1b\u5747\u6da8-3.47%\uff1b\u8d44\u91d118.3\uff1b\u98ce\u966911\uff1b\u73af\u5883\u5c42:\u94dc\u51a0\u94dc\u7b94\uff1b\u591a\u6c1f\u591a\uff1b\u5fb7\u798f\u79d1\u6280\uff1b\u5929\u534e\u65b0\u80fd\uff1b\u5929\u9f50\u9502\u4e1a",
+        "discovery_evidence": "\u6837\u672c47\uff1b\u6765\u6e905\uff1b\u5f3a33\uff1b\u6838\u5fc35\uff1b\u664b\u7ea71\uff1b\u5206\u65f615\uff1b\u6da8\u505c\uff1b\u5c01\u677f0\uff1b\u5747\u6da8-3.47%\uff1b\u8d44\u91d118.7\uff1b\u98ce\u966911\uff1b\u73af\u5883\u5c42:\u94dc\u51a0\u94dc\u7b94\uff1b\u591a\u6c1f\u591a\uff1b\u5fb7\u798f\u79d1\u6280\uff1b\u5929\u534e\u65b0\u80fd\uff1b\u5929\u9f50\u9502\u4e1a",
         "level": "\u6838\u5fc3\u5019\u9009",
         "state": "\u664b\u7ea7\u89c2\u5bdf",
         "signal": "\u5206\u65f6\u8fdb\u653b\u786e\u8ba4",
