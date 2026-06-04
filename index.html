@@ -752,6 +752,7 @@ function renderMainlineDiscovery(discovery){
     const up = r.limit_up_count ?? r.limit_count ?? 0;
     const down = r.limit_down_count ?? 0;
     const downCls = O.num(down) > 0 ? "down" : "flat";
+    const ev = cleanMainlineEvidence(r.evidence || "");
     return `<tr>
       <td title="${O.esc(O.zh(r.mainline_id))}"><b>${O.esc(O.compact(r.mainline_id,18))}</b></td>
       <td title="${O.esc(O.zh(r.branch_id))}">${O.esc(O.compact(r.branch_id,18))}</td>
@@ -760,7 +761,7 @@ function renderMainlineDiscovery(discovery){
       <td>${O.esc(O.zh(r.strong_count, {fallback:0}))}</td>
       <td class="up">${O.esc(O.zh(up, {fallback:0}))}</td>
       <td class="${downCls}">${O.esc(O.zh(down, {fallback:0}))}</td>
-      <td class="wrapcell" title="${O.esc(O.evidence(r.evidence || ""))}">${O.esc(O.compact(O.evidence(r.evidence || ""), 92))}</td>
+      <td class="wrapcell" title="${O.esc(O.evidence(ev))}">${O.esc(O.compact(O.evidence(ev), 92))}</td>
     </tr>`;
   }).join("") : emptyRow(8,"暂无主线发现数据。");
 }
@@ -833,6 +834,35 @@ function renderMainlines(mainlines){
       <div class="up"><b>${O.esc(strong)} 强</b></div>
     </div>`;
   }).join("") : `<div class="empty">暂无主线强度。</div>`;
+}
+
+function cleanMainlineEvidence(v){
+  const s = String(v || "").trim();
+  if(!s) return "--";
+  const marker = s.search(/(?:^|[；;])\s*环境层[:：]/);
+  return (marker >= 0 ? s.slice(0, marker) : s).replace(/[；;]\s*$/, "").trim() || "--";
+}
+
+function discoveryMainlineStrength(data){
+  const rows = data?.mainline_discovery?.rows || [];
+  if(!rows.length) return data?.market_environment?.mainlines || [];
+  return {
+    mode: "mainline_discovery",
+    as_of: data.generated_at || data.source_generated_at || "--",
+    rows: rows.map(r => ({
+      mainline: r.mainline_id,
+      node: r.branch_id,
+      companies: r.sample_count ?? "--",
+      core_candidates: r.core_count ?? "--",
+      strong_candidates: r.strong_count ?? "--",
+      live_sample: r.sample_count,
+      live_up_count: r.strong_count,
+      live_down_count: r.risk_count,
+      avg_pct: r.avg_pct,
+      avg_score: r.mainline_score,
+      top_companies: [r.leader_codes, r.leader_names].filter(Boolean).join(" "),
+    })),
+  };
 }
 
 function ladderStrengthClass(g){
@@ -1025,7 +1055,7 @@ function render(data){
   renderPollingBadges(data);
   renderDiscoveryAgent(data.v152_discovery_agent_report || {});
   renderPositions(data.positions || []);
-  renderMainlines(data.market_environment?.mainlines || []);
+  renderMainlines(discoveryMainlineStrength(data));
   renderLadder(data.mainline_ladder_graph || {});
   renderMainlineDiscovery(data.mainline_discovery || {});
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
