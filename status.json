@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-06-04 08:47:22",
-  "source_generated_at": "2026-06-04 08:47:22",
-  "market_environment_updated_at": "2026-06-04 08:47:22",
+  "generated_at": "2026-06-04 08:48:55",
+  "source_generated_at": "2026-06-04 08:48:55",
+  "market_environment_updated_at": "2026-06-04 08:48:55",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -17,7 +17,7 @@
   "model_owner": {
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
-    "display_name": "V152.1 ??S1??????",
+    "display_name": "V152.1 \u57fa\u51c6S1\u7a33\u5b9a\u653b\u51fb\u6a21\u578b",
     "short_name": "V152.1",
     "real_order_enabled": false,
     "broker_order_permission": "manual_confirm_required",
@@ -27,7 +27,7 @@
     "active_model_id": "V152_STABLE_ATTACK",
     "active_model": "V152",
     "stable_version": "V152_STABLE_ATTACK",
-    "display_name": "V152.1 ??S1??????",
+    "display_name": "V152.1 \u57fa\u51c6S1\u7a33\u5b9a\u653b\u51fb\u6a21\u578b",
     "short_name": "V152.1",
     "page_title": "V152.1 \u684c\u9762\u63a7\u5236\u53f0",
     "remote_title": "V152.1 \u8fdc\u7aef\u76d1\u63a7\u53f0",
@@ -349,9 +349,9 @@
     "notice": "\u7a33\u5b9a\u9a8c\u8bc1\u660e\u7ec6\u4fdd\u7559\u5728\u672c\u5730\uff0c\u4e0d\u63a8\u9001\u5230\u8fdc\u7aef\u3002"
   },
   "core_execution": {
-    "status": "bad",
-    "label": "\u5f02\u5e38\u9700\u4fee\u590d",
-    "summary": "\u5f02\u5e38\u9700\u4fee\u590d\uff1a\u5f02\u5e38 2\uff0c\u89c4\u5219\u963b\u6321 0\uff0c\u5f85\u89c2\u5bdf 1\u3002",
+    "status": "warn",
+    "label": "\u53ef\u89c2\u5bdf",
+    "summary": "\u53ef\u89c2\u5bdf\uff1a\u5f02\u5e38 0\uff0c\u89c4\u5219\u963b\u6321 0\uff0c\u5f85\u89c2\u5bdf 2\u3002",
     "selected_scenario": "BASE_SUPPORT_S1_FULL",
     "add_leg_exit_profile": "DISABLED",
     "checks": [
@@ -366,18 +366,18 @@
       {
         "stage": "validation",
         "label": "\u7a33\u5b9a\u6838\u7248\u672c",
-        "status": "bad",
+        "status": "ok",
         "blocked": false,
         "repairable": false,
-        "detail": "BASE_SUPPORT_S1_FULL\uff1bDISABLED"
+        "detail": "BASE_SUPPORT_S1_FULL\uff1bDISABLED\uff1bexpected=BASE_SUPPORT_S1_FULL"
       },
       {
         "stage": "validation",
         "label": "V152\u5951\u7ea6\u5185\u6838",
-        "status": "bad",
+        "status": "ok",
         "blocked": false,
         "repairable": false,
-        "detail": "\u5951\u7ea6\u6f02\u79fb: strict_events\uff1bmapping=PASS"
+        "detail": "\u5951\u7ea6\u5185\u6838\u901a\u8fc7\uff1bmapping=PASS"
       },
       {
         "stage": "data",
@@ -864,7 +864,7 @@
       "limit_rule": "board_aware",
       "message": "universe cache stale; using live quote pool proxy breadth",
       "fallback_from": "universe_cache",
-      "fallback_age_hours": 643.44,
+      "fallback_age_hours": 643.46,
       "universe_cache_stale": true,
       "full_market_live_message": "universe seed too small: 1476",
       "limit_count_source": "eastmoney_limit_pool",
@@ -880,7 +880,7 @@
     "mainlines": {
       "available": true,
       "version": "V151.4+dynamic",
-      "as_of": "2026-06-04 08:47:21",
+      "as_of": "2026-06-04 08:48:46",
       "static_as_of": "2026-05-13",
       "mode": "dynamic_live_monitor_pool",
       "rows": [
@@ -1228,8 +1228,8 @@
         "capital_analysis_summary": "",
         "intraday_label": "",
         "intraday_reason": "",
-        "promotion_score": 72.69,
-        "score": 72.69,
+        "promotion_score": 72.53,
+        "score": 72.53,
         "v1519_flow": "--",
         "hiddenflow_score": "",
         "hiddenflow_label": "",
@@ -1238,9 +1238,9 @@
         "pool": "",
         "pool_reason": "",
         "expectation_label": "\u9ad8\u9884\u671f",
-        "expectation_score": 72.69,
+        "expectation_score": 72.53,
         "expectation_position_text": "1.3\u4ed3",
-        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea776.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea774.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
         "rt_pct": "--",
         "price": "--",
         "pct_delta": "",
@@ -2222,7 +2222,7 @@
         "limit_count": 4,
         "leader_codes": "600487\uff1b688498\uff1b688313\uff1b002281",
         "leader_names": "\u4ea8\u901a\u5149\u7535\uff1b\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u5149\u8fc5\u79d1\u6280",
-        "evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af"
+        "evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u98ce\u96691\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af"
       },
       {
         "mainline_id": "AI\u7b97\u529b\u534a\u5bfc\u4f53",
@@ -2973,7 +2973,7 @@
             "pct_delta": "",
             "day_location": "62.2",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
             "ladder_role": "\u9f99\u5934",
             "edge_label": "\u664b\u7ea7\u786e\u8ba4",
             "ladder_score": 101.28,
@@ -3036,7 +3036,7 @@
             "pct_delta": "",
             "day_location": "83.4",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 16.41%\uff1b\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 16.41%\uff1b\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12",
             "ladder_role": "\u9ad8\u6807\u00b7\u9f99\u4e00",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 97.64,
@@ -3099,7 +3099,7 @@
             "pct_delta": "",
             "day_location": "46.0",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
             "ladder_role": "\u9f99\u4e8c",
             "edge_label": "\u664b\u7ea7\u786e\u8ba4",
             "ladder_score": 96.11,
@@ -3162,7 +3162,7 @@
             "pct_delta": "",
             "day_location": "35.2",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.72%\uff1b\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.72%\uff1b\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
             "ladder_role": "\u9f99\u4e09",
             "edge_label": "\u664b\u7ea7\u786e\u8ba4",
             "ladder_score": 92.96,
@@ -3225,7 +3225,7 @@
             "pct_delta": "",
             "day_location": "83.9",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 8.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 8.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12",
             "ladder_role": "\u5361\u4f4d",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 89.4,
@@ -3288,7 +3288,7 @@
             "pct_delta": "",
             "day_location": "41.9",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.13%\uff1b\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.13%\uff1b\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
             "ladder_role": "\u664b\u7ea7",
             "edge_label": "\u664b\u7ea7\u786e\u8ba4",
             "ladder_score": 89.33,
@@ -3351,7 +3351,7 @@
             "pct_delta": "",
             "day_location": "100.0",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 10.00%\uff1b\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +13",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 10.00%\uff1b\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +12",
             "ladder_role": "\u9ad8\u6807\u00b7\u5361\u4f4d",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
             "ladder_score": 88.1,
@@ -3414,7 +3414,7 @@
             "pct_delta": "",
             "day_location": "42.6",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
             "ladder_role": "\u664b\u7ea7",
             "edge_label": "\u664b\u7ea7\u786e\u8ba4",
             "ladder_score": 86.83,
@@ -3442,7 +3442,7 @@
         "strength_tier": "\u8054\u52a8\u589e\u5f3a",
         "strength_link_label": "\u589e\u5f3a\u8054\u52a8",
         "strength_link_class": "blue",
-        "strength_link_score": 48.0,
+        "strength_link_score": 47.95,
         "strength_action": "\u5141\u8bb8\u8fdb\u5165\u91cd\u70b9\u89c2\u5bdf\u6c60",
         "strength_risk": "\u4ecd\u9700\u5206\u65f6\u8d44\u91d1\u4e0e\u9ad8\u6807\u8868\u73b0\u786e\u8ba4",
         "strength_reason": "\u5f3a\u5019\u90091\uff1b\u6838\u5fc30\uff1b\u7eff\u8d440\uff1b\u664b\u7ea72\uff1b\u5747\u6da84.95%\uff1b\u5747\u520647.5",
@@ -3487,8 +3487,8 @@
             "capital_analysis_summary": "",
             "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
             "intraday_reason": "",
-            "promotion_score": "76.71",
-            "score": "76.71",
+            "promotion_score": "74.71",
+            "score": "74.71",
             "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
             "hiddenflow_score": "50",
             "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -3497,18 +3497,18 @@
             "pool": "",
             "pool_reason": "\u6838\u5fc3\u5019\u9009\uff1b\u822a\u7a7a\u822a\u5929\u519b\u5de5\uff1b\u822a\u5929\u536b\u661f",
             "expectation_label": "\u9ad8\u9884\u671f",
-            "expectation_score": 72.69,
+            "expectation_score": 72.53,
             "expectation_position_text": "1.3\u4ed3",
-            "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea776.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+            "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea774.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
             "rt_pct": "6.17%",
             "price": "21.18",
             "pct_delta": "",
             "day_location": "72.8",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u6270\u52a8 +2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519",
             "ladder_role": "\u9f99\u5934",
             "edge_label": "\u664b\u7ea7\u786e\u8ba4",
-            "ladder_score": 93.73,
+            "ladder_score": 93.37,
             "mainline_strength_tier": "\u8054\u52a8\u589e\u5f3a",
             "mainline_strength_label": "\u589e\u5f3a\u8054\u52a8",
             "mainline_strength_action": "\u5141\u8bb8\u8fdb\u5165\u91cd\u70b9\u89c2\u5bdf\u6c60",
@@ -3550,8 +3550,8 @@
             "capital_analysis_summary": "",
             "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
             "intraday_reason": "",
-            "promotion_score": "62.61",
-            "score": "62.61",
+            "promotion_score": "60.61",
+            "score": "60.61",
             "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
             "hiddenflow_score": "50",
             "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -3568,10 +3568,10 @@
             "pct_delta": "",
             "day_location": "46.3",
             "blockers": "\u65e0",
-            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u6270\u52a8 +2",
+            "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0",
             "ladder_role": "\u9f99\u4e00",
             "edge_label": "\u68af\u961f\u89c2\u5bdf",
-            "ladder_score": 73.13,
+            "ladder_score": 72.77,
             "mainline_strength_tier": "\u8054\u52a8\u589e\u5f3a",
             "mainline_strength_label": "\u589e\u5f3a\u8054\u52a8",
             "mainline_strength_action": "\u5141\u8bb8\u8fdb\u5165\u91cd\u70b9\u89c2\u5bdf\u6c60",
@@ -4077,7 +4077,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 1,
@@ -4093,7 +4093,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 7.74%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 86.34,
         "score": 86.34,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4112,7 +4112,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "301666",
@@ -4133,7 +4133,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 2,
@@ -4149,7 +4149,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 1.29%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 85.65,
         "score": 85.65,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4168,7 +4168,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688313",
@@ -4181,7 +4181,7 @@
         "discovery_lifecycle": "\u4e3b\u5347",
         "discovery_capital": "\u6570\u636e\u4e0d\u8db3",
         "discovery_confidence": 98.0,
-        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
+        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u98ce\u96691\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
         "level": "\u6838\u5fc3\u5019\u9009",
         "state": "\u4e3b\u7ebf\u664b\u7ea7-\u5019\u9009\u76d1\u63a7",
         "signal": "\u5206\u65f6\u8fdb\u653b\u786e\u8ba4",
@@ -4189,7 +4189,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 3,
@@ -4205,7 +4205,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 9.29%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 82.11,
         "score": 82.11,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4224,7 +4224,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300857",
@@ -4237,7 +4237,7 @@
         "discovery_lifecycle": "\u4e3b\u5347",
         "discovery_capital": "\u6570\u636e\u4e0d\u8db3",
         "discovery_confidence": 98.0,
-        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
+        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u98ce\u96691\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
         "level": "\u6838\u5fc3\u5019\u9009",
         "state": "\u4e3b\u7ebf\u664b\u7ea7-\u5019\u9009\u76d1\u63a7",
         "signal": "\u5206\u65f6\u8fdb\u653b\u786e\u8ba4",
@@ -4245,7 +4245,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 4,
@@ -4261,7 +4261,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 1.90%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 81.07,
         "score": 81.07,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4280,7 +4280,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "002297",
@@ -4301,7 +4301,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 5,
@@ -4310,16 +4310,16 @@
         "v152_selection_missing_fields": "\u65e0",
         "v152_selection_contract_reason": "\u63a8\u5bfc\u5b57\u6bb5:attack_score_from_candidate_plus_bonus,v152_t0_tail_score_from_live_ladder,close_pos_fro...",
         "tick_signal": "\u7a33\u5b9a\u89c2\u5bdf",
-        "tick_score": 63.21,
+        "tick_score": 63.18,
         "tick_reason": "\u65e0\u660e\u663e tick-like \u52a0\u901f",
         "tick_velocity_pct_per_min": 0.0,
         "v152_auxiliary_merge": "\u5206\u65f6\u5f02\u52a8\uff1b\u51c6\u5b9e\u65f6\u5408\u5e76\u626b\u63cf\uff1b\u8d44\u91d1\u5206\u6790",
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 6.17%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
-        "promotion_score": 76.71,
-        "score": 76.71,
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
+        "promotion_score": 74.71,
+        "score": 74.71,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
         "hiddenflow_score": "50",
         "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -4328,15 +4328,15 @@
         "pool": "",
         "pool_reason": "\u6838\u5fc3\u5019\u9009\uff1b\u822a\u7a7a\u822a\u5929\u519b\u5de5\uff1b\u822a\u5929\u536b\u661f",
         "expectation_label": "\u9ad8\u9884\u671f",
-        "expectation_score": 72.69,
+        "expectation_score": 72.53,
         "expectation_position_text": "1.3\u4ed3",
-        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea776.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea774.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
         "rt_pct": "6.17%",
         "price": "21.18",
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u6270\u52a8 +2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300390",
@@ -4357,7 +4357,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 6,
@@ -4373,7 +4373,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 0.10%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 71.22,
         "score": 71.22,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4413,7 +4413,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 7,
@@ -4429,7 +4429,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 6.38%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 90%",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83\uff1b\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 90%",
         "promotion_score": 68.49,
         "score": 68.49,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4448,7 +4448,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "301696",
@@ -4469,7 +4469,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 8,
@@ -4478,16 +4478,16 @@
         "v152_selection_missing_fields": "\u65e0",
         "v152_selection_contract_reason": "\u63a8\u5bfc\u5b57\u6bb5:attack_score_from_candidate_plus_bonus,v152_t0_tail_score_from_live_ladder,close_pos_fro...",
         "tick_signal": "\u7a33\u5b9a\u89c2\u5bdf",
-        "tick_score": 47.56,
+        "tick_score": 47.53,
         "tick_reason": "\u65e0\u660e\u663e tick-like \u52a0\u901f",
         "tick_velocity_pct_per_min": 0.0,
         "v152_auxiliary_merge": "\u5206\u65f6\u5f02\u52a8\uff1b\u51c6\u5b9e\u65f6\u5408\u5e76\u626b\u63cf\uff1b\u8d44\u91d1\u5206\u6790",
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 1.22%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
-        "promotion_score": 62.61,
-        "score": 62.61,
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
+        "promotion_score": 60.61,
+        "score": 60.61,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
         "hiddenflow_score": "50",
         "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -4504,7 +4504,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u6270\u52a8 +2"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0"
       },
       {
         "code": "688530",
@@ -4525,7 +4525,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 9,
@@ -4541,7 +4541,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 -2.08%\uff1b\u4ef7\u683c\u8d70\u5f31\uff0c\u8d44\u91d1\u627f\u63a5\u9700\u7b49\u5f85\u8865\u5145\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 60.28,
         "score": 60.28,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4592,7 +4592,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 1,
@@ -4608,7 +4608,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 7.74%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 86.34,
         "score": 86.34,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4627,7 +4627,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "301666",
@@ -4648,7 +4648,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 2,
@@ -4664,7 +4664,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 1.29%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 85.65,
         "score": 85.65,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4683,7 +4683,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688313",
@@ -4696,7 +4696,7 @@
         "discovery_lifecycle": "\u4e3b\u5347",
         "discovery_capital": "\u6570\u636e\u4e0d\u8db3",
         "discovery_confidence": 98.0,
-        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
+        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u98ce\u96691\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
         "level": "\u6838\u5fc3\u5019\u9009",
         "state": "\u4e3b\u7ebf\u664b\u7ea7-\u5019\u9009\u76d1\u63a7",
         "signal": "\u5206\u65f6\u8fdb\u653b\u786e\u8ba4",
@@ -4704,7 +4704,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 3,
@@ -4720,7 +4720,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 9.29%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 82.11,
         "score": 82.11,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4739,7 +4739,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300857",
@@ -4752,7 +4752,7 @@
         "discovery_lifecycle": "\u4e3b\u5347",
         "discovery_capital": "\u6570\u636e\u4e0d\u8db3",
         "discovery_confidence": 98.0,
-        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
+        "discovery_evidence": "\u6837\u672c77\uff1b\u6765\u6e905\uff1b\u5f3a77\uff1b\u6838\u5fc338\uff1b\u664b\u7ea713\uff1b\u5206\u65f617\uff1b\u6da8\u505c\uff1b\u5c01\u677f4\uff1b\u5747\u6da86.34%\uff1b\u8d44\u91d150.0\uff1b\u98ce\u96691\uff1b\u73af\u5883\u5c42:\u6e90\u6770\u79d1\u6280\uff1b\u4ed5\u4f73\u5149\u5b50\uff1b\u4ea8\u901a\u5149\u7535\uff1b\u957f\u98de\u5149\u7ea4\uff1b\u957f\u5149\u534e\u82af",
         "level": "\u6838\u5fc3\u5019\u9009",
         "state": "\u4e3b\u7ebf\u664b\u7ea7-\u5019\u9009\u76d1\u63a7",
         "signal": "\u5206\u65f6\u8fdb\u653b\u786e\u8ba4",
@@ -4760,7 +4760,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 4,
@@ -4776,7 +4776,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 1.90%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 81.07,
         "score": 81.07,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4795,7 +4795,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "002297",
@@ -4816,7 +4816,7 @@
         "action": "\u4e3b\u7ebf\u664b\u7ea7",
         "action_zh": "\u4e3b\u7ebf\u664b\u7ea7",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 5,
@@ -4825,16 +4825,16 @@
         "v152_selection_missing_fields": "\u65e0",
         "v152_selection_contract_reason": "\u63a8\u5bfc\u5b57\u6bb5:attack_score_from_candidate_plus_bonus,v152_t0_tail_score_from_live_ladder,close_pos_fro...",
         "tick_signal": "\u7a33\u5b9a\u89c2\u5bdf",
-        "tick_score": 63.21,
+        "tick_score": 63.18,
         "tick_reason": "\u65e0\u660e\u663e tick-like \u52a0\u901f",
         "tick_velocity_pct_per_min": 0.0,
         "v152_auxiliary_merge": "\u5206\u65f6\u5f02\u52a8\uff1b\u51c6\u5b9e\u65f6\u5408\u5e76\u626b\u63cf\uff1b\u8d44\u91d1\u5206\u6790",
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 6.17%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
-        "promotion_score": 76.71,
-        "score": 76.71,
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
+        "promotion_score": 74.71,
+        "score": 74.71,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
         "hiddenflow_score": "50",
         "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -4843,15 +4843,15 @@
         "pool": "",
         "pool_reason": "\u6838\u5fc3\u5019\u9009\uff1b\u822a\u7a7a\u822a\u5929\u519b\u5de5\uff1b\u822a\u5929\u536b\u661f",
         "expectation_label": "\u9ad8\u9884\u671f",
-        "expectation_score": 72.69,
+        "expectation_score": 72.53,
         "expectation_position_text": "1.3\u4ed3",
-        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea776.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea774.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
         "rt_pct": "6.17%",
         "price": "21.18",
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u6270\u52a8 +2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300390",
@@ -4872,7 +4872,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 6,
@@ -4888,7 +4888,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 0.10%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 71.22,
         "score": 71.22,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4928,7 +4928,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 7,
@@ -4944,7 +4944,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 6.38%\uff1b\u4ef7\u683c\u51b2\u9ad8\uff0c\u9700\u9632\u7f29\u91cf\u6216\u627f\u63a5\u4e0d\u8db3",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 90%",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83\uff1b\u4ef7\u683c\u4f4d\u4e8e\u65e5\u5185\u533a\u95f4\u4e0a\u6cbf 90%",
         "promotion_score": 68.49,
         "score": 68.49,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -4963,7 +4963,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "301696",
@@ -4984,7 +4984,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 8,
@@ -4993,16 +4993,16 @@
         "v152_selection_missing_fields": "\u65e0",
         "v152_selection_contract_reason": "\u63a8\u5bfc\u5b57\u6bb5:attack_score_from_candidate_plus_bonus,v152_t0_tail_score_from_live_ladder,close_pos_fro...",
         "tick_signal": "\u7a33\u5b9a\u89c2\u5bdf",
-        "tick_score": 47.56,
+        "tick_score": 47.53,
         "tick_reason": "\u65e0\u660e\u663e tick-like \u52a0\u901f",
         "tick_velocity_pct_per_min": 0.0,
         "v152_auxiliary_merge": "\u5206\u65f6\u5f02\u52a8\uff1b\u51c6\u5b9e\u65f6\u5408\u5e76\u626b\u63cf\uff1b\u8d44\u91d1\u5206\u6790",
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 1.22%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
-        "promotion_score": 62.61,
-        "score": 62.61,
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
+        "promotion_score": 60.61,
+        "score": 60.61,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
         "hiddenflow_score": "50",
         "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -5019,7 +5019,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u6270\u52a8 +2"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0"
       },
       {
         "code": "688530",
@@ -5040,7 +5040,7 @@
         "action": "\u664b\u7ea7\u89c2\u5bdf",
         "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
         "v152_gate_label": "V152\u963b\u65ad",
-        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1b\u4e3b\u7ebf\u5f3a\u5019\u9009<6",
+        "v152_gate_reason": "\u4e70\u5165\u7a97\u53e3\u672a\u6253\u5f00:09:30-14:55\uff1b\u7f3a\u5c11V152\u540c\u53e3\u5f845\u5206\u949f\u4e70\u70b9\u8bc1\u636e:\u7f3a\u5c11=\u8fd0\u884c\u9ad8\u70b9\u56de\u64a4,\u4f4e\u70b9\u53cd\u5f39,\u79bb\u6da8\u505c\u7a7a\u95f4\uff1bsupport_no_distribution=Fal...",
         "v152_source_kind": "v152_native_live",
         "source_spec": "CORE_THEME_TOP2_MIN60_BONUS100",
         "v152_native_live_rank": 9,
@@ -5056,7 +5056,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u89c2\u5bdf",
         "capital_analysis_summary": "\u884c\u60c5\u6da8\u5e45 -2.08%\uff1b\u4ef7\u683c\u8d70\u5f31\uff0c\u8d44\u91d1\u627f\u63a5\u9700\u7b49\u5f85\u8865\u5145\u786e\u8ba4",
         "intraday_label": "\u7b49\u5f85\u786e\u8ba4",
-        "intraday_reason": "\u6682\u65e0\u660e\u663e\u5206\u65f6\u5f02\u52a8",
+        "intraday_reason": "\u9996\u6b21\u5feb\u7167\uff0c\u7b49\u5f85\u4e0b\u4e00\u8f6e\u6bd4\u8f83",
         "promotion_score": 60.28,
         "score": 60.28,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
@@ -5142,7 +5142,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "301666",
@@ -5198,7 +5198,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "001309",
@@ -5254,7 +5254,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.15%\uff1b\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.15%\uff1b\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300042",
@@ -5310,7 +5310,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.72%\uff1b\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.72%\uff1b\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688313",
@@ -5366,7 +5366,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300857",
@@ -5422,7 +5422,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688525",
@@ -5478,7 +5478,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.49%\uff1b\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.49%\uff1b\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "002281",
@@ -5534,7 +5534,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.13%\uff1b\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.13%\uff1b\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "002297",
@@ -5572,8 +5572,8 @@
         "capital_analysis_summary": "",
         "intraday_label": "",
         "intraday_reason": "",
-        "promotion_score": 76.71,
-        "score": 76.71,
+        "promotion_score": 74.71,
+        "score": 74.71,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
         "hiddenflow_score": "50",
         "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -5582,15 +5582,15 @@
         "pool": "",
         "pool_reason": "",
         "expectation_label": "\u9ad8\u9884\u671f",
-        "expectation_score": 72.69,
+        "expectation_score": 72.53,
         "expectation_position_text": "1.3\u4ed3",
-        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea776.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea774.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
         "rt_pct": "6.17%",
         "price": "21.18",
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u6270\u52a8 +2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300283",
@@ -5646,7 +5646,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.04%\uff1b\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.04%\uff1b\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "600105",
@@ -5702,7 +5702,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.64%\uff1b\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.64%\uff1b\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688048",
@@ -5758,7 +5758,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.72%\uff1b\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.72%\uff1b\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688498",
@@ -5814,7 +5814,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u8fc7\u9ad8 16.41%\uff0c\u4e0d\u8ffd\u9ad8",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 16.41%\uff1b\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 16.41%\uff1b\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300390",
@@ -5926,7 +5926,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 54.1",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 8.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 8.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "603629",
@@ -5982,7 +5982,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "002975",
@@ -6038,7 +6038,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -0.39%\uff1b\u5f3a\u5ea6\u4e0d\u8db3 50.9",
-        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "603459",
@@ -6094,7 +6094,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 0.63%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 50.6",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "600522",
@@ -6150,7 +6150,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.5",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "688025",
@@ -6206,7 +6206,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 49.0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.57%\uff1b\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.57%\uff1b\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "002008",
@@ -6262,7 +6262,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 48.2",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.83%\uff1b\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.83%\uff1b\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300620",
@@ -6318,63 +6318,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.6\uff1b\u5f3a\u5ea6\u4e0d\u8db3 52.2",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.32%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
-      },
-      {
-        "code": "301696",
-        "name": "\u4e09\u745e\u667a\u80fd",
-        "mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
-        "node": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
-        "theme": "\u822a\u7a7a\u822a\u5929\u519b\u5de5\uff1b\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
-        "discovery_mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
-        "discovery_branch": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
-        "discovery_lifecycle": "",
-        "discovery_capital": "",
-        "discovery_confidence": null,
-        "discovery_evidence": "",
-        "level": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
-        "state": "",
-        "signal": "",
-        "candidate_tier": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
-        "action": "\u664b\u7ea7\u89c2\u5bdf",
-        "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
-        "v152_gate_label": "",
-        "v152_gate_reason": "",
-        "v152_source_kind": "",
-        "source_spec": "",
-        "v152_native_live_rank": null,
-        "v152_selection_contract_status": "\u5b9e\u76d8\u63a8\u5bfc",
-        "v152_selection_source_parity": "",
-        "v152_selection_missing_fields": "\u65e0",
-        "v152_selection_contract_reason": "",
-        "tick_signal": "",
-        "tick_score": null,
-        "tick_reason": "",
-        "tick_velocity_pct_per_min": null,
-        "v152_auxiliary_merge": "",
-        "capital_analysis_label": "",
-        "capital_analysis_summary": "",
-        "intraday_label": "",
-        "intraday_reason": "",
-        "promotion_score": 62.61,
-        "score": 62.61,
-        "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
-        "hiddenflow_score": "50",
-        "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
-        "capital_evidence": "\u884c\u60c5\u6da8\u5e45 1.22%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
-        "flow_risk_tags": "",
-        "pool": "",
-        "pool_reason": "",
-        "expectation_label": "\u6b63\u5e38\u9884\u671f",
-        "expectation_score": 59.36,
-        "expectation_position_text": "1\u4ed3",
-        "expectation_reason": "\u6f5c\u529b57.34\uff1b\u4e1a\u52a160\uff1b\u5f3a\u5ea6100\uff1b\u8d44\u91d1\u5206\u679050\uff1b60\u65e5417.95\uff1b\u6da8\u5e451.22%\uff1b\u5f3a\u5019\u9009",
-        "rt_pct": "1.22%",
-        "price": "124.10",
-        "pct_delta": "",
-        "day_location": "",
-        "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u6270\u52a8 +2"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.32%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "600330",
@@ -6430,7 +6374,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.56%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -1.56%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.3",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "600487",
@@ -6486,7 +6430,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u8fc7\u9ad8 10.00%\uff0c\u4e0d\u8ffd\u9ad8\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 10.00%\uff1b\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 10.00%\uff1b\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "688256",
@@ -6542,7 +6486,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 53.0\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.7",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.01%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.01%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300308",
@@ -6598,7 +6542,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.1",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.98%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.98%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300502",
@@ -6654,7 +6598,63 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 51.8\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.6",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.72%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.72%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
+      },
+      {
+        "code": "301696",
+        "name": "\u4e09\u745e\u667a\u80fd",
+        "mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
+        "node": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
+        "theme": "\u822a\u7a7a\u822a\u5929\u519b\u5de5\uff1b\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
+        "discovery_mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
+        "discovery_branch": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
+        "discovery_lifecycle": "",
+        "discovery_capital": "",
+        "discovery_confidence": null,
+        "discovery_evidence": "",
+        "level": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "state": "",
+        "signal": "",
+        "candidate_tier": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "action": "\u664b\u7ea7\u89c2\u5bdf",
+        "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
+        "v152_gate_label": "",
+        "v152_gate_reason": "",
+        "v152_source_kind": "",
+        "source_spec": "",
+        "v152_native_live_rank": null,
+        "v152_selection_contract_status": "\u5b9e\u76d8\u63a8\u5bfc",
+        "v152_selection_source_parity": "",
+        "v152_selection_missing_fields": "\u65e0",
+        "v152_selection_contract_reason": "",
+        "tick_signal": "",
+        "tick_score": null,
+        "tick_reason": "",
+        "tick_velocity_pct_per_min": null,
+        "v152_auxiliary_merge": "",
+        "capital_analysis_label": "",
+        "capital_analysis_summary": "",
+        "intraday_label": "",
+        "intraday_reason": "",
+        "promotion_score": 60.61,
+        "score": 60.61,
+        "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
+        "hiddenflow_score": "50",
+        "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
+        "capital_evidence": "\u884c\u60c5\u6da8\u5e45 1.22%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
+        "flow_risk_tags": "",
+        "pool": "",
+        "pool_reason": "",
+        "expectation_label": "\u6b63\u5e38\u9884\u671f",
+        "expectation_score": 59.36,
+        "expectation_position_text": "1\u4ed3",
+        "expectation_reason": "\u6f5c\u529b57.34\uff1b\u4e1a\u52a160\uff1b\u5f3a\u5ea6100\uff1b\u8d44\u91d1\u5206\u679050\uff1b60\u65e5417.95\uff1b\u6da8\u5e451.22%\uff1b\u5f3a\u5019\u9009",
+        "rt_pct": "1.22%",
+        "price": "124.10",
+        "pct_delta": "",
+        "day_location": "",
+        "blockers": "\u65e0",
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0"
       },
       {
         "code": "688530",
@@ -6766,7 +6766,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -3.71%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.71%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       }
     ],
     "remote_protection": "protected",
@@ -6833,7 +6833,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.74%\uff1b\u6f5c\u529b\u5206 67.0\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "301666",
@@ -6889,7 +6889,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.29%\uff1b\u6f5c\u529b\u5206 66.1\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "001309",
@@ -6945,7 +6945,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.15%\uff1b\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.15%\uff1b\u6f5c\u529b\u5206 65.2\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300042",
@@ -7001,7 +7001,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.72%\uff1b\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.72%\uff1b\u6f5c\u529b\u5206 64.1\uff1b\u5e02\u573a\u5f3a\u5ea6 83.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688313",
@@ -7057,7 +7057,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 9.29%\uff1b\u6f5c\u529b\u5206 66.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300857",
@@ -7113,7 +7113,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.90%\uff1b\u6f5c\u529b\u5206 66.5\uff1b\u5e02\u573a\u5f3a\u5ea6 68.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688525",
@@ -7169,7 +7169,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.49%\uff1b\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.49%\uff1b\u6f5c\u529b\u5206 63.4\uff1b\u5e02\u573a\u5f3a\u5ea6 66.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "002281",
@@ -7225,7 +7225,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.13%\uff1b\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.13%\uff1b\u6f5c\u529b\u5206 60.2\uff1b\u5e02\u573a\u5f3a\u5ea6 88.1\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "002297",
@@ -7263,8 +7263,8 @@
         "capital_analysis_summary": "",
         "intraday_label": "",
         "intraday_reason": "",
-        "promotion_score": 76.71,
-        "score": 76.71,
+        "promotion_score": 74.71,
+        "score": 74.71,
         "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
         "hiddenflow_score": "50",
         "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
@@ -7273,15 +7273,15 @@
         "pool": "",
         "pool_reason": "",
         "expectation_label": "\u9ad8\u9884\u671f",
-        "expectation_score": 72.69,
+        "expectation_score": 72.53,
         "expectation_position_text": "1.3\u4ed3",
-        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea776.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "expectation_reason": "\u6f5c\u529b68.69\uff1b\u4e1a\u52a172\uff1b\u5f3a\u5ea691.19\uff1b\u8d44\u91d1\u5206\u679050\uff1b\u664b\u7ea774.71\uff1b\u6da8\u5e456.17%\uff1b\u6838\u5fc3\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
         "rt_pct": "6.17%",
         "price": "21.18",
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u65b0\u95fb\u6270\u52a8 +2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.17%\uff1b\u6f5c\u529b\u5206 68.7\uff1b\u5e02\u573a\u5f3a\u5ea6 91.2\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "300283",
@@ -7337,7 +7337,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.04%\uff1b\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 3.04%\uff1b\u6f5c\u529b\u5206 58.0\uff1b\u5e02\u573a\u5f3a\u5ea6 88.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "600105",
@@ -7393,7 +7393,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.64%\uff1b\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.64%\uff1b\u6f5c\u529b\u5206 58.3\uff1b\u5e02\u573a\u5f3a\u5ea6 75.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688048",
@@ -7449,7 +7449,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.72%\uff1b\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +13\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 7.72%\uff1b\u6f5c\u529b\u5206 55.6\uff1b\u5e02\u573a\u5f3a\u5ea6 92.5\uff1b\u65b0\u95fb\u5f3a\u5316 +12\uff1b\u5df2\u6620\u5c04\u5230\u5019\u9009\u76d1\u63a7\u6c60\uff0c\u4e0d\u751f\u6210\u5c0f\u4ed3\u6a21\u62df\u8bd5\u9519"
       },
       {
         "code": "688498",
@@ -7505,7 +7505,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u8fc7\u9ad8 16.41%\uff0c\u4e0d\u8ffd\u9ad8",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 16.41%\uff1b\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 16.41%\uff1b\u6f5c\u529b\u5206 61.2\uff1b\u5e02\u573a\u5f3a\u5ea6 72.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300390",
@@ -7617,7 +7617,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 54.1",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 8.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 8.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 86.2\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "603629",
@@ -7673,7 +7673,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.38%\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "002975",
@@ -7729,7 +7729,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -0.39%\uff1b\u5f3a\u5ea6\u4e0d\u8db3 50.9",
-        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u6f5c\u529b\u5206 58.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "603459",
@@ -7785,7 +7785,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 0.63%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 50.6",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "600522",
@@ -7841,7 +7841,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.5",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.87%\uff1b\u5e02\u573a\u5f3a\u5ea6 73.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "688025",
@@ -7897,7 +7897,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 49.0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.57%\uff1b\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.57%\uff1b\u5e02\u573a\u5f3a\u5ea6 84.7\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "002008",
@@ -7953,7 +7953,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 48.2",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.83%\uff1b\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 2.83%\uff1b\u5e02\u573a\u5f3a\u5ea6 87.3\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300620",
@@ -8009,63 +8009,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.6\uff1b\u5f3a\u5ea6\u4e0d\u8db3 52.2",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.32%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
-      },
-      {
-        "code": "301696",
-        "name": "\u4e09\u745e\u667a\u80fd",
-        "mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
-        "node": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
-        "theme": "\u822a\u7a7a\u822a\u5929\u519b\u5de5\uff1b\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
-        "discovery_mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
-        "discovery_branch": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
-        "discovery_lifecycle": "",
-        "discovery_capital": "",
-        "discovery_confidence": null,
-        "discovery_evidence": "",
-        "level": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
-        "state": "",
-        "signal": "",
-        "candidate_tier": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
-        "action": "\u664b\u7ea7\u89c2\u5bdf",
-        "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
-        "v152_gate_label": "",
-        "v152_gate_reason": "",
-        "v152_source_kind": "",
-        "source_spec": "",
-        "v152_native_live_rank": null,
-        "v152_selection_contract_status": "\u5b9e\u76d8\u63a8\u5bfc",
-        "v152_selection_source_parity": "",
-        "v152_selection_missing_fields": "\u65e0",
-        "v152_selection_contract_reason": "",
-        "tick_signal": "",
-        "tick_score": null,
-        "tick_reason": "",
-        "tick_velocity_pct_per_min": null,
-        "v152_auxiliary_merge": "",
-        "capital_analysis_label": "",
-        "capital_analysis_summary": "",
-        "intraday_label": "",
-        "intraday_reason": "",
-        "promotion_score": 62.61,
-        "score": 62.61,
-        "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
-        "hiddenflow_score": "50",
-        "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
-        "capital_evidence": "\u884c\u60c5\u6da8\u5e45 1.22%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
-        "flow_risk_tags": "",
-        "pool": "",
-        "pool_reason": "",
-        "expectation_label": "\u6b63\u5e38\u9884\u671f",
-        "expectation_score": 59.36,
-        "expectation_position_text": "1\u4ed3",
-        "expectation_reason": "\u6f5c\u529b57.34\uff1b\u4e1a\u52a160\uff1b\u5f3a\u5ea6100\uff1b\u8d44\u91d1\u5206\u679050\uff1b60\u65e5417.95\uff1b\u6da8\u5e451.22%\uff1b\u5f3a\u5019\u9009",
-        "rt_pct": "1.22%",
-        "price": "124.10",
-        "pct_delta": "",
-        "day_location": "",
-        "blockers": "\u65e0",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0\uff1b\u65b0\u95fb\u6270\u52a8 +2"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 5.32%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "600330",
@@ -8121,7 +8065,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -1.56%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -1.56%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.3",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 90.4\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "600487",
@@ -8177,7 +8121,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u8fc7\u9ad8 10.00%\uff0c\u4e0d\u8ffd\u9ad8\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.4",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 10.00%\uff1b\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 10.00%\uff1b\u5e02\u573a\u5f3a\u5ea6 88.6\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "688256",
@@ -8233,7 +8177,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 53.0\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.7",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.01%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.01%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300308",
@@ -8289,7 +8233,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 52.3\uff1b\u5f3a\u5ea6\u4e0d\u8db3 33.1",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.98%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 6.98%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       },
       {
         "code": "300502",
@@ -8345,7 +8289,63 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6f5c\u529b\u5206\u4e0d\u8db3 51.8\uff1b\u5f3a\u5ea6\u4e0d\u8db3 30.6",
-        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.72%\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 4.72%\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
+      },
+      {
+        "code": "301696",
+        "name": "\u4e09\u745e\u667a\u80fd",
+        "mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
+        "node": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
+        "theme": "\u822a\u7a7a\u822a\u5929\u519b\u5de5\uff1b\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
+        "discovery_mainline": "\u822a\u7a7a\u822a\u5929\u519b\u5de5",
+        "discovery_branch": "\u4f4e\u7a7a\uff1b\u65e0\u4eba\u673a",
+        "discovery_lifecycle": "",
+        "discovery_capital": "",
+        "discovery_confidence": null,
+        "discovery_evidence": "",
+        "level": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "state": "",
+        "signal": "",
+        "candidate_tier": "\u5f3a\u5019\u9009-\u4e3b\u7ebf\u664b\u7ea7",
+        "action": "\u664b\u7ea7\u89c2\u5bdf",
+        "action_zh": "\u664b\u7ea7\u89c2\u5bdf",
+        "v152_gate_label": "",
+        "v152_gate_reason": "",
+        "v152_source_kind": "",
+        "source_spec": "",
+        "v152_native_live_rank": null,
+        "v152_selection_contract_status": "\u5b9e\u76d8\u63a8\u5bfc",
+        "v152_selection_source_parity": "",
+        "v152_selection_missing_fields": "\u65e0",
+        "v152_selection_contract_reason": "",
+        "tick_signal": "",
+        "tick_score": null,
+        "tick_reason": "",
+        "tick_velocity_pct_per_min": null,
+        "v152_auxiliary_merge": "",
+        "capital_analysis_label": "",
+        "capital_analysis_summary": "",
+        "intraday_label": "",
+        "intraday_reason": "",
+        "promotion_score": 60.61,
+        "score": 60.61,
+        "v1519_flow": "\u4e2d\u6027\u89c2\u5bdf 50",
+        "hiddenflow_score": "50",
+        "hiddenflow_label": "\u4e2d\u6027\u89c2\u5bdf",
+        "capital_evidence": "\u884c\u60c5\u6da8\u5e45 1.22%\uff1b\u4ef7\u683c\u4e2d\u6027\uff0c\u7b49\u5f85\u4e3b\u529b\uff1b\u5927\u5355\u5b57\u6bb5\u589e\u5f3a\u786e\u8ba4",
+        "flow_risk_tags": "",
+        "pool": "",
+        "pool_reason": "",
+        "expectation_label": "\u6b63\u5e38\u9884\u671f",
+        "expectation_score": 59.36,
+        "expectation_position_text": "1\u4ed3",
+        "expectation_reason": "\u6f5c\u529b57.34\uff1b\u4e1a\u52a160\uff1b\u5f3a\u5ea6100\uff1b\u8d44\u91d1\u5206\u679050\uff1b60\u65e5417.95\uff1b\u6da8\u5e451.22%\uff1b\u5f3a\u5019\u9009",
+        "rt_pct": "1.22%",
+        "price": "124.10",
+        "pct_delta": "",
+        "day_location": "",
+        "blockers": "\u65e0",
+        "reason": "\u76d8\u4e2d\u6da8\u5e45\u786e\u8ba4 1.22%\uff1b\u6f5c\u529b\u5206 57.3\uff1b\u5e02\u573a\u5f3a\u5ea6 100.0"
       },
       {
         "code": "688530",
@@ -8457,7 +8457,7 @@
         "pct_delta": "",
         "day_location": "",
         "blockers": "\u6da8\u5e45\u672a\u786e\u8ba4 -3.71%\uff1b\u76d8\u4e2d\u8f6c\u5f31 -3.71%\uff1b\u6f5c\u529b\u5206\u4e0d\u8db3 46.0",
-        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +13"
+        "reason": "\u5e02\u573a\u5f3a\u5ea6 69.0\uff1b\u65b0\u95fb\u5f3a\u5316 +12"
       }
     ],
     "remote_protection": "protected",
