@@ -853,12 +853,14 @@ function renderLadder(graph){
     const strengthTip = [g.strength_action,g.strength_risk,g.strength_reason].filter(Boolean).join("；");
     const chips = nodes.map(n => {
       const role = O.zh(n.ladder_role || n.edge_label || n.candidate_tier || "候选");
-      const cls = role.includes("龙头") || role.includes("高标") ? "hot" : String(n.v152_capital_acceptance_text || n.v1519_flow || "").includes("承接") ? "good" : "";
-      return `<div class="node-chip ${cls}">
+      const basis = O.zh(n.ladder_basis || n.edge_label || "", {fallback:""});
+      const cls = n.limit_hit || role.includes("涨停") ? "hot" : String(n.v152_capital_acceptance_text || n.v1519_flow || role).includes("承接") ? "good" : "";
+      return `<div class="node-chip ${cls}" title="${O.esc(basis)}">
         <div class="role">${O.esc(role)}</div>
         <b>${O.esc(O.code(n.code))} ${O.esc(O.name(n.code,n.name))}</b>
         <div class="${O.tone(n.rt_pct)}">${O.esc(O.zh(n.rt_pct))} · ${O.esc(O.zh(n.price))}</div>
         <div>${flowLabel(n)}</div>
+        <div class="muted">${O.esc(O.compact(basis,36))}</div>
       </div>`;
     }).join("");
     return `<details ${idx < 3 ? "open" : ""}>
