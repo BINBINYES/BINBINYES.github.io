@@ -225,11 +225,11 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   </section>
 
   <section id="discoveryAgentPanel" class="panel">
-    <div class="panel-head"><h2>发掘Agent</h2><div class="poll-pills"><span id="discoveryAgentPolling" class="pill cyan">轮询 --</span><span id="discoveryAgentBadge" class="pill cyan">读取中</span></div></div>
+    <div class="panel-head"><h2>V152本地训练智能交易Agent</h2><div class="poll-pills"><span id="discoveryAgentPolling" class="pill cyan">轮询 --</span><span id="discoveryAgentBadge" class="pill cyan">读取中</span></div></div>
     <details id="discoveryAgentDetails" class="agent-report">
       <summary>
-        <div class="summary-title"><b id="discoveryAgentSummary">等待日报</b><span id="discoveryAgentMeta" class="muted">点击查看今天做了什么</span></div>
-        <span class="pill cyan">日报</span>
+        <div class="summary-title"><b id="discoveryAgentSummary">等待本地训练Agent</b><span id="discoveryAgentMeta" class="muted">查看训练样本和买卖标签</span></div>
+        <span class="pill cyan">训练Agent</span>
       </summary>
       <div class="agent-body">
         <div id="discoveryAgentActions"></div>
@@ -675,7 +675,7 @@ function renderPollingBadges(data){
   setPollingBadge("envPolling", scanModule(data, "market_environment"), activity);
   setPollingBadge("globalPollingBadge", {}, activity, globalMod);
   setPollingBadge("scanFrameworkPolling", {}, activity, globalMod);
-  setPollingBadge("discoveryAgentPolling", scanModule(data, "v152_discovery_agent_report"), activity);
+  setPollingBadge("discoveryAgentPolling", scanModule(data, "v152_unified_mainline_agent"), activity);
   setPollingBadge("positionsPolling", scanModule(data, "positions"), activity);
   setPollingBadge("mainlineStrengthPolling", scanModule(data, "mainline_discovery"), activity);
   setPollingBadge("ladderPolling", scanModule(data, "mainline_ladder"), activity);
@@ -728,21 +728,20 @@ function renderLiveHealth(data){
 function renderDiscoveryAgent(report){
   const r = report || {};
   const ok = Boolean(r.ok);
-  $("discoveryAgentBadge").textContent = ok ? `${O.zh(r.mode_label || "已运行")}日报` : "等待日报";
+  $("discoveryAgentBadge").textContent = ok ? "训练Agent运行" : "等待训练Agent";
   $("discoveryAgentBadge").className = "pill " + (ok ? "green" : "yellow");
-  $("discoveryAgentSummary").textContent = O.compact(r.summary || "等待发掘Agent盘中/盘后任务写入日报。", 96);
-  const meta = [r.target_date, r.mode_label, r.latest_run_mtime, r.latest_run_file].filter(Boolean).join(" · ");
-  $("discoveryAgentMeta").textContent = meta || "点击查看今天做了什么";
-  const actions = r.actions || [];
+  $("discoveryAgentSummary").textContent = O.compact(r.summary || "等待V152本地训练智能交易Agent。", 120);
+  $("discoveryAgentMeta").textContent = `训练 ${O.zh(r.training_rows_count,{fallback:0})} · 主线 ${O.zh(r.branch_count,{fallback:0})} · 分支 ${O.zh(r.topic_count,{fallback:0})} · BUY ${O.zh(r.buy_candidate_count,{fallback:0})}`;
+  const actions = (r.rows || []).slice(0,8).map(x => `${O.zh(x.action)} ${O.zh(x.code)} ${O.zh(x.name)} ${O.zh(x.stock_role || "角色待定")} · ${O.zh(x.trade_style || "观察等待")} · ${O.zh(x.mainline)} / ${O.zh(x.branch)}`);
   $("discoveryAgentActions").innerHTML = actions.length ? actions.map(x => (
     `<div class="agent-action">${O.esc(O.compact(x, 150))}</div>`
-  )).join("") : `<div class="empty">暂无发掘日报。</div>`;
-  const steps = r.steps || [];
+  )).join("") : `<div class="empty">暂无本地训练买卖标签。</div>`;
+  const steps = r.stage_rows || [];
   $("discoveryAgentSteps").innerHTML = steps.length ? steps.map(s => {
-    const cls = s.ok ? "green" : "yellow";
-    const text = `${O.zh(s.name)} ${s.ok ? "OK" : "待查"} ${O.zh(s.started_at_beijing, {fallback:""})}`;
+    const cls = s.status === "green" ? "green" : s.status === "yellow" ? "yellow" : s.status === "red" ? "red" : "cyan";
+    const text = `${O.zh(s.name)} ${O.zh(s.rows, {fallback:"--"})}`;
     return `<span class="agent-step">${O.pill(text, cls)}</span>`;
-  }).join("") : `<span class="muted">等待任务步骤。</span>`;
+  }).join("") : `<span class="muted">等待本地训练Agent阶段。</span>`;
 }
 
 function renderMainlineDiscovery(discovery){
@@ -1052,7 +1051,7 @@ function render(data){
   renderEnv(data);
   renderLiveHealth(data);
   renderPollingBadges(data);
-  renderDiscoveryAgent(data.v152_discovery_agent_report || {});
+  renderDiscoveryAgent(data.v152_unified_mainline_agent || {});
   renderPositions(data.positions || []);
   renderMainlines(discoveryMainlineStrength(data));
   renderLadder(data.mainline_ladder_graph || {});
