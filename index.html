@@ -113,8 +113,6 @@ h2{font-size:16px;margin:0}
 .pill.red{border-color:rgba(255,47,132,.62);color:#ff7dad;background:rgba(255,47,132,.09)}
 .pill.yellow{border-color:rgba(255,211,92,.68);color:var(--yellow);background:rgba(255,211,92,.1)}
 .pill.cyan{border-color:rgba(0,229,255,.62);color:var(--cyan);background:rgba(0,229,255,.08)}
-.poll-pills{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap;min-width:0}
-.poll-pills .pill{max-width:220px}
 .scroll{overflow-x:auto;max-width:100%;border:1px solid var(--line2);border-radius:8px}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 .table-small{min-width:660px}
@@ -153,13 +151,6 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
 .service-card{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.46);padding:9px;min-width:0}
 .service-card b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .service-card span{display:block;color:var(--muted);font-size:12px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.agent-report{border:1px solid var(--line2);border-radius:8px;background:rgba(3,8,18,.42);overflow:hidden}
-.agent-report summary{cursor:pointer;list-style:none;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
-.agent-report summary::-webkit-details-marker{display:none}
-.agent-report summary b,.agent-report summary span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.agent-body{display:grid;gap:8px;padding:0 12px 12px}
-.agent-action{border-left:3px solid var(--cyan);background:rgba(9,24,44,.72);border-radius:7px;padding:8px 10px;line-height:1.35}
-.agent-step{display:inline-flex;align-items:center;gap:6px;margin:2px 6px 0 0;color:var(--muted);font-size:12px}
 @media(max-width:1280px){
   .two,.tables-grid{grid-template-columns:1fr}
   .node-line{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -177,31 +168,6 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   .pos-history-item{grid-template-columns:1fr}
   h1{font-size:24px}
 }
-/* ===== UI升级层 2026-06：动效 / 图表 / 告警 ===== */
-.panel{transition:border-color .18s ease,box-shadow .18s ease}
-.panel:hover{border-color:rgba(0,229,255,.45);box-shadow:0 14px 34px rgba(0,0,0,.36),0 0 22px rgba(0,229,255,.08)}
-.dot.ok{animation:dotPulse 2.2s ease-in-out infinite}
-@keyframes dotPulse{50%{box-shadow:0 0 0 7px rgba(0,245,160,.08),0 0 18px rgba(0,245,160,.95)}}
-::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(0,229,255,.22);border-radius:8px;border:2px solid rgba(3,8,18,.85)}
-@keyframes flashUp{0%{box-shadow:inset 0 0 0 999px rgba(255,47,132,.16)}100%{box-shadow:inset 0 0 0 999px transparent}}
-@keyframes flashDown{0%{box-shadow:inset 0 0 0 999px rgba(0,245,160,.14)}100%{box-shadow:inset 0 0 0 999px transparent}}
-.flash-up{animation:flashUp 1.1s ease-out}.flash-down{animation:flashDown 1.1s ease-out}
-.chart-panel .panel-head{margin-bottom:10px}
-.chart-legend{display:flex;gap:12px;font-size:12px;color:var(--muted);flex-wrap:wrap;align-items:center}
-.chart-legend i{display:inline-block;width:12px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
-.equity-chart-wrap{position:relative;height:220px}
-#equityChart{width:100%;height:100%;display:block;border:1px solid var(--line2);border-radius:8px;background:linear-gradient(180deg,rgba(7,18,33,.92),rgba(4,10,20,.95))}
-.chart-tip{position:absolute;pointer-events:none;border:1px solid rgba(0,229,255,.45);background:rgba(4,10,20,.96);border-radius:7px;padding:6px 9px;font-size:12px;color:#d7fbff;display:none;z-index:5;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.4)}
-#toastStack{position:fixed;right:12px;bottom:12px;z-index:60;display:grid;gap:8px;max-width:min(380px,calc(100vw - 24px))}
-.toast{border:1px solid rgba(0,229,255,.4);background:rgba(4,11,22,.97);border-radius:9px;padding:10px 12px;font-size:13px;color:#d7fbff;box-shadow:0 14px 34px rgba(0,0,0,.45),0 0 18px rgba(0,229,255,.10);animation:toastIn .22s ease-out;display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:start}
-.toast.warn{border-color:rgba(255,211,92,.55)}.toast.bad{border-color:rgba(255,47,132,.6)}.toast.ok{border-color:rgba(0,245,160,.55)}
-.toast b{font-size:12px;white-space:nowrap}.toast .t-msg{white-space:pre-wrap;line-height:1.45;min-width:0;overflow-wrap:anywhere}
-.toast .t-close{cursor:pointer;border:0;background:transparent;color:var(--muted);padding:0 2px;font-size:15px;line-height:1}
-@keyframes toastIn{from{transform:translateY(8px);opacity:0}}
-.toast.out{transition:opacity .25s,transform .25s;opacity:0;transform:translateY(8px)}
-@media(prefers-reduced-motion:reduce){.panel{transition:none}.dot.ok{animation:none}.flash-up,.flash-down,.toast{animation:none}}
-@media(max-width:640px){.equity-chart-wrap{height:170px}}
 </style>
 </head>
 <body>
@@ -214,7 +180,6 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     <div class="statusbar">
       <div class="badge"><span id="dot" class="dot"></span><span id="remoteState">状态读取中</span></div>
       <div id="updated" class="badge">已更新 --</div>
-      <div id="globalPollingBadge" class="badge">全局轮询 --</div>
       <a class="btn" href="mobile.html">手机简版</a>
       <button id="alarmBtn" class="btn">仓位铃声 OFF</button>
     </div>
@@ -227,13 +192,8 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
     <div class="panel kpi"><div class="label">已实现盈亏</div><div id="realized" class="value">--</div><div class="muted">重置后口径</div></div>
   </section>
 
-  <section class="panel chart-panel">
-    <div class="panel-head"><h2>权益与浮盈走势</h2><div class="chart-legend"><span><i style="background:var(--cyan)"></i>总权益(左轴)</span><span><i style="background:var(--yellow)"></i>浮动盈亏%(右轴,虚线)</span><span id="equityChartNote">本机采样</span></div></div>
-    <div class="equity-chart-wrap"><canvas id="equityChart"></canvas><div class="chart-tip" id="equityChartTip"></div></div>
-  </section>
-
   <section class="panel">
-    <div class="panel-head"><h2>全市场环境 / 预期 / 门控</h2><div class="poll-pills"><span id="envPolling" class="pill cyan">轮询 --</span><span id="gateBadge" class="pill cyan">读取中</span></div></div>
+    <div class="panel-head"><h2>全市场环境 / 预期 / 门控</h2><span id="gateBadge" class="pill cyan">读取中</span></div>
     <div class="envgrid">
       <div class="cell"><span>市场温度</span><b id="envMarket">--</b></div>
       <div class="cell"><span>资金结构</span><b id="envCapital">--</b></div>
@@ -243,62 +203,37 @@ td.wrapcell{white-space:normal;word-break:break-word;line-height:1.35}
   </section>
 
   <section class="panel" data-module="scan_read_framework">
-    <div class="panel-head"><h2>V152 实盘口径健康</h2><div class="poll-pills"><span id="scanFrameworkPolling" class="pill cyan">轮询 --</span><span id="liveHealthBadge" class="pill cyan">读取中</span></div></div>
+    <div class="panel-head"><h2>V152 实盘口径健康</h2><span id="liveHealthBadge" class="pill cyan">读取中</span></div>
     <div class="service-grid">
       <div class="service-card"><b id="live5mCoverage">--</b><span>5m 入场证据</span></div>
       <div class="service-card"><b id="live5mReady">--</b><span>买点证据</span></div>
       <div class="service-card"><b id="liveAuditStatus">--</b><span>回测口径审计</span></div>
       <div class="service-card"><b id="liveRemoteSync">--</b><span>远端同步</span></div>
-      <div class="service-card"><b id="modulePolling">--</b><span>全模块轮询</span></div>
     </div>
     <div id="liveHealthNote" class="note" style="margin-top:10px">等待桌面同步。</div>
   </section>
 
-  <section id="discoveryAgentPanel" class="panel">
-    <div class="panel-head"><h2>V152本地训练智能交易Agent</h2><div class="poll-pills"><span id="discoveryAgentPolling" class="pill cyan">轮询 --</span><span id="discoveryAgentBadge" class="pill cyan">读取中</span></div></div>
-    <details id="discoveryAgentDetails" class="agent-report">
-      <summary>
-        <div class="summary-title"><b id="discoveryAgentSummary">等待本地训练Agent</b><span id="discoveryAgentMeta" class="muted">查看训练样本和买卖标签</span></div>
-        <span class="pill cyan">训练Agent</span>
-      </summary>
-      <div class="agent-body">
-        <div id="discoveryAgentActions"></div>
-        <div id="discoveryAgentSteps"></div>
-      </div>
-    </details>
-  </section>
-
   <section class="two">
     <div class="panel">
-      <div class="panel-head"><h2>当前仓位</h2><span id="positionsPolling" class="pill cyan">轮询 --</span></div>
+      <div class="panel-head"><h2>当前仓位</h2></div>
       <div id="positions" class="cards"></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><h2>主线强度</h2><span id="mainlineStrengthPolling" class="pill cyan">轮询 --</span></div>
+      <div class="panel-head"><h2>主线强度</h2></div>
       <div id="mainlineMeta" class="muted" style="margin:-4px 0 10px">读取中</div>
       <div id="mainlines" class="mainline-list"></div>
     </div>
   </section>
 
   <section class="panel ladder">
-    <div class="panel-head"><h2>V152 主线梯队网</h2><div class="poll-pills"><span id="ladderPolling" class="pill cyan">轮询 --</span><span id="ladderCount" class="pill cyan">--</span></div></div>
+    <div class="panel-head"><h2>V152 主线梯队网</h2><span id="ladderCount" class="pill cyan">--</span></div>
     <div id="ladder"></div>
-  </section>
-
-  <section class="panel">
-    <div class="panel-head"><h2>主线发现 / 分支识别</h2><div class="poll-pills"><span id="mainlineDiscoveryPolling" class="pill cyan">轮询 --</span><span id="mainlineDiscoveryCount" class="pill cyan">--</span></div></div>
-    <div class="scroll">
-      <table class="table-wide">
-        <thead><tr><th style="width:136px">主线</th><th style="width:132px">分支</th><th style="width:86px">状态</th><th style="width:78px">分数</th><th style="width:68px">强票</th><th style="width:72px">涨停</th><th style="width:72px">跌停</th><th>证据</th></tr></thead>
-        <tbody id="mainlineDiscovery"></tbody>
-      </table>
-    </div>
   </section>
 
   <section>
     <div class="panel">
       <div class="toolbar">
-        <h2>主线晋级候选映射 <span id="promoPolling" class="pill cyan">轮询 --</span> <span id="promoCount" class="pill green">--</span></h2>
+        <h2>主线晋级候选映射 <span id="promoCount" class="pill green">--</span></h2>
         <button class="linkbtn" data-fold="promoMore">展开其它</button>
       </div>
       <div class="scroll">
@@ -548,12 +483,12 @@ const emptyRow = (cols, text) => `<tr><td colspan="${cols}" class="muted">${O.es
 const uniq = arr => [...new Set((arr || []).map(x => O.raw(x)).filter(x => x && x !== "--"))];
 
 function flowLabel(r){
-  const score = r?.v152_capital_acceptance_score ?? r?.hiddenflow_score ?? r?.flow_score ?? "";
-  const raw = r?.v152_capital_acceptance_text || r?.v1519_flow || [r?.v152_capital_acceptance_label || r?.hiddenflow_label, score].filter(Boolean).join(" ") || "--";
+  const score = r?.hiddenflow_score ?? r?.flow_score ?? "";
+  const raw = r?.v1519_flow || [r?.hiddenflow_label, score].filter(Boolean).join(" ") || "--";
   const s = O.zh(raw, {fallback:"--"});
   const good = /主力净流入|承接|确认|增强/.test(s);
   const risk = /出货|风险|转弱|撤退/.test(s);
-  return O.pill(s, good ? "green" : risk ? "yellow" : "cyan", r?.v152_capital_acceptance_reason || r?.hiddenflow_reason || r?.capital_evidence || "");
+  return O.pill(s, good ? "green" : risk ? "yellow" : "cyan", r?.hiddenflow_reason || r?.capital_evidence || "");
 }
 
 function expectationLabel(r){
@@ -672,46 +607,6 @@ function renderEnv(data){
 function scanModule(data, id){
   return (data.scan_read_framework?.modules || []).find(x => x.module_id === id) || {};
 }
-function pollClass(status){
-  const s = String(status || "").toLowerCase();
-  if(["green","ok","stable","polling"].includes(s)) return "green";
-  if(["red","bad","error"].includes(s)) return "red";
-  if(["yellow","warn","degraded"].includes(s)) return "yellow";
-  return "cyan";
-}
-function setPollingBadge(id, mod, activity, fallback = {}){
-  const el = $(id);
-  if(!el) return;
-  const m = mod || {};
-  const a = activity || {};
-  const seq = m.poll_seq ?? fallback.poll_seq ?? a.poll_seq ?? "--";
-  const seconds = m.poll_seconds ?? fallback.poll_seconds ?? a.snapshot_poll_seconds ?? "";
-  const label = m.polling_label || fallback.polling_label || a.label || "轮询中";
-  const checked = m.last_checked_at || fallback.last_checked_at || a.generated_at || "";
-  const suffix = seconds ? ` · ${seconds}s` : "";
-  el.textContent = `${O.zh(label)} #${O.zh(seq, {fallback:"--"})}${suffix}`;
-  el.className = "pill " + pollClass(m.status || fallback.status || a.status);
-  el.title = checked ? `最近检查 ${checked}` : "等待轮询心跳";
-}
-function renderPollingBadges(data){
-  const activity = data.module_activity || {};
-  const globalMod = {
-    polling_label: activity.label || "轮询中",
-    poll_seq: activity.poll_seq,
-    poll_seconds: activity.snapshot_poll_seconds,
-    last_checked_at: activity.generated_at,
-    status: activity.status || "polling"
-  };
-  setPollingBadge("envPolling", scanModule(data, "market_environment"), activity);
-  setPollingBadge("globalPollingBadge", {}, activity, globalMod);
-  setPollingBadge("scanFrameworkPolling", {}, activity, globalMod);
-  setPollingBadge("discoveryAgentPolling", scanModule(data, "v152_unified_mainline_agent"), activity);
-  setPollingBadge("positionsPolling", scanModule(data, "positions"), activity);
-  setPollingBadge("mainlineStrengthPolling", scanModule(data, "mainline_discovery"), activity);
-  setPollingBadge("ladderPolling", scanModule(data, "mainline_ladder"), activity);
-  setPollingBadge("mainlineDiscoveryPolling", scanModule(data, "mainline_discovery"), activity);
-  setPollingBadge("promoPolling", scanModule(data, "mainline_promotion"), activity);
-}
 function parseCoveragePair(v){
   const m = String(v || "").match(/(\d+)\s*\/\s*(\d+)/);
   return m ? { covered: Number(m[1]), total: Number(m[2]) } : { covered: 0, total: 0 };
@@ -731,7 +626,6 @@ function renderLiveHealth(data){
   const auditMod = scanModule(data, "v152_live_replay_parity_audit");
   const native = data.data_health?.v152_native_candidate || {};
   const remote = data.remote_sync || {};
-  const activity = data.module_activity || {};
   const pair = parseCoveragePair(health.five_m_coverage || five.fetch_message || fiveMod.coverage || "");
   const covered = Number(health.covered_rows ?? five.covered_rows ?? pair.covered ?? 0);
   const total = Number(health.rows ?? five.rows ?? pair.total ?? native.rows ?? data.candidate_rows ?? 0);
@@ -742,7 +636,6 @@ function renderLiveHealth(data){
   $("live5mReady").textContent = `${ready} 条`;
   $("liveAuditStatus").textContent = violations ? `硬违规 ${violations}` : "硬违规 0";
   $("liveRemoteSync").textContent = O.zh(remoteLabel);
-  $("modulePolling").textContent = activity.enabled ? `${O.zh(activity.label || "轮询中")} #${O.zh(activity.poll_seq, {fallback:0})}/${O.zh(activity.tick_poll_seq, {fallback:0})}` : "--";
   const ok = total > 0 && covered >= total && violations === 0 && (!data.remote_sync || remote.ok || remote.status === "synced");
   $("liveHealthBadge").textContent = ok ? "闭环可读" : "需要关注";
   $("liveHealthBadge").className = "pill " + (ok ? "green" : "yellow");
@@ -753,46 +646,6 @@ function renderLiveHealth(data){
     `<span>${O.esc(O.compact(health.five_m_coverage || five.fetch_message || fiveMod.coverage || "等待5m数据", 84))}</span>`,
     `<span>${O.esc(O.compact(health.audit_summary || audit.summary || auditMod.coverage || "等待审计", 116))}</span>`
   ].join(" ");
-}
-
-function renderDiscoveryAgent(report){
-  const r = report || {};
-  const ok = Boolean(r.ok);
-  $("discoveryAgentBadge").textContent = ok ? "训练Agent运行" : "等待训练Agent";
-  $("discoveryAgentBadge").className = "pill " + (ok ? "green" : "yellow");
-  $("discoveryAgentSummary").textContent = O.compact(r.summary || "等待V152本地训练智能交易Agent。", 120);
-  $("discoveryAgentMeta").textContent = `训练 ${O.zh(r.training_rows_count,{fallback:0})} · 主线 ${O.zh(r.branch_count,{fallback:0})} · 分支 ${O.zh(r.topic_count,{fallback:0})} · BUY ${O.zh(r.buy_candidate_count,{fallback:0})}`;
-  const actions = (r.rows || []).slice(0,8).map(x => `${O.zh(x.action)} ${O.zh(x.code)} ${O.zh(x.name)} ${O.zh(x.stock_role || "角色待定")} · ${O.zh(x.trade_style || "观察等待")} · ${O.zh(x.mainline)} / ${O.zh(x.branch)}`);
-  $("discoveryAgentActions").innerHTML = actions.length ? actions.map(x => (
-    `<div class="agent-action">${O.esc(O.compact(x, 150))}</div>`
-  )).join("") : `<div class="empty">暂无本地训练买卖标签。</div>`;
-  const steps = r.stage_rows || [];
-  $("discoveryAgentSteps").innerHTML = steps.length ? steps.map(s => {
-    const cls = s.status === "green" ? "green" : s.status === "yellow" ? "yellow" : s.status === "red" ? "red" : "cyan";
-    const text = `${O.zh(s.name)} ${O.zh(s.rows, {fallback:"--"})}`;
-    return `<span class="agent-step">${O.pill(text, cls)}</span>`;
-  }).join("") : `<span class="muted">等待本地训练Agent阶段。</span>`;
-}
-
-function renderMainlineDiscovery(discovery){
-  const rows = discovery?.rows || [];
-  $("mainlineDiscoveryCount").textContent = `${rows.length} 条`;
-  $("mainlineDiscovery").innerHTML = rows.length ? rows.slice(0,16).map(r => {
-    const up = r.limit_up_count ?? r.limit_count ?? 0;
-    const down = r.limit_down_count ?? 0;
-    const downCls = O.num(down) > 0 ? "down" : "flat";
-    const ev = cleanMainlineEvidence(r.evidence || "");
-    return `<tr>
-      <td title="${O.esc(O.zh(r.mainline_id))}"><b>${O.esc(O.compact(r.mainline_id,18))}</b></td>
-      <td title="${O.esc(O.zh(r.branch_id))}">${O.esc(O.compact(r.branch_id,18))}</td>
-      <td>${O.pill(O.zh(r.lifecycle_state || "观察"), O.num(down) > 0 ? "yellow" : "cyan")}</td>
-      <td>${O.esc(O.zh(r.mainline_score))}</td>
-      <td>${O.esc(O.zh(r.strong_count, {fallback:0}))}</td>
-      <td class="up">${O.esc(O.zh(up, {fallback:0}))}</td>
-      <td class="${downCls}">${O.esc(O.zh(down, {fallback:0}))}</td>
-      <td class="wrapcell" title="${O.esc(O.evidence(ev))}">${O.esc(O.compact(O.evidence(ev), 92))}</td>
-    </tr>`;
-  }).join("") : emptyRow(8,"暂无主线发现数据。");
 }
 
 function positionHistoryHtml(p){
@@ -865,34 +718,6 @@ function renderMainlines(mainlines){
   }).join("") : `<div class="empty">暂无主线强度。</div>`;
 }
 
-function cleanMainlineEvidence(v){
-  const s = String(v || "").trim();
-  if(!s) return "--";
-  const marker = s.search(/(?:^|[；;])\s*环境层[:：]/);
-  return (marker >= 0 ? s.slice(0, marker) : s).replace(/[；;]\s*$/, "").trim() || "--";
-}
-
-function discoveryMainlineStrength(data){
-  const rows = data?.mainline_discovery?.rows || [];
-  return {
-    mode: "mainline_discovery",
-    as_of: data.generated_at || data.source_generated_at || "--",
-    rows: rows.map(r => ({
-      mainline: r.mainline_id,
-      node: r.branch_id,
-      companies: r.sample_count ?? "--",
-      core_candidates: r.core_count ?? "--",
-      strong_candidates: r.strong_count ?? "--",
-      live_sample: r.sample_count,
-      live_up_count: r.strong_count,
-      live_down_count: r.risk_count,
-      avg_pct: r.avg_pct,
-      avg_score: r.mainline_score,
-      top_companies: [r.leader_codes, r.leader_names].filter(Boolean).join(" "),
-    })),
-  };
-}
-
 function ladderStrengthClass(g){
   const t = O.raw(g?.strength_link_class || g?.strength_tier || g?.strength_link_label);
   if(/bad|走弱/.test(t)) return "red";
@@ -911,14 +736,12 @@ function renderLadder(graph){
     const strengthTip = [g.strength_action,g.strength_risk,g.strength_reason].filter(Boolean).join("；");
     const chips = nodes.map(n => {
       const role = O.zh(n.ladder_role || n.edge_label || n.candidate_tier || "候选");
-      const basis = O.zh(n.ladder_basis || n.edge_label || "", {fallback:""});
-      const cls = n.limit_hit || role.includes("涨停") ? "hot" : String(n.v152_capital_acceptance_text || n.v1519_flow || role).includes("承接") ? "good" : "";
-      return `<div class="node-chip ${cls}" title="${O.esc(basis)}">
+      const cls = role.includes("龙头") || role.includes("高标") ? "hot" : String(n.v1519_flow || "").includes("承接") ? "good" : "";
+      return `<div class="node-chip ${cls}">
         <div class="role">${O.esc(role)}</div>
         <b>${O.esc(O.code(n.code))} ${O.esc(O.name(n.code,n.name))}</b>
         <div class="${O.tone(n.rt_pct)}">${O.esc(O.zh(n.rt_pct))} · ${O.esc(O.zh(n.price))}</div>
         <div>${flowLabel(n)}</div>
-        <div class="muted">${O.esc(O.compact(basis,36))}</div>
       </div>`;
     }).join("");
     return `<details ${idx < 3 ? "open" : ""}>
@@ -932,7 +755,7 @@ function renderLadder(graph){
 }
 
 function goodIntraday(r){
-  const s = [r.label,r.state,r.v152_capital_acceptance_label,r.v152_capital_acceptance_text,r.hiddenflow_label,r.v1519_flow,r.capital_evidence].map(x => O.zh(x,{fallback:""})).join(" ");
+  const s = [r.label,r.state,r.hiddenflow_label,r.v1519_flow,r.capital_evidence].map(x => O.zh(x,{fallback:""})).join(" ");
   return /分时进攻确认|承接增强|承接改善|主力净流入|确认/.test(s);
 }
 
@@ -1080,12 +903,9 @@ function render(data){
   renderKpi(data);
   renderEnv(data);
   renderLiveHealth(data);
-  renderPollingBadges(data);
-  renderDiscoveryAgent(data.v152_unified_mainline_agent || {});
   renderPositions(data.positions || []);
-  renderMainlines(discoveryMainlineStrength(data));
+  renderMainlines(data.market_environment?.mainlines || []);
   renderLadder(data.mainline_ladder_graph || {});
-  renderMainlineDiscovery(data.mainline_discovery || {});
   renderPromo(data.mainline_promotion_mapping || data.mainline_promotion || {});
   window.__lastRemotePositions = data.positions || [];
   const now = positionSig(data.positions || []);
@@ -1142,131 +962,6 @@ if("Notification" in window && Notification.permission === "default"){
 }
 load();
 setInterval(load, 15000);
-</script>
-<script>
-/* ===== UI升级层 2026-06：权益图表 + KPI闪烁 + Toast告警 ===== */
-(function(){
-  const $id=x=>document.getElementById(x);
-  const escU=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
-  const numU=v=>Number(String(v??"").replace(/[%，,]/g,"").replace(/[^\d.+-]/g,""));
-  const HIST_KEY="v152.remote.equityHistory.v1", MAX_POINTS=720;
-  let hist=[];
-  try{ hist=JSON.parse(localStorage.getItem(HIST_KEY)||"[]")||[]; }catch{ hist=[]; }
-  if(!Array.isArray(hist)) hist=[];
-  const saveHist=()=>{ try{ localStorage.setItem(HIST_KEY,JSON.stringify(hist.slice(-MAX_POINTS))); }catch{} };
-  const fmtTime=t=>{ const d=new Date(t); return `${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; };
-  const fmtMoney=v=>Math.abs(v)>=1e8?(v/1e8).toFixed(2)+"亿":Math.abs(v)>=1e4?(v/1e4).toFixed(1)+"万":v.toFixed(0);
-  function pushPoint(data){
-    const eq=numU(data.equity), fl=numU(data.floating_pnl_pct);
-    if(!Number.isFinite(eq)) return;
-    const t=Date.now(), last=hist[hist.length-1];
-    if(last && t-last.t<5000) return;
-    hist.push({t,eq,fl:Number.isFinite(fl)?fl:null});
-    if(hist.length>MAX_POINTS) hist=hist.slice(-MAX_POINTS);
-    saveHist(); drawChart();
-  }
-  const cv=$id("equityChart"), tip=$id("equityChartTip"), PADL=64, PADR=56, PADT=12, PADB=20;
-  function drawChart(){
-    if(!cv||!cv.parentElement) return;
-    const w=cv.parentElement.clientWidth, h=cv.parentElement.clientHeight, dpr=window.devicePixelRatio||1;
-    if(!w||!h) return;
-    if(cv.width!==Math.round(w*dpr)||cv.height!==Math.round(h*dpr)){ cv.width=Math.round(w*dpr); cv.height=Math.round(h*dpr); }
-    const ctx=cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
-    const pts=hist.slice(-MAX_POINTS), note=$id("equityChartNote");
-    if(note) note.textContent=pts.length>1?`本机采样 ${pts.length} 点 · ${fmtTime(pts[0].t)} ~ ${fmtTime(pts[pts.length-1].t)}`:"等待状态采样";
-    if(pts.length<2){ ctx.fillStyle="rgba(128,167,200,.65)"; ctx.font="13px sans-serif"; ctx.fillText("等待远端状态采样（至少 2 个点后出图）",14,26); return; }
-    const t0=pts[0].t, t1=pts[pts.length-1].t;
-    const X=t=>PADL+(t-t0)/Math.max(1,t1-t0)*(w-PADL-PADR);
-    let lo=Math.min(...pts.map(p=>p.eq)), hi=Math.max(...pts.map(p=>p.eq));
-    if(hi-lo<1e-9){ hi+=1; lo-=1; }
-    const padV=(hi-lo)*.08; lo-=padV; hi+=padV;
-    const Y=v=>PADT+(hi-v)/(hi-lo)*(h-PADT-PADB);
-    ctx.font="11px sans-serif"; ctx.strokeStyle="rgba(20,50,77,.9)"; ctx.fillStyle="rgba(128,167,200,.8)"; ctx.textAlign="right";
-    for(let i=0;i<=4;i++){ const v=lo+(hi-lo)*i/4, y=Y(v); ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(w-PADR,y); ctx.stroke(); ctx.fillText(fmtMoney(v),PADL-6,y+4); }
-    ctx.textAlign="center";
-    for(let i=0;i<=4;i++){ const t=t0+(t1-t0)*i/4; ctx.fillText(fmtTime(t),X(t),h-5); }
-    ctx.beginPath(); pts.forEach((p,i)=>{ const x=X(p.t),y=Y(p.eq); i?ctx.lineTo(x,y):ctx.moveTo(x,y); });
-    ctx.strokeStyle="#00e5ff"; ctx.lineWidth=2; ctx.lineJoin="round"; ctx.stroke();
-    ctx.lineTo(X(t1),h-PADB); ctx.lineTo(X(t0),h-PADB); ctx.closePath();
-    const grad=ctx.createLinearGradient(0,PADT,0,h-PADB);
-    grad.addColorStop(0,"rgba(0,229,255,.22)"); grad.addColorStop(1,"rgba(0,229,255,0)");
-    ctx.fillStyle=grad; ctx.fill();
-    const fpts=pts.filter(p=>Number.isFinite(p.fl));
-    if(fpts.length>1){
-      let flo=Math.min(0,...fpts.map(p=>p.fl)), fhi=Math.max(0,...fpts.map(p=>p.fl));
-      if(fhi-flo<1e-9){ fhi+=1; flo-=1; }
-      const fpad=(fhi-flo)*.1; flo-=fpad; fhi+=fpad;
-      const FY=v=>PADT+(fhi-v)/(fhi-flo)*(h-PADT-PADB);
-      ctx.beginPath(); fpts.forEach((p,i)=>{ const x=X(p.t),y=FY(p.fl); i?ctx.lineTo(x,y):ctx.moveTo(x,y); });
-      ctx.strokeStyle="rgba(255,211,92,.92)"; ctx.lineWidth=1.4; ctx.setLineDash([5,4]); ctx.stroke(); ctx.setLineDash([]);
-      ctx.textAlign="left"; ctx.fillStyle="rgba(255,211,92,.85)";
-      for(let i=0;i<=4;i++){ const v=flo+(fhi-flo)*i/4; ctx.fillText(v.toFixed(1)+"%",w-PADR+6,FY(v)+4); }
-    }
-    const lp=pts[pts.length-1];
-    ctx.beginPath(); ctx.arc(X(lp.t),Y(lp.eq),3.5,0,Math.PI*2); ctx.fillStyle="#00e5ff"; ctx.fill();
-  }
-  if(cv){
-    cv.addEventListener("mousemove",e=>{
-      const pts=hist.slice(-MAX_POINTS);
-      if(pts.length<2||!tip){ if(tip) tip.style.display="none"; return; }
-      const r=cv.getBoundingClientRect(), x=e.clientX-r.left;
-      const t=pts[0].t+(x-PADL)/Math.max(1,r.width-PADL-PADR)*(pts[pts.length-1].t-pts[0].t);
-      let best=pts[0];
-      for(const p of pts) if(Math.abs(p.t-t)<Math.abs(best.t-t)) best=p;
-      tip.style.display="block";
-      tip.style.left=Math.min(r.width-160,Math.max(0,x+12))+"px"; tip.style.top="10px";
-      tip.innerHTML=`${fmtTime(best.t)}<br>权益 <b>${fmtMoney(best.eq)}</b>${Number.isFinite(best.fl)?`<br>浮盈 <b>${best.fl.toFixed(2)}%</b>`:""}`;
-    });
-    cv.addEventListener("mouseleave",()=>{ if(tip) tip.style.display="none"; });
-  }
-  window.addEventListener("resize",()=>drawChart());
-  let stack=document.getElementById("toastStack");
-  if(!stack){ stack=document.createElement("div"); stack.id="toastStack"; document.body.appendChild(stack); }
-  function toast(title,msg,cls,ms){
-    const el=document.createElement("div"); el.className=`toast ${cls||""}`;
-    el.innerHTML=`<b>${escU(title)}</b><span class="t-msg">${escU(String(msg||""))}</span><button class="t-close" title="关闭">×</button>`;
-    const dismiss=()=>{ el.classList.add("out"); setTimeout(()=>el.remove(),260); };
-    el.querySelector(".t-close").onclick=dismiss;
-    stack.appendChild(el);
-    while(stack.children.length>5) stack.firstChild.remove();
-    setTimeout(dismiss,ms||9000);
-  }
-  let lastSig={};
-  function checkSignals(data){
-    const risk=(data.positions||[]).filter(p=>["strict","defense","flow_exit"].includes(String(p.level||""))).map(p=>`${p.code} ${p.name||""} ${p.level}`).sort().join("\n");
-    if(lastSig.risk!==undefined && risk && risk!==lastSig.risk) toast("持仓风险变化",risk,"bad",14000);
-    lastSig.risk=risk;
-    const eq=numU(data.equity);
-    if(lastSig.eq!==undefined && Number.isFinite(eq) && Number.isFinite(lastSig.eq) && eq!==lastSig.eq){
-      const d=eq-lastSig.eq;
-      if(Math.abs(d)/Math.max(1,Math.abs(lastSig.eq))>=0.005) toast("权益变动",`${d>0?"+":""}${fmtMoney(d)}（${(d/Math.abs(lastSig.eq)*100).toFixed(2)}%）`,d>0?"ok":"warn");
-    }
-    if(Number.isFinite(eq)) lastSig.eq=eq;
-    document.title=(risk?"⚠ ":"")+document.title.replace(/^⚠ /,"");
-  }
-  const watched=["equity","floating","marketValue","realized"];
-  let lastVals={};
-  function flashChanged(){
-    watched.forEach(id=>{
-      const el=$id(id); if(!el) return;
-      const v=el.textContent;
-      if(lastVals[id]!==undefined && v!==lastVals[id]){
-        const p=el.closest(".panel")||el;
-        const a=numU(v), b=numU(lastVals[id]);
-        const up=Number.isFinite(a)&&Number.isFinite(b)?a>=b:true;
-        p.classList.remove("flash-up","flash-down"); void p.offsetWidth;
-        p.classList.add(up?"flash-up":"flash-down");
-      }
-      lastVals[id]=v;
-    });
-  }
-  const origRender=render;
-  render=function(data){
-    origRender(data);
-    try{ pushPoint(data); checkSignals(data); flashChanged(); }catch(e){ console.warn("ui-upgrade:",e); }
-  };
-  drawChart();
-})();
 </script>
 </body>
 </html>
