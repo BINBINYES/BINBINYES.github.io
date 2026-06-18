@@ -1,8 +1,8 @@
 {
   "schema_version": "v152.remote.v1",
-  "generated_at": "2026-06-18 11:30:37",
-  "source_generated_at": "2026-06-18 11:30:37",
-  "market_environment_updated_at": "2026-06-18 11:30:37",
+  "generated_at": "2026-06-18 11:31:29",
+  "source_generated_at": "2026-06-18 11:31:29",
+  "market_environment_updated_at": "2026-06-18 11:31:29",
   "remote_protection": {
     "mode": "protected",
     "notice": "\u8fdc\u7aef\u4fdd\u62a4\u6a21\u5f0f\uff1a\u6838\u5fc3\u4ee3\u7801\u3001\u5b8c\u6574\u95e8\u63a7\u8bc1\u636e\u3001\u56e0\u5b50\u3001\u53c2\u6570\u3001\u5019\u9009\u6392\u5e8f\u548c\u56de\u6d4b\u660e\u7ec6\u4e0d\u516c\u5f00\u3002",
@@ -441,7 +441,7 @@
         "status": "ok",
         "blocked": false,
         "repairable": false,
-        "detail": "owner=V152_CORE_MODEL\uff1bauto_sell=True\uff1b\u5356\u51fa\u65f6\u6bb5=morning_session\uff1ballowed=True"
+        "detail": "owner=V152_CORE_MODEL\uff1bauto_sell=True\uff1b\u5356\u51fa\u65f6\u6bb5=midday_break\uff1ballowed=False"
       },
       {
         "stage": "sell",
@@ -477,7 +477,7 @@
     "entry_ok_rows": 0,
     "hard_violations": 1,
     "status": "warn",
-    "five_m_coverage": "1/1 \u4eca\u65e55m; sources=https://push2his.eastmoney.com/api/qt/stock/kline/get",
+    "five_m_coverage": "1/1 \u4eca\u65e55m; sources=tencent_5m",
     "audit_summary": "\u5b9e\u76d8\u5019\u9009\u56de\u6d4b\u53e3\u5f84\u5ba1\u8ba1\uff1a1\u6761\uff0c\u786c\u8fdd\u89c41\uff0c\u6392\u5e8f\u8bef\u5dee0\uff0cTOP2\u914d\u989d\u8fdd\u89c40\uff0c\u6da8\u505c\u4e70\u5165\u8fdd\u89c40\uff0c5m\u95e8\u63a7\u9519\u914d0\uff0c\u53ef\u4e70\u8bc1\u636e0\u3002",
     "five_m_status_label": "\u7a33\u5b9a",
     "audit_status_label": "\u5f02\u5e38"
@@ -505,7 +505,7 @@
     "strict_stop_loss_pct": "\u672c\u5730\u4fdd\u7559"
   },
   "auto_buy_gate": {
-    "can_auto_buy": true,
+    "can_auto_buy": false,
     "can_local_structure_override": false,
     "can_promotion_auto_buy": false,
     "closing_buy_gate": {
@@ -515,8 +515,8 @@
       "status": "waiting_for_closing_window"
     },
     "sell_session": {
-      "phase": "morning_session",
-      "sell_allowed": true
+      "phase": "midday_break",
+      "sell_allowed": false
     },
     "capital_label": "\u6570\u636e\u5931\u771f",
     "v152_account_guard": {
@@ -534,7 +534,7 @@
   "paper_trading": {
     "enabled": true,
     "auto_buy_gate": {
-      "can_auto_buy": true,
+      "can_auto_buy": false,
       "can_local_structure_override": false,
       "can_promotion_auto_buy": false,
       "closing_buy_gate": {
@@ -544,8 +544,8 @@
         "status": "waiting_for_closing_window"
       },
       "sell_session": {
-        "phase": "morning_session",
-        "sell_allowed": true
+        "phase": "midday_break",
+        "sell_allowed": false
       },
       "capital_label": "\u6570\u636e\u5931\u771f",
       "v152_account_guard": {
@@ -874,7 +874,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u589e\u5f3a",
         "capital_analysis_summary": "\u4e3b\u529b\u51c0\u5360\u6bd4 6.78%\uff1b\u4e3b\u529b\u51c0\u989d 2.21\u4ebf\uff1b\u5927\u5355\u51c0\u989d 2.14\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 49.37%",
         "intraday_label": "\u627f\u63a5\u6539\u5584",
-        "intraday_reason": "\u4e3b\u529b\u51c0\u989d\u8f83\u4e0a\u4e00\u8f6e\u6539\u5584\uff1b\u4e3b\u529b\u51c0\u5360\u6bd4 6.78%\uff1b\u8d44\u91d1\u5206\u6790 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 77",
+        "intraday_reason": "\u4e3b\u529b\u51c0\u5360\u6bd4 6.78%\uff1b\u8d44\u91d1\u5206\u6790 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 77",
         "promotion_score": null,
         "score": null,
         "v1519_flow": "\u627f\u63a5\u589e\u5f3a 77",
@@ -941,7 +941,7 @@
         "capital_analysis_label": "\u8d44\u91d1\u589e\u5f3a",
         "capital_analysis_summary": "\u4e3b\u529b\u51c0\u5360\u6bd4 6.78%\uff1b\u4e3b\u529b\u51c0\u989d 2.21\u4ebf\uff1b\u5927\u5355\u51c0\u989d 2.14\u4ebf\uff1b\u5916\u76d8\u627f\u63a5 49.37%",
         "intraday_label": "\u627f\u63a5\u6539\u5584",
-        "intraday_reason": "\u4e3b\u529b\u51c0\u989d\u8f83\u4e0a\u4e00\u8f6e\u6539\u5584\uff1b\u4e3b\u529b\u51c0\u5360\u6bd4 6.78%\uff1b\u8d44\u91d1\u5206\u6790 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 77",
+        "intraday_reason": "\u4e3b\u529b\u51c0\u5360\u6bd4 6.78%\uff1b\u8d44\u91d1\u5206\u6790 \u8d44\u91d1\u4ee3\u7406\u8f83\u5f3a 77",
         "promotion_score": null,
         "score": null,
         "v1519_flow": "\u627f\u63a5\u589e\u5f3a 77",
